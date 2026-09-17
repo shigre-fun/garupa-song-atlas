@@ -21,6 +21,10 @@ pnpmを使用する場合は `pnpm install` でも構いません。
 
 ## 新曲を追加する
 
+スマホからは、公開サイトの `admin/` にある管理ページへ入力して追加できます。GitHubへの保存とサイトの自動更新に対応しています。初回の接続・公開設定は [スマホ管理ページの手順](docs/ADMIN.md) を参照してください。
+
+以下はPCでファイルを直接追加する場合の手順です。
+
 ```powershell
 node scripts/add-song.mjs "新しい楽曲名"
 ```
@@ -60,5 +64,5 @@ node --test tests/*.test.mjs
 powershell -ExecutionPolicy Bypass -File scripts/package.ps1
 ```
 
-最後のコマンドで `garupa-song-atlas.zip` を作成します。ZIPの中身、または `dist` の中身を静的サイトの公開先に配置します。サブフォルダーではなくサイトのルートで配信してください。
+最後のコマンドで `garupa-song-atlas.zip` を作成します。ZIPの中身、または `dist` の中身を静的サイトの公開先に配置します。通常はサイトのルートで配信します。GitHub Pagesではワークフローがサブフォルダーに対応したビルドと公開を行います。
 Netlify向けの設定は `netlify.toml` にあります。コードの整形には `npm run format` を使えます。

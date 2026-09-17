@@ -17,13 +17,28 @@ if (songs.some((song) => song.slug.toLowerCase() === slug.toLowerCase()))
     "同名フォルダーがあります。別バンドや別バージョンは第2引数で区別してください。",
   );
 const song = JSON.parse(fs.readFileSync("templates/song.json", "utf8"));
-song.id = Math.max(0, ...songs.map((song) => song.id)) + 1;
+const stateFile = "data/admin-state.json";
+const state = fs.existsSync(stateFile)
+  ? JSON.parse(fs.readFileSync(stateFile, "utf8"))
+  : { nextId: 1 };
+song.id = Math.max(
+  state.nextId,
+  Math.max(0, ...songs.map((song) => song.id)) + 1,
+);
 song.title = title;
 song.releaseOrder = song.id;
 fs.mkdirSync(`data/songs/${slug}`, { recursive: true });
 fs.writeFileSync(
   `data/songs/${slug}/song.json`,
   JSON.stringify(song, null, 2) + "\n",
+);
+fs.writeFileSync(
+  stateFile,
+  JSON.stringify(
+    { nextId: song.id + 1, updatedAt: new Date().toISOString() },
+    null,
+    2,
+  ) + "\n",
 );
 console.log(
   `作成しました: data/songs/${slug}/song.json\n読み・バンド・配信日・難易度などを記入してからビルドしてください。`,

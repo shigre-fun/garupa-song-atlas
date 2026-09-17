@@ -1,3 +1,4 @@
+import { siteURL, siteBase } from "./urls.js";
 import {
   difficulties,
   typeNames,
@@ -23,11 +24,15 @@ const date = (n) =>
   }).format(new Date(n));
 const badge = (s) => `<span class="tag ${s.type}">${typeNames[s.type]}</span>`;
 const color = (s) => colors[bandOrder(s)];
-const query = (p) => {
+const query = (p, base) => {
   const x = new URLSearchParams(p);
-  return "/?" + x.toString();
+  return siteURL("?" + x.toString(), base);
 };
-export function renderList(data, params = new URLSearchParams()) {
+export function renderList(
+  data,
+  params = new URLSearchParams(),
+  base = siteBase,
+) {
   const q = params.get("q") || "";
   const mode = [
     "band",
@@ -69,7 +74,7 @@ export function renderList(data, params = new URLSearchParams()) {
           .map(
             (s) => `<tr>
 <td>
-<a class="song-title" href="/songs/${encodeURIComponent(s.slug)}/?${new URLSearchParams({ q, sort: mode, page })}">${e(s.title)}</a>${s.work ? `<div class="song-sub">${e(s.work)}</div>` : ""}</td>
+<a class="song-title" href="${siteURL(`songs/${encodeURIComponent(s.slug)}/`, base)}?${new URLSearchParams({ q, sort: mode, page })}">${e(s.title)}</a>${s.work ? `<div class="song-sub">${e(s.work)}</div>` : ""}</td>
 <td>
 <div class="band" style="--band:${color(s)}">${e(s.band)}</div>
 </td>
@@ -87,7 +92,7 @@ export function renderList(data, params = new URLSearchParams()) {
       : `<div class="panel empty">
 <h2>一致する楽曲はありません</h2>
 <p>短い曲名や作品名で試してください。</p>
-<a href="/">すべての楽曲を見る</a>
+<a href="${siteURL("", base)}">すべての楽曲を見る</a>
 </div>`
   }<p class="notice">「—」はその難易度が未実装です。レベルが同じ場合は、バンド → オリジナル・カバー・エクストラ → 配信順で並びます。 複数バンドの合同曲は「その他」に含めます。</p>
 <details class="data-note">
@@ -95,9 +100,14 @@ export function renderList(data, params = new URLSearchParams()) {
 <p>50音順は登録された読みを使用します。同時配信曲は登録された配信順、続いて管理用IDで並べます。</p>
 </details>`;
 }
-export function renderDetail(s, data, params = new URLSearchParams()) {
+export function renderDetail(
+  s,
+  data,
+  params = new URLSearchParams(),
+  base = siteBase,
+) {
   const q = params.get("q") || "";
-  return `<a class="back" href="${query({ q, sort: params.get("sort") || "band", page: params.get("page") || 1 })}">← 楽曲一覧に戻る</a>
+  return `<a class="back" href="${query({ q, sort: params.get("sort") || "band", page: params.get("page") || 1 }, base)}">← 楽曲一覧に戻る</a>
 <section class="detail-top" style="--band:${color(s)}">${badge(s)}<h1>${e(s.title)}</h1>
 <div class="detail-band">${e(s.band)}</div>
 </section>

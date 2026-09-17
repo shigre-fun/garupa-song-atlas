@@ -1,3 +1,5 @@
+import { siteURL, siteBase } from "./urls.js";
+const pagePath = "/" + location.pathname.slice(siteBase.length);
 import { renderList, renderDetail } from "./views.js";
 import { matches } from "./domain.js";
 
@@ -5,7 +7,7 @@ const app = document.querySelector("#app");
 const params = new URLSearchParams(location.search);
 const q = params.get("q") || "";
 document.querySelector("#search").value = q;
-const listURL = (values) => "/?" + new URLSearchParams(values);
+const listURL = (values) => siteURL("?" + new URLSearchParams(values));
 const backLink = document.querySelector(".back");
 if (backLink)
   backLink.href = listURL({
@@ -13,26 +15,26 @@ if (backLink)
     sort: params.get("sort") || "band",
     page: params.get("page") || 1,
   });
-if (location.pathname === "/" && params.size)
+if (pagePath === "/" && params.size)
   app.innerHTML = '<p role="status">検索結果を読み込んでいます…</p>';
 
 function notFound() {
   document.title = "ページが見つかりません | ガルパ楽曲ノート";
-  return '<div class="empty"><h1>楽曲が見つかりません</h1><p>配信終了やURLの変更の可能性があります。</p><a href="/">楽曲一覧へ戻る</a></div>';
+  return `<div class="empty"><h1>楽曲が見つかりません</h1><p>配信終了やURLの変更の可能性があります。</p><a href="${siteURL("")}">楽曲一覧へ戻る</a></div>`;
 }
 
 try {
-  const response = await fetch("/songs.json");
+  const response = await fetch(siteURL("songs.json"));
   if (!response.ok) throw new Error("Catalog unavailable");
   const data = await response.json();
-  const slug = location.pathname.match(/^\/songs\/([^/]+)\/?$/)?.[1];
+  const slug = pagePath.match(/^\/songs\/([^/]+)\/?$/)?.[1];
   if (slug) {
     const song = data.songs.find(
       (song) => song.slug === decodeURIComponent(slug),
     );
     app.innerHTML = song ? renderDetail(song, data, params) : notFound();
     if (song) document.title = song.title + " | ガルパ楽曲ノート";
-  } else if (location.pathname === "/") {
+  } else if (pagePath === "/") {
     app.innerHTML = renderList(data, params);
     const select = document.querySelector("#sort");
     const sort = select.value;

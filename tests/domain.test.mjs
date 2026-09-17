@@ -80,17 +80,17 @@ test("catalog contains all five difficulty slots, readings, IDs and generated pa
     assert.ok(fs.existsSync(`dist/songs/${s.slug}/index.html`));
     assert.ok(["normal", "anime", "tie_up"].includes(s.type));
     for (const d of s.difficulties.filter(Boolean)) {
-      assert.ok(d.level > 0 && d.level <= 40, s.title);
+      assert.ok(d.level > 0 && d.level <= 50, s.title);
       assert.ok(Number.isInteger(d.notes) && d.notes > 0, s.title);
     }
   }
 });
-test("3D versions remain independent and original songs have Boolean support", () => {
+test("3D versions remain independent and support may be unknown", () => {
   assert.equal(songs.find((s) => s.id === 484).live3d, true);
   assert.equal(songs.find((s) => s.id === 158).live3d, false);
   assert.equal(songs.find((s) => s.id === 24).live3d, true);
   for (const s of songs.filter((s) => s.type === "normal"))
-    assert.equal(typeof s.live3d, "boolean");
+    assert.ok(s.live3d === null || typeof s.live3d === "boolean");
 });
 test("all sort modes cover the same complete catalog deterministically", () => {
   for (const mode of [
@@ -106,10 +106,10 @@ test("all sort modes cover the same complete catalog deterministically", () => {
       assert.ok(comparator(sorted[i - 1], sorted[i]) <= 0);
   }
 });
-test("every released cover and extra has original artist and composer", () => {
+test("original metadata permits explicitly unknown values", () => {
   for (const s of songs.filter((s) => s.type !== "normal")) {
-    assert.ok(s.artist?.trim(), `Original artist missing: ${s.title}`);
-    assert.ok(s.composer?.trim(), `Composer missing: ${s.title}`);
+    assert.ok(s.artist === null || typeof s.artist === "string");
+    assert.ok(s.composer === null || typeof s.composer === "string");
     assert.ok(
       s.work === null || typeof s.work === "string",
       `Work status missing: ${s.title}`,

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="referrer" content="no-referrer" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; connect-src 'self' https://api.github.com; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'self'"
+    />
+    <title>楽曲を追加 | ガルパ楽曲ノート</title>
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="/admin.css" />
+    <script type="module" src="/admin.js"></script>
+  </head>
+  <body>
+    <header><a href="/">✳ ガルパ楽曲ノート</a><span>管理ページ</span></header>
+    <main>
+      <p class="eyebrow">SONG EDITOR</p>
+      <h1>新しい楽曲を追加</h1>
+      <p class="lead">
+        楽曲情報を入力して保存すると、サイトの更新が始まります。
+      </p>
+      <noscript
+        ><p class="message error">
+          入力・保存にはJavaScriptを有効にしてください。
+        </p></noscript
+      >
+      <section class="card" aria-labelledby="connection-title">
+        <h2 id="connection-title">1. 保存先に接続</h2>
+        <p id="connection-status" role="status">
+          未接続です。入力は接続前から始められます。
+        </p>
+        <form id="connection-form">
+          <div class="fields">
+            <label
+              >GitHubユーザー名<input
+                name="owner"
+                required
+                autocomplete="username"
+                spellcheck="false"
+                autocapitalize="none"
+            /></label>
+            <label
+              >リポジトリ名<input
+                name="repo"
+                required
+                spellcheck="false"
+                autocapitalize="none"
+            /></label>
+            <label
+              >ブランチ<input
+                name="branch"
+                value="main"
+                required
+                spellcheck="false"
+                autocapitalize="none"
+            /></label>
+            <label
+              >アクセストークン<input
+                name="token"
+                type="password"
+                required
+                autocomplete="off"
+                spellcheck="false"
+                autocapitalize="none"
+                aria-describedby="token-note"
+            /></label>
+          </div>
+          <p id="token-note" class="help">
+            このリポジトリへの書き込み権限が必要です。トークンは画面を開いている間だけ保持し、端末に保存しません。
+          </p>
+          <div class="actions">
+            <button type="submit" id="connect">接続する</button
+            ><button type="button" id="disconnect" class="secondary" hidden>
+              接続を解除</button
+            ><a href="#setup-help">初回の接続方法</a>
+          </div>
+        </form>
+      </section>
+      <form id="song-form">
+        <section class="card">
+          <h2>2. 楽曲情報</h2>
+          <p class="help">
+            「必須」以外の未確認項目は空欄にできます。日時は日本時間です。
+          </p>
+          <div class="fields">
+            <label class="wide"
+              >楽曲名 <span>必須</span
+              ><input name="title" required maxlength="500"
+            /></label>
+            <label class="wide"
+              >読み（カタカナ） <span>必須</span
+              ><input
+                name="reading"
+                required
+                maxlength="500"
+                placeholder="英語の曲名もカタカナで入力"
+            /></label>
+            <label
+              >種類 <span>必須</span
+              ><select name="category">
+                <option>オリジナル</option>
+                <option>カバー</option>
+                <option>エクストラ</option>
+              </select></label
+            >
+            <label
+              >演奏バンド <span>必須</span
+              ><select name="band" id="band"></select
+            ></label>
+            <label id="other-band-label" hidden
+              >その他のバンド名 <span>必須</span
+              ><input name="otherBand" maxlength="500"
+            /></label>
+            <label
+              >参加アーティスト・他バンド<input
+                name="guests"
+                maxlength="400"
+                placeholder="例：星街すいせい（複数は×で区切る）"
+            /></label>
+            <label
+              >配信日時（日本時間） <span>必須</span
+              ><input type="datetime-local" name="releaseDate" required
+            /></label>
+            <label
+              >同時配信曲の順序<input
+                type="number"
+                name="releaseOrder"
+                min="0"
+                step="1"
+                inputmode="numeric"
+                placeholder="指定しなければ追加順"
+            /></label>
+            <label class="wide"
+              >作曲者（カバー・エクストラは原曲）<input
+                name="composer"
+                maxlength="2000"
+            /></label>
+            <div id="original-fields" class="wide">
+              <label
+                >3Dライブ<select name="live3d">
+                  <option value="null">未確認</option>
+                  <option value="true">あり</option>
+                  <option value="false">なし</option>
+                </select></label
+              >
+            </div>
+            <div id="cover-fields" class="wide fields" hidden>
+              <label class="wide"
+                >原曲アーティスト<input name="originalArtist" maxlength="2000"
+              /></label>
+              <label class="wide"
+                >原曲が使われた作品名<textarea
+                  name="originalWork"
+                  maxlength="2000"
+                  rows="2"
+                  placeholder="アニメ・映画・ドラマ名など。複数ある場合も入力できます。"
+                ></textarea>
+              </label>
+            </div>
+            <label class="wide"
+              >検索用の別名<textarea
+                name="aliases"
+                rows="2"
+                placeholder="略称や別表記を1行に1つ"
+              ></textarea>
+            </label>
+          </div>
+          <details>
+            <summary>ページのフォルダー名を指定する</summary>
+            <label
+              >楽曲名またはローマ字<input
+                name="slug"
+                maxlength="120"
+                placeholder="空欄なら曲名から自動作成"
+            /></label>
+            <p class="help">
+              同名の別バージョンを追加する場合は、末尾にバンド名などを付けて区別してください。
+            </p>
+          </details>
+        </section>
+        <section class="card">
+          <h2>3. 難易度とノーツ数</h2>
+          <p class="help">
+            実装済みの難易度にチェックして、数値を入力してください。
+          </p>
+          <div id="charts"></div>
+        </section>
+        <section class="card">
+          <h2>4. 確認して保存</h2>
+          <p id="draft-status" class="help" role="status">
+            入力内容はこの端末に下書き保存されます。
+          </p>
+          <p id="form-status" class="message" role="status" tabindex="-1">
+            保存する前に、入力内容を確認してください。
+          </p>
+          <div class="actions">
+            <button type="submit" id="save">楽曲を保存する</button
+            ><button type="button" id="clear" class="secondary">
+              新しい入力を始める
+            </button>
+          </div>
+          <div id="result" hidden>
+            <p id="saved-message"></p>
+            <div class="actions">
+              <a id="commit-link" target="_blank" rel="noopener noreferrer"
+                >保存した内容</a
+              ><a id="workflow-link" target="_blank" rel="noopener noreferrer"
+                >更新の進行状況</a
+              ><button type="button" id="check-published" class="secondary">
+                サイトへの反映を確認
+              </button>
+            </div>
+            <p id="publish-status" role="status"></p>
+            <a id="song-link" hidden>公開された楽曲ページを開く</a>
+          </div>
+        </section>
+      </form>
+      <section id="setup-help" class="card">
+        <h2>初回の接続方法</h2>
+        <ol>
+          <li>
+            GitHubでこのサイトのリポジトリを開き、自分に書き込み権限があることを確認します。
+          </li>
+          <li>
+            GitHubの「Settings → Developer settings → Personal access tokens →
+            Fine-grained
+            tokens」で、このリポジトリだけを対象にトークンを作成します。Repository
+            permissionsの「Contents」を「Read and write」にします。
+          </li>
+          <li>このページの保存先とアクセストークンを入力して接続します。</li>
+        </ol>
+        <p class="help">
+          トークンに「Workflows」の権限は不要です。有効期限が切れたらGitHubで再発行してください。端末の再読み込み後は再接続が必要です。
+        </p>
+        <a
+          href="https://github.com/settings/personal-access-tokens"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHubのトークン設定を開く</a
+        >
+      </section>
+    </main>
+    <footer>ガルパ楽曲ノート · 楽曲管理</footer>
+  </body>
+</html>
