@@ -10,7 +10,7 @@
 - 前回の実装Goal：コードの整形、楽曲名フォルダーへの移行、出典表示の削除、新曲追加用テンプレートの用意。完了済み。
 - Goal：`data/wiki` の不要判定・フォルダー削除・削除後検証の成功条件をすべて満たした。
 - 作業ディレクトリ：`C:\MyProgramming\BangDream_Website`
-- Git：mainブランチに初回コミット `Initial commit: editable Garupa song database` を作成。保存後の `git status --short` は空。最終ハッシュは `git log -1 --oneline` で確認する。
+- Git：mainから `https://github.com/shigre-fun/garupa-song-atlas` へ配置済み。公開済みコードは `bb06b58`、公開URL・運用記録は `4ea2d2d`。最終ローカルハッシュは `git log -1 --oneline` で確認する。
 
 ## 完了した作業
 
@@ -23,7 +23,7 @@
 - `templates/song.json`、`templates/README.md`、`scripts/add-song.mjs` を作成。新曲の管理IDを自動割り当てする。
 - `README.md` に編集・新曲追加・再生成・プレビュー・公開用ZIP作成手順を記載した。
 - 外部データの自動更新処理を削除し、手動編集が再取得で上書きされない構成にした。
-- 公開用 `garupa-song-atlas.zip` を再生成した（806エントリー）。インターネットへの公開は実施していない。
+- 旧公開用ZIPは806エントリーで管理画面追加前の内容。現在のインターネット公開はGitHub Actionsで生成し、ZIPは使用していない。
 - `AGENTS.md` に再開時の確認と、作業単位ごとの記録更新を定めた。
 
 ## 作業中・未完了・次の作業
@@ -38,6 +38,15 @@
 - 新曲追加：`node scripts/add-song.mjs "楽曲名"`。作成されたJSONの空欄を埋めてからビルドする。
 
 ## 検証記録
+
+### 2026-09-18：最新公開処理の完了監査
+
+- 前回Goalターンの分類：進捗あり（初回公開の実動確認、運用URL・作業記録のGitHub保存）。今回の再開時はGit管理下・差分なし・未追跡なしを確認。
+- GitHub REST APIで最新run `35245193004` を確認：`completed / success`、対象コミット `4ea2d2d676483f9e181dd614f55cf6a55a91c528`。最新ドキュメント反映後も公開成功。
+- 公開中の `admin-config.json` を取得し、owner=`shigre-fun`、repo=`garupa-song-atlas`、branch=`main` を確認。管理画面の自動設定ファイルは正常。
+- 通常サンドボックスのHTTP確認はソケットアクセス拒否。読み取り専用の承認付き実行で成功した。
+- 現在の保存処理を再読し、GitHubへの認証・原子的コミット・非強制の参照更新・公開状態確認の実装を照合。実サービスへの認証付き保存は模擬テストだけでは完了としない。
+- 同じ待機条件が継続：トークン設定と検証用ブランチの明示許可について返答なし。拒否されたブランチ作成は再試行せず、Goalは未完了のまま維持する。次はユーザーの返答に従って実接続・実保存を確認する。
 
 ### 2026-09-18：GitHubへの初回配置・公開確認
 
