@@ -3,6 +3,9 @@
 楽曲情報を手動で編集し、静的なウェブサイトを生成するプロジェクトです。
 収録データはゲーム等で確認しながら修正してください。
 
+- [公開サイト](https://shigre-fun.github.io/garupa-song-atlas/)
+- [スマホから楽曲を追加する管理ページ](https://shigre-fun.github.io/garupa-song-atlas/admin/)
+
 ## 最初の準備
 
 Node.js 22以上をインストールし、このフォルダーで `npm install` を実行します。

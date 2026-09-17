@@ -1,6 +1,8 @@
 # スマホから楽曲を追加する
 
-公開サイトのURLの末尾に `admin/` を付けて開きます。例：`https://ユーザー名.github.io/garupa-song-atlas/admin/`。
+[管理ページを開く](https://shigre-fun.github.io/garupa-song-atlas/admin/)。スマホのブラウザーでブックマークして使えます。
+
+保存先は所有者 `shigre-fun`、リポジトリ `garupa-song-atlas`、ブランチ `main` です。公開サイトから開くと自動設定されます。
 
 ## 最初の接続
 
