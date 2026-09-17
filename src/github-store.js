@@ -23,7 +23,7 @@ export function repositorySettings(input) {
 
 // トークンはこのインスタンスのメモリー内だけに置く。保存先はapi.github.comに固定。
 export class GitHubStore {
-  constructor(settings, token, fetcher = fetch) {
+  constructor(settings, token, fetcher = globalThis.fetch.bind(globalThis)) {
     this.settings = repositorySettings(settings);
     if (!token.trim())
       throw new Error("GitHubのアクセストークンを入力してください。");
@@ -52,8 +52,8 @@ export class GitHubStore {
       throw new Error(
         (error?.name === "TimeoutError" || error?.name === "AbortError"
           ? "GitHubへの接続が時間切れになりました。"
-          : "GitHubへの通信に失敗しました。ブラウザーやネットワークで通信が制限されている可能性があります。") +
-          " Chrome・Safari・Edge等の通常のブラウザーでもお試しください。接続用トークン欄は処理後に消去されます。楽曲の入力は保持されています。保存を再試行すると、同じ送信が保存済みか確認します。",
+          : "GitHubへの通信を開始または完了できませんでした。") +
+          " 接続用トークン欄は処理後に消去されます。楽曲の入力は保持されています。保存を再試行すると、同じ送信が保存済みか確認します。",
       );
     }
     if (!response.ok) {

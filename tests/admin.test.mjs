@@ -6,6 +6,19 @@ import { validateSong } from "../src/song-schema.js";
 import { renderDetail, renderList } from "../src/views.js";
 
 const submissionId = "test-submission-00000001";
+
+test("default browser fetch uses the global receiver", async (t) => {
+  // ブラウザーのfetchはGitHubStoreをthisとして呼ぶとIllegal invocationになる。
+  t.mock.method(globalThis, "fetch", function () {
+    if (this !== globalThis) throw new TypeError("Illegal invocation");
+    return Promise.resolve(new Response("{}", { status: 401 }));
+  });
+  const store = new GitHubStore(
+    { owner: "test-owner", repo: "song-atlas", branch: "main" },
+    "invalid-test-token",
+  );
+  await assert.rejects(store.connect(), (error) => error.status === 401);
+});
 const draft = {
   id: 1,
   title: "テストの新曲",
