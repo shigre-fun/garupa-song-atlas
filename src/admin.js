@@ -156,15 +156,19 @@ connection.addEventListener("submit", async (event) => {
     store = candidate;
     storageWrite(settingsKey, checked);
     connectionStatus.textContent = `${checked.owner}/${checked.repo}（${checked.branch}）に接続しました。`;
+    connectionStatus.className = "message success";
     document.querySelector("#disconnect").hidden = false;
     button.hidden = true;
     for (const element of connection.elements)
       if (element.name) element.disabled = true;
   } catch (error) {
     connectionStatus.textContent = error.message;
+    connectionStatus.className = "message error";
   } finally {
     connection.elements.token.value = "";
     button.disabled = false;
+    connectionStatus.focus();
+    connectionStatus.scrollIntoView({ block: "center" });
   }
 });
 document.querySelector("#disconnect").addEventListener("click", () => {

@@ -29,9 +29,6 @@
       >
       <section class="card" aria-labelledby="connection-title">
         <h2 id="connection-title">1. 保存先に接続</h2>
-        <p id="connection-status" role="status">
-          未接続です。入力は接続前から始められます。
-        </p>
         <form id="connection-form">
           <div class="fields">
             <label
@@ -77,6 +74,9 @@
               接続を解除</button
             ><a href="#setup-help">初回の接続方法</a>
           </div>
+          <p id="connection-status" class="message" role="status" tabindex="-1">
+            未接続です。入力は接続前から始められます。
+          </p>
         </form>
       </section>
       <form id="song-form">

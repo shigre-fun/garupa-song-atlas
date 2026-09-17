@@ -48,9 +48,12 @@ export class GitHubStore {
         },
         ...(body ? { body: JSON.stringify(body) } : {}),
       });
-    } catch {
+    } catch (error) {
       throw new Error(
-        "通信を確認できませんでした。入力は保持されています。保存を再試行すると、同じ送信が保存済みか確認します。",
+        (error?.name === "TimeoutError" || error?.name === "AbortError"
+          ? "GitHubへの接続が時間切れになりました。"
+          : "GitHubへの通信に失敗しました。ブラウザーやネットワークで通信が制限されている可能性があります。") +
+          " Chrome・Safari・Edge等の通常のブラウザーでもお試しください。接続用トークン欄は処理後に消去されます。楽曲の入力は保持されています。保存を再試行すると、同じ送信が保存済みか確認します。",
       );
     }
     if (!response.ok) {
