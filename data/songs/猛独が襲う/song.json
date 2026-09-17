@@ -1,0 +1,38 @@
+{
+  "id": 545,
+  "title": "猛独が襲う",
+  "reading": "モウトクカオソウ",
+  "category": "カバー",
+  "band": "MyGO!!!!!",
+  "releaseDate": "2023-09-15T19:00:00.000+09:00",
+  "releaseOrder": 1801,
+  "composer": "一二三",
+  "originalArtist": "一二三 feat.初音ミク",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "もうどくがおそう"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 128
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 278
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 485
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 736
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 834
+    }
+  }
+}

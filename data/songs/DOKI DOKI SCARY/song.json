@@ -1,0 +1,35 @@
+{
+  "id": 643,
+  "title": "DOKI DOKI SCARY",
+  "reading": "トキトキスケアリー",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2024-11-10T15:00:00.000+09:00",
+  "releaseOrder": 65,
+  "composer": "都丸椋太(Elements Garden)",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "dokidokiscary"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 116
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 209
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 441
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 681
+    },
+    "SPECIAL": null
+  }
+}

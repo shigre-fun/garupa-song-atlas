@@ -1,0 +1,35 @@
+{
+  "id": 369,
+  "title": "ぼなぺてぃーと♡Ｓ",
+  "reading": "ホナヘティートエス",
+  "category": "エクストラ",
+  "band": "ハロー、ハッピーワールド！×白上フブキ",
+  "releaseDate": "2021-10-23T15:00:00.000+09:00",
+  "releaseOrder": 2502,
+  "composer": "y0c1e",
+  "originalArtist": "ブレンド・A",
+  "originalWork": "アニメ「ブレンド・S」",
+  "live3d": null,
+  "aliases": [
+    "ぼなぺてぃーとs"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 118
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 227
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 447
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 684
+    },
+    "SPECIAL": null
+  }
+}

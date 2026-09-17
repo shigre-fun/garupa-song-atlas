@@ -1,0 +1,35 @@
+{
+  "id": 80,
+  "title": "す、好きなんかじゃない！",
+  "reading": "ススキナンカシャナイ",
+  "category": "オリジナル",
+  "band": "市ヶ谷有咲",
+  "releaseDate": "2017-11-06T12:00:00.000+09:00",
+  "releaseOrder": 154,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "すすきなんかじゃない"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 133
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 202
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 397
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 606
+    },
+    "SPECIAL": null
+  }
+}

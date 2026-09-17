@@ -1,0 +1,35 @@
+{
+  "id": 144,
+  "title": "ツナグ、ソラモヨウ",
+  "reading": "ツナクソラモヨウ",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2018-09-10T15:00:00.000+09:00",
+  "releaseOrder": 208,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "つなぐそらもよう"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 170
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 275
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 432
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 646
+    },
+    "SPECIAL": null
+  }
+}

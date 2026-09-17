@@ -1,0 +1,38 @@
+{
+  "id": 489,
+  "title": "迷星叫",
+  "reading": "マヨイウタ",
+  "category": "オリジナル",
+  "band": "MyGO!!!!!",
+  "releaseDate": "2023-04-09T20:00:00.000+09:00",
+  "releaseOrder": 801,
+  "composer": "長谷川大介(SUPA LOVE)",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": true,
+  "aliases": [
+    "まよいうた"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 73
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 173
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 311
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 641
+    },
+    "SPECIAL": {
+      "level": 27,
+      "notes": 651
+    }
+  }
+}

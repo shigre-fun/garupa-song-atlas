@@ -1,0 +1,35 @@
+{
+  "id": 317,
+  "title": "夜に駆ける",
+  "reading": "ヨルニカケル",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2021-03-15T17:00:00.000+09:00",
+  "releaseOrder": 1328,
+  "composer": "Ayase",
+  "originalArtist": "YOASOBI",
+  "originalWork": "CM「日本マクドナルド」",
+  "live3d": null,
+  "aliases": [
+    "よるにかける"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 189
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 285
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 482
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 756
+    },
+    "SPECIAL": null
+  }
+}

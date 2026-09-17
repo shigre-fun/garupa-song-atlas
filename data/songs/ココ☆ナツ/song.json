@@ -1,0 +1,35 @@
+{
+  "id": 617,
+  "title": "ココ☆ナツ",
+  "reading": "ココナツ",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2024-06-30T15:00:00.000+09:00",
+  "releaseOrder": 1341,
+  "composer": "前山田 健一",
+  "originalArtist": "ももいろクローバー",
+  "originalWork": "映画「シロメ」",
+  "live3d": null,
+  "aliases": [
+    "ここなつ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 142
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 294
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 495
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 772
+    },
+    "SPECIAL": null
+  }
+}

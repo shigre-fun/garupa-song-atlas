@@ -1,0 +1,35 @@
+{
+  "id": 500,
+  "title": "Angel's Ladder",
+  "reading": "エンシェルスラター",
+  "category": "オリジナル",
+  "band": "Morfonica",
+  "releaseDate": "2023-05-21T15:00:00.000+09:00",
+  "releaseOrder": 615,
+  "composer": "藤田淳平（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "angelsladder"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 152
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 290
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 580
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 869
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": 26,
+  "title": "That Is How I Roll!",
+  "reading": "サットイスハウアイロール",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2017-03-16T00:00:00.000+09:00",
+  "releaseOrder": 201,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": true,
+  "aliases": [
+    "thatishowiroll"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 99
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 224
+    },
+    "HARD": {
+      "level": 18,
+      "notes": 315
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 547
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 706
+    }
+  }
+}

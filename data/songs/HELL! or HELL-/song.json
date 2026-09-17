@@ -1,0 +1,38 @@
+{
+  "id": 359,
+  "title": "HELL! or HELL?",
+  "reading": "ヘルオアヘル",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2021-09-19T15:00:00.000+09:00",
+  "releaseOrder": 712,
+  "composer": "菊田大介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "hellorhell"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 11,
+      "notes": 196
+    },
+    "NORMAL": {
+      "level": 16,
+      "notes": 338
+    },
+    "HARD": {
+      "level": 25,
+      "notes": 598
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 999
+    },
+    "SPECIAL": {
+      "level": 30,
+      "notes": 1196
+    }
+  }
+}

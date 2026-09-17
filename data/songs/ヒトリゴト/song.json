@@ -1,0 +1,35 @@
+{
+  "id": 384,
+  "title": "ヒトリゴト",
+  "reading": "ヒトリコト",
+  "category": "エクストラ",
+  "band": "Pastel＊Palettes×ClariS",
+  "releaseDate": "2021-12-31T15:00:00.000+09:00",
+  "releaseOrder": 2302,
+  "composer": "野村陽一郎",
+  "originalArtist": "ClariS",
+  "originalWork": "アニメ「エロマンガ先生」",
+  "live3d": null,
+  "aliases": [
+    "ひとりごと"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 120
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 256
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 533
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 837
+    },
+    "SPECIAL": null
+  }
+}

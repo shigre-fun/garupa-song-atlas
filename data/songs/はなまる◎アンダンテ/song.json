@@ -1,0 +1,35 @@
+{
+  "id": 34,
+  "title": "はなまる◎アンダンテ",
+  "reading": "ハナマルアンタンテ",
+  "category": "オリジナル",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2017-05-31T15:00:00.000+09:00",
+  "releaseOrder": 303,
+  "composer": "末益涼太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "はなまるあんだんて"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 174
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 246
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 363
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 607
+    },
+    "SPECIAL": null
+  }
+}

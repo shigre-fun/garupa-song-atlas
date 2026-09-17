@@ -1,0 +1,38 @@
+{
+  "id": 606,
+  "title": "V.I.P MONSTER",
+  "reading": "フイアイヒーモンスター",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2024-05-02T15:00:00.000+09:00",
+  "releaseOrder": 727,
+  "composer": "藤田淳平（Elements Garden）/日高勇輝（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "vipmonster"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 124
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 230
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 517
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 921
+    },
+    "SPECIAL": {
+      "level": 29,
+      "notes": 955
+    }
+  }
+}

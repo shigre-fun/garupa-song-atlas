@@ -1,0 +1,35 @@
+{
+  "id": 202,
+  "title": "アニバーサリー",
+  "reading": "アニハーサリー",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2019-06-30T15:00:00.000+09:00",
+  "releaseOrder": 30,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "あにばーさりー"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 160
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 333
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 511
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 698
+    },
+    "SPECIAL": null
+  }
+}

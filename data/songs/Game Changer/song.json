@@ -1,0 +1,38 @@
+{
+  "id": 782,
+  "title": "Game Changer",
+  "reading": "ケームチェンシャー",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2026-03-22T20:00:00.000+09:00",
+  "releaseOrder": 71,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "gamechanger"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 12,
+      "notes": 280
+    },
+    "NORMAL": {
+      "level": 16,
+      "notes": 478
+    },
+    "HARD": {
+      "level": 25,
+      "notes": 830
+    },
+    "EXPERT": {
+      "level": 29,
+      "notes": 1250
+    },
+    "SPECIAL": {
+      "level": 30,
+      "notes": 1400
+    }
+  }
+}

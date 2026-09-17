@@ -1,0 +1,35 @@
+{
+  "id": 259,
+  "title": "chAngE",
+  "reading": "チェンシ",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2020-03-21T15:00:00.000+09:00",
+  "releaseOrder": 1602,
+  "composer": "miwa",
+  "originalArtist": "miwa",
+  "originalWork": "アニメ「BLEACH」",
+  "live3d": null,
+  "aliases": [
+    "change"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 149
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 307
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 482
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 712
+    },
+    "SPECIAL": null
+  }
+}

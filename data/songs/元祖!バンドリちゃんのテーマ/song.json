@@ -1,0 +1,35 @@
+{
+  "id": 740,
+  "title": "元祖！バンドリちゃんのテーマ",
+  "reading": "カンソハントリチャンノテーマ",
+  "category": "オリジナル",
+  "band": "香澄×蘭×彩×友希那×こころ×ましろ×レイヤ×燈×ドロリス×あられ",
+  "releaseDate": "2025-10-02T22:30:00.000+09:00",
+  "releaseOrder": 928,
+  "composer": "藤田淳平（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "がんそばんどりちゃんのてーま"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 130
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 227
+    },
+    "HARD": {
+      "level": 24,
+      "notes": 630
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 974
+    },
+    "SPECIAL": null
+  }
+}

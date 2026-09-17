@@ -1,0 +1,35 @@
+{
+  "id": 655,
+  "title": "シカ色デイズ",
+  "reading": "シカイロテイス",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！×ましろ",
+  "releaseDate": "2024-12-31T15:00:00.000+09:00",
+  "releaseOrder": 1546,
+  "composer": "和賀裕希",
+  "originalArtist": "シカ部",
+  "originalWork": "TVアニメ「しかのこのこのここしたんたん」OP",
+  "live3d": null,
+  "aliases": [
+    "しかいろでいず"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 106
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 171
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 486
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 651
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": 82,
+  "title": "恋は渾沌の隷也",
+  "reading": "コイワカオスノシモへナリ",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2017-11-21T15:00:00.000+09:00",
+  "releaseOrder": 1507,
+  "composer": "田中秀和(MONACA)",
+  "originalArtist": "後ろから這いより隊G",
+  "originalWork": "アニメ「這いよれ!ニャル子さんW」",
+  "live3d": null,
+  "aliases": [
+    "こいはかおすのしもべなり"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 134
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 262
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 641
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 815
+    },
+    "SPECIAL": {
+      "level": 27,
+      "notes": 825
+    }
+  }
+}

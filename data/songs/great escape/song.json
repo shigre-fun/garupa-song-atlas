@@ -1,0 +1,35 @@
+{
+  "id": 54,
+  "title": "great escape",
+  "reading": "クレートエスケーフ",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2017-07-25T15:00:00.000+09:00",
+  "releaseOrder": 1204,
+  "composer": "cinema staff",
+  "originalArtist": "cinema staff",
+  "originalWork": "アニメ「進撃の巨人」",
+  "live3d": null,
+  "aliases": [
+    "greatescape"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 118
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 239
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 445
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 676
+    },
+    "SPECIAL": null
+  }
+}

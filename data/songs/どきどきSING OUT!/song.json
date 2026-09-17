@@ -1,0 +1,35 @@
+{
+  "id": 51,
+  "title": "どきどきSING OUT!",
+  "reading": "トキトキシンクアウト",
+  "category": "オリジナル",
+  "band": "戸山香澄",
+  "releaseDate": "2017-06-05T12:00:00.000+09:00",
+  "releaseOrder": 150,
+  "composer": "藤間仁（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "どきどきsingout"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 133
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 265
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 498
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 605
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 350,
+  "title": "Singing “OURS”",
+  "reading": "シンキンクアワース",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2021-07-04T15:00:00.000+09:00",
+  "releaseOrder": 432,
+  "composer": "竹田祐介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "singingours"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 135
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 216
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 412
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 581
+    },
+    "SPECIAL": null
+  }
+}

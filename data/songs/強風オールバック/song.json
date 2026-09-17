@@ -1,0 +1,35 @@
+{
+  "id": 567,
+  "title": "強風オールバック",
+  "reading": "キョウフウオールハック",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2023-12-26T15:00:00.000+09:00",
+  "releaseOrder": 1542,
+  "composer": "ゆこぴ",
+  "originalArtist": "ゆこぴ feat.歌愛ユキ",
+  "originalWork": "CM「カップヌードル」",
+  "live3d": null,
+  "aliases": [
+    "きょうふうおーるばっく"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 99
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 277
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 473
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 743
+    },
+    "SPECIAL": null
+  }
+}

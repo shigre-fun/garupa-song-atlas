@@ -1,0 +1,35 @@
+{
+  "id": 382,
+  "title": "怪物",
+  "reading": "カイフツ",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2021-11-30T15:00:00.000+09:00",
+  "releaseOrder": 1133,
+  "composer": "Ayase",
+  "originalArtist": "YOASOBI",
+  "originalWork": "アニメ「BEASTARS」",
+  "live3d": null,
+  "aliases": [
+    "かいぶつ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 114
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 208
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 524
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 847
+    },
+    "SPECIAL": null
+  }
+}

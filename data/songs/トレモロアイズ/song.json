@@ -1,0 +1,35 @@
+{
+  "id": 599,
+  "title": "トレモロアイズ",
+  "reading": "トレモロアイス",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2024-03-31T15:00:00.000+09:00",
+  "releaseOrder": 62,
+  "composer": "笠井雄太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "とれもろあいず"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 128
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 212
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 436
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 600
+    },
+    "SPECIAL": null
+  }
+}

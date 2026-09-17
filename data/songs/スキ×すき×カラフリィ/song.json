@@ -1,0 +1,35 @@
+{
+  "id": 723,
+  "title": "スキ×すき×カラフリィ",
+  "reading": "スキスキカラフリィ",
+  "category": "オリジナル",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2025-08-23T15:00:00.000+09:00",
+  "releaseOrder": 336,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "すきすきからふりぃ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 131
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 186
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 437
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 643
+    },
+    "SPECIAL": null
+  }
+}

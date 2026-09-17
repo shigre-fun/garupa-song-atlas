@@ -1,0 +1,35 @@
+{
+  "id": 493,
+  "title": "最強☆ソング",
+  "reading": "サイキョウソンク",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2023-04-29T15:00:00.000+09:00",
+  "releaseOrder": 59,
+  "composer": "HoneyWorks",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "さいきょうそんぐ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 123
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 230
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 446
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 677
+    },
+    "SPECIAL": null
+  }
+}

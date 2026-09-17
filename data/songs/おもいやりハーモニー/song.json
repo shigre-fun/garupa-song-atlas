@@ -1,0 +1,35 @@
+{
+  "id": 421,
+  "title": "おもいやりハーモニー",
+  "reading": "オモイヤリハーモニー",
+  "category": "オリジナル",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2022-05-11T15:00:00.000+09:00",
+  "releaseOrder": 522,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "おもいやりはーもにー"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 129
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 179
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 311
+    },
+    "EXPERT": {
+      "level": 23,
+      "notes": 479
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 558,
+  "title": "覚悟のLiberation",
+  "reading": "カクコノリヘレイション",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2023-12-10T15:00:00.000+09:00",
+  "releaseOrder": 443,
+  "composer": "堀川大翼（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "かくごのliberation"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 113
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 234
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 471
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 701
+    },
+    "SPECIAL": null
+  }
+}

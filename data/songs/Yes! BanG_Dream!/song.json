@@ -1,0 +1,38 @@
+{
+  "id": 1,
+  "title": "Yes! BanG_Dream!",
+  "reading": "イエスハントリ",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2017-03-16T00:00:00.000+09:00",
+  "releaseOrder": 3,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "yesbangdream"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 5,
+      "notes": 63
+    },
+    "NORMAL": {
+      "level": 10,
+      "notes": 153
+    },
+    "HARD": {
+      "level": 17,
+      "notes": 336
+    },
+    "EXPERT": {
+      "level": 22,
+      "notes": 459
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 832
+    }
+  }
+}

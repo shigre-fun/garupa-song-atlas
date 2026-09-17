@@ -1,0 +1,35 @@
+{
+  "id": 612,
+  "title": "Wreath of Brave",
+  "reading": "リースオフフレイフ",
+  "category": "オリジナル",
+  "band": "Morfonica",
+  "releaseDate": "2024-05-21T15:00:00.000+09:00",
+  "releaseOrder": 622,
+  "composer": "日高勇輝（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "wreathofbrave"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 120
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 263
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 512
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 750
+    },
+    "SPECIAL": null
+  }
+}

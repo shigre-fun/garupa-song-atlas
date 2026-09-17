@@ -1,0 +1,35 @@
+{
+  "id": 798,
+  "title": "胡蝶翔る星月夜",
+  "reading": "コチョウカケルホシツキヨ",
+  "category": "オリジナル",
+  "band": "Morfonica",
+  "releaseDate": "2026-05-06T15:00:00.000+09:00",
+  "releaseOrder": 633,
+  "composer": "日高勇輝（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "こちょうかけるほしづきよ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 105
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 191
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 494
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 671
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 625,
+  "title": "花咲く未来に",
+  "reading": "ハナサクミライニ",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2024-09-18T21:00:00.000+09:00",
+  "releaseOrder": 64,
+  "composer": "近藤世真（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "はなさくみらいに"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 109
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 237
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 526
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 712
+    },
+    "SPECIAL": null
+  }
+}

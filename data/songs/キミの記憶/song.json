@@ -1,0 +1,35 @@
+{
+  "id": 133,
+  "title": "キミの記憶",
+  "reading": "キミノキオク",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2018-07-20T15:00:00.000+09:00",
+  "releaseOrder": 1413,
+  "composer": "目黒将司",
+  "originalArtist": "川村ゆみ",
+  "originalWork": "ゲーム「ペルソナ3」",
+  "live3d": null,
+  "aliases": [
+    "きみのきおく"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 104
+    },
+    "NORMAL": {
+      "level": 11,
+      "notes": 180
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 447
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 651
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 554,
+  "title": "Chu Chueen!",
+  "reading": "チュチュイーン",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2023-11-20T15:00:00.000+09:00",
+  "releaseOrder": 61,
+  "composer": "日高勇輝（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "chucheen"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 188
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 337
+    },
+    "HARD": {
+      "level": 24,
+      "notes": 622
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 947
+    },
+    "SPECIAL": null
+  }
+}

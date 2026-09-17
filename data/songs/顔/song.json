@@ -1,0 +1,35 @@
+{
+  "id": 685,
+  "title": "顔",
+  "reading": "カオ",
+  "category": "オリジナル",
+  "band": "Ave Mujica",
+  "releaseDate": "2025-03-31T15:00:00.000+09:00",
+  "releaseOrder": 857,
+  "composer": "木下龍平(SUPA LOVE)、Diggy-MO’",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "かお"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 111
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 192
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 518
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 786
+    },
+    "SPECIAL": null
+  }
+}

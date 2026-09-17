@@ -1,0 +1,35 @@
+{
+  "id": 731,
+  "title": "恋愛サーキュレーション",
+  "reading": "レンアイサーキュレーション",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2025-09-13T15:00:00.000+09:00",
+  "releaseOrder": 1348,
+  "composer": "神前 暁（MONACA）",
+  "originalArtist": "千石撫子（花澤香菜）",
+  "originalWork": "TVアニメ「化物語」OP",
+  "live3d": null,
+  "aliases": [
+    "れんあいさーきゅれーしょん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 95
+    },
+    "NORMAL": {
+      "level": 11,
+      "notes": 147
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 394
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 598
+    },
+    "SPECIAL": null
+  }
+}

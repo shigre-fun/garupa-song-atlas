@@ -1,0 +1,38 @@
+{
+  "id": 470,
+  "title": "IGNITE GLOW",
+  "reading": "イクナイトクロウ",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2023-01-21T15:00:00.000+09:00",
+  "releaseOrder": 225,
+  "composer": "都丸椋太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "igniteglow"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 110
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 226
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 481
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 808
+    },
+    "SPECIAL": {
+      "level": 28,
+      "notes": 920
+    }
+  }
+}

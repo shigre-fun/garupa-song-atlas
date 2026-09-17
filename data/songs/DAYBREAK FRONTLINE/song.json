@@ -1,0 +1,35 @@
+{
+  "id": 322,
+  "title": "DAYBREAK FRONTLINE",
+  "reading": "テイフレイクフロントライン",
+  "category": "カバー",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2021-03-20T15:00:00.000+09:00",
+  "releaseOrder": 1707,
+  "composer": "Orangestar",
+  "originalArtist": "Orangestar feat.IA",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "daybreakfrontline"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 136
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 279
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 473
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 802
+    },
+    "SPECIAL": null
+  }
+}

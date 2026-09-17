@@ -1,0 +1,35 @@
+{
+  "id": 707,
+  "title": "つよがるガール feat. もっさ",
+  "reading": "ツヨカルカールフィーチャリンクモッサ",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2025-07-08T21:00:00.000+09:00",
+  "releaseOrder": 1150,
+  "composer": "ぼっちぼろまる",
+  "originalArtist": "ぼっちぼろまる",
+  "originalWork": "TVアニメ「負けヒロインが多すぎる！」OP",
+  "live3d": null,
+  "aliases": [
+    "つよがるがーるfeatもっさ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 156
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 200
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 660
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 843
+    },
+    "SPECIAL": null
+  }
+}

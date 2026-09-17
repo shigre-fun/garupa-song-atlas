@@ -1,0 +1,35 @@
+{
+  "id": 737,
+  "title": "Mas?uerade Rhapsody Re?uest",
+  "reading": "マスカレイトラフソティリクエスト",
+  "category": "オリジナル",
+  "band": "Ave Mujica",
+  "releaseDate": "2025-09-19T15:00:00.000+09:00",
+  "releaseOrder": 860,
+  "composer": "あらケン(SUPA LOVE)",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "masqueraderhapsodyrequest"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 116
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 236
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 454
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 822
+    },
+    "SPECIAL": null
+  }
+}

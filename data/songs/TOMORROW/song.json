@@ -1,0 +1,35 @@
+{
+  "id": 363,
+  "title": "TOMORROW",
+  "reading": "トゥモロウ",
+  "category": "エクストラ",
+  "band": "ハロー、ハッピーワールド！×Machico",
+  "releaseDate": "2021-09-30T15:00:00.000+09:00",
+  "releaseOrder": 2501,
+  "composer": "岡野裕次郎(TRYTONELABO)",
+  "originalArtist": "Machico",
+  "originalWork": "アニメ「この素晴らしい世界に祝福を！2」",
+  "live3d": null,
+  "aliases": [
+    "tomorrow"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 99
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 166
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 394
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 655
+    },
+    "SPECIAL": null
+  }
+}

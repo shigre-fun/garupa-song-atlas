@@ -1,0 +1,35 @@
+{
+  "id": 260,
+  "title": "ルカルカ★ナイトフィーバー",
+  "reading": "ルカルカナイトフィーハー",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2020-03-28T15:00:00.000+09:00",
+  "releaseOrder": 1323,
+  "composer": "SAM(samfree)",
+  "originalArtist": "samfree feat.巡音ルカ",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "るかるかないとふぃーばー"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 171
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 338
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 584
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 799
+    },
+    "SPECIAL": null
+  }
+}

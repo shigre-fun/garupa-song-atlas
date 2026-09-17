@@ -1,0 +1,35 @@
+{
+  "id": 673,
+  "title": "はいよろこんで",
+  "reading": "ハイヨロコンテ",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2025-03-15T18:00:00.000+09:00",
+  "releaseOrder": 1547,
+  "composer": "こっちのけんと / GRP",
+  "originalArtist": "こっちのけんと",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "はいよろこんで"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 114
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 183
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 479
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 717
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 795,
+  "title": "ランデヴー",
+  "reading": "ランテウー",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2026-05-03T15:00:00.000+09:00",
+  "releaseOrder": 1248,
+  "composer": "佐々木 想",
+  "originalArtist": "シャイトープ",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "らんでゔー"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 108
+    },
+    "NORMAL": {
+      "level": 11,
+      "notes": 175
+    },
+    "HARD": {
+      "level": 18,
+      "notes": 395
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 612
+    },
+    "SPECIAL": null
+  }
+}

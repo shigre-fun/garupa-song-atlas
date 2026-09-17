@@ -1,0 +1,38 @@
+{
+  "id": 3,
+  "title": "ぽっぴん’しゃっふる",
+  "reading": "ホッヒンシャッフル",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2017-03-16T00:00:00.000+09:00",
+  "releaseOrder": 5,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "ぽっぴんしゃっふる"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 124
+    },
+    "NORMAL": {
+      "level": 11,
+      "notes": 207
+    },
+    "HARD": {
+      "level": 18,
+      "notes": 443
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 651
+    },
+    "SPECIAL": {
+      "level": 27,
+      "notes": 979
+    }
+  }
+}

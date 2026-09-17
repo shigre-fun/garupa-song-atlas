@@ -1,0 +1,35 @@
+{
+  "id": 504,
+  "title": "キミを れっつ・はぶ・ふぁん♪",
+  "reading": "キミヲレッツハフファン",
+  "category": "オリジナル",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2023-06-10T15:00:00.000+09:00",
+  "releaseOrder": 526,
+  "composer": "下田晃太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "きみをれっつはぶふぁん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 10,
+      "notes": 173
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 287
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 464
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 739
+    },
+    "SPECIAL": null
+  }
+}

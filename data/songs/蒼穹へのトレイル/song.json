@@ -1,0 +1,35 @@
+{
+  "id": 581,
+  "title": "蒼穹へのトレイル",
+  "reading": "ソウキュウヘノトレイル",
+  "category": "オリジナル",
+  "band": "Morfonica",
+  "releaseDate": "2024-02-29T15:00:00.000+09:00",
+  "releaseOrder": 618,
+  "composer": "近藤世真（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "そうきゅうへのとれいる"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 154
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 259
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 424
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 785
+    },
+    "SPECIAL": null
+  }
+}

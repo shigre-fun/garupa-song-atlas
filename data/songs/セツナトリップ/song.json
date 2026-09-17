@@ -1,0 +1,38 @@
+{
+  "id": 296,
+  "title": "セツナトリップ",
+  "reading": "セツナトリップ",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2020-09-30T15:00:00.000+09:00",
+  "releaseOrder": 1129,
+  "composer": "Last Note.",
+  "originalArtist": "Last Note. feat.GUMI",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "せつなとりっぷ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 188
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 304
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 554
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 1034
+    },
+    "SPECIAL": {
+      "level": 30,
+      "notes": 1087
+    }
+  }
+}

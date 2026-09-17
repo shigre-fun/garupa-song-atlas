@@ -1,0 +1,35 @@
+{
+  "id": 448,
+  "title": "Invincible Fighter",
+  "reading": "インヒンシフルファイター",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2022-09-25T22:00:00.000+09:00",
+  "releaseOrder": 720,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "invinciblefighter"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 111
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 246
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 521
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 856
+    },
+    "SPECIAL": null
+  }
+}

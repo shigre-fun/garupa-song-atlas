@@ -1,0 +1,35 @@
+{
+  "id": 327,
+  "title": "Sonorous",
+  "reading": "ソノーラス",
+  "category": "オリジナル",
+  "band": "Morfonica",
+  "releaseDate": "2021-04-20T15:00:00.000+09:00",
+  "releaseOrder": 606,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "sonorous"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 124
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 231
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 479
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 668
+    },
+    "SPECIAL": null
+  }
+}

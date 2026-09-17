@@ -1,0 +1,38 @@
+{
+  "id": 395,
+  "title": "Sparkling Daydream",
+  "reading": "スハークリンクテイトリーム",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2022-03-18T15:00:00.000+09:00",
+  "releaseOrder": 1332,
+  "composer": "ZAQ",
+  "originalArtist": "ZAQ",
+  "originalWork": "アニメ「中二病でも恋がしたい!」",
+  "live3d": null,
+  "aliases": [
+    "sparklingdaydream"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 113
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 212
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 446
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 585
+    },
+    "SPECIAL": {
+      "level": 27,
+      "notes": 774
+    }
+  }
+}

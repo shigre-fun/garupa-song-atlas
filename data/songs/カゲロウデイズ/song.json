@@ -1,0 +1,35 @@
+{
+  "id": 632,
+  "title": "カゲロウデイズ",
+  "reading": "カケロウテイス",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2024-09-16T15:00:00.000+09:00",
+  "releaseOrder": 1242,
+  "composer": "じん（自然の敵Ｐ）",
+  "originalArtist": "じん",
+  "originalWork": "TVアニメ「メカクシティアクターズ」第4話挿入歌（じん ft. 田口囁一による別歌唱版）",
+  "live3d": null,
+  "aliases": [
+    "かげろうでいず"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 115
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 235
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 577
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 812
+    },
+    "SPECIAL": null
+  }
+}

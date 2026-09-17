@@ -1,0 +1,35 @@
+{
+  "id": 46,
+  "title": "Little Busters!",
+  "reading": "リトルハスタース",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2017-04-24T15:00:00.000+09:00",
+  "releaseOrder": 1104,
+  "composer": "麻枝准",
+  "originalArtist": "Rita",
+  "originalWork": "ゲーム「リトルバスターズ!」",
+  "live3d": null,
+  "aliases": [
+    "littlebusters"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 71
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 152
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 370
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 575
+    },
+    "SPECIAL": null
+  }
+}

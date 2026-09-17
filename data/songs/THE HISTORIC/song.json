@@ -1,0 +1,35 @@
+{
+  "id": 416,
+  "title": "THE HISTORIC...",
+  "reading": "サヒストリック",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2022-04-20T15:00:00.000+09:00",
+  "releaseOrder": 435,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "thehistoric"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 171
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 307
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 581
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 816
+    },
+    "SPECIAL": null
+  }
+}

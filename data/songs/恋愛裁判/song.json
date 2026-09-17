@@ -1,0 +1,35 @@
+{
+  "id": 201,
+  "title": "恋愛裁判",
+  "reading": "レンアイサイハン",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2019-06-20T15:00:00.000+09:00",
+  "releaseOrder": 1519,
+  "composer": "40mP",
+  "originalArtist": "40mP feat.初音ミク",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "れんあいさいばん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 153
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 252
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 409
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 640
+    },
+    "SPECIAL": null
+  }
+}

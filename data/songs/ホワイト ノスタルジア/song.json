@@ -1,0 +1,35 @@
+{
+  "id": 645,
+  "title": "ホワイト ノスタルジア",
+  "reading": "ホワイトノスタルシア",
+  "category": "オリジナル",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2024-11-30T15:00:00.000+09:00",
+  "releaseOrder": 332,
+  "composer": "菊田大介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "ほわいとのすたるじあ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 96
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 177
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 379
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 542
+    },
+    "SPECIAL": null
+  }
+}

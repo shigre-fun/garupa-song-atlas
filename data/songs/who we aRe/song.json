@@ -1,0 +1,35 @@
+{
+  "id": 802,
+  "title": "who we aRe",
+  "reading": "フーウィーアー",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2026-06-10T15:00:00.000+09:00",
+  "releaseOrder": 459,
+  "composer": "藤田淳平（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "whoweare"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 120
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 222
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 534
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 795
+    },
+    "SPECIAL": null
+  }
+}

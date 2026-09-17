@@ -1,0 +1,35 @@
+{
+  "id": 652,
+  "title": "WELCOME TO PANDEMONIUM",
+  "reading": "ウェルカムトゥハンテモニウム",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2024-12-28T15:00:00.000+09:00",
+  "releaseOrder": 730,
+  "composer": "藤田淳平（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "うぇるかむとぅぱんでもにうむ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 125
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 210
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 514
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 756
+    },
+    "SPECIAL": null
+  }
+}

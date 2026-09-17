@@ -1,0 +1,35 @@
+{
+  "id": 262,
+  "title": "うぃーきゃん☆フレフレっ！",
+  "reading": "ウィーキャンフレフレ",
+  "category": "オリジナル",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2020-03-31T15:00:00.000+09:00",
+  "releaseOrder": 516,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "うぃーきゃんふれふれ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 164
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 289
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 415
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 720
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 497,
+  "title": "チューリングラブ",
+  "reading": "チューリンクラフ",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！×蘭",
+  "releaseDate": "2023-05-01T15:00:00.000+09:00",
+  "releaseOrder": 1539,
+  "composer": "ナユタセイジ",
+  "originalArtist": "ナナヲアカリ feat. Sou",
+  "originalWork": "アニメ「理系が恋に落ちたので証明してみた。」",
+  "live3d": null,
+  "aliases": [
+    "ちゅーりんぐらぶ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 101
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 211
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 479
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 797
+    },
+    "SPECIAL": null
+  }
+}

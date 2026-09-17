@@ -1,0 +1,38 @@
+{
+  "id": 232,
+  "title": "イニシャル",
+  "reading": "イニシャル",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2019-12-12T21:00:00.000+09:00",
+  "releaseOrder": 36,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "いにしゃる"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 10,
+      "notes": 172
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 228
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 436
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 682
+    },
+    "SPECIAL": {
+      "level": 28,
+      "notes": 802
+    }
+  }
+}

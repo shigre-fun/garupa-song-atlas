@@ -1,0 +1,35 @@
+{
+  "id": 303,
+  "title": "TITLE IDOL",
+  "reading": "タイトルアイトル",
+  "category": "オリジナル",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2020-12-13T15:00:00.000+09:00",
+  "releaseOrder": 318,
+  "composer": "笠井雄太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "titleidol"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 154
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 256
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 446
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 658
+    },
+    "SPECIAL": null
+  }
+}

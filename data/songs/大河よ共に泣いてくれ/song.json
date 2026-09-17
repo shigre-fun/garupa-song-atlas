@@ -1,0 +1,35 @@
+{
+  "id": 343,
+  "title": "大河よ共に泣いてくれ",
+  "reading": "タイカヨトモニナイテクレ",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2021-06-20T15:00:00.000+09:00",
+  "releaseOrder": 1132,
+  "composer": "加藤裕介",
+  "originalArtist": "フランシュシュ",
+  "originalWork": "アニメ「ゾンビランドサガ」",
+  "live3d": null,
+  "aliases": [
+    "たいがよともにないてくれ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 157
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 250
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 436
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 695
+    },
+    "SPECIAL": null
+  }
+}

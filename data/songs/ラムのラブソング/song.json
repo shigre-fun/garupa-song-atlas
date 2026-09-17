@@ -1,0 +1,35 @@
+{
+  "id": 336,
+  "title": "ラムのラブソング",
+  "reading": "ラムノラフソンク",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2021-05-05T15:00:00.000+09:00",
+  "releaseOrder": 1329,
+  "composer": "小林　泉美",
+  "originalArtist": "松谷祐子",
+  "originalWork": "アニメ「うる星やつら」",
+  "live3d": null,
+  "aliases": [
+    "らむのらぶそんぐ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 162
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 279
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 449
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 641
+    },
+    "SPECIAL": null
+  }
+}

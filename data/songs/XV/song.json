@@ -1,0 +1,35 @@
+{
+  "id": 793,
+  "title": "XV",
+  "reading": "フィフティーン",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2026-05-01T15:00:00.000+09:00",
+  "releaseOrder": 458,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "XV"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 75
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 160
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 457
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 681
+    },
+    "SPECIAL": null
+  }
+}

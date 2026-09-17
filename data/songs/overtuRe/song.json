@@ -1,0 +1,35 @@
+{
+  "id": 337,
+  "title": "overtuRe",
+  "reading": "オーハチュアー",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2021-05-07T15:00:00.000+09:00",
+  "releaseOrder": 431,
+  "composer": "都丸椋太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "overture"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 170
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 244
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 562
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 810
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 242,
+  "title": "Wonderful Sweet!",
+  "reading": "ワンタフルスイート",
+  "category": "オリジナル",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2020-01-31T15:00:00.000+09:00",
+  "releaseOrder": 315,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "wonderfulsweet"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 10,
+      "notes": 198
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 286
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 492
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 792
+    },
+    "SPECIAL": null
+  }
+}

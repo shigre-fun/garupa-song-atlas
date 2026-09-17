@@ -1,0 +1,35 @@
+{
+  "id": 523,
+  "title": "ボクらの夏's☆ショーたいむっ！！",
+  "reading": "ホクラノナッツショータイムッ",
+  "category": "オリジナル",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2023-08-29T21:00:00.000+09:00",
+  "releaseOrder": 527,
+  "composer": "Seonoo Kim（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "ぼくらのなっつしょーたいむっ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 121
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 243
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 446
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 729
+    },
+    "SPECIAL": null
+  }
+}

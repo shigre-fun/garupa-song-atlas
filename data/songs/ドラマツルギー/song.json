@@ -1,0 +1,35 @@
+{
+  "id": 308,
+  "title": "ドラマツルギー",
+  "reading": "トラマツルキー",
+  "category": "カバー",
+  "band": "Afterglow×香澄",
+  "releaseDate": "2021-01-01T15:00:00.000+09:00",
+  "releaseOrder": 1222,
+  "composer": "Eve",
+  "originalArtist": "Eve",
+  "originalWork": "ドラマ「フォローされたら終わり」",
+  "live3d": null,
+  "aliases": [
+    "どらまつるぎー"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 170
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 291
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 483
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 844
+    },
+    "SPECIAL": null
+  }
+}

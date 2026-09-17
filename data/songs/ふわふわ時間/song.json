@@ -1,0 +1,38 @@
+{
+  "id": 59,
+  "title": "ふわふわ時間",
+  "reading": "フワフワタイム",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2017-07-31T15:00:00.000+09:00",
+  "releaseOrder": 1305,
+  "composer": "前澤寛之",
+  "originalArtist": "桜高軽音部",
+  "originalWork": "アニメ「けいおん!」",
+  "live3d": null,
+  "aliases": [
+    "ふわふわたいむ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 104
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 195
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 384
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 544
+    },
+    "SPECIAL": {
+      "level": 24,
+      "notes": 541
+    }
+  }
+}

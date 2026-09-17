@@ -1,0 +1,35 @@
+{
+  "id": 315,
+  "title": "Make it!",
+  "reading": "メイクイット",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2021-02-28T15:00:00.000+09:00",
+  "releaseOrder": 1327,
+  "composer": "渡辺徹",
+  "originalArtist": "i☆Ris",
+  "originalWork": "アニメ「プリパラ」",
+  "live3d": null,
+  "aliases": [
+    "makeit"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 163
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 300
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 522
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 676
+    },
+    "SPECIAL": null
+  }
+}

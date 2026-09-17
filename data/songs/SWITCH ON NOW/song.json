@@ -1,0 +1,35 @@
+{
+  "id": 425,
+  "title": "SWITCH ON NOW",
+  "reading": "スイッチオンナウ",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2022-06-18T21:00:00.000+09:00",
+  "releaseOrder": 222,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "switchonnow"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 130
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 268
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 510
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 917
+    },
+    "SPECIAL": null
+  }
+}

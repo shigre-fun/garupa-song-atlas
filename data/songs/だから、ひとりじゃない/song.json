@@ -1,0 +1,35 @@
+{
+  "id": 454,
+  "title": "だから、ひとりじゃない",
+  "reading": "タカラヒトリシャナイ",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2024-08-10T15:00:00.000+09:00",
+  "releaseOrder": 1342,
+  "composer": "Carlos K.・加賀爪 タッド",
+  "originalArtist": "Little Glee Monster",
+  "originalWork": "TVアニメ「僕のヒーローアカデミア 2期」ED",
+  "live3d": null,
+  "aliases": [
+    "だからひとりじゃない"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 149
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 235
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 471
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 620
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 159,
+  "title": "BRAVE JEWEL",
+  "reading": "フレイフシュエル",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2018-12-12T15:00:00.000+09:00",
+  "releaseOrder": 416,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "bravejewel"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 136
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 255
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 486
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 747
+    },
+    "SPECIAL": null
+  }
+}

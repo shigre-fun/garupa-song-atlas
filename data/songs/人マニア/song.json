@@ -1,0 +1,35 @@
+{
+  "id": 629,
+  "title": "人マニア",
+  "reading": "ヒトマニア",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2024-09-13T15:00:00.000+09:00",
+  "releaseOrder": 1444,
+  "composer": "原口 沙輔",
+  "originalArtist": "原口沙輔",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "ひとまにあ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 142
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 223
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 520
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 881
+    },
+    "SPECIAL": null
+  }
+}

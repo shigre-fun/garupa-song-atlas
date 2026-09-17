@@ -1,0 +1,35 @@
+{
+  "id": 780,
+  "title": "許婚っきゅん",
+  "reading": "イイナスッキュン",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2026-03-20T15:00:00.000+09:00",
+  "releaseOrder": 1553,
+  "composer": "真部 脩一",
+  "originalArtist": "ano",
+  "originalWork": "TVアニメ「らんま1/2」OP",
+  "live3d": null,
+  "aliases": [
+    "いいなずっきゅん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 132
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 282
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 500
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 777
+    },
+    "SPECIAL": null
+  }
+}

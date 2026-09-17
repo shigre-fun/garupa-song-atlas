@@ -1,0 +1,35 @@
+{
+  "id": 461,
+  "title": "スターナイトスノウ",
+  "reading": "スターナイトスノウ",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2022-12-24T15:00:00.000+09:00",
+  "releaseOrder": 1135,
+  "composer": "Orangestar",
+  "originalArtist": "n-buna×Orangestar feat.初音ミク",
+  "originalWork": "イベント「SNOW MIKU 2017」",
+  "live3d": null,
+  "aliases": [
+    "すたーないとすのう"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 103
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 184
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 417
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 723
+    },
+    "SPECIAL": null
+  }
+}

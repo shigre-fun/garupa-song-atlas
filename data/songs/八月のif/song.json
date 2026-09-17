@@ -1,0 +1,35 @@
+{
+  "id": 64,
+  "title": "八月のif",
+  "reading": "ハチカツノイフ",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2017-08-19T15:00:00.000+09:00",
+  "releaseOrder": 13,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "はちがつのif"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 142
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 268
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 444
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 609
+    },
+    "SPECIAL": null
+  }
+}

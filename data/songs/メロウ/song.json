@@ -1,0 +1,35 @@
+{
+  "id": 775,
+  "title": "メロウ",
+  "reading": "メロウ",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2026-03-15T15:00:00.000+09:00",
+  "releaseOrder": 1627,
+  "composer": "須田景凪",
+  "originalArtist": "須田景凪",
+  "originalWork": "TVアニメ「スキップとローファー」OP",
+  "live3d": null,
+  "aliases": [
+    "めろう"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 107
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 192
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 375
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 524
+    },
+    "SPECIAL": null
+  }
+}

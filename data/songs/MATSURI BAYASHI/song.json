@@ -1,0 +1,35 @@
+{
+  "id": 774,
+  "title": "MATSURI BAYASHI",
+  "reading": "マツリハヤシ",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2026-03-13T18:00:00.000+09:00",
+  "releaseOrder": 1155,
+  "composer": "寺中友将",
+  "originalArtist": "KEYTALK",
+  "originalWork": "フジテレビ系「魁!ミュージック」6月度マンスリーアーティスト",
+  "live3d": null,
+  "aliases": [
+    "matsuribayashi"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 85
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 144
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 406
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 675
+    },
+    "SPECIAL": null
+  }
+}

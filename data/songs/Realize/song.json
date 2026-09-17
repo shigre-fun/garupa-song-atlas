@@ -1,0 +1,38 @@
+{
+  "id": 406,
+  "title": "Realize",
+  "reading": "リアライス",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2022-03-17T15:00:00.000+09:00",
+  "releaseOrder": 1433,
+  "composer": "篠崎あやと、橘 亮祐",
+  "originalArtist": "鈴木このみ",
+  "originalWork": "アニメ「Re:ゼロから始める異世界生活2nd season」",
+  "live3d": null,
+  "aliases": [
+    "realize"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 126
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 246
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 530
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 909
+    },
+    "SPECIAL": {
+      "level": 28,
+      "notes": 945
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 490,
+  "title": "新しい季節に",
+  "reading": "アタラシイキセツニ",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2023-04-18T15:00:00.000+09:00",
+  "releaseOrder": 58,
+  "composer": "菊田大介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "あたらしいきせつに"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 135
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 242
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 391
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 557
+    },
+    "SPECIAL": null
+  }
+}

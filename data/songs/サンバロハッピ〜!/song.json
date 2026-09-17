@@ -1,0 +1,35 @@
+{
+  "id": 607,
+  "title": "サンバロハッピ〜！",
+  "reading": "サンハロハッヒー",
+  "category": "オリジナル",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2024-05-03T15:00:00.000+09:00",
+  "releaseOrder": 531,
+  "composer": "藤間仁（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "さんばろはっぴー"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 102
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 178
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 424
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 613
+    },
+    "SPECIAL": null
+  }
+}

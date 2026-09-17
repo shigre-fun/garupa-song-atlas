@@ -1,0 +1,35 @@
+{
+  "id": 550,
+  "title": "裸の勇者",
+  "reading": "ハタカノユウシャ",
+  "category": "カバー",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2023-10-20T15:00:00.000+09:00",
+  "releaseOrder": 1717,
+  "composer": "Vaundy",
+  "originalArtist": "Vaundy",
+  "originalWork": "アニメ「王様ランキング」",
+  "live3d": null,
+  "aliases": [
+    "はだかのゆうしゃ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 106
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 258
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 537
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 863
+    },
+    "SPECIAL": null
+  }
+}

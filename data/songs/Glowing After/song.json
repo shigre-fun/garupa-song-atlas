@@ -1,0 +1,35 @@
+{
+  "id": 611,
+  "title": "Glowing After",
+  "reading": "クローインクアフター",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2024-05-10T15:00:00.000+09:00",
+  "releaseOrder": 231,
+  "composer": "近藤世真（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "glowingafter"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 105
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 224
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 456
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 700
+    },
+    "SPECIAL": null
+  }
+}

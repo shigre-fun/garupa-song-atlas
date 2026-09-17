@@ -1,0 +1,38 @@
+{
+  "id": 387,
+  "title": "曇天",
+  "reading": "トンテン",
+  "category": "カバー",
+  "band": "Roselia×レイヤ",
+  "releaseDate": "2022-01-02T15:00:00.000+09:00",
+  "releaseOrder": 1431,
+  "composer": "氏原 ワタル",
+  "originalArtist": "DOES",
+  "originalWork": "アニメ「銀魂」",
+  "live3d": null,
+  "aliases": [
+    "どんてん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 130
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 239
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 570
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 1058
+    },
+    "SPECIAL": {
+      "level": 28,
+      "notes": 1112
+    }
+  }
+}

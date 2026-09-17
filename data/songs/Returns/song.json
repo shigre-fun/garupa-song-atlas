@@ -1,0 +1,35 @@
+{
+  "id": 180,
+  "title": "Returns",
+  "reading": "リターンス",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2019-03-22T15:00:00.000+09:00",
+  "releaseOrder": 27,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "returns"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 140
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 269
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 473
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 698
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": 132,
+  "title": "ハイファイブ∞あどべんちゃっ",
+  "reading": "ハイファイフアトへンチャッ",
+  "category": "オリジナル",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2018-07-10T15:00:00.000+09:00",
+  "releaseOrder": 508,
+  "composer": "笠井雄太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "はいふぁいぶあどべんちゃっ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 203
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 307
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 504
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 853
+    },
+    "SPECIAL": {
+      "level": 25,
+      "notes": 706
+    }
+  }
+}

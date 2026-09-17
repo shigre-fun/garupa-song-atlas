@@ -1,0 +1,35 @@
+{
+  "id": 31,
+  "title": "LOUDER",
+  "reading": "ラウター",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2017-04-05T15:00:00.000+09:00",
+  "releaseOrder": 403,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "louder"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 67
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 180
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 543
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 828
+    },
+    "SPECIAL": null
+  }
+}

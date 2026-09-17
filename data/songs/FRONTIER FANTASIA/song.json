@@ -1,0 +1,35 @@
+{
+  "id": 638,
+  "title": "FRONTIER FANTASIA",
+  "reading": "フロンティアファンタシア",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2024-10-09T15:00:00.000+09:00",
+  "releaseOrder": 449,
+  "composer": "竹田祐介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "frontierfantasia"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 102
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 206
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 425
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 659
+    },
+    "SPECIAL": null
+  }
+}

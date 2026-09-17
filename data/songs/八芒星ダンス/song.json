@@ -1,0 +1,35 @@
+{
+  "id": 682,
+  "title": "八芒星ダンス",
+  "reading": "ハチホウセイタンス",
+  "category": "オリジナル",
+  "band": "Ave Mujica",
+  "releaseDate": "2025-03-28T00:00:00.000+09:00",
+  "releaseOrder": 856,
+  "composer": "あらケン(SUPA LOVE)、Diggy-MO’",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "はちぼうせいだんす"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 95
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 237
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 382
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 761
+    },
+    "SPECIAL": null
+  }
+}

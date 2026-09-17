@@ -1,0 +1,35 @@
+{
+  "id": 61,
+  "title": "夏のドーン！",
+  "reading": "ナツノトーン",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2017-08-10T15:00:00.000+09:00",
+  "releaseOrder": 102,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "なつのどーん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 145
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 273
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 406
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 594
+    },
+    "SPECIAL": null
+  }
+}

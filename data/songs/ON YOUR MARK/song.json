@@ -1,0 +1,38 @@
+{
+  "id": 184,
+  "title": "ON YOUR MARK",
+  "reading": "オンユアマーク",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2019-04-05T15:00:00.000+09:00",
+  "releaseOrder": 210,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "onyourmark"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 166
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 292
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 515
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 760
+    },
+    "SPECIAL": {
+      "level": 27,
+      "notes": 836
+    }
+  }
+}

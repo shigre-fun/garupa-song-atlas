@@ -1,0 +1,35 @@
+{
+  "id": 720,
+  "title": "スタ〜リング ☆じぶん☆",
+  "reading": "スターリンクシフン",
+  "category": "オリジナル",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2025-08-09T15:00:00.000+09:00",
+  "releaseOrder": 536,
+  "composer": "藤間仁（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "すたーりんぐじぶん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 114
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 226
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 450
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 733
+    },
+    "SPECIAL": null
+  }
+}

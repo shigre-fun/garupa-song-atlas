@@ -1,0 +1,35 @@
+{
+  "id": 746,
+  "title": "Fear Nothing",
+  "reading": "フィアーナッシンク",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2025-11-30T15:00:00.000+09:00",
+  "releaseOrder": 456,
+  "composer": "竹田祐介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "fearnothing"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 97
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 188
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 467
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 687
+    },
+    "SPECIAL": null
+  }
+}

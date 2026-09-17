@@ -1,0 +1,35 @@
+{
+  "id": 73,
+  "title": "Time Lapse",
+  "reading": "タイムラフス",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2017-09-10T15:00:00.000+09:00",
+  "releaseOrder": 14,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "timelapse"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 148
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 252
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 563
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 728
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 287,
+  "title": "恋しさと せつなさと 心強さと",
+  "reading": "イトシサトセツナサトココロツヨサト",
+  "category": "カバー",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2020-08-31T15:00:00.000+09:00",
+  "releaseOrder": 1704,
+  "composer": "小室哲哉",
+  "originalArtist": "篠原涼子",
+  "originalWork": "映画「ストリートファイターII MOVIE」",
+  "live3d": null,
+  "aliases": [
+    "いとしさとせつなさとこころづよさと"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 155
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 221
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 389
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 534
+    },
+    "SPECIAL": null
+  }
+}

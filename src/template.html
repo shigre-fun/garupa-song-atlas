@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ガルパ楽曲ノート</title>
+    <meta
+      name="description"
+      content="ガルパの楽曲・難易度・原曲を探せる非公式データベース。"
+    />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/mobile.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/"
+        >✳ <span>ガルパ楽曲ノート<small>SONG ATLAS</small></span></a
+      >
+      <form action="/" role="search">
+        <label class="sr-only" for="search">楽曲名・原曲の作品名で検索</label
+        ><span aria-hidden="true">⌕</span
+        ><input
+          id="search"
+          name="q"
+          type="search"
+          placeholder="楽曲名・アニメ・作品名で検索"
+          autocomplete="off"
+        /><button>検索</button>
+      </form>
+    </header>
+    <a class="sr-only skip-link" href="#app">本文へ移動</a
+    ><noscript
+      ><p class="notice">
+        検索と並べ替えにはJavaScriptを有効にしてください。楽曲ページの詳細情報はそのまま閲覧できます。
+      </p></noscript
+    >
+    <main id="app"><p>楽曲データを読み込んでいます…</p></main>
+    <footer>
+      ガルパ楽曲ノート · 非公式ファンデータベース<br />「バンドリ！
+      ガールズバンドパーティ！」日本版 /
+      楽曲・作品の権利は各権利者に帰属します。
+    </footer>
+  </body>
+</html>

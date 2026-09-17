@@ -1,0 +1,35 @@
+{
+  "id": 213,
+  "title": "からくりピエロ",
+  "reading": "カラクリヒエロ",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2019-08-23T15:00:00.000+09:00",
+  "releaseOrder": 1320,
+  "composer": "40mP",
+  "originalArtist": "40mP feat.初音ミク",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "からくりぴえろ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 144
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 256
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 428
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 668
+    },
+    "SPECIAL": null
+  }
+}

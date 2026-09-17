@@ -1,0 +1,35 @@
+{
+  "id": 563,
+  "title": "Overdose",
+  "reading": "オーハートース",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2023-12-28T15:00:00.000+09:00",
+  "releaseOrder": 1620,
+  "composer": "なとり",
+  "originalArtist": "なとり",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "overdose"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 107
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 190
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 439
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 737
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 430,
+  "title": "Preserved Roses",
+  "reading": "フリサーフトローセス",
+  "category": "カバー",
+  "band": "Roselia×蘭",
+  "releaseDate": "2022-06-30T15:00:00.000+09:00",
+  "releaseOrder": 1434,
+  "composer": "浅倉　大介",
+  "originalArtist": "T.M.Revolution × 水樹奈々",
+  "originalWork": "アニメ「革命機ヴァルヴレイヴ」",
+  "live3d": null,
+  "aliases": [
+    "preservedroses"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 158
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 274
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 518
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 866
+    },
+    "SPECIAL": null
+  }
+}

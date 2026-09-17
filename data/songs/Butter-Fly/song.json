@@ -1,0 +1,38 @@
+{
+  "id": 11,
+  "title": "Butter-Fly",
+  "reading": "ハタフライ",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2017-03-16T00:00:00.000+09:00",
+  "releaseOrder": 1202,
+  "composer": "千綿偉功",
+  "originalArtist": "和田光司",
+  "originalWork": "「デジモンアドベンチャー」OP",
+  "live3d": null,
+  "aliases": [
+    "butterfly"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 133
+    },
+    "NORMAL": {
+      "level": 11,
+      "notes": 172
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 405
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 615
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 844
+    }
+  }
+}

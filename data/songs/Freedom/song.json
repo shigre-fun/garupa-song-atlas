@@ -1,0 +1,35 @@
+{
+  "id": 415,
+  "title": "Freedom",
+  "reading": "フリータム",
+  "category": "オリジナル",
+  "band": "Poppin'Party×夏希",
+  "releaseDate": "2022-04-10T15:00:00.000+09:00",
+  "releaseOrder": 51,
+  "composer": "竹田祐介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "freedom"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 148
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 275
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 468
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 649
+    },
+    "SPECIAL": null
+  }
+}

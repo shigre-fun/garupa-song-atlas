@@ -1,0 +1,35 @@
+{
+  "id": 816,
+  "title": "浪漫飛行",
+  "reading": "ロマンヒコウ",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2026-09-13T15:00:00.000+09:00",
+  "releaseOrder": 816,
+  "composer": "米米CLUB",
+  "originalArtist": "米米CLUB",
+  "originalWork": "JAL「JAL STORY　夏離宮キャンペーン」CMソング",
+  "live3d": null,
+  "aliases": [
+    "ろまんひこう"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 114
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 173
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 471
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 647
+    },
+    "SPECIAL": null
+  }
+}

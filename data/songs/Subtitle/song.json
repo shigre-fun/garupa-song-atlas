@@ -1,0 +1,35 @@
+{
+  "id": 648,
+  "title": "Subtitle",
+  "reading": "サフタイトル",
+  "category": "カバー",
+  "band": "MyGO!!!!!",
+  "releaseDate": "2024-12-24T15:00:00.000+09:00",
+  "releaseOrder": 1806,
+  "composer": "藤原 聡",
+  "originalArtist": "Official髭男dism",
+  "originalWork": "ドラマ「silent」主題歌",
+  "live3d": null,
+  "aliases": [
+    "subtitle"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 91
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 200
+    },
+    "HARD": {
+      "level": 18,
+      "notes": 381
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 555
+    },
+    "SPECIAL": null
+  }
+}

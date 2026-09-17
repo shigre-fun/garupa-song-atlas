@@ -1,0 +1,35 @@
+{
+  "id": 434,
+  "title": "Swear 〜Night & Day〜",
+  "reading": "スウェアーナイトアントテイ",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2022-07-21T15:00:00.000+09:00",
+  "releaseOrder": 437,
+  "composer": "竹田祐介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "swearnightandday"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 100
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 176
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 353
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 506
+    },
+    "SPECIAL": null
+  }
+}

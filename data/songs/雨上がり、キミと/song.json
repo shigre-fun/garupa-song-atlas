@@ -1,0 +1,35 @@
+{
+  "id": 614,
+  "title": "雨上がり、キミと",
+  "reading": "アメアカリキミト",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2024-06-11T15:00:00.000+09:00",
+  "releaseOrder": 63,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "あめあがりきみと"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 128
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 235
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 449
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 693
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 48,
+  "title": "正解はひとつ!じゃない!!",
+  "reading": "セイカイワヒトツシャナイ",
+  "category": "カバー",
+  "band": "Poppin'Party×グリグリ",
+  "releaseDate": "2017-04-30T22:00:00.000+09:00",
+  "releaseOrder": 1105,
+  "composer": "山口朗彦",
+  "originalArtist": "ミルキィホームズ",
+  "originalWork": "アニメ「探偵オペラ ミルキィホームズ」",
+  "live3d": null,
+  "aliases": [
+    "せいかいはひとつじゃない"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 86
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 222
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 438
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 637
+    },
+    "SPECIAL": null
+  }
+}

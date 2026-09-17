@@ -1,0 +1,35 @@
+{
+  "id": 62,
+  "title": "ひまわりの約束",
+  "reading": "ヒマワリノヤクソク",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2017-08-12T15:00:00.000+09:00",
+  "releaseOrder": 1505,
+  "composer": "秦基博",
+  "originalArtist": "秦基博",
+  "originalWork": "映画「STAND BY ME ドラえもん」、CM「フレッツ光」",
+  "live3d": null,
+  "aliases": [
+    "ひまわりのやくそく"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 125
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 244
+    },
+    "HARD": {
+      "level": 18,
+      "notes": 394
+    },
+    "EXPERT": {
+      "level": 23,
+      "notes": 481
+    },
+    "SPECIAL": null
+  }
+}

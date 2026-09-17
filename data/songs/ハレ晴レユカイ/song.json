@@ -1,0 +1,38 @@
+{
+  "id": 108,
+  "title": "ハレ晴レユカイ",
+  "reading": "ハレハレユカイ",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！×蘭×彩",
+  "releaseDate": "2018-03-10T15:00:00.000+09:00",
+  "releaseOrder": 1510,
+  "composer": "田代智一",
+  "originalArtist": "平野綾、茅原実里、後藤邑子",
+  "originalWork": "アニメ「涼宮ハルヒの憂鬱」",
+  "live3d": null,
+  "aliases": [
+    "はれはれゆかい"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 235
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 397
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 664
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 972
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 960
+    }
+  }
+}

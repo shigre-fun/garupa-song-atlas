@@ -1,0 +1,35 @@
+{
+  "id": 535,
+  "title": "D-tecnoLife",
+  "reading": "ティーテクノライフ",
+  "category": "カバー",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2023-09-11T15:00:00.000+09:00",
+  "releaseOrder": 1716,
+  "composer": "TAKUYA∞",
+  "originalArtist": "UVERworld",
+  "originalWork": "アニメ「BLEACH」",
+  "live3d": null,
+  "aliases": [
+    "dtecnolife"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 97
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 225
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 458
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 706
+    },
+    "SPECIAL": null
+  }
+}

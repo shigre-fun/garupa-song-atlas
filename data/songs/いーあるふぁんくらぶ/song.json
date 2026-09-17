@@ -1,0 +1,38 @@
+{
+  "id": 21,
+  "title": "いーあるふぁんくらぶ",
+  "reading": "イイアルファンクラフ",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2017-03-16T00:00:00.000+09:00",
+  "releaseOrder": 1502,
+  "composer": "みきとP",
+  "originalArtist": "みきとP feat.GUMI・鏡音リン",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "いーあるふぁんくらぶ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 108
+    },
+    "NORMAL": {
+      "level": 11,
+      "notes": 189
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 394
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 652
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 723
+    }
+  }
+}

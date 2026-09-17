@@ -1,0 +1,38 @@
+{
+  "id": 233,
+  "title": "天ノ弱",
+  "reading": "アマノシャク",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2019-12-29T21:00:00.000+09:00",
+  "releaseOrder": 1217,
+  "composer": "164",
+  "originalArtist": "164 feat.GUMI",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "あまのじゃく"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 11,
+      "notes": 215
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 370
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 637
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 967
+    },
+    "SPECIAL": {
+      "level": 29,
+      "notes": 998
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 759,
+  "title": "デビルじゃないもん",
+  "reading": "テヒルシャナイモン",
+  "category": "カバー",
+  "band": "Pastel＊Palettes×友希那",
+  "releaseDate": "2026-01-01T15:00:00.000+09:00",
+  "releaseOrder": 1349,
+  "composer": "DECO*27 & ピノキオピー",
+  "originalArtist": "DECO*27・ピノキオピー",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "でびるじゃないもん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 133
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 191
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 449
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 702
+    },
+    "SPECIAL": null
+  }
+}

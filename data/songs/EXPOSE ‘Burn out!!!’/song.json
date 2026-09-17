@@ -1,0 +1,38 @@
+{
+  "id": 247,
+  "title": "EXPOSE ‘Burn out!!!’",
+  "reading": "エクスホースハーンアウト",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2020-06-10T15:00:00.000+09:00",
+  "releaseOrder": 704,
+  "composer": "菊田大介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": true,
+  "aliases": [
+    "exposeburnout"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 150
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 303
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 527
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 789
+    },
+    "SPECIAL": {
+      "level": 27,
+      "notes": 853
+    }
+  }
+}

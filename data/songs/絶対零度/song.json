@@ -1,0 +1,35 @@
+{
+  "id": 791,
+  "title": "絶対零度",
+  "reading": "セッタイレイト",
+  "category": "カバー",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2026-04-29T15:00:00.000+09:00",
+  "releaseOrder": 1726,
+  "composer": "なとり",
+  "originalArtist": "なとり",
+  "originalWork": "TVアニメ「WIND BREAKER」OP",
+  "live3d": null,
+  "aliases": [
+    "ぜったいれいど"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 161
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 279
+    },
+    "HARD": {
+      "level": 24,
+      "notes": 685
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 953
+    },
+    "SPECIAL": null
+  }
+}

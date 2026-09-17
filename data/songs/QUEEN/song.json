@@ -1,0 +1,35 @@
+{
+  "id": 514,
+  "title": "QUEEN",
+  "reading": "クイーン",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2023-07-14T15:00:00.000+09:00",
+  "releaseOrder": 1617,
+  "composer": "Kanaria",
+  "originalArtist": "Kanaria feat.GUMI",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "queen"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 129
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 278
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 552
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 992
+    },
+    "SPECIAL": null
+  }
+}

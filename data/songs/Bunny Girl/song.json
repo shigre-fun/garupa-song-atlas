@@ -1,0 +1,35 @@
+{
+  "id": 695,
+  "title": "Bunny Girl",
+  "reading": "ハニーカール",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2025-05-03T15:00:00.000+09:00",
+  "releaseOrder": 1244,
+  "composer": "AKASAKI",
+  "originalArtist": "AKASAKI",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "bunnygirl"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 136
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 269
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 496
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 690
+    },
+    "SPECIAL": null
+  }
+}

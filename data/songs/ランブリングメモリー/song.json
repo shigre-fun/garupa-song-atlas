@@ -1,0 +1,35 @@
+{
+  "id": 156,
+  "title": "ランブリングメモリー",
+  "reading": "ランフリンクメモリー",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2018-11-30T15:00:00.000+09:00",
+  "releaseOrder": 209,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "らんぶりんぐめもりー"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 120
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 202
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 402
+    },
+    "EXPERT": {
+      "level": 23,
+      "notes": 526
+    },
+    "SPECIAL": null
+  }
+}

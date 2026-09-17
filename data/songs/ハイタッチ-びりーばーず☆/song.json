@@ -1,0 +1,35 @@
+{
+  "id": 641,
+  "title": "ハイタッチ／＼びりーばーず☆",
+  "reading": "ハイタッチヒリーハース",
+  "category": "オリジナル",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2024-10-31T15:00:00.000+09:00",
+  "releaseOrder": 533,
+  "composer": "笠井雄太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "はいたっちびりーばーず"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 121
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 297
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 512
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 742
+    },
+    "SPECIAL": null
+  }
+}

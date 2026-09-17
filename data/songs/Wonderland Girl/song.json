@@ -1,0 +1,38 @@
+{
+  "id": 106,
+  "title": "Wonderland Girl",
+  "reading": "ワンターラントカール",
+  "category": "オリジナル",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2018-02-19T15:00:00.000+09:00",
+  "releaseOrder": 306,
+  "composer": "菊田大介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "wonderlandgirl"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 168
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 365
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 461
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 625
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 784
+    }
+  }
+}

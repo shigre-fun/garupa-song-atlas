@@ -1,0 +1,35 @@
+{
+  "id": 776,
+  "title": "DAY×DAY",
+  "reading": "テイテイ",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2026-03-16T15:00:00.000+09:00",
+  "releaseOrder": 1247,
+  "composer": "田邊駿一",
+  "originalArtist": "BLUE ENCOUNT",
+  "originalWork": "TVアニメ「銀魂゜」OP",
+  "live3d": null,
+  "aliases": [
+    "dayday"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 127
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 227
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 481
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 811
+    },
+    "SPECIAL": null
+  }
+}

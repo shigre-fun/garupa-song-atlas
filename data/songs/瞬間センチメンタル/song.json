@@ -1,0 +1,38 @@
+{
+  "id": 163,
+  "title": "瞬間センチメンタル",
+  "reading": "シュンカンセンチメンタル",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2018-12-30T15:00:00.000+09:00",
+  "releaseOrder": 1213,
+  "composer": "田鹿祐一",
+  "originalArtist": "SCANDAL",
+  "originalWork": "アニメ「鋼の錬金術師 FULLMETAL ALCHEMIST」",
+  "live3d": null,
+  "aliases": [
+    "しゅんかんせんちめんたる"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 139
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 235
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 446
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 709
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 649
+    }
+  }
+}

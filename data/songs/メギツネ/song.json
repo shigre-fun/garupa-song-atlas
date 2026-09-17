@@ -1,0 +1,35 @@
+{
+  "id": 426,
+  "title": "メギツネ",
+  "reading": "メキツネ",
+  "category": "カバー",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2022-06-19T22:00:00.000+09:00",
+  "releaseOrder": 1713,
+  "composer": "NORiMETAL",
+  "originalArtist": "BABYMETAL",
+  "originalWork": "バラエティ「ハッキリ5〜そんなに好かれていない5人が世界を救う〜」",
+  "live3d": null,
+  "aliases": [
+    "めぎつね"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 130
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 285
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 576
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 915
+    },
+    "SPECIAL": null
+  }
+}

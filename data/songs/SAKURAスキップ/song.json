@@ -1,0 +1,35 @@
+{
+  "id": 101,
+  "title": "SAKURAスキップ",
+  "reading": "サクラスキッフ",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2018-02-17T21:00:00.000+09:00",
+  "releaseOrder": 1309,
+  "composer": "奥井康介",
+  "originalArtist": "fourfolium",
+  "originalWork": "アニメ「NEW GAME!」",
+  "live3d": null,
+  "aliases": [
+    "sakuraすきっぷ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 135
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 240
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 471
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 650
+    },
+    "SPECIAL": null
+  }
+}

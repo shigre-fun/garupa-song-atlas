@@ -1,0 +1,38 @@
+{
+  "id": 76,
+  "title": "Determination Symphony",
+  "reading": "テタミネーションシンフォニー",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2017-10-18T21:00:00.000+09:00",
+  "releaseOrder": 407,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "determinationsymphony"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 140
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 264
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 630
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 1054
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 943
+    }
+  }
+}

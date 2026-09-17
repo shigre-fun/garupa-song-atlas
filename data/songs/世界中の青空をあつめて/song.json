@@ -1,0 +1,35 @@
+{
+  "id": 741,
+  "title": "世界中の青空をあつめて",
+  "reading": "セカイシュウノアオソラヲアツメテ",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2025-10-10T15:00:00.000+09:00",
+  "releaseOrder": 69,
+  "composer": "日高勇輝（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "せかいじゅうのあおぞらをあつめて"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 119
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 194
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 446
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 642
+    },
+    "SPECIAL": null
+  }
+}

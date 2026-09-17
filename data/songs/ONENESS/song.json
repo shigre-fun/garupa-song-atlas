@@ -1,0 +1,38 @@
+{
+  "id": 96,
+  "title": "ONENESS",
+  "reading": "ワンネス",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2018-01-13T15:00:00.000+09:00",
+  "releaseOrder": 408,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "oneness"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 165
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 262
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 445
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 746
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 771
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 477,
+  "title": "新時代",
+  "reading": "シンシタイ",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2023-03-15T17:00:00.000+09:00",
+  "releaseOrder": 1436,
+  "composer": "中田ヤスタカ",
+  "originalArtist": "Ado",
+  "originalWork": "映画「ONE PIECE FILM RED」",
+  "live3d": null,
+  "aliases": [
+    "しんじだい"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 130
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 266
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 569
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 835
+    },
+    "SPECIAL": null
+  }
+}

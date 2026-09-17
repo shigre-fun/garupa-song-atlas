@@ -1,0 +1,35 @@
+{
+  "id": 291,
+  "title": "ZEAL of proud",
+  "reading": "シールオフフラウト",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2020-09-20T15:00:00.000+09:00",
+  "releaseOrder": 427,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "zealofproud"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 148
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 272
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 496
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 857
+    },
+    "SPECIAL": null
+  }
+}

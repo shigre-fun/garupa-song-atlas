@@ -1,0 +1,35 @@
+{
+  "id": 305,
+  "title": "好き！雪！本気マジック",
+  "reading": "スキユキマシマシック",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2020-12-24T15:00:00.000+09:00",
+  "releaseOrder": 1527,
+  "composer": "Mitchie M",
+  "originalArtist": "Mitchie M feat.初音ミク",
+  "originalWork": "イベント「SNOW MIKU 2014」",
+  "live3d": null,
+  "aliases": [
+    "すきゆきまじまじっく"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 170
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 277
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 419
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 724
+    },
+    "SPECIAL": null
+  }
+}

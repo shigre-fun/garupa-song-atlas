@@ -1,0 +1,35 @@
+{
+  "id": 18,
+  "title": "secret base ～君がくれたもの～",
+  "reading": "シイクレットへエスキミカクレタモノ",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2017-03-16T00:00:00.000+09:00",
+  "releaseOrder": 1301,
+  "composer": "町田紀彦",
+  "originalArtist": "ZONE",
+  "originalWork": "ドラマ「キッズ・ウォー3」「キッズ・ウォー ファイナル」主題歌",
+  "live3d": null,
+  "aliases": [
+    "secretbaseきみがくれたもの"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 5,
+      "notes": 71
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 195
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 424
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 560
+    },
+    "SPECIAL": null
+  }
+}

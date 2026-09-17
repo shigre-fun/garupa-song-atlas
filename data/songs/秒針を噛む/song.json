@@ -1,0 +1,38 @@
+{
+  "id": 269,
+  "title": "秒針を噛む",
+  "reading": "ヒョウシンヲカム",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2020-05-10T15:00:00.000+09:00",
+  "releaseOrder": 1603,
+  "composer": "ACAね×ぬゆり",
+  "originalArtist": "ずっと真夜中でいいのに。",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "びょうしんをかむ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 152
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 260
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 454
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 738
+    },
+    "SPECIAL": {
+      "level": 25,
+      "notes": 562
+    }
+  }
+}

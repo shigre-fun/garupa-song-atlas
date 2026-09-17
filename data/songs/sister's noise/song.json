@@ -1,0 +1,35 @@
+{
+  "id": 302,
+  "title": "sister's noise",
+  "reading": "シスタースノイス",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2020-11-30T15:00:00.000+09:00",
+  "releaseOrder": 1425,
+  "composer": "八木沼悟志",
+  "originalArtist": "fripSide",
+  "originalWork": "アニメ「とある科学の超電磁砲S」",
+  "live3d": null,
+  "aliases": [
+    "sistersnoise"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 141
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 194
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 360
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 555
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 411,
+  "title": "廻廻奇譚",
+  "reading": "カイカイキタン",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2022-03-11T17:00:00.000+09:00",
+  "releaseOrder": 1432,
+  "composer": "Eve",
+  "originalArtist": "Eve",
+  "originalWork": "アニメ「呪術廻戦」",
+  "live3d": null,
+  "aliases": [
+    "かいかいきたん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 143
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 238
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 485
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 749
+    },
+    "SPECIAL": null
+  }
+}

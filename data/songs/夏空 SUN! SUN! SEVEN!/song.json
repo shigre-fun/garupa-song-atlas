@@ -1,0 +1,35 @@
+{
+  "id": 5,
+  "title": "夏空 SUN! SUN! SEVEN!",
+  "reading": "ナツソラサンサンセフン",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2017-03-16T00:00:00.000+09:00",
+  "releaseOrder": 7,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "なつぞらsunsunseven"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 152
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 231
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 521
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 750
+    },
+    "SPECIAL": null
+  }
+}

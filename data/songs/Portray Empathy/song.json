@@ -1,0 +1,35 @@
+{
+  "id": 692,
+  "title": "Portray Empathy",
+  "reading": "ホートレイエンハシー",
+  "category": "オリジナル",
+  "band": "Morfonica",
+  "releaseDate": "2025-05-08T21:00:00.000+09:00",
+  "releaseOrder": 626,
+  "composer": "菊田大介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "portrayempathy"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 100
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 242
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 449
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 739
+    },
+    "SPECIAL": null
+  }
+}

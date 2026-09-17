@@ -1,0 +1,35 @@
+{
+  "id": 419,
+  "title": "秘密の扉から会いにきて",
+  "reading": "ヒミツノトアカラアイニキテ",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2022-04-30T15:00:00.000+09:00",
+  "releaseOrder": 1333,
+  "composer": "太田雅友",
+  "originalArtist": "田村ゆかり",
+  "originalWork": "アニメ「のうりん」",
+  "live3d": null,
+  "aliases": [
+    "ひみつのどあからあいにきて"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 10,
+      "notes": 213
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 337
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 620
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 884
+    },
+    "SPECIAL": null
+  }
+}

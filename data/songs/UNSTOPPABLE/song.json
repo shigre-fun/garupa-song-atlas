@@ -1,0 +1,35 @@
+{
+  "id": 194,
+  "title": "UNSTOPPABLE",
+  "reading": "アンストッハフル",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2019-05-03T15:00:00.000+09:00",
+  "releaseOrder": 702,
+  "composer": "藤田淳平（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "unstoppable"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 154
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 260
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 495
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 646
+    },
+    "SPECIAL": null
+  }
+}

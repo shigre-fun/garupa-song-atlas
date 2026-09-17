@@ -1,0 +1,38 @@
+{
+  "id": 674,
+  "title": "ひとりじゃないんだから(パラレルver.)",
+  "reading": "ヒトリシャナインタカラ",
+  "category": "オリジナル",
+  "band": "羽沢珈琲店にようこそ♪",
+  "releaseDate": "2025-03-15T18:00:00.000+09:00",
+  "releaseOrder": 923,
+  "composer": "都丸椋太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "ひとりじゃないんだから"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 115
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 200
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 400
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 591
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 757
+    }
+  }
+}

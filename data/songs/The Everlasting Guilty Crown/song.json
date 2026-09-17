@@ -1,0 +1,35 @@
+{
+  "id": 63,
+  "title": "The Everlasting Guilty Crown",
+  "reading": "シエハーラスティングキルティクラウン",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2017-08-18T15:00:00.000+09:00",
+  "releaseOrder": 1405,
+  "composer": "ryo(supercell)",
+  "originalArtist": "EGOIST",
+  "originalWork": "アニメ「ギルティクラウン」",
+  "live3d": null,
+  "aliases": [
+    "theeverlastingguiltycrown"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 158
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 340
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 571
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 852
+    },
+    "SPECIAL": null
+  }
+}

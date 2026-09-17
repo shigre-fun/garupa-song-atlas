@@ -1,0 +1,35 @@
+{
+  "id": 297,
+  "title": "おジャ魔女カーニバル!!",
+  "reading": "オシャマショカーニハル",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2020-10-31T15:00:00.000+09:00",
+  "releaseOrder": 1526,
+  "composer": "池毅",
+  "originalArtist": "MAHO堂",
+  "originalWork": "アニメ「おジャ魔女どれみ」",
+  "live3d": null,
+  "aliases": [
+    "おじゃまじょかーにばる"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 143
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 221
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 356
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 555
+    },
+    "SPECIAL": null
+  }
+}

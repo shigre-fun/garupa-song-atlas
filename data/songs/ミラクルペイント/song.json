@@ -1,0 +1,35 @@
+{
+  "id": 751,
+  "title": "ミラクルペイント",
+  "reading": "ミラクルヘイント",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2025-12-25T15:00:00.000+09:00",
+  "releaseOrder": 1550,
+  "composer": "OSTER project",
+  "originalArtist": "OSTER project",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "みらくるぺいんと"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 141
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 265
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 678
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 898
+    },
+    "SPECIAL": null
+  }
+}

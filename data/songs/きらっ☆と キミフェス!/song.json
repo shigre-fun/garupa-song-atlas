@@ -1,0 +1,35 @@
+{
+  "id": 362,
+  "title": "きらっ☆と キミフェス！",
+  "reading": "キラットキミフェス",
+  "category": "オリジナル",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2021-09-30T15:00:00.000+09:00",
+  "releaseOrder": 520,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "きらっときみふぇす"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 128
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 245
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 386
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 589
+    },
+    "SPECIAL": null
+  }
+}

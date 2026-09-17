@@ -1,0 +1,35 @@
+{
+  "id": 646,
+  "title": "“Say cheese!!!!!”",
+  "reading": "セイチース",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2024-12-10T15:00:00.000+09:00",
+  "releaseOrder": 233,
+  "composer": "日高勇輝（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "saycheese"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 107
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 247
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 461
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 656
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 669,
+  "title": "とっておきAnswer",
+  "reading": "トッテオキアンサー",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2025-02-28T15:00:00.000+09:00",
+  "releaseOrder": 67,
+  "composer": "藤田淳平（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "とっておきanswer"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 111
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 215
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 543
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 770
+    },
+    "SPECIAL": null
+  }
+}

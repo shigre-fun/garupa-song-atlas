@@ -1,0 +1,35 @@
+{
+  "id": 68,
+  "title": "YAPPY！SCHOOL CARNIVAL☆彡",
+  "reading": "ヤッヒースクールカーニハル",
+  "category": "オリジナル",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2017-09-24T17:00:00.000+09:00",
+  "releaseOrder": 505,
+  "composer": "藤間仁（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "yappyschoolcarnival"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 184
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 290
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 468
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 663
+    },
+    "SPECIAL": null
+  }
+}

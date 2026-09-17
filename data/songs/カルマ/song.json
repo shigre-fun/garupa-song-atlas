@@ -1,0 +1,38 @@
+{
+  "id": 14,
+  "title": "カルマ",
+  "reading": "カルマ",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2017-03-16T00:00:00.000+09:00",
+  "releaseOrder": 1201,
+  "composer": "藤原基央",
+  "originalArtist": "BUMP OF CHICKEN",
+  "originalWork": "ゲーム「テイルズ オブ ジ アビス」主題歌",
+  "live3d": null,
+  "aliases": [
+    "かるま"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 97
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 199
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 352
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 582
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 691
+    }
+  }
+}

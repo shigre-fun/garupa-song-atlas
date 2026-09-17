@@ -1,0 +1,35 @@
+{
+  "id": 515,
+  "title": "碧天伴走",
+  "reading": "ヘキテンハンソウ",
+  "category": "オリジナル",
+  "band": "MyGO!!!!!",
+  "releaseDate": "2023-07-27T23:30:00.000+09:00",
+  "releaseOrder": 804,
+  "composer": "木下龍平(SUPA LOVE)",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "へきてんばんそう"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 147
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 271
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 580
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 966
+    },
+    "SPECIAL": null
+  }
+}

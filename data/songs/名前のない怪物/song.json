@@ -1,0 +1,35 @@
+{
+  "id": 165,
+  "title": "名前のない怪物",
+  "reading": "ナマエノナイカイフツ",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2019-01-01T15:00:00.000+09:00",
+  "releaseOrder": 1416,
+  "composer": "ryo",
+  "originalArtist": "EGOIST",
+  "originalWork": "アニメ「PSYCHO-PASS サイコパス」",
+  "live3d": null,
+  "aliases": [
+    "なまえのないかいぶつ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 139
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 197
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 521
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 734
+    },
+    "SPECIAL": null
+  }
+}

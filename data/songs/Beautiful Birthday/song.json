@@ -1,0 +1,35 @@
+{
+  "id": 288,
+  "title": "Beautiful Birthday",
+  "reading": "ヒューティフルハーステイ",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2020-08-31T15:00:00.000+09:00",
+  "releaseOrder": 705,
+  "composer": "菊田大介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "beautifulbirthday"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 131
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 238
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 453
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 644
+    },
+    "SPECIAL": null
+  }
+}

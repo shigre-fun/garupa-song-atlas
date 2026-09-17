@@ -1,0 +1,38 @@
+{
+  "id": 97,
+  "title": "Opera of the wasteland",
+  "reading": "オへラオフサウェイストラント",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2018-01-22T15:00:00.000+09:00",
+  "releaseOrder": 409,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "operaofthewasteland"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 155
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 281
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 483
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 696
+    },
+    "SPECIAL": {
+      "level": 27,
+      "notes": 702
+    }
+  }
+}

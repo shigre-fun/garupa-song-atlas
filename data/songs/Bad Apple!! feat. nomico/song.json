@@ -1,0 +1,36 @@
+{
+  "id": 258,
+  "title": "Bad Apple!! feat. nomico",
+  "reading": "ハットアッフルフィーチャリンクノミコ",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2020-03-21T15:00:00.000+09:00",
+  "releaseOrder": 1423,
+  "composer": "ZUN/Masayoshi Minoshima（Alstroemeria Records）",
+  "originalArtist": "Alstroemeria Records feat. nomico",
+  "originalWork": "ゲーム「東方幻想郷 ～ Lotus Land Story.」の楽曲『Bad Apple!!』を原曲とするアレンジ",
+  "live3d": null,
+  "aliases": [
+    "baddapplefeatnomico",
+    "東方Project"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 11,
+      "notes": 233
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 363
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 557
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 800
+    },
+    "SPECIAL": null
+  }
+}

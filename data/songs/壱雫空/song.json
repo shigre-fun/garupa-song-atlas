@@ -1,0 +1,38 @@
+{
+  "id": 512,
+  "title": "壱雫空",
+  "reading": "ヒトシスク",
+  "category": "オリジナル",
+  "band": "MyGO!!!!!",
+  "releaseDate": "2023-06-27T23:30:00.000+09:00",
+  "releaseOrder": 802,
+  "composer": "hisakuni(SUPA LOVE)",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "ひとしずく"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 116
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 230
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 417
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 663
+    },
+    "SPECIAL": {
+      "level": 29,
+      "notes": 890
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 722,
+  "title": "百花繚乱",
+  "reading": "ヒャッカリョウラン",
+  "category": "カバー",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2025-08-20T15:00:00.000+09:00",
+  "releaseOrder": 1723,
+  "composer": "幾田 りら",
+  "originalArtist": "幾田りら",
+  "originalWork": "TVアニメ「薬屋のひとりごと」第2期OP",
+  "live3d": null,
+  "aliases": [
+    "ひゃっかりょうらん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 136
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 246
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 568
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 805
+    },
+    "SPECIAL": null
+  }
+}

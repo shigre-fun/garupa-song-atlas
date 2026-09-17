@@ -1,0 +1,38 @@
+{
+  "id": 20,
+  "title": "シュガーソングとビターステップ",
+  "reading": "シュカアソンクトヒタアステッフ",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2017-03-16T00:00:00.000+09:00",
+  "releaseOrder": 1501,
+  "composer": "田淵智也",
+  "originalArtist": "UNISON SQUARE GARDEN",
+  "originalWork": "アニメ「血界戦線」",
+  "live3d": null,
+  "aliases": [
+    "しゅがーそんぐとびたーすてっぷ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 131
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 252
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 469
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 811
+    },
+    "SPECIAL": {
+      "level": 25,
+      "notes": 701
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 469,
+  "title": "Five Letters",
+  "reading": "ファイフレタース",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2023-01-11T15:00:00.000+09:00",
+  "releaseOrder": 55,
+  "composer": "藤間仁（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "fiveletters"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 5,
+      "notes": 55
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 205
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 365
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 515
+    },
+    "SPECIAL": null
+  }
+}

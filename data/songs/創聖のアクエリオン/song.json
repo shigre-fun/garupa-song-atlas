@@ -1,0 +1,35 @@
+{
+  "id": 236,
+  "title": "創聖のアクエリオン",
+  "reading": "ソウセイノアクエリオン",
+  "category": "カバー",
+  "band": "Poppin'Party×友希那",
+  "releaseDate": "2019-12-31T15:00:00.000+09:00",
+  "releaseOrder": 1125,
+  "composer": "菅野よう子",
+  "originalArtist": "AKINO from bless4",
+  "originalWork": "アニメ「創聖のアクエリオン」",
+  "live3d": null,
+  "aliases": [
+    "そうせいのあくえりおん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 108
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 224
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 393
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 591
+    },
+    "SPECIAL": null
+  }
+}

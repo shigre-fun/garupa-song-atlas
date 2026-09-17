@@ -1,0 +1,35 @@
+{
+  "id": 252,
+  "title": "インフェルノ",
+  "reading": "インフェルノ",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2020-03-08T15:00:00.000+09:00",
+  "releaseOrder": 1218,
+  "composer": "大森元貴",
+  "originalArtist": "Mrs. GREEN APPLE",
+  "originalWork": "アニメ「炎炎ノ消防隊」",
+  "live3d": null,
+  "aliases": [
+    "いんふぇるの"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 158
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 276
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 523
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 790
+    },
+    "SPECIAL": null
+  }
+}

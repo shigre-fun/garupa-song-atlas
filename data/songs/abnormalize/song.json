@@ -1,0 +1,35 @@
+{
+  "id": 444,
+  "title": "abnormalize",
+  "reading": "アフノーマライス",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2022-09-12T15:00:00.000+09:00",
+  "releaseOrder": 1232,
+  "composer": "TK",
+  "originalArtist": "凛として時雨",
+  "originalWork": "アニメ「PSYCHO-PASS サイコパス」",
+  "live3d": null,
+  "aliases": [
+    "abnormalize"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 129
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 212
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 531
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 864
+    },
+    "SPECIAL": null
+  }
+}

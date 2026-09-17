@@ -1,0 +1,35 @@
+{
+  "id": 332,
+  "title": "鳥の詩",
+  "reading": "トリノウタ",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2021-05-01T15:00:00.000+09:00",
+  "releaseOrder": 1427,
+  "composer": "折戸伸治",
+  "originalArtist": "Lia",
+  "originalWork": "ゲーム「AIR」",
+  "live3d": null,
+  "aliases": [
+    "とりのうた"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 171
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 386
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 616
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 917
+    },
+    "SPECIAL": null
+  }
+}

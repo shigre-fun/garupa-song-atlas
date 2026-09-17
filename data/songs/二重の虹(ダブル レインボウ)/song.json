@@ -1,0 +1,35 @@
+{
+  "id": 122,
+  "title": "二重の虹(ダブル レインボウ)",
+  "reading": "タフルレインホウ",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2018-04-30T15:00:00.000+09:00",
+  "releaseOrder": 20,
+  "composer": "菊田大介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "だぶるれいんぼう"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 141
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 276
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 477
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 623
+    },
+    "SPECIAL": null
+  }
+}

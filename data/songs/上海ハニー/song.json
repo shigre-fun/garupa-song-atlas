@@ -1,0 +1,35 @@
+{
+  "id": 208,
+  "title": "上海ハニー",
+  "reading": "シャンハイハニー",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2019-07-20T15:00:00.000+09:00",
+  "releaseOrder": 1520,
+  "composer": "ORANGE RANGE",
+  "originalArtist": "ORANGE RANGE",
+  "originalWork": "ドラマ「オレンジデイズ」",
+  "live3d": null,
+  "aliases": [
+    "しゃんはいはにー"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 183
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 254
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 442
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 737
+    },
+    "SPECIAL": null
+  }
+}

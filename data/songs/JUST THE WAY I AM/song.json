@@ -1,0 +1,35 @@
+{
+  "id": 662,
+  "title": "JUST THE WAY I AM",
+  "reading": "シャストサウェイアイアム",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2024-12-08T21:30:00.000+09:00",
+  "releaseOrder": 729,
+  "composer": "藤田淳平（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "justthewayiam"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 141
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 362
+    },
+    "HARD": {
+      "level": 24,
+      "notes": 624
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 917
+    },
+    "SPECIAL": null
+  }
+}

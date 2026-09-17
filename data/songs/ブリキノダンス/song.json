@@ -1,0 +1,38 @@
+{
+  "id": 292,
+  "title": "ブリキノダンス",
+  "reading": "フリキノタンス",
+  "category": "カバー",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2020-12-26T15:00:00.000+09:00",
+  "releaseOrder": 1705,
+  "composer": "日向電工",
+  "originalArtist": "日向電工 feat.初音ミク",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "ぶりきのだんす"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 170
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 302
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 607
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 1005
+    },
+    "SPECIAL": {
+      "level": 28,
+      "notes": 1206
+    }
+  }
+}

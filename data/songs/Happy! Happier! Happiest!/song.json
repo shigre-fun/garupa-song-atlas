@@ -1,0 +1,35 @@
+{
+  "id": 428,
+  "title": "Happy! Happier! Happiest!",
+  "reading": "ハッヒーハヒアーハヒエスト",
+  "category": "オリジナル",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2022-06-30T15:00:00.000+09:00",
+  "releaseOrder": 523,
+  "composer": "前山田　健一",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "happyhappierhappiest"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 128
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 269
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 569
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 829
+    },
+    "SPECIAL": null
+  }
+}

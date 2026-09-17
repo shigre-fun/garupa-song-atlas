@@ -1,0 +1,35 @@
+{
+  "id": 207,
+  "title": "Easy come, Easy go！",
+  "reading": "イーシーカムイーシーコー",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2019-07-21T15:00:00.000+09:00",
+  "releaseOrder": 212,
+  "composer": "都丸椋太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "easycomeeasygo"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 121
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 212
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 462
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 910
+    },
+    "SPECIAL": null
+  }
+}

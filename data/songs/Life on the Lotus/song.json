@@ -1,0 +1,35 @@
+{
+  "id": 602,
+  "title": "Life on the Lotus",
+  "reading": "ライフオンサロータス",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2024-04-20T15:00:00.000+09:00",
+  "releaseOrder": 726,
+  "composer": "竹田祐介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "lifeonthelotus"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 102
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 203
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 409
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 685
+    },
+    "SPECIAL": null
+  }
+}

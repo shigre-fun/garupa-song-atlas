@@ -1,0 +1,38 @@
+{
+  "id": 784,
+  "title": "灼熱 Bonfire!(パラレルver.)",
+  "reading": "シャクネツホンファイア",
+  "category": "オリジナル",
+  "band": "GO OUR WAYS！",
+  "releaseDate": "2026-03-24T15:00:00.000+09:00",
+  "releaseOrder": 936,
+  "composer": "日高勇輝（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "しゃくねつbonfire"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 143
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 251
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 508
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 695
+    },
+    "SPECIAL": {
+      "level": 27,
+      "notes": 738
+    }
+  }
+}

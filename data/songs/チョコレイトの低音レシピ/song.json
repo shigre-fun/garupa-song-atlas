@@ -1,0 +1,35 @@
+{
+  "id": 58,
+  "title": "チョコレイトの低音レシピ",
+  "reading": "チョコレイトノテイオンレシヒ",
+  "category": "オリジナル",
+  "band": "牛込りみ",
+  "releaseDate": "2017-08-28T12:00:00.000+09:00",
+  "releaseOrder": 152,
+  "composer": "末益涼太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "ちょこれいとのていおんれしぴ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 114
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 239
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 505
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 670
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 672,
+  "title": "HOWLING AMBITION",
+  "reading": "ハウリンクアンヒション",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2025-03-08T15:00:00.000+09:00",
+  "releaseOrder": 730,
+  "composer": "菊田大介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "howlingambition"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 94
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 248
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 398
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 762
+    },
+    "SPECIAL": null
+  }
+}

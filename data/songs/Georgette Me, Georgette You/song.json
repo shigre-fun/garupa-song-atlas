@@ -1,0 +1,35 @@
+{
+  "id": 661,
+  "title": "Georgette Me, Georgette You",
+  "reading": "ショーシェットミーショーシェットユー",
+  "category": "オリジナル",
+  "band": "Ave Mujica",
+  "releaseDate": "2025-01-10T00:00:00.000+09:00",
+  "releaseOrder": 853,
+  "composer": "松坂康司(SUPA LOVE)、Diggy-MO’",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "georgettemegeorgetteyou"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 110
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 186
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 317
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 512
+    },
+    "SPECIAL": null
+  }
+}

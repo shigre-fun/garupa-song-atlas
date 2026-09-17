@@ -1,0 +1,35 @@
+{
+  "id": 584,
+  "title": "VIOLET LINE",
+  "reading": "ウァイオレットライン",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2024-02-17T21:00:00.000+09:00",
+  "releaseOrder": 444,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "violetline"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 175
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 383
+    },
+    "HARD": {
+      "level": 24,
+      "notes": 704
+    },
+    "EXPERT": {
+      "level": 29,
+      "notes": 1200
+    },
+    "SPECIAL": null
+  }
+}

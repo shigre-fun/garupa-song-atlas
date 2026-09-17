@@ -1,0 +1,38 @@
+{
+  "id": 77,
+  "title": "ロメオ",
+  "reading": "ロメオ",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2017-10-20T15:00:00.000+09:00",
+  "releaseOrder": 1506,
+  "composer": "HoneyWorks",
+  "originalArtist": "LIP×LIP",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "ろめお"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 103
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 259
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 476
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 620
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 758
+    }
+  }
+}

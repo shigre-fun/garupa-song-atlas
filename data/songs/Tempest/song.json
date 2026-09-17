@@ -1,0 +1,35 @@
+{
+  "id": 654,
+  "title": "Tempest",
+  "reading": "テンヘスト",
+  "category": "オリジナル",
+  "band": "Morfonica",
+  "releaseDate": "2024-12-30T15:00:00.000+09:00",
+  "releaseOrder": 624,
+  "composer": "堀川大翼（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "tempest"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 141
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 335
+    },
+    "HARD": {
+      "level": 24,
+      "notes": 518
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 916
+    },
+    "SPECIAL": null
+  }
+}

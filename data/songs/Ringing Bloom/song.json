@@ -1,0 +1,38 @@
+{
+  "id": 175,
+  "title": "Ringing Bloom",
+  "reading": "リンキングフルーム",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2019-02-19T15:00:00.000+09:00",
+  "releaseOrder": 418,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": true,
+  "aliases": [
+    "ringingbloom"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 12,
+      "notes": 280
+    },
+    "NORMAL": {
+      "level": 16,
+      "notes": 442
+    },
+    "HARD": {
+      "level": 25,
+      "notes": 634
+    },
+    "EXPERT": {
+      "level": 29,
+      "notes": 1094
+    },
+    "SPECIAL": {
+      "level": 28,
+      "notes": 1148
+    }
+  }
+}

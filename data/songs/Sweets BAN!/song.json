@@ -1,0 +1,35 @@
+{
+  "id": 312,
+  "title": "Sweets BAN!",
+  "reading": "スウィーツハン",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2021-01-31T15:00:00.000+09:00",
+  "releaseOrder": 43,
+  "composer": "下田晃太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "sweetsban"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 177
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 293
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 481
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 723
+    },
+    "SPECIAL": null
+  }
+}

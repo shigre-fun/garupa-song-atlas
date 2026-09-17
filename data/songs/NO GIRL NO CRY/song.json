@@ -1,0 +1,35 @@
+{
+  "id": 181,
+  "title": "NO GIRL NO CRY",
+  "reading": "ノーカールノークライ",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2019-03-25T15:00:00.000+09:00",
+  "releaseOrder": 28,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "nogirlnocry"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 192
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 311
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 470
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 587
+    },
+    "SPECIAL": null
+  }
+}

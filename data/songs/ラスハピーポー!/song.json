@@ -1,0 +1,35 @@
+{
+  "id": 357,
+  "title": "ラスハピーポー！",
+  "reading": "ラスハヒーホー",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN×ハロー、ハッピーワールド！",
+  "releaseDate": "2021-08-27T15:00:00.000+09:00",
+  "releaseOrder": 905,
+  "composer": "藤間仁（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "らすはぴーぽー"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 151
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 279
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 467
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 751
+    },
+    "SPECIAL": null
+  }
+}

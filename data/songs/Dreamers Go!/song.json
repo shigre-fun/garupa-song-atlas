@@ -1,0 +1,35 @@
+{
+  "id": 182,
+  "title": "Dreamers Go!",
+  "reading": "トリーマースコー",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2019-03-29T15:00:00.000+09:00",
+  "releaseOrder": 29,
+  "composer": "菊田大介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "dreamersgo"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 141
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 267
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 438
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 669
+    },
+    "SPECIAL": null
+  }
+}

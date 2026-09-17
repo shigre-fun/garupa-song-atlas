@@ -1,0 +1,35 @@
+{
+  "id": 199,
+  "title": "ディスカバリー！",
+  "reading": "ティスカハリー",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2019-06-07T12:00:00.000+09:00",
+  "releaseOrder": 1123,
+  "composer": "本多友紀(Arte Refact)",
+  "originalArtist": "スタァライト九九組",
+  "originalWork": "ゲーム「少女☆歌劇 レヴュースタァライト -Re LIVE-」",
+  "live3d": null,
+  "aliases": [
+    "でぃすかばりー"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 132
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 265
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 464
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 729
+    },
+    "SPECIAL": null
+  }
+}

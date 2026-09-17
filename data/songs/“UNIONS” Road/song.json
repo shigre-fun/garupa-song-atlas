@@ -1,0 +1,35 @@
+{
+  "id": 214,
+  "title": "“UNIONS” Road",
+  "reading": "ユニオンスロート",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2019-08-31T15:00:00.000+09:00",
+  "releaseOrder": 421,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "unionsroad"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 178
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 259
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 391
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 692
+    },
+    "SPECIAL": null
+  }
+}

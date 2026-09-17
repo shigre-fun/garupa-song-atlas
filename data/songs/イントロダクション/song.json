@@ -1,0 +1,35 @@
+{
+  "id": 381,
+  "title": "イントロダクション",
+  "reading": "イントロタクション",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2021-11-30T15:00:00.000+09:00",
+  "releaseOrder": 48,
+  "composer": "Ayase",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "いんとろだくしょん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 131
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 262
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 549
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 850
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 478,
+  "title": "五等分の気持ち",
+  "reading": "コトウフンノキモチ",
+  "category": "カバー",
+  "band": "Pastel＊Palettes×有咲×つぐみ×ましろ",
+  "releaseDate": "2023-03-15T17:00:00.000+09:00",
+  "releaseOrder": 1334,
+  "composer": "齊藤　信治",
+  "originalArtist": "中野家の五つ子",
+  "originalWork": "アニメ「五等分の花嫁」",
+  "live3d": null,
+  "aliases": [
+    "ごとうぶんのきもち"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 119
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 255
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 550
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 872
+    },
+    "SPECIAL": null
+  }
+}

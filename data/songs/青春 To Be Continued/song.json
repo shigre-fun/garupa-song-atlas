@@ -1,0 +1,35 @@
+{
+  "id": 557,
+  "title": "青春 To Be Continued",
+  "reading": "セイシュントゥヒーコンティニュート",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2023-11-03T21:30:00.000+09:00",
+  "releaseOrder": 60,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "せいしゅんtobecontinued"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 124
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 273
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 495
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 779
+    },
+    "SPECIAL": null
+  }
+}

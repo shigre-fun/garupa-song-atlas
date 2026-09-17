@@ -1,0 +1,35 @@
+{
+  "id": 548,
+  "title": "everyday flower",
+  "reading": "エフリテイフラワー",
+  "category": "オリジナル",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2023-09-23T15:00:00.000+09:00",
+  "releaseOrder": 325,
+  "composer": "近藤世真（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "everydayflower"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 123
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 220
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 437
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 629
+    },
+    "SPECIAL": null
+  }
+}

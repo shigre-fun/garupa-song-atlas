@@ -1,0 +1,35 @@
+{
+  "id": 352,
+  "title": "COLORFUL BOX",
+  "reading": "カラフルホックス",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2021-08-20T21:00:00.000+09:00",
+  "releaseOrder": 1609,
+  "composer": "カヨコ",
+  "originalArtist": "石田燿子",
+  "originalWork": "アニメ「SHIROBAKO」",
+  "live3d": null,
+  "aliases": [
+    "colorfulbox"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 156
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 307
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 546
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 819
+    },
+    "SPECIAL": null
+  }
+}

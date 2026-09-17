@@ -1,0 +1,35 @@
+{
+  "id": 326,
+  "title": "Live Beyond!!",
+  "reading": "ライフヒヨント",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2021-04-09T15:00:00.000+09:00",
+  "releaseOrder": 44,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "livebeyond"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 161
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 340
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 562
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 840
+    },
+    "SPECIAL": null
+  }
+}

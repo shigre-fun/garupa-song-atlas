@@ -1,0 +1,35 @@
+{
+  "id": 747,
+  "title": "白い雪のプリンセスは",
+  "reading": "シロイユキノフリンセスハ",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2025-12-10T15:00:00.000+09:00",
+  "releaseOrder": 1626,
+  "composer": "のぼる↑",
+  "originalArtist": "のぼる↑",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "しろいゆきのぷりんせすは"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 132
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 262
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 667
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 913
+    },
+    "SPECIAL": null
+  }
+}

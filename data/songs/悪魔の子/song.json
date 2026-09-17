@@ -1,0 +1,35 @@
+{
+  "id": 657,
+  "title": "悪魔の子",
+  "reading": "アクマノコ",
+  "category": "カバー",
+  "band": "Roselia×レイヤ",
+  "releaseDate": "2025-01-01T15:00:00.000+09:00",
+  "releaseOrder": 1446,
+  "composer": "ヒグチアイ",
+  "originalArtist": "ヒグチアイ",
+  "originalWork": "TVアニメ「進撃の巨人 The Final Season Part 2」ED",
+  "live3d": null,
+  "aliases": [
+    "あくまのこ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 5,
+      "notes": 102
+    },
+    "NORMAL": {
+      "level": 11,
+      "notes": 166
+    },
+    "HARD": {
+      "level": 18,
+      "notes": 299
+    },
+    "EXPERT": {
+      "level": 23,
+      "notes": 405
+    },
+    "SPECIAL": null
+  }
+}

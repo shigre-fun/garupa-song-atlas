@@ -1,0 +1,35 @@
+{
+  "id": 688,
+  "title": "again",
+  "reading": "アケイン",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2025-03-19T15:00:00.000+09:00",
+  "releaseOrder": 1624,
+  "composer": "YUI",
+  "originalArtist": "YUI",
+  "originalWork": "TVアニメ「鋼の錬金術師 FULLMETAL ALCHEMIST」OP",
+  "live3d": null,
+  "aliases": [
+    "again"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 91
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 214
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 390
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 568
+    },
+    "SPECIAL": null
+  }
+}

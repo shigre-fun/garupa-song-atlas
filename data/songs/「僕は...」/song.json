@@ -1,0 +1,35 @@
+{
+  "id": 595,
+  "title": "「僕は...」",
+  "reading": "ホクハ",
+  "category": "カバー",
+  "band": "MyGO!!!!!",
+  "releaseDate": "2024-04-29T15:00:00.000+09:00",
+  "releaseOrder": 1805,
+  "composer": "ひとみ",
+  "originalArtist": "あたらよ",
+  "originalWork": "アニメ「僕の心のヤバイやつ」",
+  "live3d": null,
+  "aliases": [
+    "ぼくは"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 77
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 183
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 334
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 483
+    },
+    "SPECIAL": null
+  }
+}

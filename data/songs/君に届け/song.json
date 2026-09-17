@@ -1,0 +1,35 @@
+{
+  "id": 151,
+  "title": "君に届け",
+  "reading": "キミニトトケ",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2018-10-29T21:00:00.000+09:00",
+  "releaseOrder": 1116,
+  "composer": "阪井　一生",
+  "originalArtist": "flumpool",
+  "originalWork": "映画「君に届け」",
+  "live3d": null,
+  "aliases": [
+    "きみにとどけ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 128
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 258
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 499
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 732
+    },
+    "SPECIAL": null
+  }
+}

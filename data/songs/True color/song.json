@@ -1,0 +1,38 @@
+{
+  "id": 27,
+  "title": "True color",
+  "reading": "トゥルーカラー",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2017-03-16T00:00:00.000+09:00",
+  "releaseOrder": 202,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "truecolor"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 112
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 240
+    },
+    "HARD": {
+      "level": 18,
+      "notes": 370
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 574
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 767
+    }
+  }
+}

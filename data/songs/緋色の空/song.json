@@ -1,0 +1,35 @@
+{
+  "id": 188,
+  "title": "緋色の空",
+  "reading": "ヒショクノソラ",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2019-04-20T15:00:00.000+09:00",
+  "releaseOrder": 1418,
+  "composer": "中沢伴行",
+  "originalArtist": "川田まみ",
+  "originalWork": "アニメ「灼眼のシャナ」",
+  "live3d": null,
+  "aliases": [
+    "ひしょくのそら"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 173
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 332
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 483
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 701
+    },
+    "SPECIAL": null
+  }
+}

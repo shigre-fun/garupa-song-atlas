@@ -1,0 +1,35 @@
+{
+  "id": 440,
+  "title": "THE WAY OF LIFE",
+  "reading": "サウェイオフライフ",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2022-08-31T15:00:00.000+09:00",
+  "releaseOrder": 719,
+  "composer": "日高勇輝（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "thewayoflife"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 135
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 281
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 565
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 919
+    },
+    "SPECIAL": null
+  }
+}

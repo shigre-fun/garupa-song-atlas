@@ -1,0 +1,35 @@
+{
+  "id": 113,
+  "title": "Jamboree!Journey!",
+  "reading": "シャンホリーシャーニー",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2018-03-21T15:00:00.000+09:00",
+  "releaseOrder": 206,
+  "composer": "藤田淳平（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "jamboreejourney"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 121
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 248
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 461
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 641
+    },
+    "SPECIAL": null
+  }
+}

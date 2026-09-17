@@ -1,0 +1,35 @@
+{
+  "id": 697,
+  "title": "最高到達点",
+  "reading": "サイコウトウタツテン",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2025-05-05T15:00:00.000+09:00",
+  "releaseOrder": 1548,
+  "composer": "Nakajin",
+  "originalArtist": "SEKAI NO OWARI",
+  "originalWork": "TVアニメ「ONE PIECE」OP",
+  "live3d": null,
+  "aliases": [
+    "さいこうとうたつてん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 72
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 114
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 345
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 490
+    },
+    "SPECIAL": null
+  }
+}

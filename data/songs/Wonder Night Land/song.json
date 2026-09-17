@@ -1,0 +1,35 @@
+{
+  "id": 770,
+  "title": "Wonder Night Land",
+  "reading": "ワンダーナイトランド",
+  "category": "オリジナル",
+  "band": "星降るティーパーティー",
+  "releaseDate": "2026-02-17T15:00:00.000+09:00",
+  "releaseOrder": 934,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "wondernightland"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 88
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 170
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 491
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 722
+    },
+    "SPECIAL": null
+  }
+}

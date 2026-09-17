@@ -1,0 +1,35 @@
+{
+  "id": 268,
+  "title": "大盛り一丁！ガルパ☆ピコ",
+  "reading": "オオモリイッチョウカルハヒコ",
+  "category": "オリジナル",
+  "band": "香澄×蘭×彩×友希那×こころ",
+  "releaseDate": "2020-05-07T12:00:00.000+09:00",
+  "releaseOrder": 903,
+  "composer": "藤田淳平（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "おおもりいっちょうがるぱぴこ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 10,
+      "notes": 206
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 344
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 481
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 730
+    },
+    "SPECIAL": null
+  }
+}

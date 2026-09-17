@@ -1,0 +1,35 @@
+{
+  "id": 706,
+  "title": "FIVE as ONE",
+  "reading": "ファイフアスワン",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2025-06-20T15:00:00.000+09:00",
+  "releaseOrder": 731,
+  "composer": "藤間仁（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "ふぁいぶあずわん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 108
+    },
+    "NORMAL": {
+      "level": 11,
+      "notes": 202
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 409
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 501
+    },
+    "SPECIAL": null
+  }
+}

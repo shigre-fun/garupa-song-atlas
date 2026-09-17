@@ -1,0 +1,23 @@
+{
+  "id": 690,
+  "title": "Second to None",
+  "reading": "セカントトゥノン",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2025-04-10T15:00:00.000+09:00",
+  "releaseOrder": 451,
+  "composer": "竹田祐介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "secondtonone"
+  ],
+  "difficulties": {
+    "EASY": null,
+    "NORMAL": null,
+    "HARD": null,
+    "EXPERT": null,
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 443,
+  "title": "うちゃパ！で ぱっぴかポーんっ！",
+  "reading": "ウチャハテハッヒカホーン",
+  "category": "オリジナル",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2022-09-12T15:00:00.000+09:00",
+  "releaseOrder": 524,
+  "composer": "藤間仁（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "うちゃぱでぱっぴかぽーんっ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 10,
+      "notes": 160
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 325
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 555
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 746
+    },
+    "SPECIAL": null
+  }
+}

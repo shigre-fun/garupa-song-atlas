@@ -1,0 +1,35 @@
+{
+  "id": 378,
+  "title": "COLORS",
+  "reading": "カラース",
+  "category": "エクストラ",
+  "band": "Afterglow×FLOW",
+  "releaseDate": "2021-12-11T15:00:00.000+09:00",
+  "releaseOrder": 2201,
+  "composer": "TAKESHI ASAKAWA",
+  "originalArtist": "FLOW",
+  "originalWork": "アニメ「コードギアス 反逆のルルーシュ」",
+  "live3d": null,
+  "aliases": [
+    "colors"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 91
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 196
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 426
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 611
+    },
+    "SPECIAL": null
+  }
+}

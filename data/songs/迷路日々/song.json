@@ -1,0 +1,35 @@
+{
+  "id": 525,
+  "title": "迷路日々",
+  "reading": "メロティ",
+  "category": "オリジナル",
+  "band": "MyGO!!!!!",
+  "releaseDate": "2023-08-31T23:30:00.000+09:00",
+  "releaseOrder": 806,
+  "composer": "松坂康司(SUPA LOVE)",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "めろでぃ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 145
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 325
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 663
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 966
+    },
+    "SPECIAL": null
+  }
+}

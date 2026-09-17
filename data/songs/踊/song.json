@@ -1,0 +1,35 @@
+{
+  "id": 498,
+  "title": "踊",
+  "reading": "オト",
+  "category": "カバー",
+  "band": "RAISE A SUILEN×友希那",
+  "releaseDate": "2023-05-02T15:00:00.000+09:00",
+  "releaseOrder": 1715,
+  "composer": "Giga・TeddyLoid",
+  "originalArtist": "Ado",
+  "originalWork": "音楽番組「夜光音楽 ボカロP 5min.」",
+  "live3d": null,
+  "aliases": [
+    "おど"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 104
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 200
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 422
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 606
+    },
+    "SPECIAL": null
+  }
+}

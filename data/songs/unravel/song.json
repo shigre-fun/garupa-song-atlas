@@ -1,0 +1,35 @@
+{
+  "id": 408,
+  "title": "unravel",
+  "reading": "アンラヘル",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2022-03-16T15:00:00.000+09:00",
+  "releaseOrder": 1611,
+  "composer": "TK",
+  "originalArtist": "TK from 凛として時雨",
+  "originalWork": "アニメ「東京喰種トーキョーグール」",
+  "live3d": null,
+  "aliases": [
+    "unravel"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 109
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 219
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 518
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 777
+    },
+    "SPECIAL": null
+  }
+}

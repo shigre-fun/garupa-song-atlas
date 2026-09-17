@@ -1,0 +1,38 @@
+{
+  "id": 307,
+  "title": "ムーンライト伝説",
+  "reading": "ムーンライトテンセツ",
+  "category": "カバー",
+  "band": "Pastel＊Palettes×こころ×ましろ",
+  "releaseDate": "2020-12-31T15:00:00.000+09:00",
+  "releaseOrder": 1326,
+  "composer": "小諸鉄矢",
+  "originalArtist": "DALI",
+  "originalWork": "アニメ「美少女戦士セーラームーン」",
+  "live3d": null,
+  "aliases": [
+    "むーんらいとでんせつ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 130
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 235
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 445
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 602
+    },
+    "SPECIAL": {
+      "level": 25,
+      "notes": 691
+    }
+  }
+}

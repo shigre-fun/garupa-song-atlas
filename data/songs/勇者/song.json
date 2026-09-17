@@ -1,0 +1,35 @@
+{
+  "id": 627,
+  "title": "勇者",
+  "reading": "ユウシャ",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2024-09-11T15:00:00.000+09:00",
+  "releaseOrder": 1622,
+  "composer": "Ayase",
+  "originalArtist": "YOASOBI",
+  "originalWork": "TVアニメ「葬送のフリーレン」OP",
+  "live3d": null,
+  "aliases": [
+    "ゆうしゃ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 111
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 188
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 450
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 597
+    },
+    "SPECIAL": null
+  }
+}

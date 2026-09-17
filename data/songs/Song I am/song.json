@@ -1,0 +1,35 @@
+{
+  "id": 245,
+  "title": "Song I am.",
+  "reading": "ソンクアイアム",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2020-02-10T15:00:00.000+09:00",
+  "releaseOrder": 423,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "songiam"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 141
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 293
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 559
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 882
+    },
+    "SPECIAL": null
+  }
+}

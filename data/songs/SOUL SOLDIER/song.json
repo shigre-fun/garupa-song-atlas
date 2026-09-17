@@ -1,0 +1,35 @@
+{
+  "id": 432,
+  "title": "SOUL SOLDIER",
+  "reading": "ソウルソルシャー",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2022-06-19T22:00:00.000+09:00",
+  "releaseOrder": 718,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "soulsoldier"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 151
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 285
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 593
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 984
+    },
+    "SPECIAL": null
+  }
+}

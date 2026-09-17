@@ -1,0 +1,35 @@
+{
+  "id": 392,
+  "title": "ハッピー☆マテリアル",
+  "reading": "ハッヒーマテリアル",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2022-01-11T15:00:00.000+09:00",
+  "releaseOrder": 1533,
+  "composer": "大川 茂伸",
+  "originalArtist": "麻帆良学園中等部2-A",
+  "originalWork": "アニメ「魔法先生ネギま!」",
+  "live3d": null,
+  "aliases": [
+    "はっぴーまてりある"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 240
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 320
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 600
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 764
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 495,
+  "title": "DANCING DARING",
+  "reading": "タンシンクテーリンク",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2023-05-10T15:00:00.000+09:00",
+  "releaseOrder": 723,
+  "composer": "都丸椋太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "dancingdaring"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 129
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 233
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 423
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 762
+    },
+    "SPECIAL": null
+  }
+}

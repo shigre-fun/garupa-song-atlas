@@ -1,0 +1,35 @@
+{
+  "id": 615,
+  "title": "SOULSOUP",
+  "reading": "ソウルスーフ",
+  "category": "カバー",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2024-06-20T15:00:00.000+09:00",
+  "releaseOrder": 1720,
+  "composer": "藤原 聡",
+  "originalArtist": "Official髭男dism",
+  "originalWork": "映画「劇場版 SPY×FAMILY CODE: White」",
+  "live3d": null,
+  "aliases": [
+    "soulsoup"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 130
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 295
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 665
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 997
+    },
+    "SPECIAL": null
+  }
+}

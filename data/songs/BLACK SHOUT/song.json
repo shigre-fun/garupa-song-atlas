@@ -1,0 +1,38 @@
+{
+  "id": 29,
+  "title": "BLACK SHOUT",
+  "reading": "フラックシャウト",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2017-03-16T00:00:00.000+09:00",
+  "releaseOrder": 401,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": true,
+  "aliases": [
+    "blackshout"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 81
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 214
+    },
+    "HARD": {
+      "level": 18,
+      "notes": 309
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 506
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 575
+    }
+  }
+}

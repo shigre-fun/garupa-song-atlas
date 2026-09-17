@@ -1,0 +1,35 @@
+{
+  "id": 542,
+  "title": "歌いましょう鳴らしましょう",
+  "reading": "ウタイマショウナラシマショウ",
+  "category": "オリジナル",
+  "band": "MyGO!!!!!",
+  "releaseDate": "2023-09-16T00:00:00.000+09:00",
+  "releaseOrder": 808,
+  "composer": "メガテラ・ゼロ",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "うたいましょうならしましょう"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 109
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 217
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 484
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 706
+    },
+    "SPECIAL": null
+  }
+}

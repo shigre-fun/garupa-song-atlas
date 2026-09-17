@@ -1,0 +1,35 @@
+{
+  "id": 564,
+  "title": "魔法少女とチョコレゐト",
+  "reading": "マホウショウショトチョコレイト",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2024-01-02T15:00:00.000+09:00",
+  "releaseOrder": 1338,
+  "composer": "ピノキオピー",
+  "originalArtist": "ピノキオピー feat.初音ミク",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "まほうしょうじょとちょこれいと"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 140
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 264
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 470
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 849
+    },
+    "SPECIAL": null
+  }
+}

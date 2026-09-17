@@ -1,0 +1,38 @@
+{
+  "id": 681,
+  "title": "えがおのオーケストラっ！(パラレルver.)",
+  "reading": "エカオノオオケストラッ",
+  "category": "オリジナル",
+  "band": "優雅なティータイムを♪",
+  "releaseDate": "2025-03-24T15:00:00.000+09:00",
+  "releaseOrder": 924,
+  "composer": "藤間仁（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "えがおのおーけすとらっ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 101
+    },
+    "NORMAL": {
+      "level": 11,
+      "notes": 206
+    },
+    "HARD": {
+      "level": 18,
+      "notes": 313
+    },
+    "EXPERT": {
+      "level": 23,
+      "notes": 427
+    },
+    "SPECIAL": {
+      "level": 25,
+      "notes": 610
+    }
+  }
+}

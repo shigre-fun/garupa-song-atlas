@@ -1,0 +1,38 @@
+{
+  "id": 53,
+  "title": "陽だまりロードナイト",
+  "reading": "ヒタマリロートナイト",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2017-06-21T15:00:00.000+09:00",
+  "releaseOrder": 404,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "ひだまりろーどないと"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 99
+    },
+    "NORMAL": {
+      "level": 11,
+      "notes": 188
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 413
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 659
+    },
+    "SPECIAL": {
+      "level": 25,
+      "notes": 667
+    }
+  }
+}

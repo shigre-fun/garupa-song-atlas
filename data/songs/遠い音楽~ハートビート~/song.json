@@ -1,0 +1,35 @@
+{
+  "id": 74,
+  "title": "遠い音楽～ハートビート～",
+  "reading": "トオイオンカクハートヒート",
+  "category": "オリジナル",
+  "band": "山吹沙綾",
+  "releaseDate": "2017-10-04T12:00:00.000+09:00",
+  "releaseOrder": 153,
+  "composer": "菊田大介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "とおいおんがくはーとびーと"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 116
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 272
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 507
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 687
+    },
+    "SPECIAL": null
+  }
+}

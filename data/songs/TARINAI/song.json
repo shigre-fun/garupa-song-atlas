@@ -1,0 +1,35 @@
+{
+  "id": 650,
+  "title": "TARINAI",
+  "reading": "タリナイ",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2024-12-26T15:00:00.000+09:00",
+  "releaseOrder": 66,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "tarinai"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 109
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 292
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 454
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 843
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 111,
+  "title": "軌跡",
+  "reading": "キセキ",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2018-03-31T15:00:00.000+09:00",
+  "releaseOrder": 410,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "きせき"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 94
+    },
+    "NORMAL": {
+      "level": 11,
+      "notes": 169
+    },
+    "HARD": {
+      "level": 18,
+      "notes": 333
+    },
+    "EXPERT": {
+      "level": 21,
+      "notes": 449
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 331,
+  "title": "ハウトゥー世界征服",
+  "reading": "ハウトゥーセカイセイフク",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2021-04-30T15:00:00.000+09:00",
+  "releaseOrder": 1225,
+  "composer": "Neru",
+  "originalArtist": "Neru feat.鏡音リン、鏡音レン",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "はうとぅーせかいせいふく"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 156
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 233
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 516
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 694
+    },
+    "SPECIAL": null
+  }
+}

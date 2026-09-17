@@ -1,0 +1,35 @@
+{
+  "id": 211,
+  "title": "切ないSandglass",
+  "reading": "セツナイサントクラス",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2019-08-18T21:00:00.000+09:00",
+  "releaseOrder": 31,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "せつないsandglass"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 120
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 216
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 359
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 606
+    },
+    "SPECIAL": null
+  }
+}

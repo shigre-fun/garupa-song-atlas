@@ -1,0 +1,35 @@
+{
+  "id": 218,
+  "title": "ファティマ",
+  "reading": "ファティマ",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2019-09-20T15:00:00.000+09:00",
+  "releaseOrder": 1420,
+  "composer": "志倉千代丸",
+  "originalArtist": "いとうかなこ",
+  "originalWork": "アニメ「シュタインズ・ゲート ゼロ」",
+  "live3d": null,
+  "aliases": [
+    "ふぁてぃま"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 136
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 274
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 480
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 728
+    },
+    "SPECIAL": null
+  }
+}

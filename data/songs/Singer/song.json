@@ -1,0 +1,35 @@
+{
+  "id": 752,
+  "title": "Singer",
+  "reading": "シンカー",
+  "category": "オリジナル",
+  "band": "夢ノ結唱 PASTEL",
+  "releaseDate": "2025-12-26T15:00:00.000+09:00",
+  "releaseOrder": 929,
+  "composer": "THE SPELLBOUND",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "singer"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 131
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 296
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 565
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 840
+    },
+    "SPECIAL": null
+  }
+}

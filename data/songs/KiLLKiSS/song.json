@@ -1,0 +1,35 @@
+{
+  "id": 659,
+  "title": "KiLLKiSS",
+  "reading": "キルキス",
+  "category": "オリジナル",
+  "band": "Ave Mujica",
+  "releaseDate": "2025-01-03T00:00:00.000+09:00",
+  "releaseOrder": 852,
+  "composer": "長谷川大介(SUPA LOVE)、Diggy-MO’",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "killkiss"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 98
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 259
+    },
+    "HARD": {
+      "level": 24,
+      "notes": 503
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 903
+    },
+    "SPECIAL": null
+  }
+}

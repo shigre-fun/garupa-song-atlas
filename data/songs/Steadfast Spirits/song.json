@@ -1,0 +1,35 @@
+{
+  "id": 714,
+  "title": "Steadfast Spirits",
+  "reading": "ステットファストスヒリッツ",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2025-07-20T15:00:00.000+09:00",
+  "releaseOrder": 455,
+  "composer": "都丸椋太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "steadfastspirits"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 147
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 296
+    },
+    "HARD": {
+      "level": 24,
+      "notes": 573
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 937
+    },
+    "SPECIAL": null
+  }
+}

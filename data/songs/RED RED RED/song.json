@@ -1,0 +1,35 @@
+{
+  "id": 270,
+  "title": "RED RED RED",
+  "reading": "レットレットレット",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2020-05-29T21:00:00.000+09:00",
+  "releaseOrder": 215,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "redredred"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 129
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 214
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 383
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 733
+    },
+    "SPECIAL": null
+  }
+}

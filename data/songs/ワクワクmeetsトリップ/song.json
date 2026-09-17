@@ -1,0 +1,35 @@
+{
+  "id": 193,
+  "title": "ワクワクmeetsトリップ",
+  "reading": "ワクワクミーツトリッフ",
+  "category": "オリジナル",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2019-04-30T15:00:00.000+09:00",
+  "releaseOrder": 311,
+  "composer": "菊田大介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "わくわくmeetsとりっぷ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 135
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 217
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 411
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 634
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 168,
+  "title": "Safe and Sound",
+  "reading": "セーフアントサウント",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2019-01-10T15:00:00.000+09:00",
+  "releaseOrder": 417,
+  "composer": "藤田淳平（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "safeandsound"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 117
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 191
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 328
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 468
+    },
+    "SPECIAL": null
+  }
+}

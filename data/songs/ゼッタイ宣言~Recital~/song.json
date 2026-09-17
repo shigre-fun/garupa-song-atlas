@@ -1,0 +1,38 @@
+{
+  "id": 148,
+  "title": "ゼッタイ宣言～Recital～",
+  "reading": "セッタイセンケンリサイタル",
+  "category": "オリジナル",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2018-09-30T15:00:00.000+09:00",
+  "releaseOrder": 308,
+  "composer": "藤田淳平（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "ぜったいせんげんrecital"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 10,
+      "notes": 185
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 279
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 572
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 921
+    },
+    "SPECIAL": {
+      "level": 29,
+      "notes": 954
+    }
+  }
+}

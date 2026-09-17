@@ -1,0 +1,35 @@
+{
+  "id": 651,
+  "title": "愛包ダンスホール",
+  "reading": "アイハイタンスホール",
+  "category": "カバー",
+  "band": "Pastel＊Palettes×蘭",
+  "releaseDate": "2024-12-27T15:00:00.000+09:00",
+  "releaseOrder": 1345,
+  "composer": "涼木シンジ、Gohgo",
+  "originalArtist": "HIMEHINA",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "あいぱいだんすほーる"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 134
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 253
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 618
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 854
+    },
+    "SPECIAL": null
+  }
+}

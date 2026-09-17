@@ -1,0 +1,35 @@
+{
+  "id": 104,
+  "title": "もういちど ルミナス",
+  "reading": "モウイチトルミナス",
+  "category": "オリジナル",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2018-06-20T15:00:00.000+09:00",
+  "releaseOrder": 308,
+  "composer": "末益涼太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "もういちどるみなす"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 86
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 168
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 439
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 660
+    },
+    "SPECIAL": null
+  }
+}

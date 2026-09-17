@@ -1,0 +1,35 @@
+{
+  "id": 636,
+  "title": "ティリカモニカリラ",
+  "reading": "ティリカモニカリラ",
+  "category": "オリジナル",
+  "band": "Morfonica",
+  "releaseDate": "2024-09-29T15:00:00.000+09:00",
+  "releaseOrder": 623,
+  "composer": "藤間仁（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "てぃりかもにかりら"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 140
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 255
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 411
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 679
+    },
+    "SPECIAL": null
+  }
+}

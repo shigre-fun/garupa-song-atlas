@@ -1,0 +1,35 @@
+{
+  "id": 427,
+  "title": "ボクノート",
+  "reading": "ホクノート",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2022-06-20T15:00:00.000+09:00",
+  "releaseOrder": 1611,
+  "composer": "大橋卓弥 常田真太郎",
+  "originalArtist": "スキマスイッチ",
+  "originalWork": "映画「ドラえもん のび太の恐竜2006」",
+  "live3d": null,
+  "aliases": [
+    "ぼくのーと"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 81
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 178
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 422
+    },
+    "EXPERT": {
+      "level": 23,
+      "notes": 614
+    },
+    "SPECIAL": null
+  }
+}

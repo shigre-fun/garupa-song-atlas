@@ -1,0 +1,35 @@
+{
+  "id": 281,
+  "title": "右肩の蝶",
+  "reading": "ミキカタノチョウ",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2020-07-28T15:00:00.000+09:00",
+  "releaseOrder": 1424,
+  "composer": "のりぴー",
+  "originalArtist": "のりぴー feat.鏡音レン",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "みぎかたのちょう"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 139
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 246
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 423
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 695
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 501,
+  "title": "惑星ループ",
+  "reading": "ワクセイルーフ",
+  "category": "カバー",
+  "band": "Pastel＊Palettes×パレオ",
+  "releaseDate": "2023-05-31T15:00:00.000+09:00",
+  "releaseOrder": 1336,
+  "composer": "ナユタン星人",
+  "originalArtist": "ナユタン星人 feat.初音ミク",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "わくせいるーぷ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 162
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 279
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 546
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 823
+    },
+    "SPECIAL": null
+  }
+}

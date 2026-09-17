@@ -1,0 +1,35 @@
+{
+  "id": 468,
+  "title": "転生林檎",
+  "reading": "テンセイリンコ",
+  "category": "エクストラ",
+  "band": "Roselia×＋α／あるふぁきゅん。",
+  "releaseDate": "2023-01-02T15:00:00.000+09:00",
+  "releaseOrder": 2402,
+  "composer": "ピノキオピー",
+  "originalArtist": "ピノキオピー feat.初音ミク",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "てんせいりんご"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 141
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 308
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 546
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 853
+    },
+    "SPECIAL": null
+  }
+}

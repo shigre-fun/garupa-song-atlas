@@ -1,0 +1,35 @@
+{
+  "id": 593,
+  "title": "ボッカデラベリタ",
+  "reading": "ホッカテラヘリタ",
+  "category": "カバー",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2024-03-22T15:00:00.000+09:00",
+  "releaseOrder": 1719,
+  "composer": "柊キライ",
+  "originalArtist": "柊キライ feat. flower",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "ぼっかでらべりた"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 100
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 211
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 459
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 963
+    },
+    "SPECIAL": null
+  }
+}

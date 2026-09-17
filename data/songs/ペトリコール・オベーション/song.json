@@ -1,0 +1,35 @@
+{
+  "id": 510,
+  "title": "ペトリコール・オベーション",
+  "reading": "ヘトリコールオヘレーション",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2023-07-20T15:00:00.000+09:00",
+  "releaseOrder": 227,
+  "composer": "日高勇輝（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "ぺとりこーるおぺれーしょん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 157
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 283
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 481
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 764
+    },
+    "SPECIAL": null
+  }
+}

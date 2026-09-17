@@ -1,0 +1,38 @@
+{
+  "id": 231,
+  "title": "全力少年",
+  "reading": "センリョクショウネン",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2019-12-10T15:00:00.000+09:00",
+  "releaseOrder": 1522,
+  "composer": "大橋卓弥/常田真太郎",
+  "originalArtist": "スキマスイッチ",
+  "originalWork": "CM「NTTDoCoMo関西」、映画「ラフ ROUGH」",
+  "live3d": null,
+  "aliases": [
+    "ぜんりょくしょうねん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 163
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 290
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 404
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 608
+    },
+    "SPECIAL": {
+      "level": 25,
+      "notes": 697
+    }
+  }
+}

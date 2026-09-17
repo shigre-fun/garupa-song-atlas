@@ -1,0 +1,35 @@
+{
+  "id": 353,
+  "title": "絆色のアンサンブル",
+  "reading": "キスナイロノアンサンフル",
+  "category": "オリジナル",
+  "band": "Poppin'Party×Pastel＊Palettes×Morfonica",
+  "releaseDate": "2021-08-20T15:00:00.000+09:00",
+  "releaseOrder": 904,
+  "composer": "笠井雄太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "きずないろのあんさんぶる"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 146
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 307
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 566
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 842
+    },
+    "SPECIAL": null
+  }
+}

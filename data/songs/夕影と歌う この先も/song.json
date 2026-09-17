@@ -1,0 +1,35 @@
+{
+  "id": 805,
+  "title": "夕影と歌う この先も",
+  "reading": "セキエイトウタウコノサキモ",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2026-07-10T15:00:00.000+09:00",
+  "releaseOrder": 805,
+  "composer": "日高勇輝（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "せきえいとうたうこのさきも"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 101
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 196
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 483
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 660
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 373,
+  "title": "Our Carol",
+  "reading": "アワーキャロル",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2021-11-30T15:00:00.000+09:00",
+  "releaseOrder": 433,
+  "composer": "日高勇輝（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "ourcarol"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 71
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 164
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 367
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 512
+    },
+    "SPECIAL": null
+  }
+}

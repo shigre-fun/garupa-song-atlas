@@ -1,0 +1,38 @@
+{
+  "id": 30,
+  "title": "Re:birth day",
+  "reading": "リハーステイ",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2017-03-16T00:00:00.000+09:00",
+  "releaseOrder": 402,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "rebirthday"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 101
+    },
+    "NORMAL": {
+      "level": 11,
+      "notes": 177
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 514
+    },
+    "EXPERT": {
+      "level": 29,
+      "notes": 848
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 781
+    }
+  }
+}

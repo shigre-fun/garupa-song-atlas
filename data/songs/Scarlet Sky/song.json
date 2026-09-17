@@ -1,0 +1,38 @@
+{
+  "id": 28,
+  "title": "Scarlet Sky",
+  "reading": "スカーレットスカイ",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2017-05-11T15:00:00.000+09:00",
+  "releaseOrder": 203,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "scarletsky"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 77
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 160
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 433
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 695
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 750
+    }
+  }
+}

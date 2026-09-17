@@ -1,0 +1,35 @@
+{
+  "id": 754,
+  "title": "端程山",
+  "reading": "ハノラマ",
+  "category": "オリジナル",
+  "band": "MyGO!!!!!",
+  "releaseDate": "2025-12-28T15:00:00.000+09:00",
+  "releaseOrder": 819,
+  "composer": "トミタカズキ(SUPA LOVE)",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "ぱのらま"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 96
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 147
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 346
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 512
+    },
+    "SPECIAL": null
+  }
+}

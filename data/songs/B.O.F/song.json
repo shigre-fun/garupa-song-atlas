@@ -1,0 +1,35 @@
+{
+  "id": 92,
+  "title": "B.O.F",
+  "reading": "ヒーオーエフ",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2017-12-06T15:00:00.000+09:00",
+  "releaseOrder": 16,
+  "composer": "DAIGO",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "bof"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 108
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 175
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 413
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 612
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": 4,
+  "title": "ティアドロップス",
+  "reading": "ティアトロッフス",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2017-03-16T00:00:00.000+09:00",
+  "releaseOrder": 4,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": true,
+  "aliases": [
+    "てぃあどろっぷす"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 158
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 288
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 450
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 774
+    },
+    "SPECIAL": {
+      "level": 27,
+      "notes": 1063
+    }
+  }
+}

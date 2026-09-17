@@ -1,0 +1,35 @@
+{
+  "id": 338,
+  "title": "My Dearest",
+  "reading": "マイティアレスト",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2021-05-11T15:00:00.000+09:00",
+  "releaseOrder": 1428,
+  "composer": "ryo",
+  "originalArtist": "supercell",
+  "originalWork": "アニメ「ギルティクラウン」",
+  "live3d": null,
+  "aliases": [
+    "mydearest"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 131
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 251
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 436
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 618
+    },
+    "SPECIAL": null
+  }
+}

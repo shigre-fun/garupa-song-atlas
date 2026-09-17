@@ -1,0 +1,35 @@
+{
+  "id": 808,
+  "title": "I AM WHO I AM",
+  "reading": "アイアムフーアイアム",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2026-08-11T15:00:00.000+09:00",
+  "releaseOrder": 808,
+  "composer": "竹田祐介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "iamwhoiam"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 102
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 163
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 427
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 594
+    },
+    "SPECIAL": null
+  }
+}

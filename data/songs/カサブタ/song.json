@@ -1,0 +1,35 @@
+{
+  "id": 277,
+  "title": "カサブタ",
+  "reading": "カサフタ",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2020-07-05T15:00:00.000+09:00",
+  "releaseOrder": 1220,
+  "composer": "千綿偉功",
+  "originalArtist": "千綿ヒデノリ",
+  "originalWork": "アニメ「金色のガッシュベル!!」",
+  "live3d": null,
+  "aliases": [
+    "かさぶた"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 148
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 233
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 372
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 532
+    },
+    "SPECIAL": null
+  }
+}

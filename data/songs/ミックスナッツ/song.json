@@ -1,0 +1,35 @@
+{
+  "id": 458,
+  "title": "ミックスナッツ",
+  "reading": "ミックスナッツ",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2022-11-30T15:00:00.000+09:00",
+  "releaseOrder": 1536,
+  "composer": "藤原　聡",
+  "originalArtist": "Official髭男dism",
+  "originalWork": "アニメ「SPYxFAMILY」",
+  "live3d": null,
+  "aliases": [
+    "みっくすなっつ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 160
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 279
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 603
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 983
+    },
+    "SPECIAL": null
+  }
+}

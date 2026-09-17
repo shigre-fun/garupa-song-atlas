@@ -1,0 +1,19 @@
+{
+  "name": "garupa-song-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "add-song": "node scripts/add-song.mjs",
+    "format": "prettier --write src scripts tests templates package.json README.md"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2"
+  }
+}

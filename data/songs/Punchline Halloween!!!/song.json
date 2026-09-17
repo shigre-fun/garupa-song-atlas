@@ -1,0 +1,35 @@
+{
+  "id": 451,
+  "title": "Punchline Halloween!!!",
+  "reading": "ハンチラインハロウィン",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2022-09-29T15:00:00.000+09:00",
+  "releaseOrder": 224,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "punchlinehalloween"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 146
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 279
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 473
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 800
+    },
+    "SPECIAL": null
+  }
+}

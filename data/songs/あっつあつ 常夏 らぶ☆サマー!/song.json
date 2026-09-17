@@ -1,0 +1,38 @@
+{
+  "id": 210,
+  "title": "あっつあつ 常夏 らぶ☆サマー！",
+  "reading": "アッツアツトコナツラフサマー",
+  "category": "オリジナル",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2019-07-31T15:00:00.000+09:00",
+  "releaseOrder": 312,
+  "composer": "笠井雄太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": true,
+  "aliases": [
+    "あっつあつとこなつらぶさまー"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 146
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 264
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 502
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 778
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 750
+    }
+  }
+}

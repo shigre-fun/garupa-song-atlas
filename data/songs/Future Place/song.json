@@ -1,0 +1,35 @@
+{
+  "id": 452,
+  "title": "Future Place",
+  "reading": "フューチャーフレイス",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2022-10-10T15:00:00.000+09:00",
+  "releaseOrder": 54,
+  "composer": "笠井雄太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "futureplace"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 139
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 244
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 499
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 670
+    },
+    "SPECIAL": null
+  }
+}

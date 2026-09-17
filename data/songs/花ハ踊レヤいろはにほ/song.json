@@ -1,0 +1,38 @@
+{
+  "id": 238,
+  "title": "花ハ踊レヤいろはにほ",
+  "reading": "ハナハオトレヤイロハニホ",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2020-01-02T15:00:00.000+09:00",
+  "releaseOrder": 1322,
+  "composer": "田中　秀和",
+  "originalArtist": "チーム\"ハナヤマタ\"",
+  "originalWork": "アニメ「ハナヤマタ」",
+  "live3d": null,
+  "aliases": [
+    "はなはおどれやいろはにほ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 157
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 288
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 496
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 627
+    },
+    "SPECIAL": {
+      "level": 24,
+      "notes": 505
+    }
+  }
+}

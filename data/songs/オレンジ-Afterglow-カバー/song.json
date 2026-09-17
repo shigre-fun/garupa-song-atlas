@@ -1,0 +1,35 @@
+{
+  "id": 676,
+  "title": "オレンジ",
+  "reading": "オレンシ",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2025-03-18T15:00:00.000+09:00",
+  "releaseOrder": 1243,
+  "composer": "UZ",
+  "originalArtist": "逢坂大河（釘宮理恵）櫛枝実乃梨（堀江由衣）川嶋亜美（喜多村英梨）",
+  "originalWork": "アニメ「とらドラ!」",
+  "live3d": null,
+  "aliases": [
+    "おれんじ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 99
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 167
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 465
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 651
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 394,
+  "title": "Listen!!",
+  "reading": "リッスン",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2022-01-31T15:00:00.000+09:00",
+  "releaseOrder": 1229,
+  "composer": "前澤寛之",
+  "originalArtist": "放課後ティータイム",
+  "originalWork": "アニメ「けいおん!!」",
+  "live3d": null,
+  "aliases": [
+    "listen"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 228
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 323
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 623
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 940
+    },
+    "SPECIAL": null
+  }
+}

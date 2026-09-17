@@ -1,0 +1,38 @@
+{
+  "id": 9,
+  "title": "ETERNAL BLAZE",
+  "reading": "エターナルフレイス",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2017-04-17T12:00:00.000+09:00",
+  "releaseOrder": 1403,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": "水樹奈々",
+  "originalWork": "TVアニメ「魔法少女リリカルなのは A’s」OP",
+  "live3d": null,
+  "aliases": [
+    "eternalblaze"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 135
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 212
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 428
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 609
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 690
+    }
+  }
+}

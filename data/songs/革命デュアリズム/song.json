@@ -1,0 +1,35 @@
+{
+  "id": 178,
+  "title": "革命デュアリズム",
+  "reading": "カクメイテュアリスム",
+  "category": "カバー",
+  "band": "Roselia×蘭",
+  "releaseDate": "2019-03-16T15:00:00.000+09:00",
+  "releaseOrder": 1417,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": "水樹奈々×T.M.Revolution",
+  "originalWork": "アニメ「革命機ヴァルヴレイヴ」",
+  "live3d": null,
+  "aliases": [
+    "かくめいでゅありずむ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 11,
+      "notes": 190
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 272
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 497
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 681
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": 140,
+  "title": "ロストワンの号哭",
+  "reading": "ロストワンノコウコク",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2018-08-24T15:00:00.000+09:00",
+  "releaseOrder": 1211,
+  "composer": "Neru",
+  "originalArtist": "Neru feat.鏡音リン",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "ろすとわんのごうこく"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 10,
+      "notes": 217
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 298
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 687
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 1026
+    },
+    "SPECIAL": {
+      "level": 25,
+      "notes": 699
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 591,
+  "title": "きゅうくらりん",
+  "reading": "キュウクラリン",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2024-03-20T15:00:00.000+09:00",
+  "releaseOrder": 1543,
+  "composer": "いよわ",
+  "originalArtist": "いよわ feat. 可不",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "きゅうくらりん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 160
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 272
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 579
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 969
+    },
+    "SPECIAL": null
+  }
+}

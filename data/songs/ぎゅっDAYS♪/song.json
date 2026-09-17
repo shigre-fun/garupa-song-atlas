@@ -1,0 +1,35 @@
+{
+  "id": 169,
+  "title": "ぎゅっDAYS♪",
+  "reading": "キュッテイス",
+  "category": "オリジナル",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2019-01-19T21:00:00.000+09:00",
+  "releaseOrder": 309,
+  "composer": "竹田祐介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "ぎゅっdays"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 11,
+      "notes": 214
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 326
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 515
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 761
+    },
+    "SPECIAL": null
+  }
+}

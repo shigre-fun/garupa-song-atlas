@@ -1,0 +1,35 @@
+{
+  "id": 221,
+  "title": "コレカラ",
+  "reading": "コレカラ",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2019-10-19T21:00:00.000+09:00",
+  "releaseOrder": 1521,
+  "composer": "馬渕直純",
+  "originalArtist": "Machico",
+  "originalWork": "アニメ「りゅうおうのおしごと!」",
+  "live3d": null,
+  "aliases": [
+    "これから"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 117
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 208
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 340
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 591
+    },
+    "SPECIAL": null
+  }
+}

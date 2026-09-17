@@ -1,0 +1,35 @@
+{
+  "id": 311,
+  "title": "CQCQ",
+  "reading": "シーキューシーキュー",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2021-01-04T15:00:00.000+09:00",
+  "releaseOrder": 1606,
+  "composer": "東野へいと",
+  "originalArtist": "神様、僕は気づいてしまった",
+  "originalWork": "ドラマ「あなたのことはそれほど」",
+  "live3d": null,
+  "aliases": [
+    "cqcq"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 135
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 258
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 499
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 694
+    },
+    "SPECIAL": null
+  }
+}

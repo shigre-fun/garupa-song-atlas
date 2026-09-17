@@ -1,0 +1,35 @@
+{
+  "id": 457,
+  "title": "DEAD HEAT BEAT",
+  "reading": "テットヒートヒート",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2022-11-19T15:00:00.000+09:00",
+  "releaseOrder": 722,
+  "composer": "菊田大介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "deadheatbeat"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 11,
+      "notes": 215
+    },
+    "NORMAL": {
+      "level": 16,
+      "notes": 354
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 591
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 949
+    },
+    "SPECIAL": null
+  }
+}

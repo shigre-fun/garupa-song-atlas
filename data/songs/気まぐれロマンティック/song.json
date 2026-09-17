@@ -1,0 +1,38 @@
+{
+  "id": 116,
+  "title": "気まぐれロマンティック",
+  "reading": "キマクレロマンティック",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2018-05-03T15:00:00.000+09:00",
+  "releaseOrder": 1311,
+  "composer": "水野良樹",
+  "originalArtist": "いきものがかり",
+  "originalWork": "ドラマ「セレブと貧乏太郎」",
+  "live3d": null,
+  "aliases": [
+    "きまぐれろまんてぃっく"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 157
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 237
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 437
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 608
+    },
+    "SPECIAL": {
+      "level": 25,
+      "notes": 702
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 730,
+  "title": "BROKEN GAMES",
+  "reading": "フロークンケームス",
+  "category": "カバー",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2025-09-12T15:00:00.000+09:00",
+  "releaseOrder": 1724,
+  "composer": "MAQUMA, JACK",
+  "originalArtist": "FZMZ",
+  "originalWork": "TVアニメ「シャングリラ・フロンティア 1st Season 第1クール」 OP",
+  "live3d": null,
+  "aliases": [
+    "brokengames"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 130
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 203
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 471
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 666
+    },
+    "SPECIAL": null
+  }
+}

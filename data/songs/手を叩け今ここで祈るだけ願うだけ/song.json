@@ -1,0 +1,35 @@
+{
+  "id": 753,
+  "title": "手を叩け今ここで祈るだけ願うだけ",
+  "reading": "テヲタタケイマココテイノルタケネカウタケ",
+  "category": "オリジナル",
+  "band": "夢ノ結唱 HALO",
+  "releaseDate": "2025-12-27T15:00:00.000+09:00",
+  "releaseOrder": 930,
+  "composer": "THE SPELLBOUND",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "てをたたけいまここでいのるだけねがうだけ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 107
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 229
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 588
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 773
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 124,
+  "title": "みくみくにしてあげる♪【してやんよ】",
+  "reading": "ミクミクニシテアケルシテヤンヨ",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2018-04-25T15:00:00.000+09:00",
+  "releaseOrder": 1310,
+  "composer": "ika_mo",
+  "originalArtist": "ika feat.初音ミク",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "みくみくにしてあげるしてやんよ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 139
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 239
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 439
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 639
+    },
+    "SPECIAL": null
+  }
+}

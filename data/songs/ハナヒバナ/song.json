@@ -1,0 +1,35 @@
+{
+  "id": 437,
+  "title": "ハナヒバナ",
+  "reading": "ハナヒハナ",
+  "category": "オリジナル",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2022-08-11T15:00:00.000+09:00",
+  "releaseOrder": 324,
+  "composer": "日高勇輝（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "はなひばな"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 87
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 187
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 387
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 487
+    },
+    "SPECIAL": null
+  }
+}

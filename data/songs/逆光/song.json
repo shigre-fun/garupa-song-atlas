@@ -1,0 +1,35 @@
+{
+  "id": 610,
+  "title": "逆光",
+  "reading": "キャッコウ",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2024-05-06T15:00:00.000+09:00",
+  "releaseOrder": 1241,
+  "composer": "Vaundy",
+  "originalArtist": "Ado",
+  "originalWork": "映画「ONE PIECE FILM RED」",
+  "live3d": null,
+  "aliases": [
+    "ぎゃっこう"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 99
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 230
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 475
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 770
+    },
+    "SPECIAL": null
+  }
+}

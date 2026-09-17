@@ -1,0 +1,35 @@
+{
+  "id": 633,
+  "title": "雑踏、僕らの街",
+  "reading": "サットウホクラノマチ",
+  "category": "カバー",
+  "band": "MyGO!!!!!",
+  "releaseDate": "2024-09-17T15:00:00.000+09:00",
+  "releaseOrder": 1805,
+  "composer": "大濱 健悟",
+  "originalArtist": "トゲナシトゲアリ",
+  "originalWork": "TVアニメ「ガールズバンドクライ」OP",
+  "live3d": null,
+  "aliases": [
+    "ざっとうぼくらのまち"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 166
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 363
+    },
+    "HARD": {
+      "level": 24,
+      "notes": 538
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 928
+    },
+    "SPECIAL": null
+  }
+}

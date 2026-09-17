@@ -1,0 +1,35 @@
+{
+  "id": 815,
+  "title": "盛れ！ミ・アモーレ",
+  "reading": "モレミアモーレ",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2026-09-11T15:00:00.000+09:00",
+  "releaseOrder": 815,
+  "composer": "山崎あおい",
+  "originalArtist": "Juice=Juice",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "もれみあもーれ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 113
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 195
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 517
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 714
+    },
+    "SPECIAL": null
+  }
+}

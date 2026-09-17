@@ -1,0 +1,35 @@
+{
+  "id": 491,
+  "title": "花呼ぶ声",
+  "reading": "ハナヨフコエ",
+  "category": "オリジナル",
+  "band": "kemu feat. 夢ノ結唱 POPY×夢ノ結唱 ROSE",
+  "releaseDate": "2023-04-28T15:00:00.000+09:00",
+  "releaseOrder": 914,
+  "composer": "kemu",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "はなよぶこえ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 123
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 289
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 536
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 870
+    },
+    "SPECIAL": null
+  }
+}

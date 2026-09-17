@@ -1,0 +1,35 @@
+{
+  "id": 371,
+  "title": "勇気Limit！",
+  "reading": "ユウキリミット",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2021-11-10T15:00:00.000+09:00",
+  "releaseOrder": 47,
+  "composer": "近藤世真（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "ゆうきlimit"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 124
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 267
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 518
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 749
+    },
+    "SPECIAL": null
+  }
+}

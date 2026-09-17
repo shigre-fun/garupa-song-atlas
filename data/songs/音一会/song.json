@@ -1,0 +1,35 @@
+{
+  "id": 668,
+  "title": "音一会",
+  "reading": "オトイチエ",
+  "category": "オリジナル",
+  "band": "MyGO!!!!!",
+  "releaseDate": "2025-02-19T15:00:00.000+09:00",
+  "releaseOrder": 813,
+  "composer": "尾崎豪(SUPA LOVE)",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "おといちえ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 159
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 272
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 550
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 809
+    },
+    "SPECIAL": null
+  }
+}

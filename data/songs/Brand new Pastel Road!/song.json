@@ -1,0 +1,35 @@
+{
+  "id": 396,
+  "title": "Brand new Pastel Road！",
+  "reading": "フランニューハステルロート",
+  "category": "オリジナル",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2022-03-18T15:00:00.000+09:00",
+  "releaseOrder": 321,
+  "composer": "ZAQ",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "brandnewpastelroad"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 104
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 228
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 442
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 644
+    },
+    "SPECIAL": null
+  }
+}

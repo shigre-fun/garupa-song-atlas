@@ -1,0 +1,38 @@
+{
+  "id": 762,
+  "title": "Determination Symphony(パラレルver.)",
+  "reading": "テタミネーションシンフォニー",
+  "category": "オリジナル",
+  "band": "SISTER'S QUARTET",
+  "releaseDate": "2026-01-04T15:00:00.000+09:00",
+  "releaseOrder": 932,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "determinationsymphony"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 140
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 264
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 630
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 1054
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 943
+    }
+  }
+}

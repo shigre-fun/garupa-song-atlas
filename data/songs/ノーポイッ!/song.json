@@ -1,0 +1,35 @@
+{
+  "id": 191,
+  "title": "ノーポイッ！",
+  "reading": "ノオホイッ",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2019-04-27T15:00:00.000+09:00",
+  "releaseOrder": 1518,
+  "composer": "大久保 薫",
+  "originalArtist": "Petit Rabbit's",
+  "originalWork": "アニメ「ご注文はうさぎですか??」",
+  "live3d": null,
+  "aliases": [
+    "のーぽいっ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 132
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 265
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 408
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 607
+    },
+    "SPECIAL": null
+  }
+}

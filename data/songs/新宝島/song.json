@@ -1,0 +1,38 @@
+{
+  "id": 146,
+  "title": "新宝島",
+  "reading": "シンタカラシマ",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2018-09-28T21:00:00.000+09:00",
+  "releaseOrder": 1514,
+  "composer": "山口一郎",
+  "originalArtist": "サカナクション",
+  "originalWork": "映画「バクマン。」",
+  "live3d": null,
+  "aliases": [
+    "しんたからじま"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 161
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 249
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 412
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 658
+    },
+    "SPECIAL": {
+      "level": 24,
+      "notes": 598
+    }
+  }
+}

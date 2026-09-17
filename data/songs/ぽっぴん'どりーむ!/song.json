@@ -1,0 +1,35 @@
+{
+  "id": 390,
+  "title": "ぽっぴん'どりーむ！",
+  "reading": "ホッヒントリーム",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2022-01-01T15:00:00.000+09:00",
+  "releaseOrder": 49,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "ぽっぴんどりーむ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 140
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 284
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 498
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 719
+    },
+    "SPECIAL": null
+  }
+}

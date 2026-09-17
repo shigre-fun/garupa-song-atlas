@@ -1,0 +1,35 @@
+{
+  "id": 809,
+  "title": "SUMMER SONG",
+  "reading": "サマーソンク",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2026-08-20T15:00:00.000+09:00",
+  "releaseOrder": 809,
+  "composer": "YUI",
+  "originalArtist": "YUI",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "summersong"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 85
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 179
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 568
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 725
+    },
+    "SPECIAL": null
+  }
+}

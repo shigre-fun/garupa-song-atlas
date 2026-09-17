@@ -1,0 +1,38 @@
+{
+  "id": 282,
+  "title": "深海少女",
+  "reading": "シンカイショウショ",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2020-07-29T15:00:00.000+09:00",
+  "releaseOrder": 1604,
+  "composer": "ゆうゆ",
+  "originalArtist": "ゆうゆ feat.初音ミク",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "しんかいしょうじょ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 159
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 252
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 472
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 722
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 857
+    }
+  }
+}

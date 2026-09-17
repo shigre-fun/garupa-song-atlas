@@ -1,0 +1,35 @@
+{
+  "id": 549,
+  "title": "BATTLE CRY",
+  "reading": "ハトルクライ",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2023-10-10T15:00:00.000+09:00",
+  "releaseOrder": 724,
+  "composer": "藤田淳平（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "battlecry"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 117
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 219
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 478
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 854
+    },
+    "SPECIAL": null
+  }
+}

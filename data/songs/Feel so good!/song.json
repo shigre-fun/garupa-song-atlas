@@ -1,0 +1,35 @@
+{
+  "id": 726,
+  "title": "Feel so good!",
+  "reading": "フィールソークット",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2025-09-17T21:00:00.000+09:00",
+  "releaseOrder": 236,
+  "composer": "近藤世真（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "feelsogood"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 126
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 291
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 525
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 823
+    },
+    "SPECIAL": null
+  }
+}

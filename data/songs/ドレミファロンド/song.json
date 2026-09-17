@@ -1,0 +1,35 @@
+{
+  "id": 246,
+  "title": "ドレミファロンド",
+  "reading": "トレミファロント",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2020-02-20T15:00:00.000+09:00",
+  "releaseOrder": 1523,
+  "composer": "40mP",
+  "originalArtist": "40mP feat.初音ミク",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "どれみふぁろんど"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 151
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 221
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 439
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 600
+    },
+    "SPECIAL": null
+  }
+}

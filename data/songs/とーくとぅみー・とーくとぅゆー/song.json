@@ -1,0 +1,35 @@
+{
+  "id": 721,
+  "title": "とーくとぅみー・とーくとぅゆー",
+  "reading": "トークトゥミートクトゥユー",
+  "category": "オリジナル",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2025-08-10T15:00:00.000+09:00",
+  "releaseOrder": 537,
+  "composer": "岩橋星実（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "とーくとぅみーとーくとぅゆー"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 127
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 297
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 479
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 1000
+    },
+    "SPECIAL": null
+  }
+}

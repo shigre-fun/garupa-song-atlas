@@ -1,0 +1,35 @@
+{
+  "id": 653,
+  "title": "幾億光年",
+  "reading": "イクオクコウネン",
+  "category": "カバー",
+  "band": "Poppin'Party×燈",
+  "releaseDate": "2024-12-29T15:00:00.000+09:00",
+  "releaseOrder": 1147,
+  "composer": "藤井 怜央",
+  "originalArtist": "Omoinotake",
+  "originalWork": "ドラマ「Eye Love You」主題歌",
+  "live3d": null,
+  "aliases": [
+    "いくおくこうねん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 102
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 168
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 425
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 540
+    },
+    "SPECIAL": null
+  }
+}

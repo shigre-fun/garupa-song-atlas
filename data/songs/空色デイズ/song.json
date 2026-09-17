@@ -1,0 +1,38 @@
+{
+  "id": 8,
+  "title": "空色デイズ",
+  "reading": "ソライロテイス",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2017-03-16T00:00:00.000+09:00",
+  "releaseOrder": 1101,
+  "composer": "齋藤真也",
+  "originalArtist": "中川翔子",
+  "originalWork": "TVアニメ「天元突破グレンラガン」OP",
+  "live3d": null,
+  "aliases": [
+    "そらいろでいず"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 5,
+      "notes": 71
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 201
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 399
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 626
+    },
+    "SPECIAL": {
+      "level": 27,
+      "notes": 760
+    }
+  }
+}

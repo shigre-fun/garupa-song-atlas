@@ -1,0 +1,35 @@
+{
+  "id": 768,
+  "title": "どきどきデエト",
+  "reading": "トキトキテエト",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2026-02-09T15:00:00.000+09:00",
+  "releaseOrder": 70,
+  "composer": "堀川大翼（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "どきどきでえと"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 110
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 203
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 548
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 723
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 355,
+  "title": "競宴Red×Violet",
+  "reading": "キョウエンレットハイオレット",
+  "category": "オリジナル",
+  "band": "Roselia×Afterglow",
+  "releaseDate": "2021-09-03T15:00:00.000+09:00",
+  "releaseOrder": 906,
+  "composer": "菊田大介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "きょうえんredviolet"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 199
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 316
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 527
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 1002
+    },
+    "SPECIAL": null
+  }
+}

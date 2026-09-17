@@ -1,0 +1,35 @@
+{
+  "id": 386,
+  "title": "DEPARTURES",
+  "reading": "ティーハーチャース",
+  "category": "カバー",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2021-12-24T15:00:00.000+09:00",
+  "releaseOrder": 1709,
+  "composer": "小室哲哉",
+  "originalArtist": "globe",
+  "originalWork": "CM「JR Ski Ski」、CM「プリンスホテル 」",
+  "live3d": null,
+  "aliases": [
+    "departures"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 112
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 187
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 317
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 458
+    },
+    "SPECIAL": null
+  }
+}

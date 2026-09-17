@@ -1,0 +1,35 @@
+{
+  "id": 284,
+  "title": "I knew it!",
+  "reading": "アイニュウイット",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2020-07-31T15:00:00.000+09:00",
+  "releaseOrder": 216,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "iknewit"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 143
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 276
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 496
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 790
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": 17,
+  "title": "魂のルフラン",
+  "reading": "タマシイノルフラン",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2017-03-16T00:00:00.000+09:00",
+  "releaseOrder": 1401,
+  "composer": "大森俊之",
+  "originalArtist": "高橋洋子",
+  "originalWork": "映画「新世紀エヴァンゲリオン劇場版 シト新生」主題歌",
+  "live3d": null,
+  "aliases": [
+    "たましいのるふらん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 88
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 228
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 386
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 698
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 951
+    }
+  }
+}

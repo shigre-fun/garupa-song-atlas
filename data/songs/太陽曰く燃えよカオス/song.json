@@ -1,0 +1,35 @@
+{
+  "id": 127,
+  "title": "太陽曰く燃えよカオス",
+  "reading": "タイヨウイワクモエヨカオス",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2018-05-31T15:00:00.000+09:00",
+  "releaseOrder": 1511,
+  "composer": "田中秀和",
+  "originalArtist": "後ろから這いより隊G",
+  "originalWork": "アニメ「這いよれ! ニャル子さん」",
+  "live3d": null,
+  "aliases": [
+    "たいよういわくもえよかおす"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 176
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 312
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 459
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 652
+    },
+    "SPECIAL": null
+  }
+}

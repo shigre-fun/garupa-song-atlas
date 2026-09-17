@@ -1,0 +1,35 @@
+{
+  "id": 438,
+  "title": "Memento",
+  "reading": "メメント",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2022-08-20T15:00:00.000+09:00",
+  "releaseOrder": 1613,
+  "composer": "Tom-H@ck",
+  "originalArtist": "nonoc",
+  "originalWork": "アニメ「Re:ゼロから始める異世界生活 2nd season」",
+  "live3d": null,
+  "aliases": [
+    "memento"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 135
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 299
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 532
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 713
+    },
+    "SPECIAL": null
+  }
+}

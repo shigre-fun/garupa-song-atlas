@@ -1,0 +1,38 @@
+{
+  "id": 272,
+  "title": "ヒトリノ夜",
+  "reading": "ヒトリノヨル",
+  "category": "カバー",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2020-06-10T15:00:00.000+09:00",
+  "releaseOrder": 1703,
+  "composer": "ak. homma",
+  "originalArtist": "ポルノグラフィティ",
+  "originalWork": "アニメ「GTO」",
+  "live3d": null,
+  "aliases": [
+    "ひとりのよる"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 160
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 240
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 437
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 632
+    },
+    "SPECIAL": {
+      "level": 24,
+      "notes": 514
+    }
+  }
+}

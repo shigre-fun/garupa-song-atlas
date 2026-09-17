@@ -1,0 +1,38 @@
+{
+  "id": 44,
+  "title": "そばかす",
+  "reading": "ソハカス",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2017-04-10T15:00:00.000+09:00",
+  "releaseOrder": 1303,
+  "composer": "恩田快人",
+  "originalArtist": "JUDY AND MARY",
+  "originalWork": "アニメ「るろうに剣心 -明治剣客浪漫譚-」",
+  "live3d": null,
+  "aliases": [
+    "そばかす"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 67
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 125
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 284
+    },
+    "EXPERT": {
+      "level": 23,
+      "notes": 456
+    },
+    "SPECIAL": {
+      "level": 25,
+      "notes": 723
+    }
+  }
+}

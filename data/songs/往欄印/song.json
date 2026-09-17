@@ -1,0 +1,35 @@
+{
+  "id": 719,
+  "title": "往欄印",
+  "reading": "オウライ",
+  "category": "オリジナル",
+  "band": "MyGO!!!!!",
+  "releaseDate": "2025-08-07T21:00:00.000+09:00",
+  "releaseOrder": 818,
+  "composer": "長谷川大介(SUPA LOVE)",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "おうらい"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 177
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 361
+    },
+    "HARD": {
+      "level": 24,
+      "notes": 790
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 1133
+    },
+    "SPECIAL": null
+  }
+}

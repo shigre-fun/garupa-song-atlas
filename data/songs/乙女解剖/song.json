@@ -1,0 +1,35 @@
+{
+  "id": 589,
+  "title": "乙女解剖",
+  "reading": "オトメカイホウ",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2024-03-18T15:00:00.000+09:00",
+  "releaseOrder": 1442,
+  "composer": "DECO*27",
+  "originalArtist": "DECO*27 feat.初音ミク",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "おとめかいぼう"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 141
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 220
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 435
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 662
+    },
+    "SPECIAL": null
+  }
+}

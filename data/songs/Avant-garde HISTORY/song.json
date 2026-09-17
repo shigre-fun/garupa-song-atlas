@@ -1,0 +1,35 @@
+{
+  "id": 266,
+  "title": "Avant-garde HISTORY",
+  "reading": "アハンキャルトヒストリー",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2020-04-24T15:00:00.000+09:00",
+  "releaseOrder": 425,
+  "composer": "藤田淳平（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "avangardehistory"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 189
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 338
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 492
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 757
+    },
+    "SPECIAL": null
+  }
+}

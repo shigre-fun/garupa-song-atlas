@@ -1,0 +1,35 @@
+{
+  "id": 779,
+  "title": "金曜日のおはよう",
+  "reading": "キンヨウヒノオハヨウ",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2026-03-19T15:00:00.000+09:00",
+  "releaseOrder": 1350,
+  "composer": "shito",
+  "originalArtist": "HoneyWorks feat.Gero",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "きんようびのおはよう"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 109
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 171
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 429
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 611
+    },
+    "SPECIAL": null
+  }
+}

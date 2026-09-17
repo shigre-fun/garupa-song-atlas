@@ -1,0 +1,38 @@
+{
+  "id": 206,
+  "title": "1/3の純情な感情",
+  "reading": "サンフンノイチノシュンショウナカンショウ",
+  "category": "カバー",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2019-07-14T22:00:00.000+09:00",
+  "releaseOrder": 1701,
+  "composer": "SIAM SHADE",
+  "originalArtist": "SIAM SHADE",
+  "originalWork": "アニメ「るろうに剣心 -明治剣客浪漫譚-」",
+  "live3d": null,
+  "aliases": [
+    "3ぶんの1のじゅんじょうなかんじょう"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 113
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 189
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 421
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 614
+    },
+    "SPECIAL": {
+      "level": 24,
+      "notes": 470
+    }
+  }
+}

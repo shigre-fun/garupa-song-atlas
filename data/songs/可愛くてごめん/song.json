@@ -1,0 +1,35 @@
+{
+  "id": 533,
+  "title": "可愛くてごめん",
+  "reading": "カワイクテコメン",
+  "category": "カバー",
+  "band": "Pastel＊Palettes 日菜×千聖×麻弥×イヴ",
+  "releaseDate": "2023-09-09T15:00:00.000+09:00",
+  "releaseOrder": 1337,
+  "composer": "shito",
+  "originalArtist": "中村千鶴（ちゅーたん〈CV:早見沙織〉）",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "かわいくてごめん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 165
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 258
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 474
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 658
+    },
+    "SPECIAL": null
+  }
+}

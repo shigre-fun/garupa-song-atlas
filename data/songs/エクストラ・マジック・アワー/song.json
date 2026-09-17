@@ -1,0 +1,35 @@
+{
+  "id": 157,
+  "title": "エクストラ・マジック・アワー",
+  "reading": "エクストラマシックアワア",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2018-12-18T21:00:00.000+09:00",
+  "releaseOrder": 1515,
+  "composer": "鴇沢直",
+  "originalArtist": "AKINO with bless4",
+  "originalWork": "アニメ「甘城ブリリアントパーク」",
+  "live3d": null,
+  "aliases": [
+    "えくすとらまじっくあわー"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 142
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 226
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 413
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 782
+    },
+    "SPECIAL": null
+  }
+}

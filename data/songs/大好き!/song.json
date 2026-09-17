@@ -1,0 +1,35 @@
+{
+  "id": 433,
+  "title": "大好き！",
+  "reading": "タイスキ",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2022-07-11T15:00:00.000+09:00",
+  "releaseOrder": 52,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "だいすき"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 10,
+      "notes": 186
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 278
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 414
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 606
+    },
+    "SPECIAL": null
+  }
+}

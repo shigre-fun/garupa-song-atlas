@@ -1,0 +1,38 @@
+{
+  "id": 763,
+  "title": "熱色スターマイン(パラレルver.)",
+  "reading": "ネッショクスターマイン",
+  "category": "オリジナル",
+  "band": "さんふらわー！",
+  "releaseDate": "2026-01-05T15:00:00.000+09:00",
+  "releaseOrder": 933,
+  "composer": "上松範康（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "ねっしょくすたーまいん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 10,
+      "notes": 157
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 262
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 529
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 691
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 643
+    }
+  }
+}

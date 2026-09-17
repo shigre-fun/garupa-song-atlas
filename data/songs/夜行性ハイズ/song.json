@@ -1,0 +1,35 @@
+{
+  "id": 173,
+  "title": "夜行性ハイズ",
+  "reading": "ヤコウセイハイス",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2019-02-04T15:00:00.000+09:00",
+  "releaseOrder": 1118,
+  "composer": "DECO*27",
+  "originalArtist": "DECO*27 feat.初音ミク",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "やこうせいはいず"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 120
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 214
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 450
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 662
+    },
+    "SPECIAL": null
+  }
+}

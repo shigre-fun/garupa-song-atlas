@@ -1,0 +1,35 @@
+{
+  "id": 150,
+  "title": "キミがいなくちゃっ！",
+  "reading": "キミカイナクチャッ",
+  "category": "オリジナル",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2018-10-10T15:00:00.000+09:00",
+  "releaseOrder": 509,
+  "composer": "藤間仁（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "きみがいなくちゃ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 166
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 272
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 399
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 569
+    },
+    "SPECIAL": null
+  }
+}

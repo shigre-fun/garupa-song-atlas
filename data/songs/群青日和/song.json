@@ -1,0 +1,35 @@
+{
+  "id": 261,
+  "title": "群青日和",
+  "reading": "クンショウヒヨリ",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2020-03-28T15:00:00.000+09:00",
+  "releaseOrder": 1125,
+  "composer": "H是都M",
+  "originalArtist": "東京事変",
+  "originalWork": "CM「au W21SA」",
+  "live3d": null,
+  "aliases": [
+    "ぐんじょうびより"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 129
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 242
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 375
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 657
+    },
+    "SPECIAL": null
+  }
+}

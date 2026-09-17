@@ -1,0 +1,35 @@
+{
+  "id": 670,
+  "title": "Imprisoned XII",
+  "reading": "インフリスントトゥエルウ",
+  "category": "オリジナル",
+  "band": "Ave Mujica",
+  "releaseDate": "2025-03-07T00:00:00.000+09:00",
+  "releaseOrder": 854,
+  "composer": "松坂康司(SUPA LOVE)、Diggy-MO’",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "imprisonedxii"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 72
+    },
+    "NORMAL": {
+      "level": 11,
+      "notes": 133
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 280
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 367
+    },
+    "SPECIAL": null
+  }
+}

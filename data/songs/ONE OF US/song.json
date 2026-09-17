@@ -1,0 +1,35 @@
+{
+  "id": 293,
+  "title": "ONE OF US",
+  "reading": "ワンオフアス",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2020-10-10T15:00:00.000+09:00",
+  "releaseOrder": 216,
+  "composer": "藤田淳平（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "oneofus"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 10,
+      "notes": 191
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 295
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 502
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 831
+    },
+    "SPECIAL": null
+  }
+}

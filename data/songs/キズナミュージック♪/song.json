@@ -1,0 +1,38 @@
+{
+  "id": 158,
+  "title": "キズナミュージック♪",
+  "reading": "キスナミュウシック",
+  "category": "オリジナル",
+  "band": "Poppin'Party",
+  "releaseDate": "2018-12-12T15:00:00.000+09:00",
+  "releaseOrder": 24,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "きずなみゅーじっく"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 156
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 254
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 413
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 529
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 673
+    }
+  }
+}

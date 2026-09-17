@@ -1,0 +1,35 @@
+{
+  "id": 804,
+  "title": "スターラブレイション",
+  "reading": "スターラフレイション",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2026-07-08T21:00:00.000+09:00",
+  "releaseOrder": 804,
+  "composer": "ふるっぺ",
+  "originalArtist": "ケラケラ",
+  "originalWork": "ドラマ「ラスト・シンデレラ」主題歌",
+  "live3d": null,
+  "aliases": [
+    "すたーらぶれいしょん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 116
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 227
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 560
+    },
+    "EXPERT": {
+      "level": 24,
+      "notes": 766
+    },
+    "SPECIAL": null
+  }
+}

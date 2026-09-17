@@ -1,0 +1,38 @@
+{
+  "id": 552,
+  "title": "テレキャスタービーボーイ",
+  "reading": "テレキャスターヒーホーイ",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2023-10-31T15:00:00.000+09:00",
+  "releaseOrder": 1238,
+  "composer": "すりぃ",
+  "originalArtist": "すりぃ feat.鏡音レン",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "てれきゃすたーびーぼーい"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 155
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 292
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 575
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 820
+    },
+    "SPECIAL": {
+      "level": 28,
+      "notes": 972
+    }
+  }
+}

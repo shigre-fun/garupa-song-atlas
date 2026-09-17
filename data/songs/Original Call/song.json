@@ -1,0 +1,35 @@
+{
+  "id": 330,
+  "title": "Original Call",
+  "reading": "オリシナルコール",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2021-04-30T15:00:00.000+09:00",
+  "releaseOrder": 430,
+  "composer": "菊田大介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "originalcall"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 120
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 235
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 415
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 586
+    },
+    "SPECIAL": null
+  }
+}

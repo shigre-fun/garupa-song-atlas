@@ -1,0 +1,35 @@
+{
+  "id": 251,
+  "title": "I love your way！",
+  "reading": "アイラフユアウェイ",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2020-02-29T15:00:00.000+09:00",
+  "releaseOrder": 214,
+  "composer": "菊田大介（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "iloveyourway"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 164
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 263
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 564
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 806
+    },
+    "SPECIAL": null
+  }
+}

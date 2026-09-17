@@ -1,0 +1,21 @@
+{
+  "id": null,
+  "title": "楽曲名",
+  "reading": "",
+  "category": "オリジナル",
+  "band": "",
+  "releaseDate": "",
+  "releaseOrder": null,
+  "composer": null,
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [],
+  "difficulties": {
+    "EASY": { "level": null, "notes": null },
+    "NORMAL": { "level": null, "notes": null },
+    "HARD": { "level": null, "notes": null },
+    "EXPERT": { "level": null, "notes": null },
+    "SPECIAL": null
+  }
+}

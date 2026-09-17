@@ -1,0 +1,35 @@
+{
+  "id": 727,
+  "title": "季節は次々死んでいく",
+  "reading": "キセツハツキツキシンテイク",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2025-09-10T18:00:00.000+09:00",
+  "releaseOrder": 1246,
+  "composer": "秋田　ひろむ",
+  "originalArtist": "amazarashi",
+  "originalWork": "TVアニメ「東京喰種 √A」ED",
+  "live3d": null,
+  "aliases": [
+    "きせつはつぎつぎしんでいく"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 117
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 274
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 594
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 964
+    },
+    "SPECIAL": null
+  }
+}

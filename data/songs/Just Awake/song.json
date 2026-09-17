@@ -1,0 +1,35 @@
+{
+  "id": 397,
+  "title": "Just Awake",
+  "reading": "シャストアウェイク",
+  "category": "カバー",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2022-02-07T22:00:00.000+09:00",
+  "releaseOrder": 1710,
+  "composer": "Fear, and Loathing in Las Vegas",
+  "originalArtist": "Fear, and Loathing in Las Vegas",
+  "originalWork": "アニメ「HUNTER×HUNTER」",
+  "live3d": null,
+  "aliases": [
+    "justawake"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 10,
+      "notes": 198
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 343
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 663
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 1036
+    },
+    "SPECIAL": null
+  }
+}

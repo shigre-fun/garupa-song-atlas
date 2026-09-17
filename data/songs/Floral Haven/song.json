@@ -1,0 +1,35 @@
+{
+  "id": 609,
+  "title": "Floral Haven",
+  "reading": "フローラルヘイフン",
+  "category": "オリジナル",
+  "band": "Roselia",
+  "releaseDate": "2024-05-05T15:00:00.000+09:00",
+  "releaseOrder": 446,
+  "composer": "藤永龍太郎（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "floralhaven"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 144
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 223
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 429
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 675
+    },
+    "SPECIAL": null
+  }
+}

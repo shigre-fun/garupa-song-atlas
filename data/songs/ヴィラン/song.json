@@ -1,0 +1,35 @@
+{
+  "id": 547,
+  "title": "ヴィラン",
+  "reading": "ウィラン",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2023-09-29T15:00:00.000+09:00",
+  "releaseOrder": 1237,
+  "composer": "てにをは",
+  "originalArtist": "flower・てにをは",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "ゔぃらん"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 103
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 248
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 414
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 665
+    },
+    "SPECIAL": null
+  }
+}

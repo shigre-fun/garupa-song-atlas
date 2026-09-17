@@ -1,0 +1,35 @@
+{
+  "id": 637,
+  "title": "サインはB",
+  "reading": "サインハヒー",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2024-10-04T15:00:00.000+09:00",
+  "releaseOrder": 1343,
+  "composer": "大石 昌良",
+  "originalArtist": "B小町 アイ（高橋李依）",
+  "originalWork": "TVアニメ「【推しの子】」劇中歌",
+  "live3d": null,
+  "aliases": [
+    "さいんはb"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 115
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 207
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 479
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 665
+    },
+    "SPECIAL": null
+  }
+}

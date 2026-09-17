@@ -1,0 +1,35 @@
+{
+  "id": 577,
+  "title": "A Sunset So Bright",
+  "reading": "アサンセットソーフライト",
+  "category": "オリジナル",
+  "band": "Afterglow",
+  "releaseDate": "2024-01-22T15:00:00.000+09:00",
+  "releaseOrder": 230,
+  "composer": "堀川大翼（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "asunsetsobright"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 10,
+      "notes": 178
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 283
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 529
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 794
+    },
+    "SPECIAL": null
+  }
+}

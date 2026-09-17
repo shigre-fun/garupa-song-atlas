@@ -1,0 +1,35 @@
+{
+  "id": 209,
+  "title": "ミュージック・アワー",
+  "reading": "ミューシックアワー",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2019-07-27T15:00:00.000+09:00",
+  "releaseOrder": 1123,
+  "composer": "ak. homma",
+  "originalArtist": "ポルノグラフィティ",
+  "originalWork": "CM「ポカリスエット」",
+  "live3d": null,
+  "aliases": [
+    "みゅーじっくあわー"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 174
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 275
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 462
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 746
+    },
+    "SPECIAL": null
+  }
+}

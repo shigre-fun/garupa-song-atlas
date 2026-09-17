@@ -1,0 +1,35 @@
+{
+  "id": 678,
+  "title": "フィクション",
+  "reading": "ふぃくしょん",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2025-03-21T15:00:00.000+09:00",
+  "releaseOrder": 1148,
+  "composer": "片岡　健太",
+  "originalArtist": "sumika",
+  "originalWork": "TVアニメ「ヲタクに恋は難しい」OP",
+  "live3d": null,
+  "aliases": [
+    "フィクション"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 121
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 261
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 502
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 765
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 323,
+  "title": "Synchrogazer",
+  "reading": "シンクロケイサー",
+  "category": "カバー",
+  "band": "Roselia",
+  "releaseDate": "2021-03-21T15:00:00.000+09:00",
+  "releaseOrder": 1426,
+  "composer": "上松 範康（Elements Garden）",
+  "originalArtist": "水樹奈々",
+  "originalWork": "アニメ「戦姫絶唱シンフォギア」",
+  "live3d": null,
+  "aliases": [
+    "synchrogazer"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 150
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 254
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 474
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 758
+    },
+    "SPECIAL": null
+  }
+}

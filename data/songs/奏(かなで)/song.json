@@ -1,0 +1,35 @@
+{
+  "id": 162,
+  "title": "奏（かなで）",
+  "reading": "カナテ",
+  "category": "カバー",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2018-12-24T15:00:00.000+09:00",
+  "releaseOrder": 1315,
+  "composer": "大橋卓弥 常田真太郎",
+  "originalArtist": "スキマスイッチ",
+  "originalWork": "映画「ラフ ROUGH」、ドラマ「卒うた」",
+  "live3d": null,
+  "aliases": [
+    "かなで"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 6,
+      "notes": 98
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 187
+    },
+    "HARD": {
+      "level": 18,
+      "notes": 346
+    },
+    "EXPERT": {
+      "level": 22,
+      "notes": 491
+    },
+    "SPECIAL": null
+  }
+}

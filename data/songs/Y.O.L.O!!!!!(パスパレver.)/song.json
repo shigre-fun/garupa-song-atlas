@@ -1,0 +1,35 @@
+{
+  "id": 694,
+  "title": "Y.O.L.O！！！！！(パスパレver.)",
+  "reading": "ヨーロー",
+  "category": "オリジナル",
+  "band": "Pastel＊Palettes",
+  "releaseDate": "2025-05-02T15:00:00.000+09:00",
+  "releaseOrder": 334,
+  "composer": "藤田淳平（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "yolo"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 132
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 260
+    },
+    "HARD": {
+      "level": 23,
+      "notes": 555
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 867
+    },
+    "SPECIAL": null
+  }
+}

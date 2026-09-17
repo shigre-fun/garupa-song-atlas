@@ -1,0 +1,35 @@
+{
+  "id": 592,
+  "title": "かくれんぼ",
+  "reading": "カクレンホ",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2024-03-21T15:00:00.000+09:00",
+  "releaseOrder": 1621,
+  "composer": "EREN",
+  "originalArtist": "AliA",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "かくれんぼ"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 156
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 231
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 410
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 735
+    },
+    "SPECIAL": null
+  }
+}

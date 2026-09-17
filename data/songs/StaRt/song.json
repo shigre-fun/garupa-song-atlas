@@ -1,0 +1,35 @@
+{
+  "id": 183,
+  "title": "StaRt",
+  "reading": "スタート",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2019-03-31T15:00:00.000+09:00",
+  "releaseOrder": 1517,
+  "composer": "大森元貴",
+  "originalArtist": "Mrs. GREEN APPLE",
+  "originalWork": null,
+  "live3d": null,
+  "aliases": [
+    "start"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 8,
+      "notes": 152
+    },
+    "NORMAL": {
+      "level": 14,
+      "notes": 291
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 528
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 804
+    },
+    "SPECIAL": null
+  }
+}

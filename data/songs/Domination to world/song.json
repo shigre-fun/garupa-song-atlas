@@ -1,0 +1,35 @@
+{
+  "id": 339,
+  "title": "Domination to world",
+  "reading": "トミネイショントゥワールト",
+  "category": "オリジナル",
+  "band": "RAISE A SUILEN",
+  "releaseDate": "2021-05-21T15:00:00.000+09:00",
+  "releaseOrder": 709,
+  "composer": "都丸椋太（Elements Garden）",
+  "originalArtist": null,
+  "originalWork": null,
+  "live3d": false,
+  "aliases": [
+    "dominationtoworld"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 153
+    },
+    "NORMAL": {
+      "level": 15,
+      "notes": 282
+    },
+    "HARD": {
+      "level": 22,
+      "notes": 595
+    },
+    "EXPERT": {
+      "level": 27,
+      "notes": 932
+    },
+    "SPECIAL": null
+  }
+}

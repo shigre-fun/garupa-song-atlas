@@ -1,0 +1,35 @@
+{
+  "id": 569,
+  "title": "カオスが極まる",
+  "reading": "カオスカキワマル",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2023-12-30T15:00:00.000+09:00",
+  "releaseOrder": 1240,
+  "composer": "田淵 智也",
+  "originalArtist": "UNISON SQUARE GARDEN",
+  "originalWork": "アニメ「ブルーロック」",
+  "live3d": null,
+  "aliases": [
+    "かおすがきわまる"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 10,
+      "notes": 158
+    },
+    "NORMAL": {
+      "level": 16,
+      "notes": 352
+    },
+    "HARD": {
+      "level": 24,
+      "notes": 568
+    },
+    "EXPERT": {
+      "level": 28,
+      "notes": 868
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": 10,
+  "title": "Alchemy",
+  "reading": "アルケミー",
+  "category": "カバー",
+  "band": "Poppin'Party",
+  "releaseDate": "2017-03-16T00:00:00.000+09:00",
+  "releaseOrder": 1102,
+  "composer": "麻枝准",
+  "originalArtist": "Girls Dead Monster",
+  "originalWork": "TVアニメ「Angel Beats!」劇中歌",
+  "live3d": null,
+  "aliases": [
+    "alchemy"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 115
+    },
+    "NORMAL": {
+      "level": 12,
+      "notes": 212
+    },
+    "HARD": {
+      "level": 19,
+      "notes": 395
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 603
+    },
+    "SPECIAL": {
+      "level": 26,
+      "notes": 796
+    }
+  }
+}

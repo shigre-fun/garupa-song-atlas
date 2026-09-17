@@ -1,0 +1,35 @@
+{
+  "id": 481,
+  "title": "ALIVE",
+  "reading": "アライフ",
+  "category": "カバー",
+  "band": "Morfonica",
+  "releaseDate": "2023-03-18T15:00:00.000+09:00",
+  "releaseOrder": 1617,
+  "composer": "重永亮介",
+  "originalArtist": "ClariS",
+  "originalWork": "アニメ「リコリス・リコイル」",
+  "live3d": null,
+  "aliases": [
+    "alive"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 9,
+      "notes": 111
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 173
+    },
+    "HARD": {
+      "level": 21,
+      "notes": 381
+    },
+    "EXPERT": {
+      "level": 25,
+      "notes": 535
+    },
+    "SPECIAL": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": 630,
+  "title": "クラクラ",
+  "reading": "クラクラ",
+  "category": "カバー",
+  "band": "ハロー、ハッピーワールド！",
+  "releaseDate": "2024-09-14T15:00:00.000+09:00",
+  "releaseOrder": 1545,
+  "composer": "meiyo",
+  "originalArtist": "Ado",
+  "originalWork": "TVアニメ「SPY×FAMILY Season 2」OP",
+  "live3d": null,
+  "aliases": [
+    "くらくら"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 102
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 225
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 386
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 625
+    },
+    "SPECIAL": null
+  }
+}

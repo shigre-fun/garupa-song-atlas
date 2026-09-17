@@ -1,0 +1,35 @@
+{
+  "id": 309,
+  "title": "Northern lights",
+  "reading": "ノーサンライツ",
+  "category": "カバー",
+  "band": "Afterglow",
+  "releaseDate": "2021-01-10T15:00:00.000+09:00",
+  "releaseOrder": 1223,
+  "composer": "たかはし　ごう",
+  "originalArtist": "林原めぐみ",
+  "originalWork": "アニメ「シャーマンキング」",
+  "live3d": null,
+  "aliases": [
+    "northernlights"
+  ],
+  "difficulties": {
+    "EASY": {
+      "level": 7,
+      "notes": 121
+    },
+    "NORMAL": {
+      "level": 13,
+      "notes": 240
+    },
+    "HARD": {
+      "level": 20,
+      "notes": 387
+    },
+    "EXPERT": {
+      "level": 26,
+      "notes": 618
+    },
+    "SPECIAL": null
+  }
+}
