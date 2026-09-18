@@ -3,7 +3,9 @@
 import http from "node:http";
 import fs from "node:fs";
 import path from "node:path";
-const origin = "http://127.0.0.1:4174";
+// 別ポートなら過去の検証用下書きと分離できる。
+const port = Number(process.env.EDITOR_PREVIEW_PORT || 4174);
+const origin = `http://127.0.0.1:${port}`;
 const files = {
   "data/admin-state.json": { nextId: 900, updatedAt: "2026-09-18T00:00:00Z" },
 };
@@ -98,6 +100,6 @@ http
       content = content.replace("https://api.github.com", origin);
     res.end(content);
   })
-  .listen(4174, "127.0.0.1", () =>
+  .listen(port, "127.0.0.1", () =>
     console.log(`${origin}/garupa-song-atlas/admin/ (memory-only fixture)`),
   );

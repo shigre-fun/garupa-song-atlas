@@ -105,6 +105,10 @@ document.querySelector("#load-song").addEventListener("click", async () => {
       "composer",
       "originalArtist",
       "originalWork",
+      "bpm",
+      "bpmMin",
+      "bpmMax",
+      "durationSeconds",
     ])
       form.elements[key].value = song[key] ?? "";
     const [band, ...guests] = song.band.split("×");
@@ -331,6 +335,12 @@ function enteredSong() {
     originalArtist: original ? null : value("originalArtist") || null,
     originalWork: original ? null : value("originalWork") || null,
     live3d: original ? JSON.parse(value("live3d")) : null,
+    ...Object.fromEntries(
+      ["bpm", "bpmMin", "bpmMax", "durationSeconds"].map((key) => [
+        key,
+        value(key) === "" ? null : Number(value(key)),
+      ]),
+    ),
     aliases: value("aliases")
       .split("\n")
       .map((x) => x.trim())

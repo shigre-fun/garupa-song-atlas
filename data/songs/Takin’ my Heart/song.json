@@ -31,5 +31,9 @@
       "notes": 590
     },
     "SPECIAL": null
-  }
+  },
+  "bpm": 92,
+  "bpmMin": 92,
+  "bpmMax": 92,
+  "durationSeconds": 105.72
 }

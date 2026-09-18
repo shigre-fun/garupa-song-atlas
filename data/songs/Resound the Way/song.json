@@ -30,5 +30,9 @@
     },
     "SPECIAL": null
   },
-  "submissionId": "ca4b72f4-767d-4f49-830f-b6eff8ba112b"
+  "submissionId": "ca4b72f4-767d-4f49-830f-b6eff8ba112b",
+  "bpm": 180,
+  "bpmMin": 180,
+  "bpmMax": 180,
+  "durationSeconds": 105.384
 }

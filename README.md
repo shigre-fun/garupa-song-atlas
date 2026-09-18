@@ -3,6 +3,8 @@
 楽曲情報を手動で編集し、静的なウェブサイトを生成するプロジェクトです。
 収録データはゲーム等で確認しながら修正してください。
 
+BPM（基本・下限・上限）とゲーム内演奏時間も編集できます。BPM順・演奏時間順の定義と既存曲の調査方法は[BPMと演奏時間](docs/SONG_TIMING.md)を参照してください。
+
 - [公開サイト](https://shigre-fun.github.io/garupa-song-atlas/)
 - [スマホから楽曲を追加する管理ページ](https://shigre-fun.github.io/garupa-song-atlas/admin/)
 

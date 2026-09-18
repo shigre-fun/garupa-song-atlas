@@ -34,5 +34,9 @@
       "level": 26,
       "notes": 857
     }
-  }
+  },
+  "bpm": 137,
+  "bpmMin": 137,
+  "bpmMax": 137,
+  "durationSeconds": 125.304
 }

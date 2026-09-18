@@ -56,6 +56,10 @@ export function compareSongs(mode) {
     ["normal", "anime", "tie_up"].indexOf(a.type) -
       ["normal", "anime", "tie_up"].indexOf(b.type) ||
     release(a, b);
+  if (mode === "bpm" || mode === "duration") {
+    const key = mode === "bpm" ? "bpm" : "durationSeconds";
+    return (a, b) => (b[key] ?? -1) - (a[key] ?? -1) || band(a, b);
+  }
   return mode === "release"
     ? release
     : mode === "kana"

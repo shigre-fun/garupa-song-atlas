@@ -19,5 +19,9 @@
     "HARD": null,
     "EXPERT": null,
     "SPECIAL": null
-  }
+  },
+  "bpm": 186,
+  "bpmMin": 186,
+  "bpmMax": 186,
+  "durationSeconds": 107.16
 }

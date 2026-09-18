@@ -73,6 +73,19 @@ export function validateSong(song, slug) {
     fail("検索用別名は500文字以内、50件までです。");
   if (song.live3d !== null && typeof song.live3d !== "boolean")
     fail("3Dライブの対応状況が不正です。");
+  for (const key of ["bpm", "bpmMin", "bpmMax", "durationSeconds"]) {
+    if (song[key] != null && (!Number.isFinite(song[key]) || song[key] <= 0))
+      fail(
+        `${key}は0より大きい数値で入力してください。未確認の場合は空欄にします。`,
+      );
+  }
+  if ((song.bpmMin != null) !== (song.bpmMax != null))
+    fail("BPMの下限と上限は両方入力してください。");
+  if (
+    song.bpmMin != null &&
+    (song.bpm == null || song.bpmMin > song.bpm || song.bpm > song.bpmMax)
+  )
+    fail("BPMは下限 ≦ 基本BPM ≦ 上限になるように入力してください。");
   if (!song.difficulties || typeof song.difficulties !== "object")
     fail("難易度を入力してください。");
   for (const name of difficultyNames) {

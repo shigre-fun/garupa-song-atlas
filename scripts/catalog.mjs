@@ -44,6 +44,10 @@ export function loadCatalog(directory = "data/songs") {
       artist: song.originalArtist,
       work: song.originalWork,
       live3d: song.live3d,
+      bpm: song.bpm ?? null,
+      bpmMin: song.bpmMin ?? null,
+      bpmMax: song.bpmMax ?? null,
+      durationSeconds: song.durationSeconds ?? null,
       aliases: song.aliases,
       difficulties: charts,
     };

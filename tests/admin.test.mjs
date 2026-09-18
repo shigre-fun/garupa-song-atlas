@@ -31,6 +31,10 @@ const draft = {
   originalArtist: null,
   originalWork: "架空の作品",
   live3d: null,
+  bpm: 180,
+  bpmMin: 90,
+  bpmMax: 200.5,
+  durationSeconds: 105.384,
   aliases: [],
   difficulties: {
     EASY: { level: 5, notes: 100 },
@@ -141,6 +145,11 @@ test("authenticated save atomically stores Japanese song data and next ID", asyn
   await store.connect();
   const result = await store.addSong(draft, draft.title, submissionId);
   assert.equal(result.id, 820);
+  for (const key of ["bpm", "bpmMin", "bpmMax", "durationSeconds"])
+    assert.equal(
+      server.files["data/songs/テストの新曲/song.json"][key],
+      draft[key],
+    );
   assert.equal(
     server.files["data/songs/テストの新曲/song.json"].originalWork,
     "架空の作品",
@@ -244,6 +253,10 @@ test("edit preserves identity, unknown fields and counter while updating every s
     id: 999,
     title: "変更した曲名",
     reading: "ヘンコウ",
+    bpm: 174,
+    bpmMin: 100.25,
+    bpmMax: 201,
+    durationSeconds: 125.625,
     category: "エクストラ",
     band: "MyGO!!!!!×ゲスト",
     releaseDate: "2026-09-18T15:01+09:00",
@@ -262,6 +275,8 @@ test("edit preserves identity, unknown fields and counter while updating every s
   assert.equal(server.files[path].id, 7);
   assert.equal(result.slug, draft.title);
   assert.equal(server.files[path].title, changes.title);
+  for (const key of ["bpm", "bpmMin", "bpmMax", "durationSeconds"])
+    assert.equal(server.files[path][key], changes[key]);
   assert.deepEqual(server.files[path].customMetadata, { retained: true });
   assert.deepEqual(server.files[path].difficulties, changes.difficulties);
   assert.equal(server.files["data/admin-state.json"].nextId, 820);

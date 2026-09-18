@@ -28,6 +28,18 @@ const date = (n) =>
   }).format(new Date(n));
 const badge = (s) => `<span class="tag ${s.type}">${typeNames[s.type]}</span>`;
 const color = (s) => colors[bandOrder(s)];
+export function formatDuration(seconds) {
+  if (!Number.isFinite(seconds) || seconds <= 0) return "未確認";
+  const milliseconds = Math.round(seconds * 1000);
+  const minutes = Math.floor(milliseconds / 60000);
+  const secondsPart = String(
+    Math.floor((milliseconds % 60000) / 1000),
+  ).padStart(2, "0");
+  const fraction = String(milliseconds % 1000)
+    .padStart(3, "0")
+    .replace(/0+$/, "");
+  return `${minutes}:${secondsPart}${fraction ? "." + fraction : ""}`;
+}
 const query = (p, base) => {
   const x = new URLSearchParams(p);
   return siteURL("?" + x.toString(), base);
@@ -42,6 +54,8 @@ export function renderList(
     "band",
     "kana",
     "release",
+    "bpm",
+    "duration",
     ...difficulties.map((_, i) => `level-${i}`),
   ].includes(params.get("sort"))
     ? params.get("sort")
@@ -82,7 +96,7 @@ export function renderList(
 <div class="filter-actions"><button type="submit">絞り込む</button> <button type="button" id="clear-filters">絞り込みを解除</button></div>
 </form>
 <div class="toolbar">
-<label>並べ替え<select id="sort">${[["band", "バンド順"], ...difficulties.map((d, i) => [`level-${i}`, `${d} レベルが高い順`]), ["kana", "楽曲名 50音順"], ["release", "配信順（古い順）"]].map(([v, t]) => `<option value="${v}" ${v === mode ? "selected" : ""}>${t}</option>`).join("")}</select>
+<label>並べ替え<select id="sort">${[["band", "バンド順"], ...difficulties.map((d, i) => [`level-${i}`, `${d} レベルが高い順`]), ["bpm", "BPM（速い順）"], ["duration", "楽曲演奏時間（長い順）"], ["kana", "楽曲名 50音順"], ["release", "配信順（古い順）"]].map(([v, t]) => `<option value="${v}" ${v === mode ? "selected" : ""}>${t}</option>`).join("")}</select>
 </label>
 <div class="meta">日本版 · ${date(data.updatedAt)} 更新</div>
 </div>${
@@ -101,7 +115,7 @@ export function renderList(
           .map(
             (s) => `<tr>
 <td>
-<a class="song-title" href="${siteURL(`songs/${encodeURIComponent(s.slug)}/`, base)}?${e(state.toString())}">${e(s.title)}</a>${s.work ? `<div class="song-sub">${e(s.work)}</div>` : ""}</td>
+<a class="song-title" href="${siteURL(`songs/${encodeURIComponent(s.slug)}/`, base)}?${e(state.toString())}">${e(s.title)}</a>${s.work ? `<div class="song-sub">${e(s.work)}</div>` : ""}<div class="song-sub">基本BPM ${e(s.bpm ?? "未確認")} · 演奏時間 ${formatDuration(s.durationSeconds)}</div></td>
 <td>
 <div class="band" style="--band:${color(s)}">${e(s.band)}</div>
 </td>
@@ -131,7 +145,7 @@ export function renderList(
   }<p class="notice">「—」はその難易度が未実装です。レベルが同じ場合は、バンド → オリジナル・カバー・エクストラ → 配信順で並びます。 複数バンドの合同曲は「その他」に含めます。</p>
 <details class="data-note">
 <summary>並べ替えについて</summary>
-<p>50音順は登録された読みを使用します。同時配信曲は登録された配信順、続いて管理用IDで並べます。</p>
+<p>50音順は登録された読みを使用します。同時配信曲は登録された配信順、続いて管理用IDで並べます。BPM順は基本BPM、演奏時間順はゲーム内の秒数を比較します。同値はバンド → 種類 → 配信順、未確認は最後です。</p>
 </details>`;
 }
 export function renderDetail(
@@ -173,6 +187,9 @@ export function renderDetail(
 <dl>
 <dt>配信日（日本版）</dt>
 <dd>${date(s.publishedAt)}</dd>
+<dt>基本BPM</dt><dd>${e(s.bpm ?? "未確認")}</dd>
+<dt>BPMの下限〜上限</dt><dd>${e(s.bpmMin ?? s.bpm ?? "未確認")} 〜 ${e(s.bpmMax ?? s.bpm ?? "未確認")}</dd>
+<dt>楽曲演奏時間（ゲーム内）</dt><dd>${formatDuration(s.durationSeconds)}</dd>
 <dt>演奏バンド・参加アーティスト</dt>
 <dd>${e(s.band)}</dd>
 <dt>${s.type === "normal" ? "作曲" : "原曲の作曲者"}</dt>

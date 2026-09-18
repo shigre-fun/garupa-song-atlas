@@ -10,6 +10,10 @@
   "originalArtist": null,
   "originalWork": null,
   "live3d": null,
+  "bpm": null,
+  "bpmMin": null,
+  "bpmMax": null,
+  "durationSeconds": null,
   "aliases": [],
   "difficulties": {
     "EASY": { "level": null, "notes": null },
