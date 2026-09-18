@@ -33,6 +33,7 @@ export function loadCatalog(directory = "data/songs") {
     return {
       id: song.id,
       slug,
+      revision: song.revision || song.submissionId || null,
       title: song.title,
       reading: song.reading,
       band: song.band,

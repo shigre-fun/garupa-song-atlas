@@ -13,6 +13,135 @@ let store = null;
 let busy = false;
 let submissionId = crypto.randomUUID();
 let savedResult = null;
+let editing = null;
+let songSlugs = [];
+let catalogSongs = [];
+const editStatus = document.querySelector("#edit-status");
+
+function updateMode() {
+  form.elements.slug.disabled = !!editing;
+  document.querySelector("#save").textContent = editing
+    ? "変更を保存する"
+    : "楽曲を保存する";
+  editStatus.textContent = editing
+    ? `修正中：${editing.song.title}（${editing.settings.owner}/${editing.settings.repo}・${editing.settings.branch}）。新規追加へ戻るには「新しい入力を始める」を押してください。`
+    : "新規追加モードです。";
+}
+
+function renderSongOptions() {
+  const normalize = (text) => text.normalize("NFKC").toLocaleLowerCase("ja");
+  const query = normalize(document.querySelector("#edit-search").value);
+  const select = document.querySelector("#edit-song");
+  select.replaceChildren();
+  for (const slug of songSlugs) {
+    const known = catalogSongs.find((song) => song.slug === slug);
+    const label = known ? `${known.title} / ${known.band}（${slug}）` : slug;
+    if (!normalize(label + (known?.reading || "")).includes(query)) continue;
+    const option = document.createElement("option");
+    option.value = slug;
+    option.textContent = label;
+    select.append(option);
+  }
+  if (!select.options.length)
+    select.add(new Option("一致する曲がありません", ""));
+}
+document
+  .querySelector("#edit-search")
+  .addEventListener("input", renderSongOptions);
+document.querySelector("#refresh-songs").addEventListener("click", async () => {
+  if (busy) return;
+  if (!store) {
+    editStatus.textContent = "先にGitHubへ接続してください。";
+    return;
+  }
+  busy = true;
+  editStatus.textContent = "曲の一覧を取得しています…";
+  try {
+    songSlugs = await store.listSongs();
+    try {
+      const response = await fetch(siteURL("songs.json"), {
+        cache: "no-store",
+      });
+      if (response.ok) catalogSongs = (await response.json()).songs;
+    } catch {
+      /* GitHubのフォルダー名だけでも選択できる。 */
+    }
+    renderSongOptions();
+    editStatus.textContent = `${songSlugs.length}曲から選択してください。読み込み時にGitHubの最新情報を取得します。`;
+  } catch (error) {
+    editStatus.textContent = error.message;
+  } finally {
+    busy = false;
+  }
+});
+document.querySelector("#load-song").addEventListener("click", async () => {
+  if (busy) return;
+  if (!store) {
+    editStatus.textContent = "先にGitHubへ接続してください。";
+    return;
+  }
+  const slug = document.querySelector("#edit-song").value;
+  if (!slug) {
+    editStatus.textContent = "曲を選択してください。";
+    return;
+  }
+  if (
+    (editing || form.elements.title.value) &&
+    !confirm("現在の入力を、選んだ曲の最新情報に置き換えますか？")
+  )
+    return;
+  busy = true;
+  editStatus.textContent = "曲を読み込んでいます…";
+  try {
+    const loaded = await store.loadSong(slug);
+    editing = loaded;
+    form.reset();
+    const song = loaded.song;
+    for (const key of [
+      "title",
+      "reading",
+      "category",
+      "releaseOrder",
+      "composer",
+      "originalArtist",
+      "originalWork",
+    ])
+      form.elements[key].value = song[key] ?? "";
+    const [band, ...guests] = song.band.split("×");
+    form.elements.band.value = bandNames.includes(band) ? band : "その他";
+    form.elements.otherBand.value = bandNames.includes(band) ? "" : band;
+    form.elements.guests.value = guests.join("×");
+    form.elements.releaseDate.value = new Date(
+      Date.parse(song.releaseDate) + 9 * 3600000,
+    )
+      .toISOString()
+      .slice(0, 23);
+    form.elements.live3d.value = JSON.stringify(song.live3d);
+    form.elements.aliases.value = song.aliases.join("\n");
+    form.elements.slug.value = slug;
+    for (const name of difficultyNames) {
+      const chart = song.difficulties[name];
+      form.elements[`${name}-enabled`].checked = !!chart;
+      form.elements[`${name}-level`].value = chart?.level ?? "";
+      form.elements[`${name}-notes`].value = chart?.notes ?? "";
+    }
+    submissionId = crypto.randomUUID();
+    savedResult = null;
+    document.querySelector("#result").hidden = true;
+    updateVisibility();
+    updateMode();
+    saveDraft();
+    message(
+      "曲を読み込みました。必要な項目を修正して「変更を保存する」を押してください。",
+    );
+    form.elements.title.focus();
+  } catch (error) {
+    editStatus.textContent = error.message;
+  } finally {
+    busy = false;
+    updateVisibility();
+  }
+});
 
 function storageRead(key) {
   try {
@@ -80,6 +209,7 @@ function saveDraft() {
     values: draftValues(),
     submissionId,
     savedResult,
+    editing,
   });
   draftStatus.textContent = ok
     ? "この端末に下書きを保存しました。"
@@ -100,6 +230,7 @@ function showResult(result) {
 
 const draft = storageRead(draftKey);
 if (draft?.values) {
+  editing = draft.editing || null;
   for (const element of form.elements) {
     const value = draft.values[element.name];
     if (element.type === "checkbox" && typeof value === "boolean")
@@ -114,6 +245,7 @@ if (draft?.values) {
   draftStatus.textContent = "前回の入力を復元しました。";
 }
 updateVisibility();
+updateMode();
 form.addEventListener("input", () => {
   if (busy) return;
   submissionId = crypto.randomUUID();
@@ -245,7 +377,10 @@ form.addEventListener("submit", async (event) => {
     element.disabled = true;
   message("楽曲をGitHubに保存しています。この画面を閉じずにお待ちください。");
   try {
-    const result = await store.addSong(entry.song, entry.slug, submissionId);
+    const result = editing
+      ? await store.updateSong(entry.song, editing, submissionId)
+      : await store.addSong(entry.song, entry.slug, submissionId);
+    if (result.editing) editing = result.editing;
     savedResult = { ...result, title: entry.song.title, ...store.settings };
     showResult(savedResult);
     message(
@@ -260,6 +395,7 @@ form.addEventListener("submit", async (event) => {
     for (const element of form.elements) element.disabled = false;
     document.querySelector("#disconnect").disabled = false;
     updateVisibility();
+    updateMode();
     status.focus();
   }
 });
@@ -279,7 +415,10 @@ document
       if (!response.ok) throw new Error();
       const data = await response.json();
       const published = data.songs.some(
-        (song) => song.slug === savedResult.slug && song.id === savedResult.id,
+        (song) =>
+          song.slug === savedResult.slug &&
+          song.id === savedResult.id &&
+          (!savedResult.revision || song.revision === savedResult.revision),
       );
       publishStatus.textContent = published
         ? "サイトへの反映が完了しました。"
@@ -303,10 +442,12 @@ document.querySelector("#clear").addEventListener("click", () => {
   )
     return;
   form.reset();
+  editing = null;
   submissionId = crypto.randomUUID();
   savedResult = null;
   document.querySelector("#result").hidden = true;
   updateVisibility();
+  updateMode();
   saveDraft();
   message("新しい楽曲を入力してください。");
   form.elements.title.focus();

@@ -231,3 +231,123 @@ test("all existing IDs precede the next allocated ID and unknown metadata render
   );
   assert.ok(html.includes("未確認"));
 });
+
+test("edit preserves identity, unknown fields and counter while updating every song field", async () => {
+  const server = remote();
+  const path = `data/songs/${draft.title}/song.json`;
+  server.files[path] = { ...draft, id: 7, customMetadata: { retained: true } };
+  const store = client(server);
+  assert.deepEqual(await store.listSongs(), [draft.title]);
+  const loaded = await store.loadSong(draft.title);
+  const changes = {
+    ...draft,
+    id: 999,
+    title: "変更した曲名",
+    reading: "ヘンコウ",
+    category: "エクストラ",
+    band: "MyGO!!!!!×ゲスト",
+    releaseDate: "2026-09-18T15:01+09:00",
+    releaseOrder: 9,
+    composer: "作曲者",
+    originalArtist: "原曲歌手",
+    originalWork: "作品名",
+    aliases: ["別名"],
+    difficulties: { ...draft.difficulties, SPECIAL: { level: 28, notes: 999 } },
+  };
+  const result = await store.updateSong(
+    changes,
+    loaded,
+    "update-operation-00001",
+  );
+  assert.equal(server.files[path].id, 7);
+  assert.equal(result.slug, draft.title);
+  assert.equal(server.files[path].title, changes.title);
+  assert.deepEqual(server.files[path].customMetadata, { retained: true });
+  assert.deepEqual(server.files[path].difficulties, changes.difficulties);
+  assert.equal(server.files["data/admin-state.json"].nextId, 820);
+  assert.equal(server.writes, 1);
+  await store.updateSong(
+    { ...changes, composer: "再修正" },
+    result.editing,
+    "update-operation-00002",
+  );
+  assert.equal(server.files[path].composer, "再修正");
+  assert.equal(server.writes, 2);
+});
+
+test("stale edit, removed song and different repository cannot overwrite data", async () => {
+  const server = remote();
+  const path = `data/songs/${draft.title}/song.json`;
+  server.files[path] = { ...draft, id: 7 };
+  const store = client(server);
+  const loaded = await store.loadSong(draft.title);
+  server.files[path].composer = "他端末の修正";
+  await assert.rejects(
+    store.updateSong(draft, loaded, "update-operation-00001"),
+    /読み込み後/,
+  );
+  await assert.rejects(
+    store.updateSong(
+      draft,
+      { ...loaded, settings: { ...loaded.settings, branch: "other" } },
+      "update-operation-00001",
+    ),
+    /保存先/,
+  );
+  delete server.files[path];
+  await assert.rejects(
+    store.updateSong(draft, loaded, "update-operation-00001"),
+    /見つかりません/,
+  );
+  assert.equal(server.writes, 0);
+});
+
+test("edit retry recovers a lost response and unrelated edits are preserved", async () => {
+  const server = remote({ loseResponse: true });
+  const path = `data/songs/${draft.title}/song.json`;
+  server.files[path] = { ...draft, id: 7 };
+  const store = client(server);
+  const loaded = await store.loadSong(draft.title);
+  server.files["data/songs/別の曲/song.json"] = {
+    ...draft,
+    id: 8,
+    title: "別の曲",
+  };
+  await assert.rejects(
+    store.updateSong(
+      { ...draft, composer: "修正" },
+      loaded,
+      "update-operation-00001",
+    ),
+    /通信/,
+  );
+  const recovered = await store.updateSong(
+    { ...draft, composer: "修正" },
+    loaded,
+    "update-operation-00001",
+  );
+  assert.equal(recovered.alreadySaved, true);
+  assert.equal(server.writes, 1);
+  assert.equal(server.files["data/songs/別の曲/song.json"].id, 8);
+  assert.equal(server.files["data/admin-state.json"].nextId, 820);
+});
+
+test("edit refuses a branch race during commit without advancing the counter", async () => {
+  const server = remote({ conflict: true });
+  server.files[`data/songs/${draft.title}/song.json`] = { ...draft, id: 7 };
+  const store = client(server);
+  const loaded = await store.loadSong(draft.title);
+  await assert.rejects(
+    store.updateSong(
+      { ...draft, title: "変更" },
+      loaded,
+      "update-operation-00001",
+    ),
+    /同時更新/,
+  );
+  assert.equal(server.writes, 0);
+  assert.equal(
+    server.files[`data/songs/${draft.title}/song.json`].title,
+    draft.title,
+  );
+});

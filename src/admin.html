@@ -9,7 +9,7 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self'; connect-src 'self' https://api.github.com; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'self'"
     />
-    <title>楽曲を追加 | ガルパ楽曲ノート</title>
+    <title>楽曲を追加・修正 | ガルパ楽曲ノート</title>
     <link rel="icon" href="/favicon.svg" />
     <link rel="stylesheet" href="/admin.css" />
     <script type="module" src="/admin.js"></script>
@@ -18,7 +18,7 @@
     <header><a href="/">✳ ガルパ楽曲ノート</a><span>管理ページ</span></header>
     <main>
       <p class="eyebrow">SONG EDITOR</p>
-      <h1>新しい楽曲を追加</h1>
+      <h1>楽曲を追加・修正</h1>
       <p class="lead">
         楽曲情報を入力して保存すると、サイトの更新が始まります。
       </p>
@@ -79,6 +79,28 @@
           </p>
         </form>
       </section>
+      <section class="card" aria-labelledby="edit-title">
+        <h2 id="edit-title">既存の楽曲を修正</h2>
+        <p class="help">
+          接続後、曲の一覧を取得して修正する曲を選びます。曲名を変えてもページのURLは変わりません。
+        </p>
+        <button type="button" id="refresh-songs">曲の一覧を取得・更新</button>
+        <label
+          >修正する曲を検索<input
+            type="search"
+            id="edit-search"
+            placeholder="曲名・フォルダー名"
+        /></label>
+        <label
+          >修正する曲<select id="edit-song">
+            <option value="">一覧を取得してください</option>
+          </select></label
+        >
+        <button type="button" id="load-song">選んだ曲を読み込む</button>
+        <p id="edit-status" role="status" class="message">
+          新規追加モードです。
+        </p>
+      </section>
       <form id="song-form">
         <section class="card">
           <h2>2. 楽曲情報</h2>
@@ -122,7 +144,11 @@
             /></label>
             <label
               >配信日時（日本時間） <span>必須</span
-              ><input type="datetime-local" name="releaseDate" required
+              ><input
+                type="datetime-local"
+                name="releaseDate"
+                step="0.001"
+                required
             /></label>
             <label
               >同時配信曲の順序<input

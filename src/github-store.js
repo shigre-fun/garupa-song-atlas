@@ -195,4 +195,112 @@ export class GitHubStore {
     );
     return { slug, id: song.id, head: commit.sha, alreadySaved: false };
   }
+
+  async listSongs() {
+    const snapshot = await this.snapshot();
+    return snapshot.entries
+      .filter(
+        (entry) =>
+          entry.type === "blob" &&
+          /^data\/songs\/[^/]+\/song\.json$/.test(entry.path),
+      )
+      .map((entry) => entry.path.split("/")[2])
+      .sort((a, b) => a.localeCompare(b, "ja"));
+  }
+
+  async loadSong(slug) {
+    if (folderName(slug) !== slug) throw new Error("楽曲の指定が不正です。");
+    const snapshot = await this.snapshot();
+    const song = await this.readJSON(snapshot, `data/songs/${slug}/song.json`);
+    validateSong(song, slug);
+    return {
+      slug,
+      song,
+      version: JSON.stringify(song),
+      settings: { ...this.settings },
+    };
+  }
+
+  async updateSong(input, editing, operationId) {
+    if (!/^[a-zA-Z0-9-]{16,80}$/.test(operationId))
+      throw new Error("送信識別子が不正です。");
+    if (
+      ["owner", "repo", "branch"].some(
+        (key) => editing.settings?.[key] !== this.settings[key],
+      )
+    )
+      throw new Error(
+        "読み込んだ楽曲と保存先が異なります。元の保存先に接続してください。",
+      );
+    const { slug } = editing;
+    validateSong({ ...input, id: editing.song.id }, slug);
+    const snapshot = await this.snapshot();
+    const path = `data/songs/${slug}/song.json`;
+    const current = await this.readJSON(snapshot, path);
+    if (current.revision === operationId)
+      return {
+        slug,
+        id: current.id,
+        head: snapshot.head,
+        revision: operationId,
+        editing: {
+          ...editing,
+          song: current,
+          version: JSON.stringify(current),
+        },
+        alreadySaved: true,
+      };
+    if (JSON.stringify(current) !== editing.version)
+      throw new Error(
+        "この曲は読み込み後に変更されています。入力を控えてから、最新の曲を読み直して修正してください。上書きは行っていません。",
+      );
+    const song = {
+      ...current,
+      ...input,
+      id: current.id,
+      revision: operationId,
+    };
+    validateSong(song, slug);
+    const state = await this.readJSON(snapshot, "data/admin-state.json");
+    const tree = await this.request("/git/trees", "POST", {
+      base_tree: snapshot.tree,
+      tree: [
+        {
+          path,
+          mode: "100644",
+          type: "blob",
+          content: JSON.stringify(song, null, 2) + "\n",
+        },
+        {
+          path: "data/admin-state.json",
+          mode: "100644",
+          type: "blob",
+          content:
+            JSON.stringify(
+              { ...state, updatedAt: new Date().toISOString() },
+              null,
+              2,
+            ) + "\n",
+        },
+      ],
+    });
+    const commit = await this.request("/git/commits", "POST", {
+      message: `Update song: ${song.title}`,
+      tree: tree.sha,
+      parents: [snapshot.head],
+    });
+    await this.request(
+      `/git/refs/heads/${this.settings.branch.split("/").map(encodeURIComponent).join("/")}`,
+      "PATCH",
+      { sha: commit.sha, force: false },
+    );
+    return {
+      slug,
+      id: song.id,
+      head: commit.sha,
+      revision: operationId,
+      editing: { ...editing, song, version: JSON.stringify(song) },
+      alreadySaved: false,
+    };
+  }
 }
