@@ -6,6 +6,10 @@ import {
   colors,
   compareSongs,
   matches,
+  bandNames,
+  selectedFilters,
+  filteredSongs,
+  pageNumbers,
 } from "./domain.js";
 const e = (s) =>
   String(s ?? "").replace(
@@ -42,9 +46,19 @@ export function renderList(
   ].includes(params.get("sort"))
     ? params.get("sort")
     : "band";
-  const rows = data.songs.filter((s) => matches(s, q)).sort(compareSongs(mode));
+  const rows = filteredSongs(data.songs, params).sort(compareSongs(mode));
   const pages = Math.max(1, Math.ceil(rows.length / 50));
   const page = Math.max(1, Math.min(pages, parseInt(params.get("page")) || 1));
+  const state = new URLSearchParams(params);
+  state.set("q", q);
+  state.set("sort", mode);
+  state.set("page", page);
+  const filters = selectedFilters(params);
+  const pageURL = (number) => {
+    const p = new URLSearchParams(state);
+    p.set("page", number);
+    return e(query(p, base));
+  };
   return `<section class="intro">
 <div>
 <p class="eyebrow">BANG DREAM! · SONG DATABASE</p>
@@ -54,6 +68,17 @@ export function renderList(
 <div class="count">${rows.length}<small>曲</small>
 </div>
 </section>
+<form id="filters" class="filters">
+<fieldset><legend>楽曲の種類（複数選択可）</legend>${Object.entries(typeNames)
+    .map(
+      ([value, label]) =>
+        `<label><input type="checkbox" name="type" value="${value}" ${filters.types.includes(value) ? "checked" : ""}>${label}</label>`,
+    )
+    .join("")}</fieldset>
+<fieldset><legend>バンド（複数選択可）</legend>${[...bandNames, "その他"].map((label, i) => `<label><input type="checkbox" name="band" value="${i}" ${filters.bands.includes(String(i)) ? "checked" : ""}>${e(label)}</label>`).join("")}</fieldset>
+<p class="notice">未選択の項目はすべて表示します。同じ項目内は「いずれか」、種類とバンドの間は「両方に一致」で絞り込みます。合同曲は「その他」です。</p>
+<button type="submit">絞り込む</button> <button type="button" id="clear-filters">絞り込みを解除</button>
+</form>
 <div class="toolbar">
 <label>並べ替え<select id="sort">${[["band", "バンド順"], ...difficulties.map((d, i) => [`level-${i}`, `${d} レベルが高い順`]), ["kana", "楽曲名 50音順"], ["release", "配信順（古い順）"]].map(([v, t]) => `<option value="${v}" ${v === mode ? "selected" : ""}>${t}</option>`).join("")}</select>
 </label>
@@ -74,7 +99,7 @@ export function renderList(
           .map(
             (s) => `<tr>
 <td>
-<a class="song-title" href="${siteURL(`songs/${encodeURIComponent(s.slug)}/`, base)}?${new URLSearchParams({ q, sort: mode, page })}">${e(s.title)}</a>${s.work ? `<div class="song-sub">${e(s.work)}</div>` : ""}</td>
+<a class="song-title" href="${siteURL(`songs/${encodeURIComponent(s.slug)}/`, base)}?${e(state.toString())}">${e(s.title)}</a>${s.work ? `<div class="song-sub">${e(s.work)}</div>` : ""}</td>
 <td>
 <div class="band" style="--band:${color(s)}">${e(s.band)}</div>
 </td>
@@ -87,6 +112,13 @@ export function renderList(
 <nav class="pagination" aria-label="一覧のページ切り替え">
 <button id="prev" ${page === 1 ? "disabled" : ""}>前へ</button>
 <span>${page} / ${pages}</span>
+<div class="page-numbers">${pageNumbers(page, pages)
+          .map((n) =>
+            n === null
+              ? '<span class="page-gap" aria-hidden="true">…</span>'
+              : `<a href="${pageURL(n)}" aria-label="${n}ページ目" ${n === page ? 'aria-current="page"' : ""}>${n}</a>`,
+          )
+          .join("")}</div>
 <button id="next" ${page === pages ? "disabled" : ""}>次へ</button>
 </nav>`
       : `<div class="panel empty">
@@ -107,7 +139,7 @@ export function renderDetail(
   base = siteBase,
 ) {
   const q = params.get("q") || "";
-  return `<a class="back" href="${query({ q, sort: params.get("sort") || "band", page: params.get("page") || 1 }, base)}">← 楽曲一覧に戻る</a>
+  return `<a class="back" href="${e(query(params, base))}">← 楽曲一覧に戻る</a>
 <section class="detail-top" style="--band:${color(s)}">${badge(s)}<h1>${e(s.title)}</h1>
 <div class="detail-band">${e(s.band)}</div>
 </section>

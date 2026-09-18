@@ -1,20 +1,24 @@
 import { siteURL, siteBase } from "./urls.js";
 const pagePath = "/" + location.pathname.slice(siteBase.length);
 import { renderList, renderDetail } from "./views.js";
-import { matches } from "./domain.js";
+import { filteredSongs } from "./domain.js";
 
 const app = document.querySelector("#app");
 const params = new URLSearchParams(location.search);
 const q = params.get("q") || "";
 document.querySelector("#search").value = q;
 const listURL = (values) => siteURL("?" + new URLSearchParams(values));
+const navigate = (changes) => {
+  const next = new URLSearchParams(params);
+  for (const [key, value] of Object.entries(changes)) next.set(key, value);
+  location.href = listURL(next);
+};
+document.querySelector('form[role="search"]').onsubmit = (event) => {
+  event.preventDefault();
+  navigate({ q: document.querySelector("#search").value, page: 1 });
+};
 const backLink = document.querySelector(".back");
-if (backLink)
-  backLink.href = listURL({
-    q,
-    sort: params.get("sort") || "band",
-    page: params.get("page") || 1,
-  });
+if (backLink) backLink.href = listURL(params);
 if (pagePath === "/" && params.size)
   app.innerHTML = '<p role="status">検索結果を読み込んでいます…</p>';
 
@@ -39,10 +43,27 @@ try {
     const select = document.querySelector("#sort");
     const sort = select.value;
     select.onchange = (event) =>
-      (location.href = listURL({ q, sort: event.target.value }));
+      navigate({ sort: event.target.value, page: 1 });
+    document.querySelector("#filters").onsubmit = (event) => {
+      event.preventDefault();
+      const next = new URLSearchParams(params);
+      next.delete("type");
+      next.delete("band");
+      next.set("page", 1);
+      for (const [key, value] of new FormData(event.currentTarget))
+        next.append(key, value);
+      location.href = listURL(next);
+    };
+    document.querySelector("#clear-filters").onclick = () => {
+      const next = new URLSearchParams(params);
+      next.delete("type");
+      next.delete("band");
+      next.set("page", 1);
+      location.href = listURL(next);
+    };
     const pages = Math.max(
       1,
-      Math.ceil(data.songs.filter((song) => matches(song, q)).length / 50),
+      Math.ceil(filteredSongs(data.songs, params).length / 50),
     );
     const page = Math.max(
       1,
@@ -53,9 +74,7 @@ try {
       ["next", 1],
     ]) {
       const button = document.querySelector("#" + name);
-      if (button)
-        button.onclick = () =>
-          (location.href = listURL({ q, sort, page: page + delta }));
+      if (button) button.onclick = () => navigate({ sort, page: page + delta });
     }
   } else {
     app.innerHTML = notFound();

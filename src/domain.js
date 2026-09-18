@@ -79,3 +79,32 @@ export function matches(s, q) {
     )
   );
 }
+
+export function selectedFilters(params) {
+  return {
+    types: params.getAll("type").filter((v) => Object.hasOwn(typeNames, v)),
+    bands: params.getAll("band").filter((v) => /^(?:[0-9])$/.test(v)),
+  };
+}
+export function filteredSongs(songs, params) {
+  const { types, bands } = selectedFilters(params);
+  return songs.filter(
+    (song) =>
+      matches(song, params.get("q") || "") &&
+      (!types.length || types.includes(song.type)) &&
+      (!bands.length || bands.includes(String(bandOrder(song)))),
+  );
+}
+export function pageNumbers(page, total) {
+  const visible = new Set([1, total]);
+  for (let n = Math.max(1, page - 2); n <= Math.min(total, page + 2); n++)
+    visible.add(n);
+  const result = [];
+  let previous = 0;
+  for (const n of [...visible].sort((a, b) => a - b)) {
+    if (previous && n - previous > 1) result.push(null);
+    result.push(n);
+    previous = n;
+  }
+  return result;
+}
