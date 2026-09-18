@@ -77,7 +77,7 @@ header {
   margin-top: 4px;
   color: var(--muted);
 }
-form {
+header form {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -87,10 +87,10 @@ form {
   border-radius: 10px;
   padding: 5px 6px 5px 14px;
 }
-form span {
+header form span {
   font-size: 28px;
 }
-input {
+header input {
   min-width: 0;
   flex: 1;
   border: 0;
@@ -297,6 +297,8 @@ tr:last-child td {
   padding: 4px;
 }
 .filters {
+  display: block;
+  width: 100%;
   padding: 18px;
   margin: 20px 0;
   border: 1px solid #d7dce5;
@@ -307,10 +309,17 @@ tr:last-child td {
   border: 0;
   padding: 0;
   margin: 0 0 14px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 16px;
   min-width: 0;
+}
+.filter-options {
+  display: grid;
+  gap: 8px;
+}
+.filter-types {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.filter-bands {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 .filters legend {
   font-weight: bold;
@@ -321,12 +330,36 @@ tr:last-child td {
   align-items: center;
   gap: 6px;
   min-height: 44px;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #c5cbd8;
+  border-radius: 8px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
   cursor: pointer;
 }
+.filters label:has(input:checked) {
+  background: #fceaf2;
+  border-color: #8d2854;
+  color: #702043;
+}
+.filters label:focus-within {
+  outline: 2px solid #8d2854;
+  outline-offset: 2px;
+}
 .filters input {
+  flex: 0 0 20px;
   width: 20px;
   height: 20px;
+  margin: 0;
+  padding: 0;
   accent-color: #8d2854;
+}
+.filter-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
 }
 .pagination button:disabled {
   opacity: 0.35;
@@ -441,6 +474,17 @@ footer {
   line-height: 1.9;
 }
 @media (max-width: 800px) {
+  .filter-bands {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .filters {
+    padding: 12px;
+  }
+  .filter-types label {
+    padding: 8px 4px;
+    gap: 4px;
+    font-size: 12px;
+  }
   header {
     flex-direction: column;
     gap: 18px;
@@ -450,7 +494,7 @@ footer {
   .brand {
     justify-content: center;
   }
-  form {
+  header form {
     width: 100%;
   }
   main {

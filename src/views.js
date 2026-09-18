@@ -69,15 +69,17 @@ export function renderList(
 </div>
 </section>
 <form id="filters" class="filters">
-<fieldset><legend>楽曲の種類（複数選択可）</legend>${Object.entries(typeNames)
+<fieldset><legend>楽曲の種類（複数選択可）</legend><div class="filter-options filter-types">${Object.entries(
+    typeNames,
+  )
     .map(
       ([value, label]) =>
         `<label><input type="checkbox" name="type" value="${value}" ${filters.types.includes(value) ? "checked" : ""}>${label}</label>`,
     )
-    .join("")}</fieldset>
-<fieldset><legend>バンド（複数選択可）</legend>${[...bandNames, "その他"].map((label, i) => `<label><input type="checkbox" name="band" value="${i}" ${filters.bands.includes(String(i)) ? "checked" : ""}>${e(label)}</label>`).join("")}</fieldset>
+    .join("")}</div></fieldset>
+<fieldset><legend>バンド（複数選択可）</legend><div class="filter-options filter-bands">${[...bandNames, "その他"].map((label, i) => `<label><input type="checkbox" name="band" value="${i}" ${filters.bands.includes(String(i)) ? "checked" : ""}>${e(label)}</label>`).join("")}</div></fieldset>
 <p class="notice">未選択の項目はすべて表示します。同じ項目内は「いずれか」、種類とバンドの間は「両方に一致」で絞り込みます。合同曲は「その他」です。</p>
-<button type="submit">絞り込む</button> <button type="button" id="clear-filters">絞り込みを解除</button>
+<div class="filter-actions"><button type="submit">絞り込む</button> <button type="button" id="clear-filters">絞り込みを解除</button></div>
 </form>
 <div class="toolbar">
 <label>並べ替え<select id="sort">${[["band", "バンド順"], ...difficulties.map((d, i) => [`level-${i}`, `${d} レベルが高い順`]), ["kana", "楽曲名 50音順"], ["release", "配信順（古い順）"]].map(([v, t]) => `<option value="${v}" ${v === mode ? "selected" : ""}>${t}</option>`).join("")}</select>
