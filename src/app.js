@@ -1,7 +1,7 @@
 import { siteURL, siteBase } from "./urls.js";
 const pagePath = "/" + location.pathname.slice(siteBase.length);
 import { renderList, renderDetail } from "./views.js";
-import { filteredSongs } from "./domain.js";
+import { filteredSongs, sortState, nextSortParams } from "./domain.js";
 
 const app = document.querySelector("#app");
 const params = new URLSearchParams(location.search);
@@ -40,10 +40,13 @@ try {
     if (song) document.title = song.title + " | ガルパ楽曲ノート";
   } else if (pagePath === "/") {
     app.innerHTML = renderList(data, params);
-    const select = document.querySelector("#sort");
-    const sort = select.value;
-    select.onchange = (event) =>
-      navigate({ sort: event.target.value, page: 1 });
+    const sorting = sortState(params);
+    document.querySelector("#difficulty").onchange = (event) =>
+      navigate({ sort: sorting.mode, difficulty: event.target.value, page: 1 });
+    for (const button of document.querySelectorAll("[data-sort]"))
+      button.onclick = () => {
+        location.href = listURL(nextSortParams(params, button.dataset.sort));
+      };
     document.querySelector("#filters").onsubmit = (event) => {
       event.preventDefault();
       const next = new URLSearchParams(params);
@@ -74,7 +77,7 @@ try {
       ["next", 1],
     ]) {
       const button = document.querySelector("#" + name);
-      if (button) button.onclick = () => navigate({ sort, page: page + delta });
+      if (button) button.onclick = () => navigate({ page: page + delta });
     }
   } else {
     app.innerHTML = notFound();

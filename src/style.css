@@ -296,6 +296,27 @@ tr:last-child td {
   align-self: center;
   padding: 4px;
 }
+.sort-controls {
+  min-width: 0;
+  flex: 1;
+}
+.sort-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.sort-buttons button {
+  background: white;
+  color: #222b42;
+  border: 1px solid #c5cbd8;
+  min-height: 44px;
+}
+.sort-buttons button[aria-pressed="true"] {
+  background: #8d2854;
+  border-color: #8d2854;
+  color: white;
+}
 .filters {
   display: block;
   width: 100%;

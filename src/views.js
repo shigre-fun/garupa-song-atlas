@@ -10,6 +10,8 @@ import {
   selectedFilters,
   filteredSongs,
   pageNumbers,
+  sortState,
+  sortLabels,
 } from "./domain.js";
 const e = (s) =>
   String(s ?? "").replace(
@@ -50,22 +52,17 @@ export function renderList(
   base = siteBase,
 ) {
   const q = params.get("q") || "";
-  const mode = [
-    "band",
-    "kana",
-    "release",
-    "bpm",
-    "duration",
-    ...difficulties.map((_, i) => `level-${i}`),
-  ].includes(params.get("sort"))
-    ? params.get("sort")
-    : "band";
-  const rows = filteredSongs(data.songs, params).sort(compareSongs(mode));
+  const { mode, difficulty, direction } = sortState(params);
+  const rows = filteredSongs(data.songs, params).sort(
+    compareSongs(mode, direction, difficulty),
+  );
   const pages = Math.max(1, Math.ceil(rows.length / 50));
   const page = Math.max(1, Math.min(pages, parseInt(params.get("page")) || 1));
   const state = new URLSearchParams(params);
   state.set("q", q);
   state.set("sort", mode);
+  state.set("difficulty", difficulty);
+  state.set("direction", direction);
   state.set("page", page);
   const filters = selectedFilters(params);
   const pageURL = (number) => {
@@ -96,8 +93,18 @@ export function renderList(
 <div class="filter-actions"><button type="submit">絞り込む</button> <button type="button" id="clear-filters">絞り込みを解除</button></div>
 </form>
 <div class="toolbar">
-<label>並べ替え<select id="sort">${[["band", "バンド順"], ...difficulties.map((d, i) => [`level-${i}`, `${d} レベルが高い順`]), ["bpm", "BPM（速い順）"], ["duration", "楽曲演奏時間（長い順）"], ["kana", "楽曲名 50音順"], ["release", "配信順（古い順）"]].map(([v, t]) => `<option value="${v}" ${v === mode ? "selected" : ""}>${t}</option>`).join("")}</select>
-</label>
+<div class="sort-controls">
+<label>難易度<select id="difficulty">${difficulties.map((name, i) => `<option value="${i}" ${i === difficulty ? "selected" : ""}>${name}</option>`).join("")}</select></label>
+<div class="sort-buttons" role="group" aria-label="並べ方">${Object.entries(
+    sortLabels,
+  )
+    .map(
+      ([key, label]) =>
+        `<button type="button" data-sort="${key}" aria-pressed="${mode === key}" aria-label="${label}${mode === key ? (direction === "reverse" ? "（逆順）" : "（通常順）") : ""}">${label}${mode === key ? `<span aria-hidden="true"> ${direction === "reverse" ? "▼" : "▲"}</span>` : ""}</button>`,
+    )
+    .join("")}</div>
+<p class="notice">選択中の並べ方を押すと逆順になります。▲ 通常順 / ▼ 逆順。難易度はレベル順・ノーツ数順に適用されます。</p>
+</div>
 <div class="meta">日本版 · ${date(data.updatedAt)} 更新</div>
 </div>${
     rows.length
@@ -142,10 +149,10 @@ export function renderList(
 <p>短い曲名や作品名で試してください。</p>
 <a href="${siteURL("", base)}">すべての楽曲を見る</a>
 </div>`
-  }<p class="notice">「—」はその難易度が未実装です。レベルが同じ場合は、バンド → オリジナル・カバー・エクストラ → 配信順で並びます。 複数バンドの合同曲は「その他」に含めます。</p>
+  }<p class="notice">「—」はその難易度が未実装です。通常順でレベル・ノーツ数が同じ場合は、バンド → オリジナル・カバー・エクストラ → 配信順で並びます。 複数バンドの合同曲は「その他」に含めます。</p>
 <details class="data-note">
 <summary>並べ替えについて</summary>
-<p>50音順は登録された読みを使用します。同時配信曲は登録された配信順、続いて管理用IDで並べます。BPM順は基本BPM、演奏時間順はゲーム内の秒数を比較します。同値はバンド → 種類 → 配信順、未確認は最後です。</p>
+<p>通常順は、レベル・ノーツ数・BPM・演奏時間が大きいものから、配信日は過去から、楽曲名は50音順、バンドは所定の順番です。同値はバンド → 種類 → 配信順で比較し、逆順では同値の順序も反転します。未実装・未確認は常に最後です。BPMは基本BPM、時間はゲーム内の秒数を使用します。難易度はレベル・ノーツ数だけに影響します。</p>
 </details>`;
 }
 export function renderDetail(

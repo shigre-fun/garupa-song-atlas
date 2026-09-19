@@ -46,7 +46,67 @@ export function normalize(s) {
     .replace(/[\s\p{P}\p{S}]/gu, "");
 }
 const collator = new Intl.Collator("ja");
-export function compareSongs(mode) {
+export const sortLabels = {
+  band: "バンド順",
+  level: "レベル順",
+  notes: "ノーツ数順",
+  bpm: "BPM順",
+  duration: "演奏時間順",
+  kana: "楽曲名50音順",
+  release: "配信順",
+};
+export function sortState(params) {
+  const legacy = /^(level|notes)-([0-4])$/.exec(params.get("sort") || "");
+  const candidate = legacy?.[1] || params.get("sort");
+  return {
+    mode: Object.hasOwn(sortLabels, candidate) ? candidate : "band",
+    difficulty: /^[0-4]$/.test(params.get("difficulty") || "")
+      ? Number(params.get("difficulty"))
+      : legacy
+        ? Number(legacy[2])
+        : 3,
+    direction: params.get("direction") === "reverse" ? "reverse" : "forward",
+  };
+}
+export function nextSortParams(params, mode) {
+  const current = sortState(params);
+  const next = new URLSearchParams(params);
+  next.set("sort", mode);
+  next.set("difficulty", current.difficulty);
+  next.set(
+    "direction",
+    current.mode === mode && current.direction === "forward"
+      ? "reverse"
+      : "forward",
+  );
+  next.set("page", 1);
+  return next;
+}
+export function compareSongs(mode, direction = "forward", difficulty = 3) {
+  const legacy = /^(level|notes)-([0-4])$/.exec(mode);
+  if (legacy) {
+    mode = legacy[1];
+    difficulty = Number(legacy[2]);
+  }
+  const compare = defaultCompareSongs(
+    mode === "level" || mode === "notes" ? `${mode}-${difficulty}` : mode,
+  );
+  const metric =
+    mode === "level" || mode === "notes"
+      ? (s) => s.difficulties[difficulty]?.[mode]
+      : mode === "bpm"
+        ? (s) => s.bpm
+        : mode === "duration"
+          ? (s) => s.durationSeconds
+          : null;
+  return (a, b) => {
+    // 未実装・未確認は逆順でも最後に置く。
+    if (metric && (metric(a) == null) !== (metric(b) == null))
+      return metric(a) == null ? 1 : -1;
+    return (direction === "reverse" ? -1 : 1) * compare(a, b);
+  };
+}
+function defaultCompareSongs(mode) {
   const release = (a, b) =>
     a.publishedAt - b.publishedAt ||
     (a.seq ?? a.id) - (b.seq ?? b.id) ||
@@ -68,10 +128,11 @@ export function compareSongs(mode) {
             normalize(a.reading || a.title),
             normalize(b.reading || b.title),
           ) || band(a, b)
-      : mode.startsWith("level-")
+      : /^(level|notes)-[0-4]$/.test(mode)
         ? (a, b) =>
-            (b.difficulties[+mode.slice(-1)]?.level ?? -1) -
-              (a.difficulties[+mode.slice(-1)]?.level ?? -1) || band(a, b)
+            (b.difficulties[+mode.slice(-1)]?.[mode.split("-")[0]] ?? -1) -
+              (a.difficulties[+mode.slice(-1)]?.[mode.split("-")[0]] ?? -1) ||
+            band(a, b)
         : band;
 }
 export function matches(s, q) {

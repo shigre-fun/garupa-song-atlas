@@ -33,9 +33,10 @@ test("source-work searches return a title link and absent terms have empty state
     ).includes("一致する楽曲はありません"),
   );
 });
-test("out-of-range pages are bounded and all five level options exist", () => {
+test("out-of-range pages are bounded and all five difficulty options exist", () => {
   const html = renderList(data, new URLSearchParams({ page: "9999999" }));
   assert.ok(html.includes('id="next" disabled'));
   assert.ok(!html.includes("9999999 /"));
-  for (let i = 0; i < 5; i++) assert.ok(html.includes(`value="level-${i}"`));
+  assert.ok(html.includes('id="difficulty"'));
+  for (let i = 0; i < 5; i++) assert.ok(html.includes(`value="${i}"`));
 });
