@@ -241,6 +241,9 @@ if (draft?.values) {
       element.checked = value;
     else if (element.name && typeof value === "string") element.value = value;
   }
+  const savedDuration = Number(form.elements.durationSeconds.value);
+  if (form.elements.durationSeconds.value && Number.isFinite(savedDuration))
+    form.elements.durationSeconds.value = String(Math.floor(savedDuration));
   if (typeof draft.submissionId === "string") submissionId = draft.submissionId;
   if (draft.savedResult?.slug && draft.savedResult?.head) {
     savedResult = draft.savedResult;

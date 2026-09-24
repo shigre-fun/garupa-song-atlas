@@ -79,6 +79,11 @@ export function validateSong(song, slug) {
         `${key}は0より大きい数値で入力してください。未確認の場合は空欄にします。`,
       );
   }
+  if (
+    song.durationSeconds != null &&
+    !Number.isSafeInteger(song.durationSeconds)
+  )
+    fail("durationSecondsは秒単位の整数にしてください。");
   if ((song.bpmMin != null) !== (song.bpmMax != null))
     fail("BPMの下限と上限は両方入力してください。");
   if (

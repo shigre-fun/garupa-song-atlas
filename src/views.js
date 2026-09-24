@@ -32,15 +32,8 @@ const badge = (s) => `<span class="tag ${s.type}">${typeNames[s.type]}</span>`;
 const color = (s) => colors[bandOrder(s)];
 export function formatDuration(seconds) {
   if (!Number.isFinite(seconds) || seconds <= 0) return "未確認";
-  const milliseconds = Math.round(seconds * 1000);
-  const minutes = Math.floor(milliseconds / 60000);
-  const secondsPart = String(
-    Math.floor((milliseconds % 60000) / 1000),
-  ).padStart(2, "0");
-  const fraction = String(milliseconds % 1000)
-    .padStart(3, "0")
-    .replace(/0+$/, "");
-  return `${minutes}:${secondsPart}${fraction ? "." + fraction : ""}`;
+  const wholeSeconds = Math.floor(seconds);
+  return `${Math.floor(wholeSeconds / 60)}:${String(wholeSeconds % 60).padStart(2, "0")}`;
 }
 const query = (p, base) => {
   const x = new URLSearchParams(p);

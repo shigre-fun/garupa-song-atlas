@@ -175,10 +175,10 @@
               >楽曲演奏時間（ゲーム内・秒）<input
                 type="number"
                 name="durationSeconds"
-                min="0.001"
-                step="0.001"
-                inputmode="decimal"
-                placeholder="例：105.384（1分45.384秒）"
+                min="1"
+                step="1"
+                inputmode="numeric"
+                placeholder="例：105（1分45秒）"
             /></label>
             <label
               >BPMの下限<input
@@ -199,7 +199,7 @@
                 placeholder="変動する場合に入力"
             /></label>
             <p class="wide help">
-              BPMが一定なら基本BPMだけで構いません。変動する場合は下限・上限も両方入力してください。基本BPMは演奏時間が最も長い値を目安にします。演奏時間はフル音源ではなくゲーム内の長さを秒で入力します。未確認の項目は空欄にしてください。
+              BPMが一定なら基本BPMだけで構いません。変動する場合は下限・上限も両方入力してください。基本BPMは演奏時間が最も長い値を目安にします。演奏時間はフル音源ではなくゲーム内の長さを秒単位で入力します。秒未満は切り捨てます。未確認の項目は空欄にしてください。
             </p>
             <label class="wide"
               >作曲者（カバー・エクストラは原曲）<input

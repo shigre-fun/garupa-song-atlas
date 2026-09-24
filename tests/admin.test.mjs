@@ -34,7 +34,7 @@ const draft = {
   bpm: 180,
   bpmMin: 90,
   bpmMax: 200.5,
-  durationSeconds: 105.384,
+  durationSeconds: 105,
   aliases: [],
   difficulties: {
     EASY: { level: 5, notes: 100 },
@@ -256,7 +256,7 @@ test("edit preserves identity, unknown fields and counter while updating every s
     bpm: 174,
     bpmMin: 100.25,
     bpmMax: 201,
-    durationSeconds: 125.625,
+    durationSeconds: 125,
     category: "エクストラ",
     band: "MyGO!!!!!×ゲスト",
     releaseDate: "2026-09-18T15:01+09:00",

@@ -48,7 +48,7 @@ for (const slug of fs.readdirSync("data/songs")) {
     bpm: byDuration[0][0],
     bpmMin: Math.min(...durations.keys()),
     bpmMax: Math.max(...durations.keys()),
-    durationSeconds: entry.length,
+    durationSeconds: Math.floor(entry.length),
   };
   records.push({
     id: song.id,
@@ -57,6 +57,7 @@ for (const slug of fs.readdirSync("data/songs")) {
     bandId: entry.bandId,
     sourceURL: `https://bestdori.com/api/songs/${sourceId}.json`,
     ...timing,
+    sourceLengthSeconds: entry.length,
     segments,
     difficultyDifferences: Object.entries(entry.bpm)
       .filter(
@@ -72,7 +73,7 @@ const report = {
   fetchedAt: fs.statSync(sourcePath).mtime.toISOString(),
   sha256: crypto.createHash("sha256").update(raw).digest("hex"),
   method:
-    "EXPERT譜面の時間が正のBPM区間を使用。基本BPMは同値の合計秒数が最大の値（同時間なら最初の出現）、上下限はその最小/最大。演奏時間はゲーム版length秒。",
+    "EXPERT譜面の時間が正のBPM区間を使用。基本BPMは同値の合計秒数が最大の値（同時間なら最初の出現）、上下限はその最小/最大。演奏時間はゲーム版lengthを切り捨てた整数秒。",
   records,
 };
 fs.mkdirSync("data/research", { recursive: true });

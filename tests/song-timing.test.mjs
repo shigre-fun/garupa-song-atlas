@@ -8,7 +8,7 @@ import { formatDuration, renderDetail, renderList } from "../src/views.js";
 const song = JSON.parse(
   fs.readFileSync("data/songs/空色デイズ/song.json", "utf8"),
 );
-test("timing validates decimals, unknowns and constant/variable BPM", () => {
+test("timing validates integer seconds, decimal BPM, unknowns and constant/variable BPM", () => {
   const check = (fields) =>
     validateSong(
       {
@@ -22,7 +22,7 @@ test("timing validates decimals, unknowns and constant/variable BPM", () => {
       "空色デイズ",
     );
   check({});
-  check({ bpm: 174.5, durationSeconds: 104.928 });
+  check({ bpm: 174.5, durationSeconds: 104 });
   check({ bpm: 174, bpmMin: 174, bpmMax: 174 });
   check({ bpm: 174, bpmMin: 90.25, bpmMax: 200.5 });
   for (const fields of [
@@ -32,6 +32,7 @@ test("timing validates decimals, unknowns and constant/variable BPM", () => {
     { bpm: Infinity },
     { durationSeconds: NaN },
     { durationSeconds: -5 },
+    { durationSeconds: 104.928 },
     { bpm: 180, bpmMin: 100 },
     { bpmMin: 90, bpmMax: 200 },
     { bpm: 180, bpmMin: 190, bpmMax: 200 },
@@ -58,13 +59,13 @@ test("timing sorts by basic BPM or game duration with band/type/date ties and un
     [2, 1, 6, 5, 4, 3],
   );
 });
-test("duration formatting preserves milliseconds and carries into minutes", () => {
+test("duration formatting truncates subsecond values", () => {
   for (const [value, text] of [
-    [104.928, "1:44.928"],
-    [105.384, "1:45.384"],
+    [104.928, "1:44"],
+    [105.983, "1:45"],
     [120, "2:00"],
-    [60.04, "1:00.04"],
-    [59.9996, "1:00"],
+    [60.04, "1:00"],
+    [59.9996, "0:59"],
     [5, "0:05"],
     [null, "未確認"],
   ])
@@ -82,13 +83,13 @@ test("timing is visible on direct detail and sort selection survives detail navi
     bpm: 174,
     bpmMin: 90,
     bpmMax: 200,
-    durationSeconds: 104.928,
+    durationSeconds: 104,
     difficulties: Array(5).fill(null),
   };
   const data = { songs: [row], updatedAt: 0 };
   assert.match(renderDetail(row, data), /基本BPM<\/dt><dd>174/);
   assert.match(renderDetail(row, data), /90 〜 200/);
-  assert.match(renderDetail(row, data), /1:44.928/);
+  assert.match(renderDetail(row, data), /1:44<\/dd>/);
   for (const sort of ["bpm", "duration"]) {
     const params = new URLSearchParams({ sort, type: "normal", band: "3" });
     const html = renderList(data, params, "/garupa-song-atlas/");
