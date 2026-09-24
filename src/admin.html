@@ -100,6 +100,9 @@
         <p id="edit-status" role="status" class="message">
           新規追加モードです。
         </p>
+        <button type="button" id="new-song" data-new-song>
+          新しい入力を始める
+        </button>
       </section>
       <form id="song-form">
         <section class="card">
@@ -263,7 +266,7 @@
           </p>
           <div class="actions">
             <button type="submit" id="save">楽曲を保存する</button
-            ><button type="button" id="clear" class="secondary">
+            ><button type="button" id="clear" data-new-song class="secondary">
               新しい入力を始める
             </button>
           </div>

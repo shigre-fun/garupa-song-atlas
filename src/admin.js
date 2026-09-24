@@ -444,7 +444,8 @@ document
     }
   });
 
-document.querySelector("#clear").addEventListener("click", () => {
+function startNewSong() {
+  if (busy) return;
   if (
     !confirm(
       "この端末の入力内容を消して、新しい楽曲を入力しますか？ 保存済みの楽曲は消えません。",
@@ -461,4 +462,6 @@ document.querySelector("#clear").addEventListener("click", () => {
   saveDraft();
   message("新しい楽曲を入力してください。");
   form.elements.title.focus();
-});
+}
+for (const button of document.querySelectorAll("[data-new-song]"))
+  button.addEventListener("click", startNewSong);
