@@ -7,24 +7,636 @@
       "availableFrom": "2026-09-24",
       "sourceURL": "https://www.fromtyo.jp/media/9H6kfC1GnMBx9TEqjjYbWSrXGeXdXUIbSdCLmbIa.jpg",
       "songs": [
-        [1, "迷星叫"],
-        [2, "壱雫空"],
-        [3, "碧天伴走"],
-        [4, "影色舞"],
-        [5, "潜在表明"],
-        [6, "音一会"],
-        [7, "春日影（MyGO!!!!! ver.）"],
-        [8, "詩超絆"],
-        [9, "迷路日々"],
-        [10, "無路矢"],
-        [11, "名無声"],
-        [12, "歩拾道"],
-        [13, "端程山"],
-        [14, "砂寸奏"],
-        [15, "焚音打"],
-        [16, "聿日箋秋"],
-        [17, "往欄印"],
-        [18, "証命讃歌"]
+        {
+          "id": 1,
+          "title": "迷星叫",
+          "reading": "マヨイウタ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 1,
+          "composer": "長谷川大介(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 2,
+          "title": "壱雫空",
+          "reading": "ヒトシスク",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 2,
+          "composer": "hisakuni(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 3,
+          "title": "碧天伴走",
+          "reading": "ヘキテンハンソウ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 3,
+          "composer": "木下龍平(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 4,
+          "title": "影色舞",
+          "reading": "シルエットタンス",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 4,
+          "composer": "木下龍平(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 5,
+          "title": "潜在表明",
+          "reading": "センサイヒョウメイ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 5,
+          "composer": "鈴木裕明(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 6,
+          "title": "音一会",
+          "reading": "オトイチエ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 6,
+          "composer": "尾崎豪(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 7,
+          "title": "春日影（MyGO!!!!! ver.）",
+          "reading": "ハルヒカゲマイゴバージョン",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 7,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 8,
+          "title": "詩超絆",
+          "reading": "ウタコトハ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 8,
+          "composer": "横地健太(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 9,
+          "title": "迷路日々",
+          "reading": "メロティ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 9,
+          "composer": "松坂康司(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 10,
+          "title": "無路矢",
+          "reading": "ノロシ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 10,
+          "composer": "庄司夏葵(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 11,
+          "title": "名無声",
+          "reading": "ナモナキ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 11,
+          "composer": "金崎真士(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 12,
+          "title": "歩拾道",
+          "reading": "スヒート",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 12,
+          "composer": "庄司夏葵(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 13,
+          "title": "端程山",
+          "reading": "ハノラマ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 13,
+          "composer": "トミタカズキ(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 14,
+          "title": "砂寸奏",
+          "reading": "サスライ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 14,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 15,
+          "title": "焚音打",
+          "reading": "タネヒ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 15,
+          "composer": "長谷川大介(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 16,
+          "title": "聿日箋秋",
+          "reading": "イチシツセンシュウ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 16,
+          "composer": "トミタカズキ(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 17,
+          "title": "往欄印",
+          "reading": "オウライ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 17,
+          "composer": "長谷川大介(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 18,
+          "title": "証命讃歌",
+          "reading": "ショウメイサンカ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 18,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        }
       ]
     },
     {
@@ -33,10 +645,146 @@
       "availableFrom": "2026-09-24",
       "sourceURL": "https://www.fromtyo.jp/media/9H6kfC1GnMBx9TEqjjYbWSrXGeXdXUIbSdCLmbIa.jpg",
       "songs": [
-        [19, "ないものねだり"],
-        [20, "青春コンプレックス"],
-        [21, "シャルル"],
-        [22, "ホワイトノイズ"]
+        {
+          "id": 19,
+          "title": "ないものねだり",
+          "reading": "ナイモノネダリ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 19,
+          "composer": null,
+          "originalArtist": "KANA-BOON",
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 20,
+          "title": "青春コンプレックス",
+          "reading": "セイシュンコンプレックス",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 20,
+          "composer": "音羽-otoha-",
+          "originalArtist": "結束バンド",
+          "originalWork": "TVアニメ「ぼっち・ざ・ろっく！」OP",
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 21,
+          "title": "シャルル",
+          "reading": "シャルル",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 21,
+          "composer": "バルーン",
+          "originalArtist": "バルーン feat.v flower",
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 22,
+          "title": "ホワイトノイズ",
+          "reading": "ホワイトノイス",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 22,
+          "composer": "藤原 聡",
+          "originalArtist": "Official髭男dism",
+          "originalWork": "アニメ「東京リベンジャーズ」",
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        }
       ]
     },
     {
@@ -45,23 +793,601 @@
       "availableFrom": "2026-09-24",
       "sourceURL": "https://www.fromtyo.jp/media/XrpeIAIDo7OiOrJT83hXNp99WQiOjssBA9iRCD8C.jpg",
       "songs": [
-        [23, "Ave Mujica"],
-        [24, "KiLLKiSS"],
-        [25, "Imprisoned XII"],
-        [26, "Crucifix X"],
-        [27, "八芒星ダンス"],
-        [28, "顔"],
-        [29, "天球(そら)のMúsica"],
-        [30, "Symbol I : △"],
-        [31, "Symbol II : Air"],
-        [32, "Symbol III : ▽"],
-        [33, "Symbol IV : Earth"],
-        [34, "Ether"],
-        [35, "黒のバースデイ"],
-        [36, "Choir ‘S’ Choir"],
-        [37, "Mas?uerade Rhapsody Re?uest"],
-        [38, "碧い瞳の中に"],
-        [39, "The Whole Blue World"]
+        {
+          "id": 23,
+          "title": "Ave Mujica",
+          "reading": "アヘムシカ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 23,
+          "composer": "上松範康（Elements Garden）",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 24,
+          "title": "KiLLKiSS",
+          "reading": "キルキス",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 24,
+          "composer": "長谷川大介(SUPA LOVE)、Diggy-MO’",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 25,
+          "title": "Imprisoned XII",
+          "reading": "インフリスントトゥエルウ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 25,
+          "composer": "松坂康司(SUPA LOVE)、Diggy-MO’",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 26,
+          "title": "Crucifix X",
+          "reading": "クルーシフィクスキス",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 26,
+          "composer": "o-saka(SUPA LOVE)、Diggy-MO’",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 27,
+          "title": "八芒星ダンス",
+          "reading": "ハチホウセイタンス",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 27,
+          "composer": "あらケン(SUPA LOVE)、Diggy-MO’",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 28,
+          "title": "顔",
+          "reading": "カオ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 28,
+          "composer": "木下龍平(SUPA LOVE)、Diggy-MO’",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 29,
+          "title": "天球(そら)のMúsica",
+          "reading": "ソラノムシカ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 29,
+          "composer": "高橋涼(SUPA LOVE)、Diggy-MO’",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 30,
+          "title": "Symbol I : △",
+          "reading": "シンボルワン",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 30,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 31,
+          "title": "Symbol II : Air",
+          "reading": "シンボルツーエアー",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 31,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 32,
+          "title": "Symbol III : ▽",
+          "reading": "シンボルスリー",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 32,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 33,
+          "title": "Symbol IV : Earth",
+          "reading": "シンボルフォーアース",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 33,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 34,
+          "title": "Ether",
+          "reading": "エーテル",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 34,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 35,
+          "title": "黒のバースデイ",
+          "reading": "クロノハーステイ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 35,
+          "composer": "賀佐泰洋(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 36,
+          "title": "Choir ‘S’ Choir",
+          "reading": "クワイアエスクワイア",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 36,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 37,
+          "title": "Mas?uerade Rhapsody Re?uest",
+          "reading": "マスカレイトラフソティリクエスト",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 37,
+          "composer": "あらケン(SUPA LOVE)",
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 38,
+          "title": "碧い瞳の中に",
+          "reading": "アオイヒトミノナカニ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 38,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 39,
+          "title": "The Whole Blue World",
+          "reading": "ザホールブルーワールド",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 39,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        }
       ]
     },
     {
@@ -70,10 +1396,146 @@
       "availableFrom": "2026-09-24",
       "sourceURL": "https://www.fromtyo.jp/media/XrpeIAIDo7OiOrJT83hXNp99WQiOjssBA9iRCD8C.jpg",
       "songs": [
-        [40, "堕天"],
-        [41, "残酷な天使のテーゼ"],
-        [42, "暗黒天国"],
-        [43, "KINGS"]
+        {
+          "id": 40,
+          "title": "堕天",
+          "reading": "ダテン",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 40,
+          "composer": null,
+          "originalArtist": "Creepy Nuts",
+          "originalWork": "TVアニメ「よふかしのうた」OP",
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 41,
+          "title": "残酷な天使のテーゼ",
+          "reading": "サンコクナテンシノテエセ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 41,
+          "composer": "佐藤英敏",
+          "originalArtist": "高橋洋子",
+          "originalWork": "アニメ「新世紀エヴァンゲリオン」",
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 42,
+          "title": "暗黒天国",
+          "reading": "アンコクテンゴク",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 42,
+          "composer": null,
+          "originalArtist": "ALI PROJECT",
+          "originalWork": "TVアニメ「かみちゃまかりん」OP",
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 43,
+          "title": "KINGS",
+          "reading": "キングス",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 43,
+          "composer": null,
+          "originalArtist": "angela",
+          "originalWork": "TVアニメ「K」OP",
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        }
       ]
     },
     {
@@ -82,21 +1544,531 @@
       "availableFrom": "2026-09-24",
       "sourceURL": "https://www.fromtyo.jp/media/y2zsBhuoTnMu9JEYOPWntmMM8cC7czb9klLQXfNF.jpg",
       "songs": [
-        [44, "✞animaるパーティ✞開催中✞"],
-        [45, "エンプティパペット"],
-        [46, "限界現実サバイブ天使"],
-        [47, "ビッグマウス"],
-        [48, "夢現妄想世界"],
-        [49, "コハク"],
-        [50, "真夜中遊園地"],
-        [51, "チューニング"],
-        [52, "超惑星Xへの旅"],
-        [53, "Tear Jerker"],
-        [54, "Face The Next"],
-        [55, "in my words"],
-        [56, "愛は衝動"],
-        [57, "これはぼくたちの生存のあらすじ"],
-        [58, "うちゅうのふしぎ"]
+        {
+          "id": 44,
+          "title": "✞animaるパーティ✞開催中✞",
+          "reading": "アニマルパーティカイサイチュウ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 44,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 45,
+          "title": "エンプティパペット",
+          "reading": "エンプティパペット",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 45,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 46,
+          "title": "限界現実サバイブ天使",
+          "reading": "ゲンカイゲンジツサバイブテンシ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 46,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 47,
+          "title": "ビッグマウス",
+          "reading": "ビッグマウス",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 47,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 48,
+          "title": "夢現妄想世界",
+          "reading": "ムゲンマイワールド",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 48,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 49,
+          "title": "コハク",
+          "reading": "コハク",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 49,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 50,
+          "title": "真夜中遊園地",
+          "reading": "マヨナカユウエンチ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 50,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 51,
+          "title": "チューニング",
+          "reading": "チューニング",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 51,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 52,
+          "title": "超惑星Xへの旅",
+          "reading": "チョウワクセイエックスヘノタビ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 52,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 53,
+          "title": "Tear Jerker",
+          "reading": "ティアジャーカー",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 53,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 54,
+          "title": "Face The Next",
+          "reading": "フェイスザネクスト",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 54,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 55,
+          "title": "in my words",
+          "reading": "インマイワーズ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 55,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 56,
+          "title": "愛は衝動",
+          "reading": "アイハショウドウ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 56,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 57,
+          "title": "これはぼくたちの生存のあらすじ",
+          "reading": "コレハボクタチノセイゾンノアラスジ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 57,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 58,
+          "title": "うちゅうのふしぎ",
+          "reading": "ウチュウノフシギ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 58,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        }
       ]
     },
     {
@@ -105,10 +2077,146 @@
       "availableFrom": "2026-09-24",
       "sourceURL": "https://www.fromtyo.jp/media/y2zsBhuoTnMu9JEYOPWntmMM8cC7czb9klLQXfNF.jpg",
       "songs": [
-        [59, "オリオンをなぞる"],
-        [60, "唱"],
-        [61, "UNDEAD"],
-        [62, "六兆年と一夜物語"]
+        {
+          "id": 59,
+          "title": "オリオンをなぞる",
+          "reading": "オリオンヲナゾル",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 59,
+          "composer": null,
+          "originalArtist": "UNISON SQUARE GARDEN",
+          "originalWork": "TVアニメ「TIGER & BUNNY」OP",
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 60,
+          "title": "唱",
+          "reading": "ショウ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 60,
+          "composer": null,
+          "originalArtist": "Ado",
+          "originalWork": "ユニバーサル・スタジオ・ジャパン「ゾンビ・デ・ダンス」",
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 61,
+          "title": "UNDEAD",
+          "reading": "アンデッド",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 61,
+          "composer": null,
+          "originalArtist": "YOASOBI",
+          "originalWork": "アニメ「〈物語〉シリーズ オフ＆モンスターシーズン」主題歌",
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 62,
+          "title": "六兆年と一夜物語",
+          "reading": "ロクチョウネントイチヤモノカタリ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 62,
+          "composer": "Kemu",
+          "originalArtist": "kemu feat.IA",
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        }
       ]
     },
     {
@@ -117,10 +2225,146 @@
       "availableFrom": "2026-09-24",
       "sourceURL": "https://www.fromtyo.jp/media/4zArApXwoLAf0qeY3dckK7SESVLE94pDBfbG33Rk.jpg",
       "songs": [
-        [63, "起死開戦"],
-        [64, "カーネーションの咲く日に"],
-        [65, "鳴らす"],
-        [66, "everscape"]
+        {
+          "id": 63,
+          "title": "起死開戦",
+          "reading": "キシカイセン",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 63,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 64,
+          "title": "カーネーションの咲く日に",
+          "reading": "カーネーションノサクヒニ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 64,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 65,
+          "title": "鳴らす",
+          "reading": "ナラス",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 65,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 66,
+          "title": "everscape",
+          "reading": "エバースケープ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 66,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        }
       ]
     },
     {
@@ -129,10 +2373,146 @@
       "availableFrom": "2026-09-24",
       "sourceURL": "https://www.fromtyo.jp/media/4zArApXwoLAf0qeY3dckK7SESVLE94pDBfbG33Rk.jpg",
       "songs": [
-        [67, "ロウワー"],
-        [68, "Pretender"],
-        [69, "青のすみか"],
-        [70, "unravel"]
+        {
+          "id": 67,
+          "title": "ロウワー",
+          "reading": "ロウワー",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 67,
+          "composer": null,
+          "originalArtist": "ぬゆり feat.flower",
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 68,
+          "title": "Pretender",
+          "reading": "プリテンダー",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 68,
+          "composer": null,
+          "originalArtist": "Official髭男dism",
+          "originalWork": "映画「コンフィデンスマンJP ロマンス編」主題歌",
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 69,
+          "title": "青のすみか",
+          "reading": "アオノスミカ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 69,
+          "composer": "キタニタツヤ",
+          "originalArtist": "キタニタツヤ",
+          "originalWork": "アニメ「呪術廻戦 懐玉・玉折」",
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 70,
+          "title": "unravel",
+          "reading": "アンラヘル",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 70,
+          "composer": "TK",
+          "originalArtist": "TK from 凛として時雨",
+          "originalWork": "アニメ「東京喰種トーキョーグール」",
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        }
       ]
     },
     {
@@ -141,10 +2521,146 @@
       "availableFrom": "2026-09-24",
       "sourceURL": "https://www.fromtyo.jp/media/rZQj5zgaUTpzREOebabUeq1iVE8ZqfRQsH57Ylgi.jpg",
       "songs": [
-        [71, "ホーミー・タイッ！！"],
-        [72, "ピースフル・ピーシーズ！"],
-        [73, "Keep on Riddim"],
-        [74, "ジャイアント・キラー・チューン"]
+        {
+          "id": 71,
+          "title": "ホーミー・タイッ！！",
+          "reading": "ホーミータイッ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 71,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 72,
+          "title": "ピースフル・ピーシーズ！",
+          "reading": "ピースフルピーシーズ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 72,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 73,
+          "title": "Keep on Riddim",
+          "reading": "キープオンリディム",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 73,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 74,
+          "title": "ジャイアント・キラー・チューン",
+          "reading": "ジャイアントキラーチューン",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 74,
+          "composer": null,
+          "originalArtist": null,
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        }
       ]
     },
     {
@@ -153,10 +2669,146 @@
       "availableFrom": "2026-09-24",
       "sourceURL": "https://www.fromtyo.jp/media/rZQj5zgaUTpzREOebabUeq1iVE8ZqfRQsH57Ylgi.jpg",
       "songs": [
-        [75, "イケナイ太陽"],
-        [76, "革命道中"],
-        [77, "Mela!"],
-        [78, "サムライハート(Some Like It Hot!!)"]
+        {
+          "id": 75,
+          "title": "イケナイ太陽",
+          "reading": "イケナイタイヨウ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 75,
+          "composer": "ORANGE RANGE",
+          "originalArtist": "ORANGE RANGE",
+          "originalWork": "ドラマ「花ざかりの君たちへ～イケメン♂パラダイス～」OP",
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 76,
+          "title": "革命道中",
+          "reading": "カクメイドウチュウ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 76,
+          "composer": "アイナ・ジ・エンド、Shin Sakiura",
+          "originalArtist": "アイナ・ジ・エンド",
+          "originalWork": "TVアニメ「ダンダダン 第2期」OP",
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 77,
+          "title": "Mela!",
+          "reading": "メラ",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 77,
+          "composer": null,
+          "originalArtist": "緑黄色社会",
+          "originalWork": null,
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        },
+        {
+          "id": 78,
+          "title": "サムライハート(Some Like It Hot!!)",
+          "reading": "サムライハートサムライクイットホット",
+          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseOrder": 78,
+          "composer": "ＵＺ",
+          "originalArtist": "SPYAIR",
+          "originalWork": "アニメ「銀魂'」",
+          "live3d": null,
+          "bpm": null,
+          "bpmMin": null,
+          "bpmMax": null,
+          "durationSeconds": null,
+          "aliases": [],
+          "difficulties": {
+            "EASY": {
+              "level": null,
+              "notes": null
+            },
+            "NORMAL": {
+              "level": null,
+              "notes": null
+            },
+            "HARD": {
+              "level": null,
+              "notes": null
+            },
+            "EXPERT": {
+              "level": null,
+              "notes": null
+            },
+            "SPECIAL": null
+          }
+        }
       ]
     }
   ]

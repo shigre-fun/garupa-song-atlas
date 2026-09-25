@@ -4,7 +4,7 @@ export const GARUPA_SONGS_PATH = "data/garupa/songs.json";
 export const GARUPA_STATE_PATH = "data/garupa/admin-state.json";
 export const GARUPA_LEGACY_PATH = "data/garupa/legacy-song-paths.json";
 
-export function listGarupaSongs(data) {
+export function listGarupaSongs(data, game = "garupa") {
   if (!data || !Array.isArray(data.groups))
     throw new Error("ガルパの楽曲データにはgroupsが必要です。");
   const ids = new Set();
@@ -33,7 +33,7 @@ export function listGarupaSongs(data) {
           `曲${entry.id}のバンド・種類はグループ側に入力してください。`,
         );
       const song = { ...entry, band: group.band, category: group.category };
-      validateSong(song);
+      validateSong(song, game);
       if (ids.has(song.id))
         throw new Error(`楽曲IDが重複しています: ${song.id}`);
       ids.add(song.id);
@@ -72,15 +72,15 @@ function insert(data, song) {
   group.songs.push(entry);
 }
 
-export function addGarupaSong(data, song) {
-  validateSong(song);
+export function addGarupaSong(data, song, game = "garupa") {
+  validateSong(song, game);
   if (findGarupaSong(data, song.id))
     throw new Error(`楽曲IDが重複しています: ${song.id}`);
   insert(data, song);
 }
 
-export function updateGarupaSong(data, song) {
-  validateSong(song);
+export function updateGarupaSong(data, song, game = "garupa") {
+  validateSong(song, game);
   const current = findGarupaSong(data, song.id);
   if (!current) throw new Error(`楽曲IDが見つかりません: ${song.id}`);
   if (

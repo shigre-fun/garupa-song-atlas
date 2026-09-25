@@ -3,10 +3,7 @@ import path from "node:path";
 import { format } from "prettier";
 import { loadGameCatalog } from "./catalog.mjs";
 import { GAMES, siteSettings } from "../src/js/site-config.js";
-import {
-  GARUPA_LEGACY_PATH,
-  GARUPA_STATE_PATH,
-} from "../src/js/garupa-data.js";
+import { GARUPA_LEGACY_PATH } from "../src/js/garupa-data.js";
 import {
   absoluteURL,
   siteURL,
@@ -45,26 +42,31 @@ const catalogs = Object.fromEntries(
 );
 const garupaSongs = catalogs.garupa;
 const siteData = JSON.parse(fs.readFileSync("data/settings.json", "utf8"));
-const adminState = JSON.parse(fs.readFileSync(GARUPA_STATE_PATH, "utf8"));
-if (
-  !Number.isSafeInteger(adminState.nextId) ||
-  adminState.nextId <= Math.max(...garupaSongs.map((song) => song.id))
-)
-  throw new Error(
-    `${GARUPA_STATE_PATH} の nextId を全楽曲のidより大きくしてください。`,
-  );
-if (Date.parse(adminState.updatedAt) > Date.parse(siteData.updatedAt))
-  siteData.updatedAt = adminState.updatedAt;
+const adminStates = Object.fromEntries(
+  games.map((game) => [
+    game.id,
+    JSON.parse(fs.readFileSync(game.stateFile, "utf8")),
+  ]),
+);
+for (const game of games) {
+  const state = adminStates[game.id];
+  if (
+    !Number.isSafeInteger(state.nextId) ||
+    state.nextId <= Math.max(0, ...catalogs[game.id].map((song) => song.id))
+  )
+    throw new Error(
+      `${game.stateFile} の nextId を全楽曲のidより大きくしてください。`,
+    );
+}
+if (Date.parse(adminStates.garupa.updatedAt) > Date.parse(siteData.updatedAt))
+  siteData.updatedAt = adminStates.garupa.updatedAt;
 const catalogInfo = Object.fromEntries(
   games.map((game) => [
     game.id,
     {
       ...siteData,
       ...(game.id === "ournotes"
-        ? {
-            updatedAt: JSON.parse(fs.readFileSync(game.dataFile, "utf8"))
-              .updatedAt,
-          }
+        ? { updatedAt: adminStates.ournotes.updatedAt }
         : {}),
       songs: catalogs[game.id],
     },
@@ -132,6 +134,8 @@ async function page({
   scripts = [],
   jsonld = [],
 }) {
+  const searchGame =
+    games.find((game) => pagePath.startsWith(`${game.slug}/`)) || GAMES.garupa;
   const canonical = url(pagePath);
   const image = url(settings.image);
   const head = [
@@ -179,7 +183,9 @@ async function page({
     "<!--ABOUT_URL-->": local("about/"),
     "<!--SOURCES_URL-->": local("sources/"),
     "<!--PRIVACY_URL-->": local("privacy/"),
-    "<!--SEARCH_ACTION-->": local(songListPath(GAMES.garupa)),
+    "<!--SEARCH_ACTION-->": local(songListPath(searchGame)),
+    "<!--SEARCH_LABEL-->": `${searchGame.shortName}の楽曲名・原曲の作品名で検索`,
+    "<!--SEARCH_PLACEHOLDER-->": `${searchGame.shortName}の楽曲名・作品名で検索`,
     "<!--SITE_NAME-->": escapeHTML(settings.name),
   };
   let html = template;
@@ -257,7 +263,7 @@ for (const game of games) {
     title: `${game.seoName} 楽曲データベース | ${settings.name}`,
     description: `${game.name}の楽曲データベース。${songs.length}曲の曲名とバンド${game.fields.includes("level") ? "、譜面難易度・ノーツ数など" : "、種類・ゲーム内実装日"}を掲載しています。`,
     breadcrumbs: [home, gameCrumb(game)],
-    content: `<section class="intro"><div><p class="eyebrow">${escapeHTML(game.name)}</p><h1>${escapeHTML(game.shortName)} 楽曲データベース</h1><p>${songs.length}曲の情報を掲載しています。</p></div></section><div class="panel"><h2>楽曲を探す</h2><p>曲名・バンド${game.fields.includes("level") ? "・難易度" : "・種類"}から探せます。</p><a href="${local(songListPath(game))}">楽曲一覧へ</a></div>`,
+    content: `<section class="intro"><div><p class="eyebrow">${escapeHTML(game.name)}</p><h1>${escapeHTML(game.shortName)} 楽曲データベース</h1><p>${songs.length}曲の情報を掲載しています。</p></div></section><div class="panel"><h2>楽曲を探す</h2><p>曲名・バンド・難易度から探せます。</p><a href="${local(songListPath(game))}">楽曲一覧へ</a></div><div class="panel"><h2>楽曲を追加・修正</h2><a href="${local(`admin/${game.id === "ournotes" ? "?game=ournotes" : ""}`)}">${escapeHTML(game.shortName)}の管理ページへ</a></div>`,
   });
   await page({
     file: `${game.slug}/songs/index.html`,
@@ -312,7 +318,7 @@ const informationPages = [
     slug: "sources",
     name: "データ出典・更新方針",
     description: `${settings.name}の楽曲情報の出典と更新方法、確認中の項目の扱いを説明します。`,
-    content: `<h1>データ出典・更新方針</h1><section class="panel"><h2>データの管理</h2><p>ガルパの楽曲情報はゲーム内情報と公開資料を参照し、手動で編集しています。確認できない項目は未確認として表示し、推測した数値で埋めません。</p><h2>アワーノーツ</h2><p>リリース時の曲名・演奏バンド・オリジナル／カバーの区分は<a href="https://www.fromtyo.jp/news/20260915">開発元の初期実装楽曲発表</a>を参照しました。各楽曲の詳細から該当バンドの公式一覧画像へ移動できます。2026年9月25日以降の追加予定曲は、実装を確認するまで掲載しません。BPM・譜面難易度・ノーツ数は現在未確認です。</p><h2>BPMと演奏時間</h2><p>既存曲のBPMとゲーム内演奏時間は<a href="https://bestdori.com/api/songs/all.7.json">Bestdori!の公開データ</a>を参照して調査しました。基本BPMはEXPERT譜面で継続時間が最も長い値、演奏時間はゲーム版の長さを秒単位へ切り捨てた値です。元データとの対応と詳細はリポジトリ内の調査記録に残しています。</p><p>ページのデータ更新日は個別の楽曲が最後に変更された日を示すものではありません。</p></section>`,
+    content: `<h1>データ出典・更新方針</h1><section class="panel"><h2>データの管理</h2><p>ガルパの楽曲情報はゲーム内情報と公開資料を参照し、手動で編集しています。確認できない項目は未確認として表示し、推測した数値で埋めません。</p><h2>アワーノーツ</h2><p>リリース時の曲名・演奏バンド・オリジナル／カバーの区分は<a href="https://www.fromtyo.jp/news/20260915">開発元の初期実装楽曲発表</a>を参照しました。2026年9月25日以降の追加予定曲は、実装を確認するまで掲載しません。BPM・譜面難易度・ノーツ数など未確認の項目は空欄として扱います。</p><h2>BPMと演奏時間</h2><p>ガルパ既存曲のBPMとゲーム内演奏時間は<a href="https://bestdori.com/api/songs/all.7.json">Bestdori!の公開データ</a>を参照して調査しました。基本BPMはEXPERT譜面で継続時間が最も長い値、演奏時間はゲーム版の長さを秒単位へ切り捨てた値です。元データとの対応と詳細はリポジトリ内の調査記録に残しています。</p><p>ページのデータ更新日は個別の楽曲が最後に変更された日を示すものではありません。</p></section>`,
   },
   {
     slug: "privacy",

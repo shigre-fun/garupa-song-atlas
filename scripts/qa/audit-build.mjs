@@ -119,10 +119,12 @@ export function auditBuild({ directory = "dist", origin, basePath = "/" }) {
           if (!html.includes(text))
             fail(`詳細情報が不足: ${canonical} ${text}`);
       } else if (
-        html.includes("基本BPM") ||
-        html.includes("<h2>難易度・ノーツ数</h2>")
+        !html.includes("基本BPM") ||
+        !html.includes("<h2>難易度・ノーツ数</h2>") ||
+        html.includes("収録曲の公式発表を見る") ||
+        html.includes('class="diff-4">SPECIAL</th>')
       )
-        fail(`未確認のアワーノーツ譜面情報が表示されています: ${canonical}`);
+        fail(`アワーノーツ詳細の欄が不正です: ${canonical}`);
     }
     if (
       canonical !== expectedOrigin &&

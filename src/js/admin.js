@@ -1,14 +1,33 @@
-import { bandNames } from "./domain.js";
-import { difficultyNames, validateSong } from "./song-schema.js";
+import { validateSong } from "./song-schema.js";
 import { GitHubStore } from "./github-store.js";
 import { GAMES } from "./site-config.js";
 import { siteURL, songPath } from "./urls.js";
 
 const form = document.querySelector("#song-form");
+const game =
+  new URLSearchParams(location.search).get("game") === "ournotes"
+    ? GAMES.ournotes
+    : GAMES.garupa;
+document.querySelector("#admin-game-name").textContent =
+  `${game.shortName}管理ページ`;
+document.title = `${game.shortName}の楽曲を追加・修正 | ${document.title.split(" | ").at(-1)}`;
+if (game.id === "ournotes") {
+  form.elements.reading.required = false;
+  form.elements.reading.closest("label").querySelector("span").textContent =
+    "任意";
+  const composer = form.elements.composer;
+  composer.closest("label").replaceChildren("作曲者（カバーは原曲）", composer);
+  [...form.elements.category.options]
+    .find((option) => option.textContent === "エクストラ")
+    ?.remove();
+}
 const connection = document.querySelector("#connection-form");
 const status = document.querySelector("#form-status");
 const draftStatus = document.querySelector("#draft-status");
-const draftKey = "garupa-song-draft-v1:" + new URL(".", location.href).pathname;
+const draftKey =
+  game.id === "garupa"
+    ? "garupa-song-draft-v1:" + new URL(".", location.href).pathname
+    : "song-draft-v2:" + new URL(".", location.href).pathname + ":" + game.id;
 const settingsKey = draftKey + ":repository";
 let store = null;
 let busy = false;
@@ -102,8 +121,8 @@ document.querySelector("#load-song").addEventListener("click", async () => {
     ])
       form.elements[key].value = song[key] ?? "";
     const [band, ...guests] = song.band.split("×");
-    form.elements.band.value = bandNames.includes(band) ? band : "その他";
-    form.elements.otherBand.value = bandNames.includes(band) ? "" : band;
+    form.elements.band.value = game.bands.includes(band) ? band : "その他";
+    form.elements.otherBand.value = game.bands.includes(band) ? "" : band;
     form.elements.guests.value = guests.join("×");
     form.elements.releaseDate.value = new Date(
       Date.parse(song.releaseDate) + 9 * 3600000,
@@ -112,7 +131,7 @@ document.querySelector("#load-song").addEventListener("click", async () => {
       .slice(0, 23);
     form.elements.live3d.value = JSON.stringify(song.live3d);
     form.elements.aliases.value = song.aliases.join("\n");
-    for (const name of difficultyNames) {
+    for (const name of game.difficulties) {
       const chart = song.difficulties[name];
       form.elements[`${name}-enabled`].checked = !!chart;
       form.elements[`${name}-level`].value = chart?.level ?? "";
@@ -156,12 +175,12 @@ function message(text, type = "") {
   status.className = "message " + type;
 }
 
-for (const name of [...bandNames, "その他"]) {
+for (const name of [...game.bands, "その他"]) {
   const option = document.createElement("option");
   option.textContent = name;
   form.elements.band.append(option);
 }
-document.querySelector("#charts").innerHTML = difficultyNames
+document.querySelector("#charts").innerHTML = game.difficulties
   .map(
     (name) => `
   <div class="chart">
@@ -174,17 +193,18 @@ document.querySelector("#charts").innerHTML = difficultyNames
 
 function updateVisibility() {
   const original = form.elements.category.value === "オリジナル";
-  document.querySelector("#original-fields").hidden = !original;
+  document.querySelector("#original-fields").hidden =
+    !original || game.id === "ournotes";
   document.querySelector("#cover-fields").hidden = original;
   const other = form.elements.band.value === "その他";
   document.querySelector("#other-band-label").hidden = !other;
   form.elements.otherBand.required = other;
-  for (const name of difficultyNames) {
+  for (const name of game.difficulties) {
     const enabled = form.elements[`${name}-enabled`].checked;
     for (const field of ["level", "notes"]) {
       const input = form.elements[`${name}-${field}`];
       input.disabled = !enabled || busy;
-      input.required = enabled;
+      input.required = enabled && game.id === "garupa";
     }
   }
 }
@@ -284,6 +304,8 @@ connection.addEventListener("submit", async (event) => {
     const candidate = new GitHubStore(
       settings,
       connection.elements.token.value,
+      globalThis.fetch.bind(globalThis),
+      game,
     );
     const checked = await candidate.connect();
     store = candidate;
@@ -343,18 +365,24 @@ function enteredSong() {
       .map((x) => x.trim())
       .filter(Boolean),
     difficulties: Object.fromEntries(
-      difficultyNames.map((name) => [
+      game.difficulties.map((name) => [
         name,
         form.elements[`${name}-enabled`].checked
           ? {
-              level: Number(value(`${name}-level`)),
-              notes: Number(value(`${name}-notes`)),
+              level:
+                value(`${name}-level`) === ""
+                  ? null
+                  : Number(value(`${name}-level`)),
+              notes:
+                value(`${name}-notes`) === ""
+                  ? null
+                  : Number(value(`${name}-notes`)),
             }
           : null,
       ]),
     ),
   };
-  validateSong(song);
+  validateSong(song, game.id);
   return { song };
 }
 
@@ -415,7 +443,7 @@ document
     button.disabled = true;
     try {
       const response = await fetch(
-        siteURL(`${GAMES.garupa.catalog}?updated=${Date.now()}`),
+        siteURL(`${game.catalog}?updated=${Date.now()}`),
         { cache: "no-store" },
       );
       if (!response.ok) throw new Error();
@@ -430,7 +458,7 @@ document
         : "まだサイトへ反映されていません。「更新の進行状況」で成功・失敗を確認し、少し待ってから再確認してください。";
       const link = document.querySelector("#song-link");
       link.hidden = !published;
-      link.href = siteURL(songPath(GAMES.garupa, String(savedResult.id)));
+      link.href = siteURL(songPath(game, String(savedResult.id)));
     } catch {
       publishStatus.textContent =
         "公開サイトの状態を確認できませんでした。接続を確認して再試行してください。";

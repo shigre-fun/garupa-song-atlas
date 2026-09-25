@@ -33,7 +33,7 @@ pnpmを使用する場合は `pnpm install` でも構いません。
 旧曲名URLの互換情報は `data/garupa/legacy-song-paths.json` に固定してあります。
 `id` は恒久URLにも使う管理番号です。既存曲の番号は変更・再利用しないでください。URLは `/garupa/songs/{id}/` です。
 
-アワーノーツの追加・修正は `data/ournotes/songs.json` で行います。公式発表でゲーム内実装を確認してから、該当バンド・種類のグループに未使用IDと曲名を追加してください。IDは恒久URL `/ournotes/songs/{id}/` に使うため、曲名変更後も保持します。バンド、種類、実装日、出典URLを確認し、未確認のBPM・譜面情報は推測して入力しません。現在の管理画面はガルパ専用です。
+アワーノーツの追加・修正は [共通管理ページ](https://shigre-fun.github.io/garupa-song-atlas/admin/?game=ournotes) で「アワーノーツ」を選んで行えます。手動では `data/ournotes/songs.json` の該当バンド・種類のグループを編集し、追加時は `data/ournotes/admin-state.json` の `nextId` も更新してください。IDは恒久URL `/ournotes/songs/{id}/` に使うため、曲名変更後も保持します。EASY〜EXPERTのレベルとノーツ数、BPM、ゲーム内演奏時間、作曲者、カバー曲の原曲情報は確認できた値だけ入力します。
 
 ## 新曲を追加する
 

@@ -9,7 +9,7 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self'; connect-src 'self' https://api.github.com; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'self'"
     />
-    <title>ガルパの楽曲を追加・修正 | <!--SITE_NAME--></title>
+    <title>楽曲を追加・修正 | <!--SITE_NAME--></title>
     <link rel="icon" href="/favicon.svg" />
     <link rel="stylesheet" href="/admin.css" />
     <script type="module" src="/admin.js"></script>
@@ -19,11 +19,15 @@
       <a href="/"
         >✳
         <!--SITE_NAME--></a
-      ><span>ガルパ管理ページ</span>
+      ><span id="admin-game-name">ガルパ管理ページ</span>
     </header>
     <main>
       <p class="eyebrow">SONG EDITOR</p>
       <h1>楽曲を追加・修正</h1>
+      <nav class="actions" aria-label="管理するゲーム">
+        <a href="/admin/">ガルパ</a
+        ><a href="/admin/?game=ournotes">アワーノーツ</a>
+      </nav>
       <p class="lead">
         楽曲情報を入力して保存すると、サイトの更新が始まります。
       </p>
@@ -123,6 +127,7 @@
             <label class="wide"
               >読み（カタカナ） <span>必須</span
               ><input
+                id="reading"
                 name="reading"
                 required
                 maxlength="500"
@@ -306,7 +311,7 @@
     </main>
     <footer>
       <!--SITE_NAME-->
-      · ガルパ楽曲管理
+      · 楽曲管理
     </footer>
   </body>
 </html>

@@ -6,14 +6,14 @@ export const categoryCodes = {
   エクストラ: "tie_up",
 };
 
-export function validateSong(song) {
+export function validateSong(song, game = "garupa") {
   const fail = (message) => {
     throw new Error(message);
   };
   if (!song || typeof song !== "object") fail("楽曲データが不正です。");
   if (!Number.isSafeInteger(song.id) || song.id < 1)
     fail("idは正の整数にしてください。");
-  for (const key of ["title", "reading", "band"]) {
+  for (const key of ["title", "band"]) {
     if (
       typeof song[key] !== "string" ||
       !song[key].trim() ||
@@ -21,8 +21,16 @@ export function validateSong(song) {
     )
       fail(`${key}を500文字以内で入力してください。`);
   }
+  if (
+    typeof song.reading !== "string" ||
+    song.reading.length > 500 ||
+    (game === "garupa" && !song.reading.trim())
+  )
+    fail("readingを500文字以内で入力してください。");
   if (!Object.hasOwn(categoryCodes, song.category))
     fail("種類を選択してください。");
+  if (game === "ournotes" && song.category === "エクストラ")
+    fail("アワーノーツではオリジナルまたはカバーを選択してください。");
   if (
     typeof song.releaseDate !== "string" ||
     !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2}(\.\d{3})?)?(Z|[+-]\d{2}:\d{2})$/.test(
@@ -71,20 +79,26 @@ export function validateSong(song) {
     fail("BPMは下限 ≦ 基本BPM ≦ 上限になるように入力してください。");
   if (!song.difficulties || typeof song.difficulties !== "object")
     fail("難易度を入力してください。");
-  for (const name of difficultyNames) {
+  for (const name of game === "ournotes"
+    ? difficultyNames.slice(0, 4)
+    : difficultyNames) {
     const chart = song.difficulties[name];
     if (chart === null) continue;
     if (
       !chart ||
-      !Number.isInteger(chart.level) ||
-      chart.level < 1 ||
-      chart.level > 50
+      (chart.level != null &&
+        (!Number.isInteger(chart.level) ||
+          chart.level < 1 ||
+          chart.level > 50)) ||
+      (game === "garupa" && chart.level == null)
     )
       fail(`${name}のレベルを1〜50で入力してください。`);
     if (
-      !Number.isInteger(chart.notes) ||
-      chart.notes < 1 ||
-      chart.notes > 100000
+      (chart.notes != null &&
+        (!Number.isInteger(chart.notes) ||
+          chart.notes < 1 ||
+          chart.notes > 100000)) ||
+      (game === "garupa" && chart.notes == null)
     )
       fail(`${name}のノーツ数を1〜100000で入力してください。`);
   }

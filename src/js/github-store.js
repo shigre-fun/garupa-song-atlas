@@ -1,7 +1,6 @@
 import { validateSong } from "./song-schema.js";
+import { GAMES } from "./site-config.js";
 import {
-  GARUPA_SONGS_PATH,
-  GARUPA_STATE_PATH,
   addGarupaSong,
   findGarupaSong,
   listGarupaSongs,
@@ -31,8 +30,16 @@ export function repositorySettings(input) {
 
 // トークンはこのインスタンスのメモリー内だけに置く。保存先はapi.github.comに固定。
 export class GitHubStore {
-  constructor(settings, token, fetcher = globalThis.fetch.bind(globalThis)) {
+  constructor(
+    settings,
+    token,
+    fetcher = globalThis.fetch.bind(globalThis),
+    game = GAMES.garupa,
+  ) {
     this.settings = repositorySettings(settings);
+    this.game = game;
+    this.songsPath = game.dataFile;
+    this.statePath = game.stateFile;
     if (!token.trim())
       throw new Error("GitHubのアクセストークンを入力してください。");
     this.token = token.trim();
@@ -95,8 +102,8 @@ export class GitHubStore {
         "リポジトリが大きすぎて安全に一覧を確認できません。保存は行っていません。",
       );
     if (
-      !tree.tree.some((x) => x.path === GARUPA_STATE_PATH) ||
-      !tree.tree.some((x) => x.path === GARUPA_SONGS_PATH) ||
+      !tree.tree.some((x) => x.path === this.statePath) ||
+      !tree.tree.some((x) => x.path === this.songsPath) ||
       !tree.tree.some((x) => x.path === "scripts/build.mjs")
     )
       throw new Error(
@@ -133,16 +140,17 @@ export class GitHubStore {
     if (!/^[a-zA-Z0-9-]{16,80}$/.test(submissionId))
       throw new Error("送信識別子が不正です。画面を再読み込みしてください。");
     // 入力不備はGitHubへの書き込み前に検出する。
-    validateSong({ ...input, id: 1 });
+    validateSong({ ...input, id: 1 }, this.game.id);
     const snapshot = await this.snapshot();
-    const data = await this.readJSON(snapshot, GARUPA_SONGS_PATH);
-    const songs = listGarupaSongs(data);
+    const data = await this.readJSON(snapshot, this.songsPath);
+    const songs = listGarupaSongs(data, this.game.id);
     const existing = songs.find((song) => song.submissionId === submissionId);
     if (existing)
       return {
         id: existing.id,
         head: snapshot.head,
         editing: {
+          gameId: this.game.id,
           id: existing.id,
           song: existing,
           version: JSON.stringify(existing),
@@ -150,7 +158,7 @@ export class GitHubStore {
         },
         alreadySaved: true,
       };
-    const state = await this.readJSON(snapshot, GARUPA_STATE_PATH);
+    const state = await this.readJSON(snapshot, this.statePath);
     if (
       !Number.isSafeInteger(state.nextId) ||
       state.nextId <= Math.max(0, ...songs.map((song) => song.id)) ||
@@ -158,7 +166,7 @@ export class GitHubStore {
     )
       throw new Error("管理用の番号データが不正です。");
     const song = { ...input, id: state.nextId, submissionId };
-    addGarupaSong(data, song);
+    addGarupaSong(data, song, this.game.id);
     const nextState = {
       nextId: state.nextId + 1,
       updatedAt: new Date().toISOString(),
@@ -167,13 +175,13 @@ export class GitHubStore {
       base_tree: snapshot.tree,
       tree: [
         {
-          path: GARUPA_SONGS_PATH,
+          path: this.songsPath,
           mode: "100644",
           type: "blob",
           content: JSON.stringify(data, null, 2) + "\n",
         },
         {
-          path: GARUPA_STATE_PATH,
+          path: this.statePath,
           mode: "100644",
           type: "blob",
           content: JSON.stringify(nextState, null, 2) + "\n",
@@ -196,6 +204,7 @@ export class GitHubStore {
       id: song.id,
       head: commit.sha,
       editing: {
+        gameId: this.game.id,
         id: song.id,
         song: savedSong,
         version: JSON.stringify(savedSong),
@@ -207,8 +216,8 @@ export class GitHubStore {
 
   async listSongs() {
     const snapshot = await this.snapshot();
-    const data = await this.readJSON(snapshot, GARUPA_SONGS_PATH);
-    return listGarupaSongs(data)
+    const data = await this.readJSON(snapshot, this.songsPath);
+    return listGarupaSongs(data, this.game.id)
       .map(({ id, title, reading, band }) => ({ id, title, reading, band }))
       .sort((a, b) => a.title.localeCompare(b.title, "ja") || a.id - b.id);
   }
@@ -217,13 +226,14 @@ export class GitHubStore {
     if (!Number.isSafeInteger(id) || id < 1)
       throw new Error("楽曲の指定が不正です。");
     const snapshot = await this.snapshot();
-    const data = await this.readJSON(snapshot, GARUPA_SONGS_PATH);
-    listGarupaSongs(data);
+    const data = await this.readJSON(snapshot, this.songsPath);
+    listGarupaSongs(data, this.game.id);
     const found = findGarupaSong(data, id);
     if (!found) throw new Error(`楽曲ID ${id} が見つかりません。`);
     const song = found.song;
-    validateSong(song);
+    validateSong(song, this.game.id);
     return {
+      gameId: this.game.id,
       id,
       song,
       version: JSON.stringify(song),
@@ -235,6 +245,7 @@ export class GitHubStore {
     if (!/^[a-zA-Z0-9-]{16,80}$/.test(operationId))
       throw new Error("送信識別子が不正です。");
     if (
+      (editing.gameId || "garupa") !== this.game.id ||
       ["owner", "repo", "branch"].some(
         (key) => editing.settings?.[key] !== this.settings[key],
       )
@@ -243,10 +254,10 @@ export class GitHubStore {
         "読み込んだ楽曲と保存先が異なります。元の保存先に接続してください。",
       );
     const { id } = editing;
-    validateSong({ ...input, id });
+    validateSong({ ...input, id }, this.game.id);
     const snapshot = await this.snapshot();
-    const data = await this.readJSON(snapshot, GARUPA_SONGS_PATH);
-    listGarupaSongs(data);
+    const data = await this.readJSON(snapshot, this.songsPath);
+    listGarupaSongs(data, this.game.id);
     const found = findGarupaSong(data, id);
     if (!found) throw new Error(`楽曲ID ${id} が見つかりません。`);
     const current = found.song;
@@ -272,19 +283,19 @@ export class GitHubStore {
       id,
       revision: operationId,
     };
-    updateGarupaSong(data, song);
-    const state = await this.readJSON(snapshot, GARUPA_STATE_PATH);
+    updateGarupaSong(data, song, this.game.id);
+    const state = await this.readJSON(snapshot, this.statePath);
     const tree = await this.request("/git/trees", "POST", {
       base_tree: snapshot.tree,
       tree: [
         {
-          path: GARUPA_SONGS_PATH,
+          path: this.songsPath,
           mode: "100644",
           type: "blob",
           content: JSON.stringify(data, null, 2) + "\n",
         },
         {
-          path: GARUPA_STATE_PATH,
+          path: this.statePath,
           mode: "100644",
           type: "blob",
           content:

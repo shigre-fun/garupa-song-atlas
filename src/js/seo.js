@@ -33,7 +33,9 @@ export function detailTitle(song, game, songs) {
   }
   const fields = [
     song.bpm != null && "BPM",
-    song.difficulties?.some(Boolean) && "難易度・ノーツ数",
+    song.difficulties?.some(
+      (chart) => chart?.level != null || chart?.notes != null,
+    ) && "難易度・ノーツ数",
   ].filter(Boolean);
   return `${label} - ${game.seoName}${fields.length ? ` ${fields.join("・")}` : " 楽曲情報"} | ${SITE_NAME}`;
 }
@@ -44,8 +46,10 @@ export function detailDescription(song, game) {
   else if (song.artist) facts.push(`${song.artist}の楽曲`);
   if (song.bpm != null) facts.push(`基本BPMは${song.bpm}`);
   const expert = song.difficulties?.[3];
-  if (expert)
-    facts.push(`EXPERTはレベル${expert.level}、${expert.notes}ノーツ`);
+  if (expert?.level != null || expert?.notes != null)
+    facts.push(
+      `EXPERTは${expert.level != null ? `レベル${expert.level}` : "レベル未確認"}、${expert.notes != null ? `${expert.notes}ノーツ` : "ノーツ数未確認"}`,
+    );
   if (Number.isFinite(song.publishedAt)) {
     const date = new Intl.DateTimeFormat("ja-JP", {
       timeZone: "Asia/Tokyo",

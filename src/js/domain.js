@@ -1,3 +1,4 @@
+import { GAMES } from "./site-config.js";
 export const difficulties = ["EASY", "NORMAL", "HARD", "EXPERT", "SPECIAL"];
 export const typeNames = {
   normal: "オリジナル",
@@ -27,14 +28,15 @@ export const colors = [
   "#a94257",
   "#79859c",
 ];
-export function bandOrder(s) {
-  const exact = bandNames.indexOf(s.band);
+export function bandOrder(s, game = GAMES.garupa) {
+  const names = game.bands;
+  const exact = names.indexOf(s.band);
   if (exact >= 0) return exact;
-  if (bandNames.filter((n) => s.band.includes(n)).length > 1) return 9;
-  const i = bandNames.findIndex(
+  if (names.filter((n) => s.band.includes(n)).length > 1) return names.length;
+  const i = names.findIndex(
     (n) => s.band.startsWith(n + "×") || s.band.startsWith(n + " ×"),
   );
-  return i < 0 ? 9 : i;
+  return i < 0 ? names.length : i;
 }
 export function normalize(s) {
   return (s || "")
@@ -55,21 +57,23 @@ export const sortLabels = {
   kana: "楽曲名50音順",
   release: "配信順",
 };
-export function sortState(params) {
+export function sortState(params, game = GAMES.garupa) {
   const legacy = /^(level|notes)-([0-4])$/.exec(params.get("sort") || "");
   const candidate = legacy?.[1] || params.get("sort");
   return {
     mode: Object.hasOwn(sortLabels, candidate) ? candidate : "band",
-    difficulty: /^[0-4]$/.test(params.get("difficulty") || "")
+    difficulty: new RegExp(`^[0-${game.difficulties.length - 1}]$`).test(
+      params.get("difficulty") || "",
+    )
       ? Number(params.get("difficulty"))
       : legacy
-        ? Number(legacy[2])
+        ? Math.min(Number(legacy[2]), game.difficulties.length - 1)
         : 3,
     direction: params.get("direction") === "reverse" ? "reverse" : "forward",
   };
 }
-export function nextSortParams(params, mode) {
-  const current = sortState(params);
+export function nextSortParams(params, mode, game = GAMES.garupa) {
+  const current = sortState(params, game);
   const next = new URLSearchParams(params);
   next.set("sort", mode);
   next.set("difficulty", current.difficulty);
@@ -82,7 +86,12 @@ export function nextSortParams(params, mode) {
   next.set("page", 1);
   return next;
 }
-export function compareSongs(mode, direction = "forward", difficulty = 3) {
+export function compareSongs(
+  mode,
+  direction = "forward",
+  difficulty = 3,
+  game = GAMES.garupa,
+) {
   const legacy = /^(level|notes)-([0-4])$/.exec(mode);
   if (legacy) {
     mode = legacy[1];
@@ -90,6 +99,7 @@ export function compareSongs(mode, direction = "forward", difficulty = 3) {
   }
   const compare = defaultCompareSongs(
     mode === "level" || mode === "notes" ? `${mode}-${difficulty}` : mode,
+    game,
   );
   const metric =
     mode === "level" || mode === "notes"
@@ -106,13 +116,13 @@ export function compareSongs(mode, direction = "forward", difficulty = 3) {
     return (direction === "reverse" ? -1 : 1) * compare(a, b);
   };
 }
-function defaultCompareSongs(mode) {
+function defaultCompareSongs(mode, game = GAMES.garupa) {
   const release = (a, b) =>
     a.publishedAt - b.publishedAt ||
     (a.seq ?? a.id) - (b.seq ?? b.id) ||
     a.id - b.id;
   const band = (a, b) =>
-    bandOrder(a) - bandOrder(b) ||
+    bandOrder(a, game) - bandOrder(b, game) ||
     ["normal", "anime", "tie_up"].indexOf(a.type) -
       ["normal", "anime", "tie_up"].indexOf(b.type) ||
     release(a, b);
@@ -145,19 +155,21 @@ export function matches(s, q) {
   );
 }
 
-export function selectedFilters(params) {
+export function selectedFilters(params, game = GAMES.garupa) {
   return {
-    types: params.getAll("type").filter((v) => Object.hasOwn(typeNames, v)),
-    bands: params.getAll("band").filter((v) => /^(?:[0-9])$/.test(v)),
+    types: params.getAll("type").filter((v) => game.categories.includes(v)),
+    bands: params
+      .getAll("band")
+      .filter((v) => /^\d+$/.test(v) && Number(v) <= game.bands.length),
   };
 }
-export function filteredSongs(songs, params) {
-  const { types, bands } = selectedFilters(params);
+export function filteredSongs(songs, params, game = GAMES.garupa) {
+  const { types, bands } = selectedFilters(params, game);
   return songs.filter(
     (song) =>
       matches(song, params.get("q") || "") &&
       (!types.length || types.includes(song.type)) &&
-      (!bands.length || bands.includes(String(bandOrder(song)))),
+      (!bands.length || bands.includes(String(bandOrder(song, game)))),
   );
 }
 export function pageNumbers(page, total) {
