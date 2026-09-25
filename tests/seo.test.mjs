@@ -30,7 +30,7 @@ test("generated canonical pages, structured data, links and sitemap are consiste
     result.redirects,
     legacy.reduce((n, entry) => n + entry.slugs.length, 0),
   );
-  assert.equal(result.pages, count + ournotesCount + 8);
+  assert.equal(result.pages, count + ournotesCount + 6);
 });
 
 test("site settings normalize both deployment bases and reject conflicting settings", () => {

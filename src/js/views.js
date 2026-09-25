@@ -157,6 +157,7 @@ export function renderDetail(
   params = new URLSearchParams(),
   base = siteBase,
   game = GAMES.garupa,
+  related = [],
 ) {
   return `<a class="back" href="${e(query(params, base, game))}">← 楽曲一覧に戻る</a>
 <section class="detail-top" style="--band:${color(s, game)}">${badge(s)}<h1>${e(s.title)}</h1>
@@ -210,5 +211,6 @@ export function renderDetail(
   }</dl>
 </section>
 </div>
+${related.length ? `<section class="panel related-songs"><h2>同じ楽曲の別の譜面・収録先</h2><ul>${related.map((other) => `<li><a href="${e(siteURL(songPath(GAMES[other.gameId], other.stableSongId), base))}">${e(other.title)}</a><span>${e(GAMES[other.gameId].shortName)} · ${e(other.band)}</span></li>`).join("")}</ul></section>` : ""}
 <p class="data-note">データ更新：${date(data.updatedAt)} · 日本版</p>`;
 }

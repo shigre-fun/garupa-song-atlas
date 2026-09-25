@@ -7,11 +7,11 @@ import { GARUPA_LEGACY_PATH } from "../src/js/garupa-data.js";
 import {
   absoluteURL,
   siteURL,
-  gamePath,
   songListPath,
   songPath,
 } from "../src/js/urls.js";
 import { renderList, renderDetail } from "../src/js/views.js";
+import { relatedSongs } from "../src/js/related-songs.js";
 import {
   escapeHTML,
   safeJSON,
@@ -120,8 +120,10 @@ const local = (relative) => siteURL(relative, settings.basePath);
 const xmlEscape = (value) => escapeHTML(value).replace(/&#39;/g, "&apos;");
 const sitemap = [];
 const home = { name: "サイトトップ", path: "" };
-const gameCrumb = (game) => ({ name: game.shortName, path: gamePath(game) });
-const listCrumb = (game) => ({ name: "楽曲一覧", path: songListPath(game) });
+const listCrumb = (game) => ({
+  name: `${game.shortName} 楽曲一覧`,
+  path: songListPath(game),
+});
 
 async function page({
   file,
@@ -178,8 +180,8 @@ async function page({
     "<!--HEAD-->": head,
     "<!--CONTENT-->": body,
     "<!--HOME_URL-->": local(""),
-    "<!--GARUPA_URL-->": local(gamePath(GAMES.garupa)),
-    "<!--OURNOTES_URL-->": local(gamePath(GAMES.ournotes)),
+    "<!--GARUPA_URL-->": local(songListPath(GAMES.garupa)),
+    "<!--OURNOTES_URL-->": local(songListPath(GAMES.ournotes)),
     "<!--ABOUT_URL-->": local("about/"),
     "<!--SOURCES_URL-->": local("sources/"),
     "<!--PRIVACY_URL-->": local("privacy/"),
@@ -205,18 +207,17 @@ for (const [directory, names] of [
       "app.js",
       "domain.js",
       "views.js",
+      "related-songs.js",
       "urls.js",
       "site-config.js",
       "seo.js",
       "song-schema.js",
       "garupa-data.js",
-      "github-store.js",
-      "admin.js",
       "query-index.js",
       "legacy-redirect.js",
     ],
   ],
-  ["styles", ["style.css", "mobile.css", "admin.css"]],
+  ["styles", ["style.css", "mobile.css"]],
   ["images", ["favicon.svg", "og-default.png", "apple-touch-icon.png"]],
   ["static", ["_headers"]],
 ])
@@ -240,7 +241,7 @@ await page({
   title: `${settings.name} | バンドリ楽曲データベース`,
   description:
     "ガルパとアワーノーツの楽曲データを探せる非公式データベース。ゲームごとの楽曲一覧と情報を公開しています。",
-  content: `<section class="intro"><div><p class="eyebrow">BANG DREAM! · SONG DATABASE</p><h1>${escapeHTML(settings.name)}</h1><p>バンドリの楽曲情報をゲームごとに探せます。</p></div></section><div class="game-cards">${games.map((game) => `<section class="panel"><h2><a href="${local(gamePath(game))}">${escapeHTML(game.shortName)}</a></h2><p>${escapeHTML(game.name)}</p><p>${catalogs[game.id].length}曲を掲載しています。</p><a href="${local(songListPath(game))}">楽曲一覧を見る</a></section>`).join("")}</div>`,
+  content: `<section class="intro"><div><p class="eyebrow">BANG DREAM! · SONG DATABASE</p><h1>${escapeHTML(settings.name)}</h1><p>バンドリの楽曲情報をゲームごとに探せます。</p></div></section><div class="game-cards">${games.map((game) => `<section class="panel"><h2>${escapeHTML(game.name)}</h2><p>${catalogs[game.id].length}曲を掲載しています。</p><a href="${local(songListPath(game))}">楽曲一覧を見る</a></section>`).join("")}</div>`,
   scripts: ["query-index.js", "app.js"],
   jsonld: [
     {
@@ -258,19 +259,11 @@ await page({
 for (const game of games) {
   const songs = catalogs[game.id];
   await page({
-    file: `${game.slug}/index.html`,
-    pagePath: gamePath(game),
-    title: `${game.seoName} 楽曲データベース | ${settings.name}`,
-    description: `${game.name}の楽曲データベース。${songs.length}曲の曲名とバンド${game.fields.includes("level") ? "、譜面難易度・ノーツ数など" : "、種類・ゲーム内実装日"}を掲載しています。`,
-    breadcrumbs: [home, gameCrumb(game)],
-    content: `<section class="intro"><div><p class="eyebrow">${escapeHTML(game.name)}</p><h1>${escapeHTML(game.shortName)} 楽曲データベース</h1><p>${songs.length}曲の情報を掲載しています。</p></div></section><div class="panel"><h2>楽曲を探す</h2><p>曲名・バンド・難易度から探せます。</p><a href="${local(songListPath(game))}">楽曲一覧へ</a></div><div class="panel"><h2>楽曲を追加・修正</h2><a href="${local(`admin/${game.id === "ournotes" ? "?game=ournotes" : ""}`)}">${escapeHTML(game.shortName)}の管理ページへ</a></div>`,
-  });
-  await page({
     file: `${game.slug}/songs/index.html`,
     pagePath: songListPath(game),
     title: `${game.seoName} 楽曲一覧${game.fields.includes("bpm") ? "・BPM・難易度・ノーツ数" : ""} | ${settings.name}`,
     description: `${game.name}の${songs.length}曲を曲名・バンド${game.fields.includes("level") ? "・難易度" : "・種類"}などで検索できます。`,
-    breadcrumbs: [home, gameCrumb(game), listCrumb(game)],
+    breadcrumbs: [home, listCrumb(game)],
     content: renderList(
       catalogInfo[game.id],
       new URLSearchParams(),
@@ -291,7 +284,6 @@ for (const game of games) {
       description: detailDescription(song, game),
       breadcrumbs: [
         home,
-        gameCrumb(game),
         listCrumb(game),
         { name: song.title, path: songPath(game, song.stableSongId) },
       ],
@@ -301,6 +293,7 @@ for (const game of games) {
         new URLSearchParams(),
         settings.basePath,
         game,
+        relatedSongs(song, catalogs),
       ),
       scripts: ["app.js"],
     });
@@ -323,8 +316,8 @@ const informationPages = [
   {
     slug: "privacy",
     name: "プライバシーポリシー",
-    description: `${settings.name}の閲覧・管理ページにおけるデータの取り扱いを説明します。`,
-    content: `<h1>プライバシーポリシー</h1><section class="panel"><h2>閲覧と入力データ</h2><p>現在、広告やアクセス解析は設置していません。検索・絞り込み条件はURLのクエリに含まれます。</p><p>管理ページは入力途中の内容や接続先設定をブラウザーのローカルストレージに保存します。GitHubへの保存時は入力した認証情報を使用してGitHub APIと通信します。アクセストークンはブラウザーの保存領域には記録しません。</p><p>外部サイトへのリンク先では、そのサイトの取り扱い方針が適用されます。</p></section>`,
+    description: `${settings.name}の閲覧時のデータの取り扱いを説明します。`,
+    content: `<h1>プライバシーポリシー</h1><section class="panel"><h2>閲覧データ</h2><p>現在、広告やアクセス解析は設置していません。検索・絞り込み条件はURLのクエリに含まれます。</p><p>外部サイトへのリンク先では、そのサイトの取り扱い方針が適用されます。</p></section>`,
   },
 ];
 for (const info of informationPages)
@@ -394,18 +387,6 @@ write(
   `User-agent: *\nAllow: /\nSitemap: ${url("sitemap.xml")}\n`,
 );
 
-const adminHTML = fs
-  .readFileSync("src/pages/admin.html", "utf8")
-  .replace(/(href|src|action)="\//g, `$1="${settings.basePath}`)
-  .replaceAll("<!--SITE_NAME-->", escapeHTML(settings.name));
-write("admin/index.html", await format(adminHTML, { parser: "html" }));
-const [owner = "", repo = ""] = (process.env.GITHUB_REPOSITORY || "").split(
-  "/",
-);
-write(
-  "admin-config.json",
-  JSON.stringify({ owner, repo, branch: "main" }, null, 2) + "\n",
-);
 write(".nojekyll", "");
 fs.mkdirSync("reports", { recursive: true });
 fs.writeFileSync(

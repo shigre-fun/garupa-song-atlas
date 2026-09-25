@@ -10,7 +10,7 @@ export const GAMES = {
   garupa: {
     id: "garupa",
     slug: "garupa",
-    name: "バンドリ！ ガールズバンドパーティ！",
+    name: "バンドリ！ガールズバンドパーティ！",
     shortName: "ガルパ",
     seoName: "ガルパ",
     difficulties: ["EASY", "NORMAL", "HARD", "EXPERT", "SPECIAL"],
@@ -34,7 +34,7 @@ export const GAMES = {
   ournotes: {
     id: "ournotes",
     slug: "ournotes",
-    name: "バンドリ！ アワーノーツ",
+    name: "バンドリ！アワーノーツ",
     shortName: "アワーノーツ",
     seoName: "アワーノーツ",
     difficulties: ["EASY", "NORMAL", "HARD", "EXPERT"],

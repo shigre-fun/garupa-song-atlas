@@ -520,6 +520,32 @@ tr:last-child td {
   grid-template-columns: 1.3fr 1fr;
   gap: 24px;
 }
+.related-songs {
+  margin-top: 24px;
+}
+.related-songs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.related-songs li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.related-songs li:last-child {
+  border-bottom: 0;
+}
+.related-songs a {
+  color: #3269b5;
+  font-weight: 700;
+}
+.related-songs span {
+  color: var(--muted);
+  font-size: 13px;
+}
 .panel {
   background: white;
   border: 1px solid var(--line);
