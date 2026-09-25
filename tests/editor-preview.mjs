@@ -3,16 +3,36 @@
 import http from "node:http";
 import fs from "node:fs";
 import path from "node:path";
+import { findGarupaSong, listGarupaSongs } from "../src/js/garupa-data.js";
 // 別ポートなら過去の検証用下書きと分離できる。
 const port = Number(process.env.EDITOR_PREVIEW_PORT || 4174);
 const origin = `http://127.0.0.1:${port}`;
 const files = {
-  "data/admin-state.json": { nextId: 900, updatedAt: "2026-09-18T00:00:00Z" },
+  "data/garupa/admin-state.json": {
+    nextId: 900,
+    updatedAt: "2026-09-18T00:00:00Z",
+  },
+  "data/garupa/songs.json": { groups: [] },
 };
-for (const slug of ["空色デイズ", "ときめきエクスペリエンス!"])
-  files[`data/songs/${slug}/song.json`] = JSON.parse(
-    fs.readFileSync(`data/songs/${slug}/song.json`, "utf8"),
+const source = JSON.parse(fs.readFileSync("data/garupa/songs.json", "utf8"));
+for (const title of ["空色デイズ", "ときめきエクスペリエンス!"]) {
+  const id = listGarupaSongs(source).find((song) => song.title === title)?.id;
+  const found = findGarupaSong(source, id);
+  if (!found) throw new Error(`検証用の${title}が見つかりません。`);
+  let group = files["data/garupa/songs.json"].groups.find(
+    (item) =>
+      item.band === found.group.band && item.category === found.group.category,
   );
+  if (!group) {
+    group = {
+      band: found.group.band,
+      category: found.group.category,
+      songs: [],
+    };
+    files["data/garupa/songs.json"].groups.push(group);
+  }
+  group.songs.push(found.group.songs[found.index]);
+}
 let head = "initial",
   proposed,
   count = 0;

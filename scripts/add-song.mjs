@@ -1,39 +1,39 @@
 import fs from "node:fs";
-import { folderName, loadCatalog } from "./catalog.mjs";
+import { loadCatalog } from "./catalog.mjs";
+import { GARUPA_SONGS_PATH, GARUPA_STATE_PATH } from "../src/js/garupa-data.js";
 
-const [title, customFolder] = process.argv.slice(2);
-if (!title) {
-  console.error(
-    '使い方: node scripts/add-song.mjs "楽曲名" [ローマ字フォルダー名]',
-  );
+const [title, extra] = process.argv.slice(2);
+if (!title || extra) {
+  console.error('使い方: node scripts/add-song.mjs "楽曲名"');
   process.exit(1);
 }
-const slug = folderName(customFolder || title);
-if (/^\d+$/.test(slug))
-  throw new Error("数字だけでなく、楽曲名またはローマ字を指定してください。");
+
 const songs = loadCatalog();
-if (songs.some((song) => song.slug.toLowerCase() === slug.toLowerCase()))
-  throw new Error(
-    "同名フォルダーがあります。別バンドや別バージョンは第2引数で区別してください。",
-  );
+const data = JSON.parse(fs.readFileSync(GARUPA_SONGS_PATH, "utf8"));
+const state = JSON.parse(fs.readFileSync(GARUPA_STATE_PATH, "utf8"));
+if (!Number.isSafeInteger(state.nextId) || state.nextId < 1)
+  throw new Error("管理用の番号データが不正です。");
 const song = JSON.parse(fs.readFileSync("templates/song.json", "utf8"));
-const stateFile = "data/admin-state.json";
-const state = fs.existsSync(stateFile)
-  ? JSON.parse(fs.readFileSync(stateFile, "utf8"))
-  : { nextId: 1 };
 song.id = Math.max(
   state.nextId,
-  Math.max(0, ...songs.map((song) => song.id)) + 1,
+  Math.max(0, ...songs.map((item) => item.id)) + 1,
 );
 song.title = title;
 song.releaseOrder = song.id;
-fs.mkdirSync(`data/songs/${slug}`, { recursive: true });
-fs.writeFileSync(
-  `data/songs/${slug}/song.json`,
-  JSON.stringify(song, null, 2) + "\n",
+
+// ひな型のband・categoryを変更してから、同じグループで編集する。
+let group = data.groups.find(
+  (item) => item.band === song.band && item.category === song.category,
 );
+if (!group) {
+  group = { band: song.band, category: song.category, songs: [] };
+  data.groups.push(group);
+}
+const { band, category, ...entry } = song;
+group.songs.push(entry);
+fs.writeFileSync(GARUPA_SONGS_PATH, JSON.stringify(data, null, 2) + "\n");
 fs.writeFileSync(
-  stateFile,
+  GARUPA_STATE_PATH,
   JSON.stringify(
     { nextId: song.id + 1, updatedAt: new Date().toISOString() },
     null,
@@ -41,5 +41,5 @@ fs.writeFileSync(
   ) + "\n",
 );
 console.log(
-  `作成しました: data/songs/${slug}/song.json\n読み・バンド・配信日・難易度などを記入してからビルドしてください。`,
+  `追加しました: ${GARUPA_SONGS_PATH} のID ${song.id}\nバンド・種類・読み・配信日・難易度などを記入してからビルドしてください。`,
 );

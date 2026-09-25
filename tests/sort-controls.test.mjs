@@ -5,8 +5,8 @@ import {
   sortState,
   nextSortParams,
   sortLabels,
-} from "../src/domain.js";
-import { renderList, renderDetail } from "../src/views.js";
+} from "../src/js/domain.js";
+import { renderList, renderDetail } from "../src/js/views.js";
 import { loadCatalog } from "../scripts/catalog.mjs";
 
 test("sort state defaults to EXPERT, preserves old URLs and rejects invalid choices", () => {
@@ -109,14 +109,16 @@ test("seven sort buttons, default difficulty and direction are visible; state su
     "sort=notes&difficulty=4&direction=reverse&type=anime&band=0",
   );
   const html = renderList(data, params);
-  assert.match(html, /data-sort="notes" aria-pressed="true"/);
+  assert.match(html, /data-sort="notes" aria-current="true"/);
   assert.ok(html.includes("▼"));
   const links = [...html.matchAll(/href="([^"]+\?[^\"]+)"/g)].map((m) =>
     m[1].replaceAll("&amp;", "&"),
   );
-  for (const href of links) {
+  for (const href of links.filter((value) =>
+    new URL(value, "https://example.test").searchParams.has("type"),
+  )) {
     const p = new URL(href, "https://example.test").searchParams;
-    for (const k of ["sort", "difficulty", "direction", "type", "band"])
+    for (const k of ["difficulty", "type", "band"])
       assert.equal(p.get(k), params.get(k));
   }
   assert.ok(

@@ -1,0 +1,322 @@
+import { validateSong } from "./song-schema.js";
+import {
+  GARUPA_SONGS_PATH,
+  GARUPA_STATE_PATH,
+  addGarupaSong,
+  findGarupaSong,
+  listGarupaSongs,
+  updateGarupaSong,
+} from "./garupa-data.js";
+
+export function repositorySettings(input) {
+  const owner = input.owner.trim();
+  const repo = input.repo.trim();
+  const branch = input.branch.trim();
+  if (
+    !/^[A-Za-z0-9-]+$/.test(owner) ||
+    !/^[A-Za-z0-9_.-]+$/.test(repo) ||
+    [".", ".."].includes(repo)
+  )
+    throw new Error("GitHubの所有者とリポジトリ名を確認してください。");
+  if (
+    !branch ||
+    branch.length > 200 ||
+    /[\s~^:?*\[\\]/.test(branch) ||
+    branch.includes("..") ||
+    branch.includes("@{")
+  )
+    throw new Error("ブランチ名を確認してください。");
+  return { owner, repo, branch };
+}
+
+// トークンはこのインスタンスのメモリー内だけに置く。保存先はapi.github.comに固定。
+export class GitHubStore {
+  constructor(settings, token, fetcher = globalThis.fetch.bind(globalThis)) {
+    this.settings = repositorySettings(settings);
+    if (!token.trim())
+      throw new Error("GitHubのアクセストークンを入力してください。");
+    this.token = token.trim();
+    this.fetcher = fetcher;
+    this.base = `https://api.github.com/repos/${encodeURIComponent(this.settings.owner)}/${encodeURIComponent(this.settings.repo)}`;
+  }
+
+  async request(path, method = "GET", body) {
+    let response;
+    try {
+      response = await this.fetcher(this.base + path, {
+        method,
+        cache: "no-store",
+        redirect: "error",
+        signal: AbortSignal.timeout(30000),
+        headers: {
+          Accept: "application/vnd.github+json",
+          Authorization: `Bearer ${this.token}`,
+          "X-GitHub-Api-Version": "2022-11-28",
+          ...(body ? { "Content-Type": "application/json" } : {}),
+        },
+        ...(body ? { body: JSON.stringify(body) } : {}),
+      });
+    } catch (error) {
+      throw new Error(
+        (error?.name === "TimeoutError" || error?.name === "AbortError"
+          ? "GitHubへの接続が時間切れになりました。"
+          : "GitHubへの通信を開始または完了できませんでした。") +
+          " 接続用トークン欄は処理後に消去されます。楽曲の入力は保持されています。保存を再試行すると、同じ送信が保存済みか確認します。",
+      );
+    }
+    if (!response.ok) {
+      const messages = {
+        401: "GitHubの認証に失敗しました。トークンの有効期限を確認してください。",
+        403: "書き込み権限、承認状態、またはGitHubの利用上限を確認してください。",
+        404: "リポジトリ・ブランチ・初期ファイルが見つかりません。保存先とトークンの対象を確認してください。",
+        409: "別の更新と競合しました。もう一度保存してください。既存の更新は上書きしていません。",
+        422: "更新できませんでした。同時更新やブランチ保護の可能性があります。設定を確認して再試行してください。",
+      };
+      const error = new Error(
+        messages[response.status] ||
+          `GitHubでエラーが発生しました（${response.status}）。入力を保持したまま再試行できます。`,
+      );
+      error.status = response.status;
+      throw error;
+    }
+    return response.json();
+  }
+
+  async snapshot() {
+    const ref = await this.request(
+      `/git/ref/heads/${this.settings.branch.split("/").map(encodeURIComponent).join("/")}`,
+    );
+    const commit = await this.request(`/git/commits/${ref.object.sha}`);
+    const tree = await this.request(
+      `/git/trees/${commit.tree.sha}?recursive=1`,
+    );
+    if (tree.truncated)
+      throw new Error(
+        "リポジトリが大きすぎて安全に一覧を確認できません。保存は行っていません。",
+      );
+    if (
+      !tree.tree.some((x) => x.path === GARUPA_STATE_PATH) ||
+      !tree.tree.some((x) => x.path === GARUPA_SONGS_PATH) ||
+      !tree.tree.some((x) => x.path === "scripts/build.mjs")
+    )
+      throw new Error(
+        "管理ページ対応版のプロジェクトを先にリポジトリへ配置してください。",
+      );
+    return { head: ref.object.sha, tree: commit.tree.sha, entries: tree.tree };
+  }
+
+  async readJSON(snapshot, path) {
+    const entry = snapshot.entries.find(
+      (x) => x.path === path && x.type === "blob",
+    );
+    if (!entry) throw new Error(`${path}が見つかりません。`);
+    const blob = await this.request(`/git/blobs/${entry.sha}`);
+    if (blob.encoding !== "base64" || blob.size > 5_000_000)
+      throw new Error("保存データの形式またはサイズが不正です。");
+    const bytes = Uint8Array.from(atob(blob.content.replace(/\s/g, "")), (c) =>
+      c.charCodeAt(0),
+    );
+    return JSON.parse(new TextDecoder().decode(bytes));
+  }
+
+  async connect() {
+    const repository = await this.request("");
+    if (repository.archived || repository.disabled)
+      throw new Error("このリポジトリは更新できません。");
+    if (repository.permissions && !repository.permissions.push)
+      throw new Error("このリポジトリに書き込む権限がありません。");
+    await this.snapshot();
+    return this.settings;
+  }
+
+  async addSong(input, submissionId) {
+    if (!/^[a-zA-Z0-9-]{16,80}$/.test(submissionId))
+      throw new Error("送信識別子が不正です。画面を再読み込みしてください。");
+    // 入力不備はGitHubへの書き込み前に検出する。
+    validateSong({ ...input, id: 1 });
+    const snapshot = await this.snapshot();
+    const data = await this.readJSON(snapshot, GARUPA_SONGS_PATH);
+    const songs = listGarupaSongs(data);
+    const existing = songs.find((song) => song.submissionId === submissionId);
+    if (existing)
+      return {
+        id: existing.id,
+        head: snapshot.head,
+        editing: {
+          id: existing.id,
+          song: existing,
+          version: JSON.stringify(existing),
+          settings: { ...this.settings },
+        },
+        alreadySaved: true,
+      };
+    const state = await this.readJSON(snapshot, GARUPA_STATE_PATH);
+    if (
+      !Number.isSafeInteger(state.nextId) ||
+      state.nextId <= Math.max(0, ...songs.map((song) => song.id)) ||
+      state.nextId >= Number.MAX_SAFE_INTEGER
+    )
+      throw new Error("管理用の番号データが不正です。");
+    const song = { ...input, id: state.nextId, submissionId };
+    addGarupaSong(data, song);
+    const nextState = {
+      nextId: state.nextId + 1,
+      updatedAt: new Date().toISOString(),
+    };
+    const newTree = await this.request("/git/trees", "POST", {
+      base_tree: snapshot.tree,
+      tree: [
+        {
+          path: GARUPA_SONGS_PATH,
+          mode: "100644",
+          type: "blob",
+          content: JSON.stringify(data, null, 2) + "\n",
+        },
+        {
+          path: GARUPA_STATE_PATH,
+          mode: "100644",
+          type: "blob",
+          content: JSON.stringify(nextState, null, 2) + "\n",
+        },
+      ],
+    });
+    const commit = await this.request("/git/commits", "POST", {
+      message: `Add song: ${song.title}`,
+      tree: newTree.sha,
+      parents: [snapshot.head],
+    });
+    // force:false により、別端末からの更新を破壊せず競合を知らせる。
+    await this.request(
+      `/git/refs/heads/${this.settings.branch.split("/").map(encodeURIComponent).join("/")}`,
+      "PATCH",
+      { sha: commit.sha, force: false },
+    );
+    const savedSong = findGarupaSong(data, song.id).song;
+    return {
+      id: song.id,
+      head: commit.sha,
+      editing: {
+        id: song.id,
+        song: savedSong,
+        version: JSON.stringify(savedSong),
+        settings: { ...this.settings },
+      },
+      alreadySaved: false,
+    };
+  }
+
+  async listSongs() {
+    const snapshot = await this.snapshot();
+    const data = await this.readJSON(snapshot, GARUPA_SONGS_PATH);
+    return listGarupaSongs(data)
+      .map(({ id, title, reading, band }) => ({ id, title, reading, band }))
+      .sort((a, b) => a.title.localeCompare(b.title, "ja") || a.id - b.id);
+  }
+
+  async loadSong(id) {
+    if (!Number.isSafeInteger(id) || id < 1)
+      throw new Error("楽曲の指定が不正です。");
+    const snapshot = await this.snapshot();
+    const data = await this.readJSON(snapshot, GARUPA_SONGS_PATH);
+    listGarupaSongs(data);
+    const found = findGarupaSong(data, id);
+    if (!found) throw new Error(`楽曲ID ${id} が見つかりません。`);
+    const song = found.song;
+    validateSong(song);
+    return {
+      id,
+      song,
+      version: JSON.stringify(song),
+      settings: { ...this.settings },
+    };
+  }
+
+  async updateSong(input, editing, operationId) {
+    if (!/^[a-zA-Z0-9-]{16,80}$/.test(operationId))
+      throw new Error("送信識別子が不正です。");
+    if (
+      ["owner", "repo", "branch"].some(
+        (key) => editing.settings?.[key] !== this.settings[key],
+      )
+    )
+      throw new Error(
+        "読み込んだ楽曲と保存先が異なります。元の保存先に接続してください。",
+      );
+    const { id } = editing;
+    validateSong({ ...input, id });
+    const snapshot = await this.snapshot();
+    const data = await this.readJSON(snapshot, GARUPA_SONGS_PATH);
+    listGarupaSongs(data);
+    const found = findGarupaSong(data, id);
+    if (!found) throw new Error(`楽曲ID ${id} が見つかりません。`);
+    const current = found.song;
+    if (current.revision === operationId)
+      return {
+        id,
+        head: snapshot.head,
+        revision: operationId,
+        editing: {
+          ...editing,
+          song: current,
+          version: JSON.stringify(current),
+        },
+        alreadySaved: true,
+      };
+    if (JSON.stringify(current) !== editing.version)
+      throw new Error(
+        "この曲は読み込み後に変更されています。入力を控えてから、最新の曲を読み直して修正してください。上書きは行っていません。",
+      );
+    const song = {
+      ...current,
+      ...input,
+      id,
+      revision: operationId,
+    };
+    updateGarupaSong(data, song);
+    const state = await this.readJSON(snapshot, GARUPA_STATE_PATH);
+    const tree = await this.request("/git/trees", "POST", {
+      base_tree: snapshot.tree,
+      tree: [
+        {
+          path: GARUPA_SONGS_PATH,
+          mode: "100644",
+          type: "blob",
+          content: JSON.stringify(data, null, 2) + "\n",
+        },
+        {
+          path: GARUPA_STATE_PATH,
+          mode: "100644",
+          type: "blob",
+          content:
+            JSON.stringify(
+              { ...state, updatedAt: new Date().toISOString() },
+              null,
+              2,
+            ) + "\n",
+        },
+      ],
+    });
+    const commit = await this.request("/git/commits", "POST", {
+      message: `Update song: ${song.title}`,
+      tree: tree.sha,
+      parents: [snapshot.head],
+    });
+    await this.request(
+      `/git/refs/heads/${this.settings.branch.split("/").map(encodeURIComponent).join("/")}`,
+      "PATCH",
+      { sha: commit.sha, force: false },
+    );
+    const savedSong = findGarupaSong(data, id).song;
+    return {
+      id,
+      head: commit.sha,
+      revision: operationId,
+      editing: {
+        ...editing,
+        song: savedSong,
+        version: JSON.stringify(savedSong),
+      },
+      alreadySaved: false,
+    };
+  }
+}

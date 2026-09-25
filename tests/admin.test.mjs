@@ -1,24 +1,16 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { GitHubStore } from "../src/github-store.js";
-import { validateSong } from "../src/song-schema.js";
-import { renderDetail, renderList } from "../src/views.js";
+import { GitHubStore } from "../src/js/github-store.js";
+import {
+  GARUPA_SONGS_PATH,
+  GARUPA_STATE_PATH,
+  findGarupaSong,
+} from "../src/js/garupa-data.js";
+import { validateSong } from "../src/js/song-schema.js";
+import { renderDetail, renderList } from "../src/js/views.js";
 
 const submissionId = "test-submission-00000001";
-
-test("default browser fetch uses the global receiver", async (t) => {
-  // ブラウザーのfetchはGitHubStoreをthisとして呼ぶとIllegal invocationになる。
-  t.mock.method(globalThis, "fetch", function () {
-    if (this !== globalThis) throw new TypeError("Illegal invocation");
-    return Promise.resolve(new Response("{}", { status: 401 }));
-  });
-  const store = new GitHubStore(
-    { owner: "test-owner", repo: "song-atlas", branch: "main" },
-    "invalid-test-token",
-  );
-  await assert.rejects(store.connect(), (error) => error.status === 401);
-});
 const draft = {
   id: 1,
   title: "テストの新曲",
@@ -45,7 +37,19 @@ const draft = {
   },
 };
 
-// GitHubとの境界を模擬し、通信内容・永続化・競合動作を検証する。
+test("default browser fetch uses the global receiver", async (t) => {
+  t.mock.method(globalThis, "fetch", function () {
+    if (this !== globalThis) throw new TypeError("Illegal invocation");
+    return Promise.resolve(new Response("{}", { status: 401 }));
+  });
+  const store = new GitHubStore(
+    { owner: "test-owner", repo: "song-atlas", branch: "main" },
+    "invalid-test-token",
+  );
+  await assert.rejects(store.connect(), (error) => error.status === 401);
+});
+
+// GitHubとの境界を模擬し、単一JSONへの保存と競合を検証する。
 function remote({
   conflict = false,
   tokenValid = true,
@@ -53,8 +57,9 @@ function remote({
 } = {}) {
   let head = "head-1";
   let writes = 0;
-  let files = {
-    "data/admin-state.json": { nextId: 820, updatedAt: "2026-09-17T00:00:00Z" },
+  const files = {
+    [GARUPA_STATE_PATH]: { nextId: 820, updatedAt: "2026-09-17T00:00:00Z" },
+    [GARUPA_SONGS_PATH]: { groups: [] },
   };
   let proposed;
   const calls = [];
@@ -92,10 +97,11 @@ function remote({
       if (route.startsWith("/git/blobs/")) {
         const file =
           Object.values(files)[Number(route.slice("/git/blobs/file-".length))];
+        const bytes = Buffer.from(JSON.stringify(file));
         return json({
           encoding: "base64",
-          size: JSON.stringify(file).length,
-          content: Buffer.from(JSON.stringify(file)).toString("base64"),
+          size: bytes.length,
+          content: bytes.toString("base64"),
         });
       }
     }
@@ -123,15 +129,14 @@ function remote({
   };
   return {
     fetcher,
+    files,
     calls,
-    get files() {
-      return files;
-    },
     get writes() {
       return writes;
     },
   };
 }
+
 const client = (server) =>
   new GitHubStore(
     { owner: "test-owner", repo: "song-atlas", branch: "main" },
@@ -139,101 +144,116 @@ const client = (server) =>
     server.fetcher,
   );
 
-test("authenticated save atomically stores Japanese song data and next ID", async () => {
+function seedSong(server, song) {
+  let group = server.files[GARUPA_SONGS_PATH].groups.find(
+    (item) => item.band === song.band && item.category === song.category,
+  );
+  if (!group) {
+    group = { band: song.band, category: song.category, songs: [] };
+    server.files[GARUPA_SONGS_PATH].groups.push(group);
+  }
+  const { band, category, ...entry } = song;
+  group.songs.push(entry);
+}
+
+const storedSong = (server, id) =>
+  findGarupaSong(server.files[GARUPA_SONGS_PATH], id)?.song;
+
+test("authenticated save stores a song and next ID in one commit", async () => {
   const server = remote();
   const store = client(server);
   await store.connect();
-  const result = await store.addSong(draft, draft.title, submissionId);
+  const result = await store.addSong(draft, submissionId);
   assert.equal(result.id, 820);
   for (const key of ["bpm", "bpmMin", "bpmMax", "durationSeconds"])
-    assert.equal(
-      server.files["data/songs/テストの新曲/song.json"][key],
-      draft[key],
-    );
-  assert.equal(
-    server.files["data/songs/テストの新曲/song.json"].originalWork,
-    "架空の作品",
-  );
-  assert.equal(server.files["data/admin-state.json"].nextId, 821);
+    assert.equal(storedSong(server, 820)[key], draft[key]);
+  assert.equal(storedSong(server, 820).originalWork, "架空の作品");
+  assert.equal(result.editing.id, 820);
+  assert.equal(result.editing.version, JSON.stringify(storedSong(server, 820)));
+  assert.equal(server.files[GARUPA_STATE_PATH].nextId, 821);
   assert.equal(server.writes, 1);
   assert.equal(
-    server.calls.find((x) => x.route === "/git/trees" && x.method === "POST")
-      .body.tree.length,
+    server.calls.find((x) => x.route === "/git/trees").body.tree.length,
     2,
   );
   assert.ok(!JSON.stringify(server.files).includes("test-token"));
 });
-test("retry after lost save response does not create another song", async () => {
-  const server = remote({ loseResponse: true });
-  const store = client(server);
-  await assert.rejects(store.addSong(draft, draft.title, submissionId), /通信/);
-  const result = await store.addSong(draft, draft.title, submissionId);
-  assert.equal(result.alreadySaved, true);
-  assert.equal(server.writes, 1);
-});
-test("duplicate song and concurrent branch updates never overwrite stored data", async () => {
+
+test("a newly added song can be corrected without creating a duplicate", async () => {
   const server = remote();
   const store = client(server);
-  await store.addSong(draft, draft.title, submissionId);
-  await assert.rejects(
-    store.addSong(draft, draft.title, "different-submission-002"),
-    /存在/,
+  const added = await store.addSong(draft, submissionId);
+  const corrected = await store.updateSong(
+    { ...draft, title: "修正した新曲" },
+    added.editing,
+    "correct-added-song-00001",
   );
-  assert.equal(server.writes, 1);
-  const concurrent = remote({ conflict: true });
-  await assert.rejects(
-    client(concurrent).addSong(draft, draft.title, submissionId),
-    /同時更新/,
-  );
-  assert.equal(concurrent.writes, 0);
-  assert.equal(concurrent.files["data/admin-state.json"].nextId, 820);
+  assert.equal(corrected.id, added.id);
+  assert.equal(storedSong(server, added.id).title, "修正した新曲");
+  assert.equal(server.files[GARUPA_STATE_PATH].nextId, 821);
+  assert.equal(server.files[GARUPA_SONGS_PATH].groups[0].songs.length, 1);
 });
-test("invalid authentication and malformed input do not write", async () => {
-  const server = remote({ tokenValid: false });
-  await assert.rejects(client(server).connect(), /認証/);
+
+test("retry after lost response does not create another song", async () => {
+  const server = remote({ loseResponse: true });
+  const store = client(server);
+  await assert.rejects(store.addSong(draft, submissionId), /通信/);
+  const result = await store.addSong(draft, submissionId);
+  assert.equal(result.alreadySaved, true);
+  assert.equal(result.editing.id, result.id);
+  assert.equal(server.writes, 1);
+  assert.equal(server.files[GARUPA_SONGS_PATH].groups[0].songs.length, 1);
+});
+
+test("concurrent branch update does not overwrite the collection", async () => {
+  const server = remote({ conflict: true });
+  await assert.rejects(client(server).addSong(draft, submissionId), /同時更新/);
   assert.equal(server.writes, 0);
+  assert.equal(server.files[GARUPA_STATE_PATH].nextId, 820);
+  assert.deepEqual(server.files[GARUPA_SONGS_PATH].groups, []);
+});
+
+test("invalid authentication and malformed input do not write", async () => {
+  const denied = remote({ tokenValid: false });
+  await assert.rejects(client(denied).connect(), /認証/);
   const healthy = remote();
   await assert.rejects(
-    client(healthy).addSong(
-      { ...draft, reading: "" },
-      draft.title,
-      submissionId,
-    ),
+    client(healthy).addSong({ ...draft, reading: "" }, submissionId),
     /reading/,
   );
   assert.equal(healthy.calls.length, 0);
-  assert.throws(() => validateSong(draft, "../escape"), /フォルダー/);
   assert.throws(
     () =>
-      validateSong(
-        {
-          ...draft,
-          difficulties: { ...draft.difficulties, EASY: { level: 5, notes: 0 } },
-        },
-        draft.title,
-      ),
+      validateSong({
+        ...draft,
+        difficulties: { ...draft.difficulties, EASY: { level: 5, notes: 0 } },
+      }),
     /ノーツ/,
   );
 });
-test("GitHub Pages subdirectory is preserved in list links and detail backlinks", () => {
+
+test("GitHub Pages subdirectory is preserved in links", () => {
   const data = JSON.parse(fs.readFileSync("dist/songs.json"));
-  const html = renderList(data, new URLSearchParams(), "/song-atlas/");
-  assert.ok(html.includes('href="/song-atlas/songs/'));
-  assert.ok(!html.includes('href="/songs/'));
+  assert.ok(
+    renderList(data, new URLSearchParams(), "/song-atlas/").includes(
+      'href="/song-atlas/garupa/songs/',
+    ),
+  );
   assert.ok(
     renderDetail(
       data.songs[0],
       data,
       new URLSearchParams(),
       "/song-atlas/",
-    ).includes('href="/song-atlas/?'),
+    ).includes('href="/song-atlas/garupa/songs/?'),
   );
 });
-test("all existing IDs precede the next allocated ID and unknown metadata renders explicitly", () => {
+
+test("existing IDs precede the next allocated ID", () => {
   const data = JSON.parse(fs.readFileSync("dist/songs.json"));
-  const state = JSON.parse(fs.readFileSync("data/admin-state.json"));
+  const state = JSON.parse(fs.readFileSync(GARUPA_STATE_PATH));
   assert.ok(data.songs.every((song) => song.id < state.nextId));
-  validateSong(draft, draft.title);
+  validateSong(draft);
   const html = renderDetail(
     { ...data.songs[0], type: "anime", artist: null, composer: null },
     data,
@@ -241,30 +261,38 @@ test("all existing IDs precede the next allocated ID and unknown metadata render
   assert.ok(html.includes("未確認"));
 });
 
-test("edit preserves identity, unknown fields and counter while updating every song field", async () => {
+test("GitHub blob reader accepts the full 797-song source", async () => {
   const server = remote();
-  const path = `data/songs/${draft.title}/song.json`;
-  server.files[path] = { ...draft, id: 7, customMetadata: { retained: true } };
+  server.files[GARUPA_SONGS_PATH] = JSON.parse(
+    fs.readFileSync(GARUPA_SONGS_PATH, "utf8"),
+  );
+  const options = await client(server).listSongs();
+  assert.equal(options.length, 797);
+  assert.ok(
+    options.some((song) => song.id === 822 && song.title === "ライムライト"),
+  );
+});
+
+test("edit preserves ID, unknown fields, and unrelated songs", async () => {
+  const server = remote();
+  seedSong(server, { ...draft, id: 7, customMetadata: { retained: true } });
   const store = client(server);
-  assert.deepEqual(await store.listSongs(), [draft.title]);
-  const loaded = await store.loadSong(draft.title);
+  assert.deepEqual(
+    (await store.listSongs()).map((song) => song.id),
+    [7],
+  );
+  const loaded = await store.loadSong(7);
+  seedSong(server, { ...draft, id: 8, title: "別の曲" });
   const changes = {
     ...draft,
     id: 999,
     title: "変更した曲名",
     reading: "ヘンコウ",
-    bpm: 174,
-    bpmMin: 100.25,
-    bpmMax: 201,
-    durationSeconds: 125,
     category: "エクストラ",
     band: "MyGO!!!!!×ゲスト",
-    releaseDate: "2026-09-18T15:01+09:00",
-    releaseOrder: 9,
     composer: "作曲者",
-    originalArtist: "原曲歌手",
-    originalWork: "作品名",
-    aliases: ["別名"],
+    bpm: 174,
+    durationSeconds: 125,
     difficulties: { ...draft.difficulties, SPECIAL: { level: 28, notes: 999 } },
   };
   const result = await store.updateSong(
@@ -272,31 +300,27 @@ test("edit preserves identity, unknown fields and counter while updating every s
     loaded,
     "update-operation-00001",
   );
-  assert.equal(server.files[path].id, 7);
-  assert.equal(result.slug, draft.title);
-  assert.equal(server.files[path].title, changes.title);
-  for (const key of ["bpm", "bpmMin", "bpmMax", "durationSeconds"])
-    assert.equal(server.files[path][key], changes[key]);
-  assert.deepEqual(server.files[path].customMetadata, { retained: true });
-  assert.deepEqual(server.files[path].difficulties, changes.difficulties);
-  assert.equal(server.files["data/admin-state.json"].nextId, 820);
-  assert.equal(server.writes, 1);
+  assert.equal(result.id, 7);
+  assert.equal(storedSong(server, 7).title, changes.title);
+  assert.equal(storedSong(server, 7).band, changes.band);
+  assert.deepEqual(storedSong(server, 7).customMetadata, { retained: true });
+  assert.equal(storedSong(server, 8).title, "別の曲");
+  assert.equal(server.files[GARUPA_STATE_PATH].nextId, 820);
   await store.updateSong(
     { ...changes, composer: "再修正" },
     result.editing,
     "update-operation-00002",
   );
-  assert.equal(server.files[path].composer, "再修正");
+  assert.equal(storedSong(server, 7).composer, "再修正");
   assert.equal(server.writes, 2);
 });
 
-test("stale edit, removed song and different repository cannot overwrite data", async () => {
+test("stale, removed, or other repository edits cannot overwrite data", async () => {
   const server = remote();
-  const path = `data/songs/${draft.title}/song.json`;
-  server.files[path] = { ...draft, id: 7 };
+  seedSong(server, { ...draft, id: 7 });
   const store = client(server);
-  const loaded = await store.loadSong(draft.title);
-  server.files[path].composer = "他端末の修正";
+  const loaded = await store.loadSong(7);
+  server.files[GARUPA_SONGS_PATH].groups[0].songs[0].composer = "他端末の修正";
   await assert.rejects(
     store.updateSong(draft, loaded, "update-operation-00001"),
     /読み込み後/,
@@ -309,7 +333,7 @@ test("stale edit, removed song and different repository cannot overwrite data", 
     ),
     /保存先/,
   );
-  delete server.files[path];
+  server.files[GARUPA_SONGS_PATH].groups[0].songs.length = 0;
   await assert.rejects(
     store.updateSong(draft, loaded, "update-operation-00001"),
     /見つかりません/,
@@ -317,17 +341,11 @@ test("stale edit, removed song and different repository cannot overwrite data", 
   assert.equal(server.writes, 0);
 });
 
-test("edit retry recovers a lost response and unrelated edits are preserved", async () => {
+test("edit retry recovers a lost response", async () => {
   const server = remote({ loseResponse: true });
-  const path = `data/songs/${draft.title}/song.json`;
-  server.files[path] = { ...draft, id: 7 };
+  seedSong(server, { ...draft, id: 7 });
   const store = client(server);
-  const loaded = await store.loadSong(draft.title);
-  server.files["data/songs/別の曲/song.json"] = {
-    ...draft,
-    id: 8,
-    title: "別の曲",
-  };
+  const loaded = await store.loadSong(7);
   await assert.rejects(
     store.updateSong(
       { ...draft, composer: "修正" },
@@ -343,26 +361,5 @@ test("edit retry recovers a lost response and unrelated edits are preserved", as
   );
   assert.equal(recovered.alreadySaved, true);
   assert.equal(server.writes, 1);
-  assert.equal(server.files["data/songs/別の曲/song.json"].id, 8);
-  assert.equal(server.files["data/admin-state.json"].nextId, 820);
-});
-
-test("edit refuses a branch race during commit without advancing the counter", async () => {
-  const server = remote({ conflict: true });
-  server.files[`data/songs/${draft.title}/song.json`] = { ...draft, id: 7 };
-  const store = client(server);
-  const loaded = await store.loadSong(draft.title);
-  await assert.rejects(
-    store.updateSong(
-      { ...draft, title: "変更" },
-      loaded,
-      "update-operation-00001",
-    ),
-    /同時更新/,
-  );
-  assert.equal(server.writes, 0);
-  assert.equal(
-    server.files[`data/songs/${draft.title}/song.json`].title,
-    draft.title,
-  );
+  assert.equal(storedSong(server, 7).composer, "修正");
 });

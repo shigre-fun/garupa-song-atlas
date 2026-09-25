@@ -77,7 +77,9 @@ test("catalog contains all five difficulty slots, readings, IDs and generated pa
   for (const s of songs) {
     assert.ok(s.reading, s.title);
     assert.equal(s.difficulties.length, 5);
-    assert.ok(fs.existsSync(`dist/songs/${s.slug}/index.html`));
+    assert.ok(fs.existsSync(`dist/garupa/songs/${s.stableSongId}/index.html`));
+    assert.equal(s.gameId, "garupa");
+    assert.equal(s.stableSongId, String(s.id));
     assert.ok(["normal", "anime", "tie_up"].includes(s.type));
     for (const d of s.difficulties.filter(Boolean)) {
       assert.ok(d.level > 0 && d.level <= 50, s.title);

@@ -28,7 +28,8 @@
 
 ## 編集対象
 
-- 楽曲データ：`data/songs/楽曲名/song.json`
+- ガルパ楽曲データ：`data/garupa/songs.json`（`groups` 内の曲）
+- アワーノーツ楽曲データ：`data/ournotes/songs.json`
 - 画面・検索・並べ替え：`src/`
 - 新曲ひな型：`templates/song.json`
 - `dist/` は生成物。直接修正せず、`node scripts/build.mjs` で反映する。

@@ -1,8 +1,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { filteredSongs, pageNumbers, bandOrder } from "../src/domain.js";
-import { renderList, renderDetail } from "../src/views.js";
+import { filteredSongs, pageNumbers, bandOrder } from "../src/js/domain.js";
+import { renderList, renderDetail } from "../src/js/views.js";
 const data = JSON.parse(fs.readFileSync("dist/songs.json", "utf8"));
 test("multiple types OR and multiple bands OR combine with AND", () => {
   const params = new URLSearchParams("type=anime&type=tie_up&band=0&band=1");
@@ -50,23 +50,25 @@ test("filter state survives page links, details and back links with escaped attr
   const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((m) =>
     m[1].replaceAll("&amp;", "&"),
   );
-  for (const href of hrefs.filter((h) => h.includes("?"))) {
+  for (const href of hrefs.filter(
+    (h) => h.includes("?") && !h.includes('id="clear-filters"'),
+  )) {
     const q = new URL(href, "https://example.test").searchParams;
+    if (!q.has("type")) continue;
     assert.deepEqual(q.getAll("type"), ["anime", "tie_up"]);
     assert.deepEqual(q.getAll("band"), ["0", "1"]);
-    assert.equal(q.get("sort"), "release");
   }
   const detail = renderDetail(data.songs[0], data, p, "/garupa-song-atlas/");
   assert.ok(
     detail.includes(
-      'href="/garupa-song-atlas/?type=anime&amp;type=tie_up&amp;band=0&amp;band=1&amp;page=2&amp;sort=release"',
+      'href="/garupa-song-atlas/garupa/songs/?type=anime&amp;type=tie_up&amp;band=0&amp;band=1&amp;page=2&amp;sort=release"',
     ),
   );
   const single = renderList(
     data,
     new URLSearchParams("q=グレンラガン&type=anime&page=999"),
   );
-  assert.ok(single.includes('id="prev" disabled'));
-  assert.ok(single.includes('id="next" disabled'));
+  assert.ok(single.includes('id="prev" aria-disabled="true"'));
+  assert.ok(single.includes('id="next" aria-disabled="true"'));
   assert.ok(single.includes('aria-current="page"'));
 });

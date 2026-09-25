@@ -15,7 +15,10 @@ test("search query and metadata cannot inject HTML", () => {
 });
 test("direct detail pages render song facts without JavaScript execution", () => {
   for (const song of data.songs) {
-    const html = fs.readFileSync(`dist/songs/${song.slug}/index.html`, "utf8");
+    const html = fs.readFileSync(
+      `dist/garupa/songs/${song.stableSongId}/index.html`,
+      "utf8",
+    );
     assert.ok(html.includes("難易度・ノーツ数"));
     assert.ok(html.includes('name="q"'));
     assert.ok(html.includes("原曲") || song.type === "normal");
@@ -25,7 +28,7 @@ test("direct detail pages render song facts without JavaScript execution", () =>
 test("source-work searches return a title link and absent terms have empty state", () => {
   const html = renderList(data, new URLSearchParams({ q: "グレンラガン" }));
   assert.ok(html.includes("空色デイズ"));
-  assert.ok(html.includes("/songs/" + encodeURIComponent("空色デイズ") + "/"));
+  assert.ok(html.includes("/garupa/songs/8/"));
   assert.ok(
     renderList(
       data,
@@ -35,7 +38,7 @@ test("source-work searches return a title link and absent terms have empty state
 });
 test("out-of-range pages are bounded and all five difficulty options exist", () => {
   const html = renderList(data, new URLSearchParams({ page: "9999999" }));
-  assert.ok(html.includes('id="next" disabled'));
+  assert.ok(html.includes('id="next" aria-disabled="true"'));
   assert.ok(!html.includes("9999999 /"));
   assert.ok(html.includes('id="difficulty"'));
   for (let i = 0; i < 5; i++) assert.ok(html.includes(`value="${i}"`));

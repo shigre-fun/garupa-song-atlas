@@ -1,33 +1,16 @@
 node_modules/
 .cache/
-.sites-runtime/
 .env
 .env.*
 !.env.example
-*.zip
+/garupa-song-atlas.zip
 
 # 再生成する公開ファイルと検証レポート
 /dist/
-/data/quality-report.json
+/reports/
 
-# 旧取得データ（現行の編集元は data/songs/ と data/settings.json）
-/data/*.html
-/data/wiki/
-/data/bestdori-app.js
-/data/api-reference.json
-/data/assets-tree.json
-/data/bands-raw.json
-/data/enrichment.json
-/data/live3d-commit.json
-/data/live3d.json
-/data/master-difficulties.json
-/data/master-files.json
-/data/master-songs.json
-/data/missing-covers.json
-/data/overrides.json
-/data/sample.json
-/data/songs-full.json
-/data/songs-raw.json
+# 旧取得資料のローカル保管ZIPとハッシュ一覧
+/archive/
 
 # ローカルのログ・OS生成ファイル
 *.log

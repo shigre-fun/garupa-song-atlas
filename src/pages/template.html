@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--HEAD-->
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="<!--HOME_URL-->"
+        >✳ <span><!--SITE_NAME--><small>SONG ATLAS</small></span></a
+      >
+      <nav class="site-nav" aria-label="サイト内ナビゲーション">
+        <a href="<!--GARUPA_URL-->">ガルパ</a>
+        <a href="<!--OURNOTES_URL-->">アワーノーツ</a>
+        <a href="<!--ABOUT_URL-->">サイトについて</a>
+      </nav>
+      <form action="<!--SEARCH_ACTION-->" role="search">
+        <label class="sr-only" for="search"
+          >ガルパの楽曲名・原曲の作品名で検索</label
+        ><span aria-hidden="true">⌕</span
+        ><input
+          id="search"
+          name="q"
+          type="search"
+          placeholder="ガルパの楽曲名・作品名で検索"
+          autocomplete="off"
+        /><button>検索</button>
+      </form>
+    </header>
+    <a class="sr-only skip-link" href="#app">本文へ移動</a>
+    <noscript
+      ><p class="notice">
+        検索条件の変更にはJavaScriptを有効にしてください。楽曲一覧と詳細情報はそのまま閲覧できます。
+      </p></noscript
+    >
+    <main id="app">
+      <!--CONTENT-->
+      <aside class="ad-slot" hidden aria-label="広告"></aside>
+    </main>
+    <footer>
+      <nav aria-label="フッターナビゲーション">
+        <a href="<!--HOME_URL-->">トップ</a
+        ><a href="<!--ABOUT_URL-->">サイトについて</a
+        ><a href="<!--SOURCES_URL-->">データ出典・更新方針</a
+        ><a href="<!--PRIVACY_URL-->">プライバシー</a>
+      </nav>
+      <p>
+        <!--SITE_NAME-->
+        · 非公式ファンデータベース。楽曲・作品の権利は各権利者に帰属します。
+      </p>
+    </footer>
+  </body>
+</html>

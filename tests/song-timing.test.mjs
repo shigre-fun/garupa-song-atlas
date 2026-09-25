@@ -1,26 +1,50 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { validateSong } from "../src/song-schema.js";
-import { compareSongs } from "../src/domain.js";
-import { formatDuration, renderDetail, renderList } from "../src/views.js";
+import { validateSong } from "../src/js/song-schema.js";
+import { listGarupaSongs } from "../src/js/garupa-data.js";
+import { compareSongs } from "../src/js/domain.js";
+import { formatDuration, renderDetail, renderList } from "../src/js/views.js";
 
-const song = JSON.parse(
-  fs.readFileSync("data/songs/空色デイズ/song.json", "utf8"),
-);
+const song = listGarupaSongs(
+  JSON.parse(fs.readFileSync("data/garupa/songs.json", "utf8")),
+).find((item) => item.title === "空色デイズ");
+
+test("timing research keeps source details without repeating published song fields", () => {
+  const report = JSON.parse(
+    fs.readFileSync("data/garupa/song-timing-research.json", "utf8"),
+  );
+  const songs = listGarupaSongs(
+    JSON.parse(fs.readFileSync("data/garupa/songs.json", "utf8")),
+  );
+  const ids = new Set(songs.map((entry) => entry.id));
+  assert.equal(report.records.length, 796);
+  assert.equal(new Set(report.records.map((entry) => entry.id)).size, 796);
+  assert.ok(!report.records.some((entry) => entry.id === 822));
+  for (const entry of report.records) {
+    assert.ok(ids.has(entry.id));
+    assert.ok(Number.isFinite(entry.sourceLengthSeconds));
+    for (const field of [
+      "title",
+      "bpm",
+      "bpmMin",
+      "bpmMax",
+      "durationSeconds",
+      "sourceURL",
+    ])
+      assert.ok(!Object.hasOwn(entry, field));
+  }
+});
 test("timing validates integer seconds, decimal BPM, unknowns and constant/variable BPM", () => {
   const check = (fields) =>
-    validateSong(
-      {
-        ...song,
-        bpm: null,
-        bpmMin: null,
-        bpmMax: null,
-        durationSeconds: null,
-        ...fields,
-      },
-      "空色デイズ",
-    );
+    validateSong({
+      ...song,
+      bpm: null,
+      bpmMin: null,
+      bpmMax: null,
+      durationSeconds: null,
+      ...fields,
+    });
   check({});
   check({ bpm: 174.5, durationSeconds: 104 });
   check({ bpm: 174, bpmMin: 174, bpmMax: 174 });
@@ -93,7 +117,7 @@ test("timing is visible on direct detail and sort selection survives detail navi
   for (const sort of ["bpm", "duration"]) {
     const params = new URLSearchParams({ sort, type: "normal", band: "3" });
     const html = renderList(data, params, "/garupa-song-atlas/");
-    assert.match(html, new RegExp(`data-sort="${sort}" aria-pressed="true"`));
+    assert.match(html, new RegExp(`data-sort="${sort}" aria-current="true"`));
     assert.ok(html.includes(`sort=${sort}&amp;type=normal&amp;band=3`));
   }
 });
