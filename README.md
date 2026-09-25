@@ -12,6 +12,8 @@ BPM（基本・下限・上限）とゲーム内演奏時間も編集できま�
 - [公開サイト](https://shigre-fun.github.io/garupa-song-atlas/)
 - [ガルパ楽曲一覧](https://shigre-fun.github.io/garupa-song-atlas/garupa/songs/)
 - [アワーノーツ楽曲一覧](https://shigre-fun.github.io/garupa-song-atlas/ournotes/songs/)
+- [スマホから楽曲を追加する管理ページ](https://shigre-fun.github.io/garupa-song-atlas/admin/)
+
 
 ## 最初の準備
 
@@ -20,7 +22,9 @@ pnpmを使用する場合は `pnpm install` でも構いません。
 
 ## 既存の楽曲を修正する
 
-ファイルを直接修正します。公開サイトに追加・管理画面はありません。
+スマホからは[管理ページ](https://shigre-fun.github.io/garupa-song-atlas/admin/)に接続し、「曲の一覧を取得・更新」→曲を検索・選択→「選んだ曲を読み込む」→「変更を保存する」で修正できます。URLと管理IDは維持し、他端末で同じ曲が変更されていた場合は上書きを停止します。詳細は[管理ページの手順](docs/ADMIN.md)を参照してください。
+
+以下はPCでファイルを直接修正する手順です。
 
 1. `data/garupa/songs.json` をテキストエディターで開き、対象曲の `id` を探します。
 2. 曲固有の項目を修正し、UTF-8で保存します。バンドと種類はその曲が属するグループで管理します。
@@ -31,11 +35,13 @@ pnpmを使用する場合は `pnpm install` でも構いません。
 旧曲名URLの互換情報は `data/garupa/legacy-song-paths.json` に固定してあります。
 `id` は恒久URLにも使う管理番号です。既存曲の番号は変更・再利用しないでください。URLは `/garupa/songs/{id}/` です。
 
-アワーノーツの追加・修正は `data/ournotes/songs.json` の該当バンド・種類のグループを編集し、追加時は `data/ournotes/admin-state.json` の `nextId` も更新してください。IDは恒久URL `/ournotes/songs/{id}/` に使うため、曲名変更後も保持します。EASY〜EXPERTのレベルとノーツ数、BPM、ゲーム内演奏時間、作曲者、カバー曲の原曲情報は確認できた値だけ入力します。
+アワーノーツの追加・修正は [共通管理ページ](https://shigre-fun.github.io/garupa-song-atlas/admin/?game=ournotes) で「アワーノーツ」を選んで行えます。手動では `data/ournotes/songs.json` の該当バンド・種類のグループを編集し、追加時は `data/ournotes/admin-state.json` の `nextId` も更新してください。IDは恒久URL `/ournotes/songs/{id}/` に使うため、曲名変更後も保持します。EASY〜EXPERTのレベルとノーツ数、BPM、ゲーム内演奏時間、作曲者、カバー曲の原曲情報は確認できた値だけ入力します。
 
 ## 新曲を追加する
 
-ガルパの曲を追加する場合は、ローカル環境で次のコマンドを実行します。
+スマホからは、公開サイトの `admin/` にある管理ページへ入力して追加できます。GitHubへの保存とサイトの自動更新に対応しています。初回の接続・公開設定は [スマホ管理ページの手順](docs/ADMIN.md) を参照してください。
+
+以下はPCでファイルを直接追加する場合の手順です。
 
 ```powershell
 node scripts/add-song.mjs "新しい楽曲名"
@@ -54,7 +60,7 @@ node scripts/add-song.mjs "新しい楽曲名"
 | `data/ournotes/songs.json`              | アワーノーツの確認済み楽曲   |
 | `data/garupa/legacy-song-paths.json`    | 旧曲名URLと恒久IDの対応      |
 | `data/garupa/song-timing-research.json` | BPM・演奏時間の調査固有情報  |
-| `src/js/`                               | 共通設定・表示・検索         |
+| `src/js/`                               | 共通設定・表示・検索・管理画面 |
 | `src/pages/`                            | ページのHTMLひな型           |
 | `src/styles/`                           | 画面のCSS                    |
 | `src/images/`                           | サイト画像とアイコン         |

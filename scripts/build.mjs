@@ -213,11 +213,12 @@ for (const [directory, names] of [
       "seo.js",
       "song-schema.js",
       "garupa-data.js",
+      "admin.js",
       "query-index.js",
       "legacy-redirect.js",
     ],
   ],
-  ["styles", ["style.css", "mobile.css"]],
+  ["styles", ["style.css", "mobile.css", "admin.css"]],
   ["images", ["favicon.svg", "og-default.png", "apple-touch-icon.png"]],
   ["static", ["_headers"]],
 ])
@@ -385,6 +386,19 @@ write(
 write(
   "robots.txt",
   `User-agent: *\nAllow: /\nSitemap: ${url("sitemap.xml")}\n`,
+);
+
+const adminHTML = fs
+  .readFileSync("src/pages/admin.html", "utf8")
+  .replace(/(href|src|action)="\//g, `$1="${settings.basePath}`)
+  .replaceAll("<!--SITE_NAME-->", escapeHTML(settings.name));
+write("admin/index.html", await format(adminHTML, { parser: "html" }));
+const [owner = "", repo = ""] = (process.env.GITHUB_REPOSITORY || "").split(
+  "/",
+);
+write(
+  "admin-config.json",
+  JSON.stringify({ owner, repo, branch: "main" }, null, 2) + "\n",
 );
 
 write(".nojekyll", "");
