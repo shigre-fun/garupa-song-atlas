@@ -198,7 +198,7 @@ function updateVisibility() {
   document.querySelector("#cover-fields").hidden = original;
   const other = form.elements.band.value === "その他";
   document.querySelector("#other-band-label").hidden = !other;
-form.elements.otherBand.required = other;
+  form.elements.otherBand.required = other;
   for (const name of game.difficulties) {
     const enabled = form.elements[`${name}-enabled`].checked;
     for (const field of ["level", "notes"]) {
@@ -281,7 +281,7 @@ try {
   const defaults = response.ok ? await response.json() : {};
   const previous = storageRead(settingsKey) || {};
   for (const key of ["owner", "repo", "branch"])
-    connection.elements[key].value =
+    connection.elements.namedItem(key).value =
       defaults[key] || previous[key] || (key === "branch" ? "main" : "");
 } catch {
   /* 保存先は手動でも入力できる。 */
@@ -298,12 +298,12 @@ connection.addEventListener("submit", async (event) => {
     const settings = Object.fromEntries(
       ["owner", "repo", "branch"].map((key) => [
         key,
-        connection.elements[key].value,
+        connection.elements.namedItem(key).value,
       ]),
     );
     const candidate = new GitHubStore(
       settings,
-      connection.elements.token.value,
+      connection.elements.namedItem("token").value,
       globalThis.fetch.bind(globalThis),
       game,
     );
@@ -320,7 +320,7 @@ connection.addEventListener("submit", async (event) => {
     connectionStatus.textContent = error.message;
     connectionStatus.className = "message error";
   } finally {
-    connection.elements.token.value = "";
+    connection.elements.namedItem("token").value = "";
     button.disabled = false;
     connectionStatus.focus();
     connectionStatus.scrollIntoView({ block: "center" });
