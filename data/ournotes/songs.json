@@ -149,8 +149,8 @@
         {
           "id": 5,
           "title": "潜在表明",
-          "reading": "センサイヒョウメイ",
-          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "reading": "センザイヒョウメイ",
+          "releaseDate": "2026-09-24T00:00+09:00",
           "releaseOrder": 5,
           "composer": "鈴木裕明(SUPA LOVE)",
           "originalArtist": null,
@@ -158,27 +158,29 @@
           "bpm": 135,
           "bpmMin": null,
           "bpmMax": null,
-          "durationSeconds": null,
+          "durationSeconds": 106,
           "aliases": [],
           "difficulties": {
             "EASY": {
               "level": 6,
-              "notes": null
+              "notes": 203
             },
             "NORMAL": {
               "level": 15,
-              "notes": null
+              "notes": 546
             },
             "HARD": {
               "level": 18,
-              "notes": null
+              "notes": 617
             },
             "EXPERT": {
               "level": 23,
-              "notes": null
+              "notes": 728
             }
           },
-          "mv": true
+          "mv": true,
+          "relatedSongIds": [],
+          "revision": "44d3e058-c9f7-42d0-94ce-ec820d13f22e"
         },
         {
           "id": 6,
