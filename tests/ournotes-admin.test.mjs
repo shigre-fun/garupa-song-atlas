@@ -94,6 +94,15 @@ test("Our Notes administrator adds and edits within its own catalog", async () =
   );
   const original = await store.loadSong(1);
   assert.equal(original.song.id, 1);
+  assert.deepEqual(original.song.relatedSongIds, ["garupa:489", "garupa:649"]);
+  assert.deepEqual(
+    original.song.relatedSongIds.map((reference) => {
+      const [gameId, id] = reference.split(":");
+      const song = bothGames[gameId].find((item) => item.id === Number(id));
+      return `${GAMES[gameId].shortName}：${song.title}`;
+    }),
+    ["ガルパ：迷星叫", "ガルパ：迷星叫(パラレルver.)"],
+  );
   const input = {
     ...original.song,
     id: 1,
@@ -153,6 +162,20 @@ test("Our Notes administrator adds and edits within its own catalog", async () =
   assert.ok(
     proposed.tree.some((entry) => entry.path === GAMES.garupa.dataFile),
   );
+  const existing = await store.loadSong(1);
+  await store.updateSong(
+    { ...existing.song, relatedSongIds: [] },
+    existing,
+    "ournotes-remove-000001",
+  );
+  assert.deepEqual((await store.loadSong(1)).song.relatedSongIds, []);
+  for (const id of [489, 649])
+    assert.ok(
+      !findGarupaSong(
+        files[GAMES.garupa.dataFile],
+        id,
+      ).song.relatedSongIds.includes("ournotes:1"),
+    );
 });
 
 test("editor orders BPM fields and serves a searchable song picker with fresh modules", () => {

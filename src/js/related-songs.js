@@ -1,13 +1,4 @@
-// 譜面版の表記だけを外す。曲名中の作品名や副題は残す。
-export function baseSongTitle(title) {
-  return title
-    .replace(/^\[FULL\]\s*/i, "")
-    .replace(/\s*[（(](?:3Dライブモード対応|[^（）()]*ver\.)[）)]$/i, "")
-    .trim();
-}
-
 export function relatedSongs(song, catalogs) {
-  const title = baseSongTitle(song.title);
   const reference = `${song.gameId}:${song.id}`;
   return Object.values(catalogs)
     .flat()
@@ -20,12 +11,7 @@ export function relatedSongs(song, catalogs) {
         ((song.relatedSongIds ?? []).includes(
           `${candidate.gameId}:${candidate.id}`,
         ) ||
-          (candidate.relatedSongIds ?? []).includes(reference) ||
-          (baseSongTitle(candidate.title) === title &&
-            // 同名異曲を結ばない。現在の共通収録曲は作曲者も一致する。
-            song.composer &&
-            candidate.composer &&
-            song.composer === candidate.composer)),
+          (candidate.relatedSongIds ?? []).includes(reference)),
     )
     .sort(
       (a, b) =>

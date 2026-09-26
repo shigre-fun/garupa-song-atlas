@@ -64,7 +64,7 @@ function renderRelatedSelected() {
     const item = document.createElement("li");
     const label = document.createElement("span");
     label.textContent = target
-      ? `${GAMES[gameId].shortName} · ${target.title} / ${target.band}`
+      ? `${GAMES[gameId].shortName}：${target.title}`
       : `${GAMES[gameId]?.shortName ?? gameId}の楽曲（一覧取得後に曲名を表示）`;
     const remove = document.createElement("button");
     remove.type = "button";

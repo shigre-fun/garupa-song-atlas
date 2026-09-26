@@ -4,7 +4,6 @@ import fs from "node:fs";
 import { GAMES, siteSettings } from "../src/js/site-config.js";
 import { loadGameCatalog } from "../scripts/catalog.mjs";
 import {
-  baseSongTitle,
   relatedSongs,
   validateRelatedSongIds,
 } from "../src/js/related-songs.js";
@@ -22,10 +21,6 @@ const page = (game, id) =>
 
 test("chart variants and cross-game songs link in both directions", () => {
   assert.doesNotThrow(() => validateRelatedSongIds(catalogs));
-  assert.equal(
-    baseSongTitle("[FULL] キズナミュージック♪"),
-    "キズナミュージック♪",
-  );
   assert.deepEqual(ids(byId("garupa", 158)), ["garupa:249", "garupa:484"]);
   assert.deepEqual(ids(byId("garupa", 249)), ["garupa:158", "garupa:484"]);
   assert.deepEqual(ids(byId("garupa", 489)), ["garupa:649", "ournotes:1"]);
@@ -34,6 +29,70 @@ test("chart variants and cross-game songs link in both directions", () => {
   assert.deepEqual(ids(byId("ournotes", 7)), ["garupa:667"]);
   assert.deepEqual(ids(byId("garupa", 667)), ["ournotes:7"]);
   assert.deepEqual(ids(byId("garupa", 410)), []); // 同名異曲
+});
+
+test("every published related link is editable and matches the stored references", () => {
+  const songs = Object.values(catalogs).flat();
+  let linked = 0;
+  let pairs = 0;
+  for (const song of songs) {
+    const expected = song.relatedSongIds ?? [];
+    assert.deepEqual(
+      [...ids(song)].sort(),
+      [...expected].sort(),
+      `${song.gameId}:${song.id}`,
+    );
+    const html = page(song.gameId, song.id);
+    const section = html.match(
+      /<section class="panel related-songs">([\s\S]*?)<\/section>/,
+    )?.[1];
+    assert.equal(
+      Boolean(section),
+      expected.length > 0,
+      `${song.gameId}:${song.id}`,
+    );
+    if (expected.length) linked++;
+    for (const reference of expected) {
+      const [gameId, id] = reference.split(":");
+      assert.ok(section.includes(`/${gameId}/songs/${id}/`), reference);
+      pairs++;
+    }
+  }
+  assert.ok(linked > 0);
+  assert.ok(pairs > 0 && pairs % 2 === 0);
+});
+
+test("a removed link does not return from matching titles and composers", () => {
+  const shortened = {
+    ...catalogs,
+    ournotes: catalogs.ournotes.map((song) =>
+      song.id === 1 ? { ...song, relatedSongIds: [] } : song,
+    ),
+    garupa: catalogs.garupa.map((song) =>
+      [489, 649].includes(song.id)
+        ? {
+            ...song,
+            relatedSongIds: song.relatedSongIds.filter(
+              (reference) => reference !== "ournotes:1",
+            ),
+          }
+        : song,
+    ),
+  };
+  assert.deepEqual(
+    relatedSongs(
+      shortened.ournotes.find((song) => song.id === 1),
+      shortened,
+    ),
+    [],
+  );
+  assert.deepEqual(
+    relatedSongs(
+      shortened.garupa.find((song) => song.id === 489),
+      shortened,
+    ).map((song) => `${song.gameId}:${song.id}`),
+    ["garupa:649"],
+  );
 });
 
 test("explicit links must point to an existing song in both directions", () => {
