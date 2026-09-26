@@ -203,7 +203,7 @@ export function renderDetail(
       ? game.id === "garupa"
         ? `<dt>3Dライブ</dt>
 <dd>${s.live3d === true ? '<span class="pill">対応</span>' : s.live3d === false ? "非対応" : "確認中"}</dd>`
-        : ""
+        : `<dt>MV</dt><dd>${s.mv === true ? '<span class="pill">あり</span>' : s.mv === false ? "なし" : "確認中"}</dd>`
       : `<dt>原曲アーティスト</dt>
 <dd>${e(s.artist || "未確認")}</dd>
 <dt>原曲の使用作品・タイアップ</dt>

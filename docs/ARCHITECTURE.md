@@ -8,7 +8,7 @@
 
 ガルパの編集元は `data/garupa/songs.json` です。アワーノーツと同じ `groups` 形式を使い、バンド・種類をグループ、譜面やBPMなどを各曲に置きます。`scripts/catalog.mjs` が共通Songへ変換し、`gameId: "garupa"` と `stableSongId: String(id)` を追加します。`id` は編集・改名で変えず、削除後も再利用しません。別ゲームではゲームIDとstableSongIdを組にして識別します。
 
-アワーノーツの編集元は `data/ournotes/songs.json` です。公式のリリース時楽曲一覧を5バンド×オリジナル／カバーでまとめ、各曲には固定の数値IDを割り当てています。`scripts/catalog.mjs` が共通Songへ変換し、譜面・BPMなど未確認項目は空欄にします。曲名や所属が変わってもIDは変えず、削除後も再利用しません。各グループの `sourceURL` は発表画像、`availableFrom` はゲーム内実装日で、CDや音源の発売日ではありません。新たな公式発表を確認した場合だけ、次の未使用IDを追加します。
+アワーノーツの編集元は `data/ournotes/songs.json` です。公式のリリース時楽曲一覧を5バンド×オリジナル／カバーでまとめ、各曲には固定の数値IDを割り当てています。`scripts/catalog.mjs` が共通Songへ変換し、譜面・BPMなど未確認項目は空欄にします。曲名や所属が変わってもIDは変えず、削除後も再利用しません。各グループの `availableFrom` はゲーム内実装日で、CDや音源の発売日ではありません。新たな公式発表を確認した場合だけ、次の未使用IDを追加します。
 
 `data/garupa/legacy-song-paths.json` は移行前の曲名パスを楽曲IDに結び付ける固定記録です。既存の旧パスは消さないでください。ビルドは存在しないID、重複パス、不正なパスを拒否します。新曲には旧URLがないので表への追加は不要です。生成物の `legacy-redirects.json` と `.csv` はドメイン移行時の301転送設定の材料です。
 

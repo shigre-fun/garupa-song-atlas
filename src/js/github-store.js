@@ -136,6 +136,58 @@ export class GitHubStore {
     return this.settings;
   }
 
+  async syncRelatedSongs(snapshot, data, song, previous = []) {
+    const currentKey = `${this.game.id}:${song.id}`;
+    const next = song.relatedSongIds ?? [];
+    const otherGame = Object.values(GAMES).find(
+      (game) => game.id !== this.game.id,
+    );
+    let otherData = null;
+    let otherChanged = false;
+    for (const reference of new Set([...previous, ...next])) {
+      if (reference === currentKey)
+        throw new Error("自分自身を関連楽曲に指定できません。");
+      const [gameId, idText] = reference.split(":");
+      const targetGame = GAMES[gameId];
+      if (!targetGame)
+        throw new Error(`関連楽曲のゲームが不正です: ${reference}`);
+      const targetData =
+        gameId === this.game.id
+          ? data
+          : (otherData ??= await this.readJSON(snapshot, otherGame.dataFile));
+      const found = findGarupaSong(targetData, Number(idText));
+      if (!found) {
+        if (next.includes(reference))
+          throw new Error(`関連楽曲が見つかりません: ${reference}`);
+        continue;
+      }
+      const references = new Set(found.song.relatedSongIds ?? []);
+      if (next.includes(reference)) references.add(currentKey);
+      else references.delete(currentKey);
+      if (
+        JSON.stringify([...references]) !==
+        JSON.stringify(found.song.relatedSongIds ?? [])
+      ) {
+        updateGarupaSong(
+          targetData,
+          { ...found.song, relatedSongIds: [...references] },
+          gameId,
+        );
+        if (gameId !== this.game.id) otherChanged = true;
+      }
+    }
+    return otherChanged
+      ? [
+          {
+            path: otherGame.dataFile,
+            mode: "100644",
+            type: "blob",
+            content: JSON.stringify(otherData, null, 2) + "\n",
+          },
+        ]
+      : [];
+  }
+
   async addSong(input, submissionId) {
     if (!/^[a-zA-Z0-9-]{16,80}$/.test(submissionId))
       throw new Error("送信識別子が不正です。画面を再読み込みしてください。");
@@ -167,6 +219,7 @@ export class GitHubStore {
       throw new Error("管理用の番号データが不正です。");
     const song = { ...input, id: state.nextId, submissionId };
     addGarupaSong(data, song, this.game.id);
+    const relatedEntries = await this.syncRelatedSongs(snapshot, data, song);
     const nextState = {
       nextId: state.nextId + 1,
       updatedAt: new Date().toISOString(),
@@ -186,6 +239,7 @@ export class GitHubStore {
           type: "blob",
           content: JSON.stringify(nextState, null, 2) + "\n",
         },
+        ...relatedEntries,
       ],
     });
     const commit = await this.request("/git/commits", "POST", {
@@ -284,6 +338,12 @@ export class GitHubStore {
       revision: operationId,
     };
     updateGarupaSong(data, song, this.game.id);
+    const relatedEntries = await this.syncRelatedSongs(
+      snapshot,
+      data,
+      song,
+      current.relatedSongIds ?? [],
+    );
     const state = await this.readJSON(snapshot, this.statePath);
     const tree = await this.request("/git/trees", "POST", {
       base_tree: snapshot.tree,
@@ -305,6 +365,7 @@ export class GitHubStore {
               2,
             ) + "\n",
         },
+        ...relatedEntries,
       ],
     });
     const commit = await this.request("/git/commits", "POST", {

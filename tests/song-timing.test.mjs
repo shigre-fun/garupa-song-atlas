@@ -24,14 +24,7 @@ test("timing research keeps source details without repeating published song fiel
   for (const entry of report.records) {
     assert.ok(ids.has(entry.id));
     assert.ok(Number.isFinite(entry.sourceLengthSeconds));
-    for (const field of [
-      "title",
-      "bpm",
-      "bpmMin",
-      "bpmMax",
-      "durationSeconds",
-      "sourceURL",
-    ])
+    for (const field of ["title", "bpm", "bpmMin", "bpmMax", "durationSeconds"])
       assert.ok(!Object.hasOwn(entry, field));
   }
 });

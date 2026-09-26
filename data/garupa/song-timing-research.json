@@ -1,5 +1,4 @@
 {
-  "sourceURL": "https://bestdori.com/api/songs/all.7.json",
   "fetchedAt": "2026-09-18T13:29:31.846Z",
   "sha256": "568fe7d37a8fde105af0bedff1ac6c76fee4efff9ab8cfde5013a192f971adf1",
   "method": "EXPERT譜面の時間が正のBPM区間を使用。基本BPMは同値の合計秒数が最大の値（同時間なら最初の出現）、上下限はその最小/最大。演奏時間はゲーム版lengthを切り捨てた整数秒。元の小数はsourceLengthSecondsに保持。",

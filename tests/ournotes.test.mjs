@@ -10,10 +10,51 @@ import {
   compareSongs,
 } from "../src/js/domain.js";
 import { renderList, renderDetail } from "../src/js/views.js";
+import { listGarupaSongs } from "../src/js/garupa-data.js";
 
 const game = GAMES.ournotes;
 const songs = loadGameCatalog(game);
 const data = { updatedAt: "2026-09-25", songs };
+
+test("Our Notes stores MV status without Garupa-only fields", () => {
+  const raw = JSON.parse(fs.readFileSync(game.dataFile, "utf8"));
+  const exceptions = new Set([
+    "碧い瞳の中に",
+    "everscape",
+    "カーネーションの咲く日に",
+    "ジャイアント・キラー・チューン",
+    "Keep on Riddim",
+  ]);
+  const originals = raw.groups
+    .filter((group) => group.category === "オリジナル")
+    .flatMap((group) => group.songs);
+  assert.equal(originals.filter((song) => song.mv === false).length, 5);
+  for (const song of originals)
+    assert.equal(song.mv, !exceptions.has(song.title), song.title);
+  for (const song of listGarupaSongs(raw, game.id)) {
+    assert.ok(!Object.hasOwn(song, "live3d"), song.title);
+    assert.ok(!Object.hasOwn(song.difficulties, "SPECIAL"), song.title);
+  }
+  const present = renderDetail(
+    songs.find((song) => song.id === 1),
+    data,
+    new URLSearchParams(),
+    "/",
+    game,
+  );
+  const absent = renderDetail(
+    songs.find((song) => song.id === 38),
+    data,
+    new URLSearchParams(),
+    "/",
+    game,
+  );
+  assert.match(
+    present,
+    /<dt>MV<\/dt><dd><span class="pill">あり<\/span><\/dd>/,
+  );
+  assert.match(absent, /<dt>MV<\/dt><dd>なし<\/dd>/);
+});
 
 test("Our Notes retains launch IDs as its catalog grows", () => {
   const ids = new Set(songs.map((song) => song.id));

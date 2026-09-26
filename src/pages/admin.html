@@ -225,6 +225,15 @@
                 </select></label
               >
             </div>
+            <div id="mv-fields" class="wide" hidden>
+              <label
+                >MV<select name="mv">
+                  <option value="null">未確認</option>
+                  <option value="true">あり</option>
+                  <option value="false">なし</option>
+                </select></label
+              >
+            </div>
             <div id="cover-fields" class="wide fields" hidden>
               <label class="wide"
                 >原曲アーティスト<input name="originalArtist" maxlength="2000"
@@ -244,6 +253,16 @@
                 rows="2"
                 placeholder="略称や別表記を1行に1つ"
               ></textarea>
+            </label>
+            <label class="wide"
+              >同じ楽曲の別の譜面・収録先<textarea
+                name="relatedSongIds"
+                rows="3"
+                placeholder="garupa:667&#10;ournotes:7"
+              ></textarea>
+              <span class="help"
+                >相手のゲーム名と曲IDを1行に1つ入力します。保存すると相手側にもリンクが追加されます。例：garupa:667</span
+              >
             </label>
           </div>
         </section>

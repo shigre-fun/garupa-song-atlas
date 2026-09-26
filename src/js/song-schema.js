@@ -57,8 +57,38 @@ export function validateSong(song, game = "garupa") {
     song.aliases.some((x) => typeof x !== "string" || x.length > 500)
   )
     fail("検索用別名は500文字以内、50件までです。");
-  if (song.live3d !== null && typeof song.live3d !== "boolean")
+  if (
+    game === "garupa" &&
+    song.live3d !== null &&
+    typeof song.live3d !== "boolean"
+  )
     fail("3Dライブの対応状況が不正です。");
+  if (game === "ournotes") {
+    if (Object.hasOwn(song, "live3d"))
+      fail("アワーノーツに3Dライブはありません。");
+    if (Object.hasOwn(song.difficulties ?? {}, "SPECIAL"))
+      fail("アワーノーツにSPECIALはありません。");
+    if (
+      song.mv !== null &&
+      song.mv !== undefined &&
+      typeof song.mv !== "boolean"
+    )
+      fail("MVの有無が不正です。");
+  }
+  if (
+    song.relatedSongIds !== undefined &&
+    (!Array.isArray(song.relatedSongIds) ||
+      song.relatedSongIds.length > 50 ||
+      new Set(song.relatedSongIds).size !== song.relatedSongIds.length ||
+      song.relatedSongIds.some(
+        (reference) =>
+          typeof reference !== "string" ||
+          !/^(garupa|ournotes):[1-9][0-9]*$/.test(reference),
+      ))
+  )
+    fail(
+      "関連楽曲は「garupa:曲ID」または「ournotes:曲ID」を重複なく入力してください。",
+    );
   for (const key of ["bpm", "bpmMin", "bpmMax", "durationSeconds"]) {
     if (song[key] != null && (!Number.isFinite(song[key]) || song[key] <= 0))
       fail(

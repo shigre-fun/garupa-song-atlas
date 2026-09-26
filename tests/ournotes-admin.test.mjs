@@ -10,6 +10,9 @@ test("Our Notes administrator adds and edits within its own catalog", async () =
   const files = {
     [game.dataFile]: JSON.parse(fs.readFileSync(game.dataFile, "utf8")),
     [game.stateFile]: JSON.parse(fs.readFileSync(game.stateFile, "utf8")),
+    [GAMES.garupa.dataFile]: JSON.parse(
+      fs.readFileSync(GAMES.garupa.dataFile, "utf8"),
+    ),
   };
   const originalCount = listGarupaSongs(files[game.dataFile], game.id).length;
   const nextId = files[game.stateFile].nextId;
@@ -86,7 +89,22 @@ test("Our Notes administrator adds and edits within its own catalog", async () =
     title: "管理画面で追加した曲",
     reading: "カンリガメンデツイカシタキョク",
     releaseOrder: nextId,
+    relatedSongIds: ["garupa:667"],
   };
+  const writesBeforeInvalid = calls.filter(
+    ([method]) => method !== "GET",
+  ).length;
+  await assert.rejects(
+    store.addSong(
+      { ...input, relatedSongIds: ["garupa:999999"] },
+      "ournotes-bad-link-00001",
+    ),
+    /関連楽曲が見つかりません/,
+  );
+  assert.equal(
+    calls.filter(([method]) => method !== "GET").length,
+    writesBeforeInvalid,
+  );
   const added = await store.addSong(input, "ournotes-add-00000001");
   assert.equal(added.id, nextId);
   assert.equal(files[game.stateFile].nextId, nextId + 1);
@@ -98,10 +116,18 @@ test("Our Notes administrator adds and edits within its own catalog", async () =
     findGarupaSong(files[game.dataFile], 1).song.title,
     original.song.title,
   );
+  assert.deepEqual(
+    findGarupaSong(files[GAMES.garupa.dataFile], 667).song.relatedSongIds,
+    ["ournotes:7", `ournotes:${nextId}`],
+  );
+  assert.ok(
+    proposed.tree.some((entry) => entry.path === GAMES.garupa.dataFile),
+  );
   const changed = {
     ...added.editing.song,
     title: "追加直後に修正した曲",
     composer: "確認済み作曲者",
+    relatedSongIds: [],
   };
   await store.updateSong(changed, added.editing, "ournotes-edit-00000001");
   assert.equal(
@@ -109,8 +135,11 @@ test("Our Notes administrator adds and edits within its own catalog", async () =
     originalCount + 1,
   );
   assert.equal((await store.loadSong(nextId)).song.composer, "確認済み作曲者");
-  assert.ok(
-    proposed.tree.every((entry) => entry.path.startsWith("data/ournotes/")),
+  assert.deepEqual(
+    findGarupaSong(files[GAMES.garupa.dataFile], 667).song.relatedSongIds,
+    ["ournotes:7"],
   );
-  assert.ok(!calls.some(([, route]) => route.includes("garupa")));
+  assert.ok(
+    proposed.tree.some((entry) => entry.path === GAMES.garupa.dataFile),
+  );
 });

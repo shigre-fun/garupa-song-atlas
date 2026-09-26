@@ -129,7 +129,10 @@ document.querySelector("#load-song").addEventListener("click", async () => {
     )
       .toISOString()
       .slice(0, 23);
-    form.elements.live3d.value = JSON.stringify(song.live3d);
+    if (game.id === "garupa")
+      form.elements.live3d.value = JSON.stringify(song.live3d);
+    else form.elements.mv.value = JSON.stringify(song.mv ?? null);
+    form.elements.relatedSongIds.value = (song.relatedSongIds ?? []).join("\n");
     form.elements.aliases.value = song.aliases.join("\n");
     for (const name of game.difficulties) {
       const chart = song.difficulties[name];
@@ -195,6 +198,8 @@ function updateVisibility() {
   const original = form.elements.category.value === "オリジナル";
   document.querySelector("#original-fields").hidden =
     !original || game.id === "ournotes";
+  document.querySelector("#mv-fields").hidden =
+    !original || game.id !== "ournotes";
   document.querySelector("#cover-fields").hidden = original;
   const other = form.elements.band.value === "その他";
   document.querySelector("#other-band-label").hidden = !other;
@@ -353,7 +358,13 @@ function enteredSong() {
     composer: value("composer") || null,
     originalArtist: original ? null : value("originalArtist") || null,
     originalWork: original ? null : value("originalWork") || null,
-    live3d: original ? JSON.parse(value("live3d")) : null,
+    ...(game.id === "garupa"
+      ? { live3d: original ? JSON.parse(value("live3d")) : null }
+      : { mv: original ? JSON.parse(value("mv")) : null }),
+    relatedSongIds: value("relatedSongIds")
+      .split("\n")
+      .map((x) => x.trim())
+      .filter(Boolean),
     ...Object.fromEntries(
       ["bpm", "bpmMin", "bpmMax", "durationSeconds"].map((key) => [
         key,

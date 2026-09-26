@@ -5,7 +5,6 @@
       "band": "MyGO!!!!!",
       "category": "オリジナル",
       "availableFrom": "2026-09-24",
-      "sourceURL": "https://www.fromtyo.jp/media/9H6kfC1GnMBx9TEqjjYbWSrXGeXdXUIbSdCLmbIa.jpg",
       "songs": [
         {
           "id": 1,
@@ -16,7 +15,6 @@
           "composer": "長谷川大介(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 190,
           "bpmMin": null,
           "bpmMax": null,
@@ -40,7 +38,8 @@
               "notes": 768
             }
           },
-          "revision": "9b8731b1-321b-4431-af83-1eba99b59f32"
+          "revision": "9b8731b1-321b-4431-af83-1eba99b59f32",
+          "mv": true
         },
         {
           "id": 2,
@@ -51,7 +50,6 @@
           "composer": "hisakuni(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 204,
           "bpmMin": 198,
           "bpmMax": 205,
@@ -75,7 +73,8 @@
               "notes": 809
             }
           },
-          "revision": "18cd6799-0261-4b2b-9ded-a3d7d5b77eae"
+          "revision": "18cd6799-0261-4b2b-9ded-a3d7d5b77eae",
+          "mv": true
         },
         {
           "id": 3,
@@ -86,7 +85,6 @@
           "composer": "木下龍平(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 190,
           "bpmMin": null,
           "bpmMax": null,
@@ -110,7 +108,8 @@
               "notes": 1012
             }
           },
-          "revision": "14a2ba92-6cf6-47ff-afc4-3fd789b5a3db"
+          "revision": "14a2ba92-6cf6-47ff-afc4-3fd789b5a3db",
+          "mv": true
         },
         {
           "id": 4,
@@ -121,7 +120,6 @@
           "composer": "木下龍平(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 166,
           "bpmMin": null,
           "bpmMax": null,
@@ -145,7 +143,8 @@
               "notes": 720
             }
           },
-          "revision": "58d50b67-c739-416d-8096-d6bee1ebc1dc"
+          "revision": "58d50b67-c739-416d-8096-d6bee1ebc1dc",
+          "mv": true
         },
         {
           "id": 5,
@@ -156,7 +155,6 @@
           "composer": "鈴木裕明(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 135,
           "bpmMin": null,
           "bpmMax": null,
@@ -178,9 +176,9 @@
             "EXPERT": {
               "level": 23,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 6,
@@ -191,7 +189,6 @@
           "composer": "尾崎豪(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 200,
           "bpmMin": null,
           "bpmMax": null,
@@ -213,9 +210,9 @@
             "EXPERT": {
               "level": 25,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 7,
@@ -226,7 +223,6 @@
           "composer": null,
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 97,
           "bpmMin": 96,
           "bpmMax": 103,
@@ -248,9 +244,12 @@
             "EXPERT": {
               "level": 20,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true,
+          "relatedSongIds": [
+            "garupa:667"
+          ]
         },
         {
           "id": 8,
@@ -261,7 +260,6 @@
           "composer": "横地健太(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 190,
           "bpmMin": 110,
           "bpmMax": 190,
@@ -283,9 +281,9 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 9,
@@ -296,7 +294,6 @@
           "composer": "松坂康司(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 260,
           "bpmMin": null,
           "bpmMax": null,
@@ -318,9 +315,9 @@
             "EXPERT": {
               "level": 27,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 10,
@@ -331,7 +328,6 @@
           "composer": "庄司夏葵(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 120,
           "bpmMin": null,
           "bpmMax": null,
@@ -353,9 +349,9 @@
             "EXPERT": {
               "level": 23,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 11,
@@ -366,7 +362,6 @@
           "composer": "金崎真士(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 190,
           "bpmMin": null,
           "bpmMax": null,
@@ -388,9 +383,9 @@
             "EXPERT": {
               "level": 25,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 12,
@@ -401,7 +396,6 @@
           "composer": "庄司夏葵(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 130,
           "bpmMin": null,
           "bpmMax": null,
@@ -423,9 +417,9 @@
             "EXPERT": {
               "level": 23,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 13,
@@ -436,7 +430,6 @@
           "composer": "トミタカズキ(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 181,
           "bpmMin": 178,
           "bpmMax": 181,
@@ -458,9 +451,9 @@
             "EXPERT": {
               "level": 24,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 14,
@@ -471,7 +464,6 @@
           "composer": null,
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 182,
           "bpmMin": null,
           "bpmMax": null,
@@ -493,9 +485,9 @@
             "EXPERT": {
               "level": 24,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 15,
@@ -506,7 +498,6 @@
           "composer": "長谷川大介(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 190,
           "bpmMin": null,
           "bpmMax": null,
@@ -528,9 +519,9 @@
             "EXPERT": {
               "level": 29,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 16,
@@ -541,7 +532,6 @@
           "composer": "トミタカズキ(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 182,
           "bpmMin": 167,
           "bpmMax": 197,
@@ -563,9 +553,9 @@
             "EXPERT": {
               "level": 25,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 17,
@@ -576,7 +566,6 @@
           "composer": "田邊駿一",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 210,
           "bpmMin": null,
           "bpmMax": null,
@@ -598,9 +587,9 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 18,
@@ -611,7 +600,6 @@
           "composer": "長谷川大介(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 180,
           "bpmMin": null,
           "bpmMax": null,
@@ -633,9 +621,9 @@
             "EXPERT": {
               "level": 28,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         }
       ]
     },
@@ -643,7 +631,6 @@
       "band": "MyGO!!!!!",
       "category": "カバー",
       "availableFrom": "2026-09-24",
-      "sourceURL": "https://www.fromtyo.jp/media/9H6kfC1GnMBx9TEqjjYbWSrXGeXdXUIbSdCLmbIa.jpg",
       "songs": [
         {
           "id": 19,
@@ -654,7 +641,6 @@
           "composer": "谷口鮪",
           "originalArtist": "KANA-BOON",
           "originalWork": null,
-          "live3d": null,
           "bpm": 175,
           "bpmMin": null,
           "bpmMax": null,
@@ -676,8 +662,7 @@
             "EXPERT": {
               "level": 25,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         },
         {
@@ -689,7 +674,6 @@
           "composer": "バルーン",
           "originalArtist": "バルーン feat.v flower",
           "originalWork": null,
-          "live3d": null,
           "bpm": 145,
           "bpmMin": null,
           "bpmMax": null,
@@ -711,8 +695,7 @@
             "EXPERT": {
               "level": 21,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         },
         {
@@ -724,7 +707,6 @@
           "composer": "音羽-otoha-",
           "originalArtist": "結束バンド",
           "originalWork": "TVアニメ「ぼっち・ざ・ろっく！」OP",
-          "live3d": null,
           "bpm": 190,
           "bpmMin": null,
           "bpmMax": null,
@@ -746,8 +728,7 @@
             "EXPERT": {
               "level": 25,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         },
         {
@@ -759,7 +740,6 @@
           "composer": "藤原 聡",
           "originalArtist": "Official髭男dism",
           "originalWork": "アニメ「東京リベンジャーズ」",
-          "live3d": null,
           "bpm": 143,
           "bpmMin": 65,
           "bpmMax": 143,
@@ -781,8 +761,7 @@
             "EXPERT": {
               "level": 24,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         }
       ]
@@ -791,7 +770,6 @@
       "band": "Ave Mujica",
       "category": "オリジナル",
       "availableFrom": "2026-09-24",
-      "sourceURL": "https://www.fromtyo.jp/media/XrpeIAIDo7OiOrJT83hXNp99WQiOjssBA9iRCD8C.jpg",
       "songs": [
         {
           "id": 23,
@@ -802,7 +780,6 @@
           "composer": "上松範康（Elements Garden）",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 222,
           "bpmMin": 97,
           "bpmMax": 222,
@@ -824,9 +801,9 @@
             "EXPERT": {
               "level": 27,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 24,
@@ -837,7 +814,6 @@
           "composer": "長谷川大介(SUPA LOVE)、Diggy-MO’",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 200,
           "bpmMin": null,
           "bpmMax": null,
@@ -859,9 +835,9 @@
             "EXPERT": {
               "level": 28,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 25,
@@ -872,7 +848,6 @@
           "composer": "松坂康司(SUPA LOVE)、Diggy-MO’",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 158,
           "bpmMin": null,
           "bpmMax": null,
@@ -894,9 +869,9 @@
             "EXPERT": {
               "level": 22,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 26,
@@ -907,7 +882,6 @@
           "composer": "o-saka(SUPA LOVE)、Diggy-MO’",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 103,
           "bpmMin": null,
           "bpmMax": null,
@@ -929,9 +903,9 @@
             "EXPERT": {
               "level": 23,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 27,
@@ -942,7 +916,6 @@
           "composer": "あらケン(SUPA LOVE)、Diggy-MO’",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 114,
           "bpmMin": 113,
           "bpmMax": 162,
@@ -964,9 +937,9 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 28,
@@ -977,7 +950,6 @@
           "composer": "木下龍平(SUPA LOVE)、Diggy-MO’",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 140,
           "bpmMin": null,
           "bpmMax": null,
@@ -999,9 +971,9 @@
             "EXPERT": {
               "level": 24,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 29,
@@ -1012,7 +984,6 @@
           "composer": "高橋涼(SUPA LOVE)、Diggy-MO’",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 196,
           "bpmMin": 184,
           "bpmMax": 196,
@@ -1034,9 +1005,9 @@
             "EXPERT": {
               "level": 25,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 30,
@@ -1047,7 +1018,6 @@
           "composer": "長谷川大介(SUPA LOVE)、Diggy-MO’",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 236,
           "bpmMin": null,
           "bpmMax": null,
@@ -1069,9 +1039,9 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 31,
@@ -1082,7 +1052,6 @@
           "composer": "高橋涼(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 197,
           "bpmMin": null,
           "bpmMax": null,
@@ -1104,9 +1073,9 @@
             "EXPERT": {
               "level": 25,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 32,
@@ -1117,7 +1086,6 @@
           "composer": "トミタカズキ(SUPA LOVE)、Diggy-MO’",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 95,
           "bpmMin": null,
           "bpmMax": null,
@@ -1139,9 +1107,9 @@
             "EXPERT": {
               "level": 21,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 33,
@@ -1152,7 +1120,6 @@
           "composer": null,
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 148,
           "bpmMin": null,
           "bpmMax": null,
@@ -1174,9 +1141,9 @@
             "EXPERT": {
               "level": 24,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 34,
@@ -1187,7 +1154,6 @@
           "composer": "長谷川大介(SUPA LOVE)、Diggy-MO’",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 186,
           "bpmMin": null,
           "bpmMax": null,
@@ -1209,9 +1175,9 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 35,
@@ -1222,7 +1188,6 @@
           "composer": "賀佐泰洋(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 198,
           "bpmMin": null,
           "bpmMax": null,
@@ -1244,9 +1209,9 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 36,
@@ -1257,7 +1222,6 @@
           "composer": "角本麻衣(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 148,
           "bpmMin": null,
           "bpmMax": null,
@@ -1279,9 +1243,9 @@
             "EXPERT": {
               "level": 25,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 37,
@@ -1292,7 +1256,6 @@
           "composer": "あらケン(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 190,
           "bpmMin": null,
           "bpmMax": null,
@@ -1314,9 +1277,9 @@
             "EXPERT": {
               "level": 28,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 38,
@@ -1327,7 +1290,6 @@
           "composer": "Diggy-MO’、松坂康司(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 138,
           "bpmMin": null,
           "bpmMax": null,
@@ -1349,9 +1311,9 @@
             "EXPERT": {
               "level": 21,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": false
         },
         {
           "id": 39,
@@ -1362,7 +1324,6 @@
           "composer": "Diggy-MO’、植木建象",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 200,
           "bpmMin": null,
           "bpmMax": null,
@@ -1384,9 +1345,9 @@
             "EXPERT": {
               "level": 27,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         }
       ]
     },
@@ -1394,7 +1355,6 @@
       "band": "Ave Mujica",
       "category": "カバー",
       "availableFrom": "2026-09-24",
-      "sourceURL": "https://www.fromtyo.jp/media/XrpeIAIDo7OiOrJT83hXNp99WQiOjssBA9iRCD8C.jpg",
       "songs": [
         {
           "id": 40,
@@ -1405,7 +1365,6 @@
           "composer": "佐藤英敏",
           "originalArtist": "高橋洋子",
           "originalWork": "アニメ「新世紀エヴァンゲリオン」",
-          "live3d": null,
           "bpm": 140,
           "bpmMin": 85,
           "bpmMax": 140,
@@ -1427,8 +1386,7 @@
             "EXPERT": {
               "level": 23,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         },
         {
@@ -1440,7 +1398,6 @@
           "composer": "DJ松永",
           "originalArtist": "Creepy Nuts",
           "originalWork": "TVアニメ「よふかしのうた」OP",
-          "live3d": null,
           "bpm": 200,
           "bpmMin": null,
           "bpmMax": null,
@@ -1462,8 +1419,7 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         },
         {
@@ -1475,7 +1431,6 @@
           "composer": "片倉三起也",
           "originalArtist": "ALI PROJECT",
           "originalWork": "TVアニメ「かみちゃまかりん」OP",
-          "live3d": null,
           "bpm": 190,
           "bpmMin": null,
           "bpmMax": null,
@@ -1497,8 +1452,7 @@
             "EXPERT": {
               "level": 25,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         },
         {
@@ -1510,7 +1464,6 @@
           "composer": "atsuko/KATSU",
           "originalArtist": "angela",
           "originalWork": "TVアニメ「K」OP",
-          "live3d": null,
           "bpm": 176,
           "bpmMin": null,
           "bpmMax": null,
@@ -1532,8 +1485,7 @@
             "EXPERT": {
               "level": 24,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         }
       ]
@@ -1542,7 +1494,6 @@
       "band": "夢限大みゅーたいぷ",
       "category": "オリジナル",
       "availableFrom": "2026-09-24",
-      "sourceURL": "https://www.fromtyo.jp/media/y2zsBhuoTnMu9JEYOPWntmMM8cC7czb9klLQXfNF.jpg",
       "songs": [
         {
           "id": 44,
@@ -1553,7 +1504,6 @@
           "composer": "堀江晶太",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 195,
           "bpmMin": null,
           "bpmMax": null,
@@ -1575,9 +1525,9 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 45,
@@ -1588,7 +1538,6 @@
           "composer": "eba",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 125,
           "bpmMin": null,
           "bpmMax": null,
@@ -1610,9 +1559,9 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 46,
@@ -1623,7 +1572,6 @@
           "composer": "凍堂遊維",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 189,
           "bpmMin": null,
           "bpmMax": null,
@@ -1645,9 +1593,9 @@
             "EXPERT": {
               "level": 27,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 47,
@@ -1658,7 +1606,6 @@
           "composer": "堀江晶太、白神真志朗",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 145,
           "bpmMin": null,
           "bpmMax": null,
@@ -1680,9 +1627,9 @@
             "EXPERT": {
               "level": 24,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 48,
@@ -1693,7 +1640,6 @@
           "composer": "園田健太郎",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 195,
           "bpmMin": null,
           "bpmMax": null,
@@ -1715,9 +1661,9 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 49,
@@ -1728,7 +1674,6 @@
           "composer": "堀江晶太",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 194,
           "bpmMin": null,
           "bpmMax": null,
@@ -1750,9 +1695,9 @@
             "EXPERT": {
               "level": 25,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 50,
@@ -1763,7 +1708,6 @@
           "composer": "哥丸雄貴",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 176,
           "bpmMin": null,
           "bpmMax": null,
@@ -1785,9 +1729,9 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 51,
@@ -1798,7 +1742,6 @@
           "composer": "田淵智也",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 190,
           "bpmMin": null,
           "bpmMax": null,
@@ -1820,9 +1763,9 @@
             "EXPERT": {
               "level": 27,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 52,
@@ -1833,7 +1776,6 @@
           "composer": "sabio",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 122,
           "bpmMin": null,
           "bpmMax": null,
@@ -1855,9 +1797,9 @@
             "EXPERT": {
               "level": 22,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 53,
@@ -1868,7 +1810,6 @@
           "composer": "千石ユノ、堀江晶太",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 194,
           "bpmMin": null,
           "bpmMax": null,
@@ -1890,9 +1831,9 @@
             "EXPERT": {
               "level": 23,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 54,
@@ -1903,7 +1844,6 @@
           "composer": "TeddyLoid・堀江晶太",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 136,
           "bpmMin": null,
           "bpmMax": null,
@@ -1925,9 +1865,9 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 55,
@@ -1938,7 +1878,6 @@
           "composer": "sabio",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 148,
           "bpmMin": null,
           "bpmMax": null,
@@ -1960,9 +1899,9 @@
             "EXPERT": {
               "level": 25,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 56,
@@ -1973,7 +1912,6 @@
           "composer": "白神真志朗、千石ユノ",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 204,
           "bpmMin": null,
           "bpmMax": null,
@@ -1995,9 +1933,9 @@
             "EXPERT": {
               "level": 24,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 57,
@@ -2008,7 +1946,6 @@
           "composer": "白神真志朗",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 137,
           "bpmMin": null,
           "bpmMax": null,
@@ -2030,9 +1967,9 @@
             "EXPERT": {
               "level": 25,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 58,
@@ -2043,7 +1980,6 @@
           "composer": "sabio",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 180,
           "bpmMin": null,
           "bpmMax": null,
@@ -2065,9 +2001,9 @@
             "EXPERT": {
               "level": 24,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         }
       ]
     },
@@ -2075,7 +2011,6 @@
       "band": "夢限大みゅーたいぷ",
       "category": "カバー",
       "availableFrom": "2026-09-24",
-      "sourceURL": "https://www.fromtyo.jp/media/y2zsBhuoTnMu9JEYOPWntmMM8cC7czb9klLQXfNF.jpg",
       "songs": [
         {
           "id": 59,
@@ -2086,7 +2021,6 @@
           "composer": "Kemu",
           "originalArtist": "kemu feat.IA",
           "originalWork": null,
-          "live3d": null,
           "bpm": 186,
           "bpmMin": 85,
           "bpmMax": 186,
@@ -2108,8 +2042,7 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         },
         {
@@ -2121,7 +2054,6 @@
           "composer": "Giga ＆ TeddyLoid",
           "originalArtist": "Ado",
           "originalWork": "ユニバーサル・スタジオ・ジャパン「ゾンビ・デ・ダンス」",
-          "live3d": null,
           "bpm": 106,
           "bpmMin": null,
           "bpmMax": null,
@@ -2143,8 +2075,7 @@
             "EXPERT": {
               "level": 23,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         },
         {
@@ -2156,7 +2087,6 @@
           "composer": "田淵智也",
           "originalArtist": "UNISON SQUARE GARDEN",
           "originalWork": "TVアニメ「TIGER & BUNNY」OP",
-          "live3d": null,
           "bpm": 182,
           "bpmMin": null,
           "bpmMax": null,
@@ -2178,8 +2108,7 @@
             "EXPERT": {
               "level": 23,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         },
         {
@@ -2191,7 +2120,6 @@
           "composer": "Ayase",
           "originalArtist": "YOASOBI",
           "originalWork": "アニメ「〈物語〉シリーズ オフ＆モンスターシーズン」主題歌",
-          "live3d": null,
           "bpm": 144,
           "bpmMin": null,
           "bpmMax": null,
@@ -2213,8 +2141,7 @@
             "EXPERT": {
               "level": 24,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         }
       ]
@@ -2223,7 +2150,6 @@
       "band": "millsage",
       "category": "オリジナル",
       "availableFrom": "2026-09-24",
-      "sourceURL": "https://www.fromtyo.jp/media/4zArApXwoLAf0qeY3dckK7SESVLE94pDBfbG33Rk.jpg",
       "songs": [
         {
           "id": 63,
@@ -2234,7 +2160,6 @@
           "composer": "藤井健太郎",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 170,
           "bpmMin": null,
           "bpmMax": null,
@@ -2256,9 +2181,9 @@
             "EXPERT": {
               "level": 28,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 64,
@@ -2269,7 +2194,6 @@
           "composer": "瀬名水紀(Dream Monster)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 188,
           "bpmMin": null,
           "bpmMax": null,
@@ -2291,9 +2215,9 @@
             "EXPERT": {
               "level": 25,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 65,
@@ -2304,7 +2228,6 @@
           "composer": "瀬名水紀(Dream Monster)、Aira",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 150,
           "bpmMin": null,
           "bpmMax": null,
@@ -2326,9 +2249,9 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": false
         },
         {
           "id": 66,
@@ -2339,7 +2262,6 @@
           "composer": "藤井健太郎、瀬名水紀(Dream Monster)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 198,
           "bpmMin": null,
           "bpmMax": null,
@@ -2361,9 +2283,9 @@
             "EXPERT": {
               "level": 28,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": false
         }
       ]
     },
@@ -2371,7 +2293,6 @@
       "band": "millsage",
       "category": "カバー",
       "availableFrom": "2026-09-24",
-      "sourceURL": "https://www.fromtyo.jp/media/4zArApXwoLAf0qeY3dckK7SESVLE94pDBfbG33Rk.jpg",
       "songs": [
         {
           "id": 67,
@@ -2382,7 +2303,6 @@
           "composer": "キタニタツヤ",
           "originalArtist": "キタニタツヤ",
           "originalWork": "アニメ「呪術廻戦 懐玉・玉折」",
-          "live3d": null,
           "bpm": 152,
           "bpmMin": null,
           "bpmMax": null,
@@ -2404,8 +2324,7 @@
             "EXPERT": {
               "level": 21,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         },
         {
@@ -2417,7 +2336,6 @@
           "composer": "藤原聡",
           "originalArtist": "Official髭男dism",
           "originalWork": "映画「コンフィデンスマンJP ロマンス編」主題歌",
-          "live3d": null,
           "bpm": 92,
           "bpmMin": null,
           "bpmMax": null,
@@ -2439,8 +2357,7 @@
             "EXPERT": {
               "level": 22,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         },
         {
@@ -2452,7 +2369,6 @@
           "composer": "TK",
           "originalArtist": "TK from 凛として時雨",
           "originalWork": "アニメ「東京喰種トーキョーグール」",
-          "live3d": null,
           "bpm": 135,
           "bpmMin": null,
           "bpmMax": null,
@@ -2474,8 +2390,7 @@
             "EXPERT": {
               "level": 24,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         },
         {
@@ -2487,7 +2402,6 @@
           "composer": "ぬゆり",
           "originalArtist": "ぬゆり feat.flower",
           "originalWork": "ゲーム「プロジェクトセカイ　カラフルステージ！ feat.初音ミク」書き下ろし楽曲",
-          "live3d": null,
           "bpm": 132,
           "bpmMin": null,
           "bpmMax": null,
@@ -2509,8 +2423,7 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         }
       ]
@@ -2519,7 +2432,6 @@
       "band": "一家Dumb Rock!",
       "category": "オリジナル",
       "availableFrom": "2026-09-24",
-      "sourceURL": "https://www.fromtyo.jp/media/rZQj5zgaUTpzREOebabUeq1iVE8ZqfRQsH57Ylgi.jpg",
       "songs": [
         {
           "id": 71,
@@ -2530,7 +2442,6 @@
           "composer": "藤井健太郎",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 128,
           "bpmMin": null,
           "bpmMax": null,
@@ -2552,9 +2463,9 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 72,
@@ -2565,7 +2476,6 @@
           "composer": "藤井健太郎",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 130,
           "bpmMin": null,
           "bpmMax": null,
@@ -2587,9 +2497,9 @@
             "EXPERT": {
               "level": 26,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": true
         },
         {
           "id": 73,
@@ -2600,7 +2510,6 @@
           "composer": "瀬名水紀(Dream Monster)",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 107,
           "bpmMin": null,
           "bpmMax": null,
@@ -2622,9 +2531,9 @@
             "EXPERT": {
               "level": 27,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": false
         },
         {
           "id": 74,
@@ -2635,7 +2544,6 @@
           "composer": "藤井健太郎",
           "originalArtist": null,
           "originalWork": null,
-          "live3d": null,
           "bpm": 135,
           "bpmMin": null,
           "bpmMax": null,
@@ -2657,9 +2565,9 @@
             "EXPERT": {
               "level": 23,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "mv": false
         }
       ]
     },
@@ -2667,7 +2575,6 @@
       "band": "一家Dumb Rock!",
       "category": "カバー",
       "availableFrom": "2026-09-24",
-      "sourceURL": "https://www.fromtyo.jp/media/rZQj5zgaUTpzREOebabUeq1iVE8ZqfRQsH57Ylgi.jpg",
       "songs": [
         {
           "id": 75,
@@ -2678,7 +2585,6 @@
           "composer": "peppe／穴見真吾",
           "originalArtist": "緑黄色社会",
           "originalWork": null,
-          "live3d": null,
           "bpm": 138,
           "bpmMin": null,
           "bpmMax": null,
@@ -2700,8 +2606,7 @@
             "EXPERT": {
               "level": 23,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         },
         {
@@ -2713,7 +2618,6 @@
           "composer": "UZ",
           "originalArtist": "SPYAIR",
           "originalWork": "アニメ「銀魂'」",
-          "live3d": null,
           "bpm": 113,
           "bpmMin": null,
           "bpmMax": null,
@@ -2735,8 +2639,7 @@
             "EXPERT": {
               "level": 23,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         },
         {
@@ -2748,7 +2651,6 @@
           "composer": "ORANGE RANGE",
           "originalArtist": "ORANGE RANGE",
           "originalWork": "ドラマ「花ざかりの君たちへ～イケメン♂パラダイス～」OP",
-          "live3d": null,
           "bpm": 145,
           "bpmMin": null,
           "bpmMax": null,
@@ -2770,8 +2672,7 @@
             "EXPERT": {
               "level": 21,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         },
         {
@@ -2783,7 +2684,6 @@
           "composer": "アイナ・ジ・エンド、Shin Sakiura",
           "originalArtist": "アイナ・ジ・エンド",
           "originalWork": "TVアニメ「ダンダダン 第2期」OP",
-          "live3d": null,
           "bpm": 186,
           "bpmMin": null,
           "bpmMax": null,
@@ -2805,8 +2705,7 @@
             "EXPERT": {
               "level": 23,
               "notes": null
-            },
-            "SPECIAL": null
+            }
           }
         }
       ]

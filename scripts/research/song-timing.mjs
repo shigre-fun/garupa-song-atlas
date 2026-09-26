@@ -75,7 +75,6 @@ for (const song of listGarupaSongs(data)) {
   pending.push({ song, timing });
 }
 const report = {
-  sourceURL: "https://bestdori.com/api/songs/all.7.json",
   fetchedAt: fs.statSync(sourcePath).mtime.toISOString(),
   sha256: crypto.createHash("sha256").update(raw).digest("hex"),
   method:

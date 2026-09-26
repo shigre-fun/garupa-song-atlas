@@ -29744,7 +29744,10 @@
           "bpm": 97,
           "bpmMin": 96,
           "bpmMax": 103,
-          "durationSeconds": 120
+          "durationSeconds": 120,
+          "relatedSongIds": [
+            "ournotes:7"
+          ]
         }
       ]
     },

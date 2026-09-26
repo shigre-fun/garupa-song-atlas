@@ -11,7 +11,10 @@ import {
   songPath,
 } from "../src/js/urls.js";
 import { renderList, renderDetail } from "../src/js/views.js";
-import { relatedSongs } from "../src/js/related-songs.js";
+import {
+  relatedSongs,
+  validateRelatedSongIds,
+} from "../src/js/related-songs.js";
 import {
   escapeHTML,
   safeJSON,
@@ -40,6 +43,7 @@ const games = Object.values(GAMES);
 const catalogs = Object.fromEntries(
   games.map((game) => [game.id, loadGameCatalog(game)]),
 );
+validateRelatedSongIds(catalogs);
 const garupaSongs = catalogs.garupa;
 const siteData = JSON.parse(fs.readFileSync("data/settings.json", "utf8"));
 const adminStates = Object.fromEntries(
@@ -313,7 +317,7 @@ const informationPages = [
     slug: "sources",
     name: "データ出典・更新方針",
     description: `${settings.name}の楽曲情報の出典と更新方法、確認中の項目の扱いを説明します。`,
-    content: `<h1>データ出典・更新方針</h1><section class="panel"><h2>データの管理</h2><p>ガルパの楽曲情報はゲーム内情報と公開資料を参照し、手動で編集しています。確認できない項目は未確認として表示し、推測した数値で埋めません。</p><h2>アワーノーツ</h2><p>リリース時の曲名・演奏バンド・オリジナル／カバーの区分は<a href="https://www.fromtyo.jp/news/20260915">開発元の初期実装楽曲発表</a>を参照しました。2026年9月25日以降の追加予定曲は、実装を確認するまで掲載しません。BPM・譜面難易度・ノーツ数など未確認の項目は空欄として扱います。</p><h2>BPMと演奏時間</h2><p>ガルパ既存曲のBPMとゲーム内演奏時間は<a href="https://bestdori.com/api/songs/all.7.json">Bestdori!の公開データ</a>を参照して調査しました。基本BPMはEXPERT譜面で継続時間が最も長い値、演奏時間はゲーム版の長さを秒単位へ切り捨てた値です。元データとの対応と詳細はリポジトリ内の調査記録に残しています。</p><p>ページのデータ更新日は個別の楽曲が最後に変更された日を示すものではありません。</p></section>`,
+    content: `<h1>データ出典・更新方針</h1><section class="panel"><h2>データの管理</h2><p>ガルパの楽曲情報はゲーム内情報と公開資料を参照し、手動で編集しています。確認できない項目は未確認として表示し、推測した数値で埋めません。</p><h2>アワーノーツ</h2><p>リリース時の曲名・演奏バンド・オリジナル／カバーの区分は<a href="https://www.fromtyo.jp/news/20260915">開発元の初期実装楽曲発表</a>を参照しました。2026年9月25日以降の追加予定曲は、実装を確認するまで掲載しません。BPM・譜面難易度・ノーツ数など未確認の項目は空欄として扱います。</p><h2>BPMと演奏時間</h2><p>ガルパ既存曲のBPMとゲーム内演奏時間はBestdori!の公開データを参照して調査しました。基本BPMはEXPERT譜面で継続時間が最も長い値、演奏時間はゲーム版の長さを秒単位へ切り捨てた値です。元データとの対応と詳細はリポジトリ内の調査記録に残しています。</p><p>ページのデータ更新日は個別の楽曲が最後に変更された日を示すものではありません。</p></section>`,
   },
   {
     slug: "privacy",
