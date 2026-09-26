@@ -33,14 +33,14 @@
             },
             "HARD": {
               "level": 20,
-              "notes": null
+              "notes": 682
             },
             "EXPERT": {
               "level": 25,
-              "notes": null
+              "notes": 768
             }
           },
-          "revision": "2a5db91d-809e-408d-8eef-35d7254d2e2b"
+          "revision": "9b8731b1-321b-4431-af83-1eba99b59f32"
         },
         {
           "id": 2,
