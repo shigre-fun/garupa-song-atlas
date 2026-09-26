@@ -45,37 +45,37 @@
         {
           "id": 2,
           "title": "壱雫空",
-          "reading": "ヒトシスク",
-          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "reading": "ヒトシズク",
+          "releaseDate": "2026-09-24T00:00+09:00",
           "releaseOrder": 2,
           "composer": "hisakuni(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
           "live3d": null,
-          "bpm": null,
-          "bpmMin": null,
-          "bpmMax": null,
-          "durationSeconds": null,
+          "bpm": 204,
+          "bpmMin": 198,
+          "bpmMax": 205,
+          "durationSeconds": 89,
           "aliases": [],
           "difficulties": {
             "EASY": {
-              "level": null,
-              "notes": null
+              "level": 7,
+              "notes": 219
             },
             "NORMAL": {
-              "level": null,
-              "notes": null
+              "level": 14,
+              "notes": 364
             },
             "HARD": {
-              "level": null,
-              "notes": null
+              "level": 21,
+              "notes": 572
             },
             "EXPERT": {
-              "level": null,
-              "notes": null
-            },
-            "SPECIAL": null
-          }
+              "level": 27,
+              "notes": 809
+            }
+          },
+          "revision": "18cd6799-0261-4b2b-9ded-a3d7d5b77eae"
         },
         {
           "id": 3,
