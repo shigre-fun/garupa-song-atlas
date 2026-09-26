@@ -220,38 +220,39 @@
           "id": 7,
           "title": "春日影（MyGO!!!!! ver.）",
           "reading": "ハルヒカゲマイゴバージョン",
-          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseDate": "2026-09-24T00:00+09:00",
           "releaseOrder": 7,
-          "composer": null,
+          "composer": "藤田淳平(Elements Garden)",
           "originalArtist": null,
           "originalWork": null,
           "bpm": 97,
           "bpmMin": 96,
           "bpmMax": 103,
-          "durationSeconds": null,
+          "durationSeconds": 118,
           "aliases": [],
           "difficulties": {
             "EASY": {
               "level": 6,
-              "notes": null
+              "notes": 261
             },
             "NORMAL": {
               "level": 11,
-              "notes": null
+              "notes": 327
             },
             "HARD": {
               "level": 15,
-              "notes": null
+              "notes": 448
             },
             "EXPERT": {
               "level": 20,
-              "notes": null
+              "notes": 610
             }
           },
           "mv": true,
           "relatedSongIds": [
             "garupa:667"
-          ]
+          ],
+          "revision": "231ada47-e50c-4a04-9c24-11ebd929744c"
         },
         {
           "id": 8,
