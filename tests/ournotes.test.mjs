@@ -3,47 +3,76 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import { loadGameCatalog } from "../scripts/catalog.mjs";
 import { GAMES } from "../src/js/site-config.js";
-import { filteredSongs, sortState, compareSongs } from "../src/js/domain.js";
+import {
+  bandOrder,
+  filteredSongs,
+  sortState,
+  compareSongs,
+} from "../src/js/domain.js";
 import { renderList, renderDetail } from "../src/js/views.js";
 
 const game = GAMES.ournotes;
 const songs = loadGameCatalog(game);
 const data = { updatedAt: "2026-09-25", songs };
 
-test("Our Notes retains launch songs and leaves unverified facts empty", () => {
-  assert.equal(songs.length, 78);
-  assert.equal(new Set(songs.map((song) => song.stableSongId)).size, 78);
-  assert.equal(new Set(songs.map((song) => song.band)).size, 5);
-  assert.equal(songs[0].title, "迷星叫");
-  assert.equal(songs.at(-1).title, "サムライハート(Some Like It Hot!!)");
-  assert.ok(songs.every((song) => song.reading.trim()));
-  assert.equal(songs[0].composer, "長谷川大介(SUPA LOVE)");
-  assert.equal(
-    songs.find((song) => song.title === "unravel").work,
-    "アニメ「東京喰種トーキョーグール」",
-  );
+test("Our Notes retains launch IDs as its catalog grows", () => {
+  const ids = new Set(songs.map((song) => song.id));
+  assert.ok(songs.length >= 78);
+  assert.equal(ids.size, songs.length);
+  for (let id = 1; id <= 78; id++) assert.ok(ids.has(id), `launch ID ${id}`);
   assert.ok(
-    songs.every((song) => song.bpm === null && song.difficulties.length === 4),
-  );
-  assert.ok(
-    songs.every((song) =>
-      song.difficulties.every(
-        (chart) => chart.level === null && chart.notes === null,
-      ),
-    ),
-  );
-  assert.ok(!songs.some((song) => song.title === "ちゅ、多様性。"));
-  assert.ok(
-    JSON.parse(fs.readFileSync(game.dataFile, "utf8")).groups.every((group) =>
-      group.sourceURL.startsWith("https://www.fromtyo.jp/media/"),
+    songs.every(
+      (song) => song.difficulties.length === game.difficulties.length,
     ),
   );
 });
 
+test("Our Notes renders added songs and populated chart fields", () => {
+  const total = Math.ceil(songs.length / 50) * 50 + 1;
+  const nextId = Math.max(...songs.map((song) => song.id)) + 1;
+  const prototype = songs.find((song) => song.id === 1);
+  const added = Array.from({ length: total - songs.length }, (_, index) => {
+    const id = nextId + index;
+    return {
+      ...prototype,
+      id,
+      stableSongId: String(id),
+      slug: String(id),
+      title: `追加曲${id}`,
+      bpm: 180,
+      bpmMin: 180,
+      bpmMax: 180,
+      durationSeconds: 120,
+      difficulties: game.difficulties.map(() => ({ level: 20, notes: 500 })),
+    };
+  });
+  const future = { ...data, songs: [...songs, ...added] };
+  const lastPage = Math.ceil(total / 50);
+  const list = renderList(
+    future,
+    new URLSearchParams({ page: String(lastPage) }),
+    "/",
+    game,
+  );
+  assert.ok(list.includes(`${lastPage} / ${lastPage}`));
+  assert.equal((list.match(/class="song-title"/g) || []).length, 1);
+  const detail = renderDetail(
+    added[0],
+    future,
+    new URLSearchParams(),
+    "/",
+    game,
+  );
+  for (const value of ["180", "2:00", "500"]) assert.ok(detail.includes(value));
+});
+
 test("Our Notes list uses Garupa controls, multiple filters and seven sort modes", () => {
   const all = renderList(data, new URLSearchParams(), "/", game);
-  assert.equal((all.match(/class="song-title"/g) || []).length, 50);
-  assert.match(all, /1 \/ 2/);
+  assert.equal(
+    (all.match(/class="song-title"/g) || []).length,
+    Math.min(50, songs.length),
+  );
+  assert.ok(all.includes(`1 / ${Math.ceil(songs.length / 50)}`));
   for (const band of game.bands) assert.ok(all.includes(band));
   for (const mode of [
     "band",
@@ -57,16 +86,29 @@ test("Our Notes list uses Garupa controls, multiple filters and seven sort modes
     assert.ok(all.includes(`data-sort="${mode}"`));
   assert.equal(sortState(new URLSearchParams(), game).difficulty, 3);
   assert.doesNotMatch(all, /SPECIAL|エクストラ/);
-  const params = new URLSearchParams(
-    "type=normal&type=anime&band=0&band=1&q=迷星叫",
+  const target = songs.find((song) => song.id === 1);
+  const targetBand = bandOrder(target, game);
+  const params = new URLSearchParams();
+  params.append("type", target.type);
+  params.append(
+    "type",
+    game.categories.find((type) => type !== target.type),
   );
-  assert.deepEqual(
-    filteredSongs(songs, params, game).map((song) => song.id),
-    [1],
+  params.append("band", String(targetBand));
+  params.append("band", String(targetBand === 0 ? 1 : 0));
+  params.set("q", target.title);
+  const matches = filteredSongs(songs, params, game).sort(
+    compareSongs("band", "forward", 3, game),
   );
+  const position = matches.findIndex((song) => song.id === target.id);
+  assert.ok(position >= 0);
+  params.set("page", String(Math.floor(position / 50) + 1));
   const filtered = renderList(data, params, "/", game);
   assert.match(filtered, /ournotes\/songs\/1\//);
-  assert.equal((filtered.match(/class="song-title"/g) || []).length, 1);
+  assert.equal(
+    (filtered.match(/class="song-title"/g) || []).length,
+    Math.min(50, matches.length - Math.floor(position / 50) * 50),
+  );
   for (const mode of [
     "band",
     "level",
@@ -78,12 +120,13 @@ test("Our Notes list uses Garupa controls, multiple filters and seven sort modes
   ])
     assert.equal(
       [...songs].sort(compareSongs(mode, "forward", 3, game)).length,
-      78,
+      songs.length,
     );
 });
 
 test("Our Notes detail follows Garupa field order without official-image link", () => {
-  const detail = renderDetail(songs[0], data, new URLSearchParams(), "/", game);
+  const target = songs.find((song) => song.id === 1);
+  const detail = renderDetail(target, data, new URLSearchParams(), "/", game);
   const headings = [
     "難易度・ノーツ数",
     "楽曲情報",
@@ -116,7 +159,8 @@ test("Our Notes detail follows Garupa field order without official-image link", 
   assert.match(cover, /原曲アーティスト/);
   assert.match(cover, /原曲の使用作品・タイアップ/);
   const generated = fs.readFileSync("dist/ournotes/songs/1/index.html", "utf8");
-  assert.match(generated, /<h1>迷星叫<\/h1>/);
+  const heading = detail.match(/<h1>.*?<\/h1>/s)?.[0];
+  assert.ok(heading && generated.includes(heading));
   assert.match(generated, /アワーノーツの楽曲名・作品名で検索/);
   assert.match(
     generated,

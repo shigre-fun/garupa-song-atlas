@@ -6,6 +6,7 @@ import {
   GARUPA_SONGS_PATH,
   GARUPA_STATE_PATH,
   findGarupaSong,
+  listGarupaSongs,
 } from "../src/js/garupa-data.js";
 import { validateSong } from "../src/js/song-schema.js";
 import { renderDetail, renderList } from "../src/js/views.js";
@@ -261,20 +262,16 @@ test("existing IDs precede the next allocated ID", () => {
   assert.ok(html.includes("未確認"));
 });
 
-test("GitHub blob reader accepts the full 797-song source", async () => {
+test("GitHub blob reader accepts the full Garupa source", async () => {
   const server = remote();
-  server.files[GARUPA_SONGS_PATH] = JSON.parse(
-    fs.readFileSync(GARUPA_SONGS_PATH, "utf8"),
-  );
+  const source = JSON.parse(fs.readFileSync(GARUPA_SONGS_PATH, "utf8"));
+  server.files[GARUPA_SONGS_PATH] = source;
   const options = await client(server).listSongs();
-  assert.equal(options.length, 797);
-  const ids = options.map((song) => song.id);
+  const expected = listGarupaSongs(source).sort((a, b) => a.id - b.id);
+  assert.equal(options.length, expected.length);
   assert.deepEqual(
-    ids,
-    [...ids].sort((a, b) => a - b),
-  );
-  assert.ok(
-    options.some((song) => song.id === 822 && song.title === "ライムライト"),
+    options.map(({ id, title }) => ({ id, title })),
+    expected.map(({ id, title }) => ({ id, title })),
   );
 });
 

@@ -3,14 +3,16 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import { GitHubStore } from "../src/js/github-store.js";
 import { GAMES } from "../src/js/site-config.js";
-import { listGarupaSongs } from "../src/js/garupa-data.js";
+import { findGarupaSong, listGarupaSongs } from "../src/js/garupa-data.js";
 
 test("Our Notes administrator adds and edits within its own catalog", async () => {
   const game = GAMES.ournotes;
   const files = {
     [game.dataFile]: JSON.parse(fs.readFileSync(game.dataFile, "utf8")),
-    [game.stateFile]: { nextId: 79, updatedAt: "2026-09-25T00:00:00+09:00" },
+    [game.stateFile]: JSON.parse(fs.readFileSync(game.stateFile, "utf8")),
   };
+  const originalCount = listGarupaSongs(files[game.dataFile], game.id).length;
+  const nextId = files[game.stateFile].nextId;
   let head = "initial";
   let proposed;
   const calls = [];
@@ -70,34 +72,43 @@ test("Our Notes administrator adds and edits within its own catalog", async () =
   );
   await store.connect();
   const options = await store.listSongs();
-  assert.equal(options.length, 78);
+  assert.equal(options.length, originalCount);
   const ids = options.map((song) => song.id);
   assert.deepEqual(
     ids,
     [...ids].sort((a, b) => a - b),
   );
   const original = await store.loadSong(1);
-  assert.equal(original.song.title, "迷星叫");
+  assert.equal(original.song.id, 1);
   const input = {
     ...original.song,
     id: 1,
     title: "管理画面で追加した曲",
     reading: "カンリガメンデツイカシタキョク",
-    releaseOrder: 79,
+    releaseOrder: nextId,
   };
   const added = await store.addSong(input, "ournotes-add-00000001");
-  assert.equal(added.id, 79);
-  assert.equal(files[game.stateFile].nextId, 80);
-  assert.equal(listGarupaSongs(files[game.dataFile], game.id).length, 79);
-  assert.equal(files[game.dataFile].groups[0].songs[0].title, "迷星叫");
+  assert.equal(added.id, nextId);
+  assert.equal(files[game.stateFile].nextId, nextId + 1);
+  assert.equal(
+    listGarupaSongs(files[game.dataFile], game.id).length,
+    originalCount + 1,
+  );
+  assert.equal(
+    findGarupaSong(files[game.dataFile], 1).song.title,
+    original.song.title,
+  );
   const changed = {
     ...added.editing.song,
     title: "追加直後に修正した曲",
     composer: "確認済み作曲者",
   };
   await store.updateSong(changed, added.editing, "ournotes-edit-00000001");
-  assert.equal(listGarupaSongs(files[game.dataFile], game.id).length, 79);
-  assert.equal((await store.loadSong(79)).song.composer, "確認済み作曲者");
+  assert.equal(
+    listGarupaSongs(files[game.dataFile], game.id).length,
+    originalCount + 1,
+  );
+  assert.equal((await store.loadSong(nextId)).song.composer, "確認済み作曲者");
   assert.ok(
     proposed.tree.every((entry) => entry.path.startsWith("data/ournotes/")),
   );
