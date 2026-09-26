@@ -115,37 +115,37 @@
         {
           "id": 4,
           "title": "影色舞",
-          "reading": "シルエットタンス",
-          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "reading": "シルエットダンス",
+          "releaseDate": "2026-09-24T00:00+09:00",
           "releaseOrder": 4,
           "composer": "木下龍平(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
           "live3d": null,
-          "bpm": null,
+          "bpm": 166,
           "bpmMin": null,
           "bpmMax": null,
-          "durationSeconds": null,
+          "durationSeconds": 89,
           "aliases": [],
           "difficulties": {
             "EASY": {
-              "level": null,
-              "notes": null
+              "level": 6,
+              "notes": 255
             },
             "NORMAL": {
-              "level": null,
-              "notes": null
+              "level": 11,
+              "notes": 362
             },
             "HARD": {
-              "level": null,
-              "notes": null
+              "level": 18,
+              "notes": 670
             },
             "EXPERT": {
-              "level": null,
-              "notes": null
-            },
-            "SPECIAL": null
-          }
+              "level": 25,
+              "notes": 720
+            }
+          },
+          "revision": "58d50b67-c739-416d-8096-d6bee1ebc1dc"
         },
         {
           "id": 5,
