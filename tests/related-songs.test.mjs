@@ -29,7 +29,7 @@ test("chart variants and cross-game songs link in both directions", () => {
   assert.deepEqual(ids(byId("garupa", 410)), []); // 同名異曲
 });
 
-test("generated pages expose matching links and list navigation without admin", () => {
+test("public pages avoid admin links while the direct editor remains available", () => {
   const base = siteSettings(process.env).basePath;
   const garupa = page("garupa", 489);
   const ournotes = page("ournotes", 1);
@@ -49,7 +49,16 @@ test("generated pages expose matching links and list navigation without admin", 
   const home = fs.readFileSync("dist/index.html", "utf8");
   assert.match(home, /<h2>バンドリ！ガールズバンドパーティ！<\/h2>/);
   assert.match(home, /<h2>バンドリ！アワーノーツ<\/h2>/);
-  assert.ok(!fs.existsSync("dist/admin/index.html"));
+  const admin = fs.readFileSync("dist/admin/index.html", "utf8");
+  assert.match(admin, /楽曲を追加・修正/);
+  assert.match(admin, /name="robots" content="noindex,nofollow"/);
+  for (const asset of [
+    "admin.js",
+    "admin.css",
+    "github-store.js",
+    "admin-config.json",
+  ])
+    assert.ok(fs.existsSync(`dist/${asset}`), asset);
   assert.ok(!fs.existsSync("dist/garupa/index.html"));
   assert.ok(!fs.existsSync("dist/ournotes/index.html"));
 });

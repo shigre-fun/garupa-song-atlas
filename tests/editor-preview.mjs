@@ -15,7 +15,7 @@ const files = {
   "data/garupa/songs.json": { groups: [] },
 };
 const source = JSON.parse(fs.readFileSync("data/garupa/songs.json", "utf8"));
-for (const title of ["空色デイズ", "ときめきエクスペリエンス!"]) {
+for (const title of ["空色デイズ", "ときめきエクスペリエンス！"]) {
   const id = listGarupaSongs(source).find((song) => song.title === title)?.id;
   const found = findGarupaSong(source, id);
   if (!found) throw new Error(`検証用の${title}が見つかりません。`);

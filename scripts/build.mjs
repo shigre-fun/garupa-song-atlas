@@ -213,6 +213,7 @@ for (const [directory, names] of [
       "seo.js",
       "song-schema.js",
       "garupa-data.js",
+      "github-store.js",
       "admin.js",
       "query-index.js",
       "legacy-redirect.js",
@@ -317,8 +318,8 @@ const informationPages = [
   {
     slug: "privacy",
     name: "プライバシーポリシー",
-    description: `${settings.name}の閲覧時のデータの取り扱いを説明します。`,
-    content: `<h1>プライバシーポリシー</h1><section class="panel"><h2>閲覧データ</h2><p>現在、広告やアクセス解析は設置していません。検索・絞り込み条件はURLのクエリに含まれます。</p><p>外部サイトへのリンク先では、そのサイトの取り扱い方針が適用されます。</p></section>`,
+    description: `${settings.name}の閲覧・管理ページにおけるデータの取り扱いを説明します。`,
+    content: `<h1>プライバシーポリシー</h1><section class="panel"><h2>閲覧と入力データ</h2><p>現在、広告やアクセス解析は設置していません。検索・絞り込み条件はURLのクエリに含まれます。</p><p>管理ページは入力途中の内容や接続先設定をブラウザーのローカルストレージに保存します。GitHubへの保存時は入力した認証情報を使用してGitHub APIと通信します。アクセストークンはブラウザーの保存領域には記録しません。</p><p>外部サイトへのリンク先では、そのサイトの取り扱い方針が適用されます。</p></section>`,
   },
 ];
 for (const info of informationPages)

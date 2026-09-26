@@ -146,6 +146,8 @@ export function auditBuild({ directory = "dist", origin, basePath = "/" }) {
     for (const reference of tag(html, /\b(?:href|src|action)="([^"]+)"/g)) {
       const link = new URL(decode(reference), canonical);
       if (link.origin !== origin) continue;
+      if (link.pathname === `${basePath}admin/`)
+        fail(`一般ページから管理画面へのリンクがあります: ${canonical}`);
       const target = localFile(link.pathname);
       if (!target || !fs.existsSync(target))
         fail(`内部リンク切れ: ${canonical} -> ${reference}`);
@@ -180,18 +182,19 @@ export function auditBuild({ directory = "dist", origin, basePath = "/" }) {
       fail(`sitemapに必要なページがありません: ${relative}`);
   for (const relative of ["garupa/", "ournotes/", "admin/"])
     if (sitemapSet.has(expectedOrigin + relative))
-      fail(`削除対象がsitemapに残っています: ${relative}`);
+      fail(`一覧以外の非対象ページがsitemapに残っています: ${relative}`);
+  for (const relative of ["garupa/index.html", "ournotes/index.html"])
+    if (fs.existsSync(path.join(root, relative)))
+      fail(`削除対象が公開物に残っています: ${relative}`);
   for (const relative of [
-    "garupa/index.html",
-    "ournotes/index.html",
     "admin/index.html",
     "admin.js",
     "admin.css",
     "admin-config.json",
     "github-store.js",
   ])
-    if (fs.existsSync(path.join(root, relative)))
-      fail(`削除対象が公開物に残っています: ${relative}`);
+    if (!fs.existsSync(path.join(root, relative)))
+      fail(`管理画面の必須ファイルがありません: ${relative}`);
   if (
     sitemapSet.has(expectedOrigin + "search/") ||
     sitemapSet.has(expectedOrigin + "admin/")
@@ -224,7 +227,11 @@ export function auditBuild({ directory = "dist", origin, basePath = "/" }) {
     if (!sitemapSet.has(expectedOrigin + to.slice(1)))
       fail(`旧URLの行き先がsitemapにありません: ${to}`);
   }
-  for (const relative of ["search/index.html", "404.html"]) {
+  for (const relative of [
+    "search/index.html",
+    "404.html",
+    "admin/index.html",
+  ]) {
     const html = fs.readFileSync(path.join(root, relative), "utf8");
     if (!/name="robots"\s+content="noindex(?:,follow|,nofollow)?"/.test(html))
       fail(`非対象ページにnoindexがありません: ${relative}`);
