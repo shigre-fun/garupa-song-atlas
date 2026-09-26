@@ -11,36 +11,36 @@
           "id": 1,
           "title": "迷星叫",
           "reading": "マヨイウタ",
-          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "releaseDate": "2026-09-24T00:00+09:00",
           "releaseOrder": 1,
           "composer": "長谷川大介(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
           "live3d": null,
-          "bpm": null,
+          "bpm": 190,
           "bpmMin": null,
           "bpmMax": null,
-          "durationSeconds": null,
+          "durationSeconds": 94,
           "aliases": [],
           "difficulties": {
             "EASY": {
-              "level": null,
-              "notes": null
+              "level": 9,
+              "notes": 342
             },
             "NORMAL": {
-              "level": null,
-              "notes": null
+              "level": 13,
+              "notes": 408
             },
             "HARD": {
-              "level": null,
+              "level": 20,
               "notes": null
             },
             "EXPERT": {
-              "level": null,
+              "level": 25,
               "notes": null
-            },
-            "SPECIAL": null
-          }
+            }
+          },
+          "revision": "2a5db91d-809e-408d-8eef-35d7254d2e2b"
         },
         {
           "id": 2,
