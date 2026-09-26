@@ -80,37 +80,37 @@
         {
           "id": 3,
           "title": "碧天伴走",
-          "reading": "ヘキテンハンソウ",
-          "releaseDate": "2026-09-24T00:00:00+09:00",
+          "reading": "ヘキテンバンソウ",
+          "releaseDate": "2026-09-24T00:00+09:00",
           "releaseOrder": 3,
           "composer": "木下龍平(SUPA LOVE)",
           "originalArtist": null,
           "originalWork": null,
           "live3d": null,
-          "bpm": null,
+          "bpm": 190,
           "bpmMin": null,
           "bpmMax": null,
-          "durationSeconds": null,
+          "durationSeconds": 116,
           "aliases": [],
           "difficulties": {
             "EASY": {
-              "level": null,
-              "notes": null
+              "level": 7,
+              "notes": 342
             },
             "NORMAL": {
-              "level": null,
-              "notes": null
+              "level": 12,
+              "notes": 413
             },
             "HARD": {
-              "level": null,
-              "notes": null
+              "level": 19,
+              "notes": 631
             },
             "EXPERT": {
-              "level": null,
-              "notes": null
-            },
-            "SPECIAL": null
-          }
+              "level": 27,
+              "notes": 1012
+            }
+          },
+          "revision": "14a2ba92-6cf6-47ff-afc4-3fd789b5a3db"
         },
         {
           "id": 4,
