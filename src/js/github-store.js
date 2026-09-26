@@ -219,7 +219,7 @@ export class GitHubStore {
     const data = await this.readJSON(snapshot, this.songsPath);
     return listGarupaSongs(data, this.game.id)
       .map(({ id, title, reading, band }) => ({ id, title, reading, band }))
-      .sort((a, b) => a.title.localeCompare(b.title, "ja") || a.id - b.id);
+      .sort((a, b) => a.id - b.id);
   }
 
   async loadSong(id) {

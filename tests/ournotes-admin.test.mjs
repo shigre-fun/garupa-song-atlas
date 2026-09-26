@@ -69,7 +69,13 @@ test("Our Notes administrator adds and edits within its own catalog", async () =
     game,
   );
   await store.connect();
-  assert.equal((await store.listSongs()).length, 78);
+  const options = await store.listSongs();
+  assert.equal(options.length, 78);
+  const ids = options.map((song) => song.id);
+  assert.deepEqual(
+    ids,
+    [...ids].sort((a, b) => a - b),
+  );
   const original = await store.loadSong(1);
   assert.equal(original.song.title, "迷星叫");
   const input = {

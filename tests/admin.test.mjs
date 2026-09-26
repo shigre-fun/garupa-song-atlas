@@ -268,6 +268,11 @@ test("GitHub blob reader accepts the full 797-song source", async () => {
   );
   const options = await client(server).listSongs();
   assert.equal(options.length, 797);
+  const ids = options.map((song) => song.id);
+  assert.deepEqual(
+    ids,
+    [...ids].sort((a, b) => a - b),
+  );
   assert.ok(
     options.some((song) => song.id === 822 && song.title === "ライムライト"),
   );
