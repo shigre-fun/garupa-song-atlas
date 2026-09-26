@@ -2,6 +2,10 @@ import { validateSong } from "./song-schema.js";
 import { GitHubStore } from "./github-store.js";
 import { GAMES } from "./site-config.js";
 import { siteURL, songPath } from "./urls.js";
+import {
+  parseRelatedReferences,
+  searchRelatedSongs,
+} from "./related-song-picker.js";
 
 const form = document.querySelector("#song-form");
 const game =
@@ -35,7 +39,134 @@ let submissionId = crypto.randomUUID();
 let savedResult = null;
 let editing = null;
 let songOptions = [];
+let relatedOptions = null;
 const editStatus = document.querySelector("#edit-status");
+const normalize = (value) => value.normalize("NFKC").toLocaleLowerCase("ja");
+const relatedField = form.elements.namedItem("relatedSongIds");
+const relatedStatus = document.querySelector("#related-status");
+
+function relatedReferences() {
+  return parseRelatedReferences(relatedField.value);
+}
+
+function setRelatedReferences(references) {
+  relatedField.value = JSON.stringify(references);
+}
+
+function renderRelatedSelected() {
+  const list = document.querySelector("#related-selected");
+  list.replaceChildren();
+  for (const reference of relatedReferences()) {
+    const [gameId, id] = reference.split(":");
+    const target = relatedOptions?.[gameId]?.find(
+      (song) => song.id === Number(id),
+    );
+    const item = document.createElement("li");
+    const label = document.createElement("span");
+    label.textContent = target
+      ? `${GAMES[gameId].shortName} · ${target.title} / ${target.band}`
+      : `${GAMES[gameId]?.shortName ?? gameId}の楽曲（一覧取得後に曲名を表示）`;
+    const remove = document.createElement("button");
+    remove.type = "button";
+    remove.className = "secondary";
+    remove.textContent = "削除";
+    remove.setAttribute("aria-label", `${label.textContent}のリンクを削除`);
+    remove.addEventListener("click", () => {
+      if (busy) return;
+      setRelatedReferences(
+        relatedReferences().filter((entry) => entry !== reference),
+      );
+      renderRelatedSelected();
+      renderRelatedOptions();
+      form.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+    item.append(label, remove);
+    list.append(item);
+  }
+}
+
+function renderRelatedOptions() {
+  const gameId = document.querySelector("#related-game").value;
+  const query = document.querySelector("#related-search").value;
+  const select = document.querySelector("#related-song");
+  select.replaceChildren();
+  for (const song of searchRelatedSongs(relatedOptions?.[gameId] ?? [], {
+    gameId,
+    query,
+    currentGameId: game.id,
+    currentId: editing?.id,
+    selectedReferences: relatedReferences(),
+  })) {
+    const option = document.createElement("option");
+    option.value = String(song.id);
+    option.textContent = `${song.title} / ${song.band}`;
+    select.add(option);
+  }
+  if (!select.options.length)
+    select.add(new Option("一致する曲がありません", ""));
+  select.selectedIndex = -1;
+}
+
+async function refreshRelatedOptions() {
+  relatedStatus.textContent = "ガルパとアワーノーツの曲を取得しています…";
+  relatedOptions = await store.listSongsByGame();
+  renderRelatedSelected();
+  renderRelatedOptions();
+  relatedStatus.textContent = "曲名で検索し、楽曲を選んで追加してください。";
+}
+
+document
+  .querySelector("#add-related-song")
+  .addEventListener("click", async () => {
+    if (busy) return;
+    const picker = document.querySelector("#related-picker");
+    picker.hidden = false;
+    if (!store) {
+      relatedStatus.textContent = "先にGitHubへ接続してください。";
+      return;
+    }
+    document.querySelector("#related-game").value = game.id;
+    busy = true;
+    try {
+      await refreshRelatedOptions();
+      document.querySelector("#related-search").focus();
+    } catch (error) {
+      relatedStatus.textContent = error.message;
+    } finally {
+      busy = false;
+    }
+  });
+document
+  .querySelector("#related-game")
+  .addEventListener("change", renderRelatedOptions);
+document
+  .querySelector("#related-search")
+  .addEventListener("input", renderRelatedOptions);
+document
+  .querySelector("#related-search")
+  .addEventListener("keydown", (event) => {
+    if (event.key === "Enter") event.preventDefault();
+  });
+document
+  .querySelector("#confirm-related-song")
+  .addEventListener("click", () => {
+    if (busy) return;
+    const gameId = document.querySelector("#related-game").value;
+    const id = Number(document.querySelector("#related-song").value);
+    const target = relatedOptions?.[gameId]?.find((song) => song.id === id);
+    if (!target) {
+      relatedStatus.textContent = "リンクする曲を選んでください。";
+      return;
+    }
+    setRelatedReferences([...relatedReferences(), `${gameId}:${id}`]);
+    renderRelatedSelected();
+    renderRelatedOptions();
+    form.dispatchEvent(new Event("input", { bubbles: true }));
+    relatedStatus.textContent = `「${target.title}」を追加しました。保存するとリンクが公開されます。`;
+  });
+document.querySelector("#cancel-related-song").addEventListener("click", () => {
+  document.querySelector("#related-picker").hidden = true;
+});
 
 function updateMode() {
   document.querySelector("#save").textContent = editing
@@ -47,7 +178,6 @@ function updateMode() {
 }
 
 function renderSongOptions() {
-  const normalize = (text) => text.normalize("NFKC").toLocaleLowerCase("ja");
   const query = normalize(document.querySelector("#edit-search").value);
   const select = document.querySelector("#edit-song");
   select.replaceChildren();
@@ -132,7 +262,17 @@ document.querySelector("#load-song").addEventListener("click", async () => {
     if (game.id === "garupa")
       form.elements.live3d.value = JSON.stringify(song.live3d);
     else form.elements.mv.value = JSON.stringify(song.mv ?? null);
-    form.elements.relatedSongIds.value = (song.relatedSongIds ?? []).join("\n");
+    setRelatedReferences(song.relatedSongIds ?? []);
+    relatedOptions = null;
+    renderRelatedSelected();
+    if (relatedReferences().length) {
+      try {
+        await refreshRelatedOptions();
+      } catch (error) {
+        relatedStatus.textContent = error.message;
+      }
+    }
+    document.querySelector("#related-picker").hidden = true;
     form.elements.aliases.value = song.aliases.join("\n");
     for (const name of game.difficulties) {
       const chart = song.difficulties[name];
@@ -258,7 +398,9 @@ if (draft?.values) {
     const value = draft.values[element.name];
     if (element.type === "checkbox" && typeof value === "boolean")
       element.checked = value;
-    else if (element.name && typeof value === "string") element.value = value;
+    else if (element.name === "relatedSongIds" && typeof value === "string") {
+      setRelatedReferences(parseRelatedReferences(value));
+    } else if (element.name && typeof value === "string") element.value = value;
   }
   const savedDuration = Number(form.elements.durationSeconds.value);
   if (form.elements.durationSeconds.value && Number.isFinite(savedDuration))
@@ -270,6 +412,7 @@ if (draft?.values) {
   }
   draftStatus.textContent = "前回の入力を復元しました。";
 }
+renderRelatedSelected();
 updateVisibility();
 updateMode();
 form.addEventListener("input", () => {
@@ -314,6 +457,7 @@ connection.addEventListener("submit", async (event) => {
     );
     const checked = await candidate.connect();
     store = candidate;
+    relatedOptions = null;
     storageWrite(settingsKey, checked);
     connectionStatus.textContent = `${checked.owner}/${checked.repo}（${checked.branch}）に接続しました。`;
     connectionStatus.className = "message success";
@@ -335,6 +479,8 @@ document.querySelector("#disconnect").addEventListener("click", () => {
   if (busy) return;
   if (store) store.token = "";
   store = null;
+  relatedOptions = null;
+  renderRelatedSelected();
   for (const element of connection.elements) element.disabled = false;
   document.querySelector("#connect").hidden = false;
   document.querySelector("#disconnect").hidden = true;
@@ -361,10 +507,7 @@ function enteredSong() {
     ...(game.id === "garupa"
       ? { live3d: original ? JSON.parse(value("live3d")) : null }
       : { mv: original ? JSON.parse(value("mv")) : null }),
-    relatedSongIds: value("relatedSongIds")
-      .split("\n")
-      .map((x) => x.trim())
-      .filter(Boolean),
+    relatedSongIds: relatedReferences(),
     ...Object.fromEntries(
       ["bpm", "bpmMin", "bpmMax", "durationSeconds"].map((key) => [
         key,
@@ -487,6 +630,8 @@ function startNewSong() {
   )
     return;
   form.reset();
+  renderRelatedSelected();
+  document.querySelector("#related-picker").hidden = true;
   editing = null;
   submissionId = crypto.randomUUID();
   savedResult = null;

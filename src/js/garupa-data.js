@@ -4,7 +4,11 @@ export const GARUPA_SONGS_PATH = "data/garupa/songs.json";
 export const GARUPA_STATE_PATH = "data/garupa/admin-state.json";
 export const GARUPA_LEGACY_PATH = "data/garupa/legacy-song-paths.json";
 
-export function listGarupaSongs(data, game = "garupa") {
+export function listGarupaSongs(
+  data,
+  game = "garupa",
+  { validate = true } = {},
+) {
   if (!data || !Array.isArray(data.groups))
     throw new Error("ガルパの楽曲データにはgroupsが必要です。");
   const ids = new Set();
@@ -33,7 +37,15 @@ export function listGarupaSongs(data, game = "garupa") {
           `曲${entry.id}のバンド・種類はグループ側に入力してください。`,
         );
       const song = { ...entry, band: group.band, category: group.category };
-      validateSong(song, game);
+      if (validate) validateSong(song, game);
+      else if (
+        !Number.isSafeInteger(song.id) ||
+        song.id < 1 ||
+        typeof song.title !== "string" ||
+        !song.title.trim() ||
+        typeof song.reading !== "string"
+      )
+        throw new Error(`曲${song.id}の一覧表示に必要な情報が不正です。`);
       if (ids.has(song.id))
         throw new Error(`楽曲IDが重複しています: ${song.id}`);
       ids.add(song.id);

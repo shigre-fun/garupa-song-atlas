@@ -74,8 +74,19 @@ test("Our Notes administrator adds and edits within its own catalog", async () =
     game,
   );
   await store.connect();
+  // 一覧は入力項目の検証エラーで止めず、編集時に個別検証する。
+  files[game.dataFile].groups[0].songs[0].live3d = null;
   const options = await store.listSongs();
   assert.equal(options.length, originalCount);
+  const bothGames = await store.listSongsByGame();
+  assert.equal(bothGames.ournotes.length, originalCount);
+  assert.ok(bothGames.garupa.some((song) => song.id === 667));
+  assert.ok(
+    bothGames.ournotes.some(
+      (song) => song.title === "春日影（MyGO!!!!! ver.）",
+    ),
+  );
+  delete files[game.dataFile].groups[0].songs[0].live3d;
   const ids = options.map((song) => song.id);
   assert.deepEqual(
     ids,
@@ -142,4 +153,34 @@ test("Our Notes administrator adds and edits within its own catalog", async () =
   assert.ok(
     proposed.tree.some((entry) => entry.path === GAMES.garupa.dataFile),
   );
+});
+
+test("editor orders BPM fields and serves a searchable song picker with fresh modules", () => {
+  const html = fs.readFileSync("dist/admin/index.html", "utf8");
+  const fields = ["bpm", "bpmMin", "bpmMax", "durationSeconds"].map((name) =>
+    html.indexOf(`name="${name}"`),
+  );
+  assert.ok(fields.every((position) => position >= 0));
+  assert.deepEqual(
+    fields,
+    [...fields].sort((a, b) => a - b),
+  );
+  for (const id of [
+    "add-related-song",
+    "related-game",
+    "related-search",
+    "related-song",
+    "confirm-related-song",
+    "related-selected",
+  ])
+    assert.ok(html.includes(`id="${id}"`), id);
+  assert.doesNotMatch(html, /placeholder="garupa:667/);
+  const version = html.match(/admin\.js\?v=([a-f0-9]{12})/)?.[1];
+  assert.ok(version);
+  assert.ok(html.includes(`admin.css?v=${version}`));
+  const admin = fs.readFileSync("dist/admin.js", "utf8");
+  const store = fs.readFileSync("dist/github-store.js", "utf8");
+  assert.ok(admin.includes(`./github-store.js?v=${version}`));
+  assert.ok(admin.includes(`./related-song-picker.js?v=${version}`));
+  assert.ok(store.includes(`./song-schema.js?v=${version}`));
 });

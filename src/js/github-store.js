@@ -268,12 +268,33 @@ export class GitHubStore {
     };
   }
 
-  async listSongs() {
+  async listSongs(targetGame = this.game) {
+    if (GAMES[targetGame.id] !== targetGame)
+      throw new Error("楽曲一覧のゲーム指定が不正です。");
     const snapshot = await this.snapshot();
-    const data = await this.readJSON(snapshot, this.songsPath);
-    return listGarupaSongs(data, this.game.id)
+    const data = await this.readJSON(snapshot, targetGame.dataFile);
+    return this.songOptions(data, targetGame);
+  }
+
+  songOptions(data, targetGame) {
+    return listGarupaSongs(data, targetGame.id, { validate: false })
       .map(({ id, title, reading, band }) => ({ id, title, reading, band }))
       .sort((a, b) => a.id - b.id);
+  }
+
+  async listSongsByGame() {
+    const snapshot = await this.snapshot();
+    return Object.fromEntries(
+      await Promise.all(
+        Object.values(GAMES).map(async (targetGame) => [
+          targetGame.id,
+          this.songOptions(
+            await this.readJSON(snapshot, targetGame.dataFile),
+            targetGame,
+          ),
+        ]),
+      ),
+    );
   }
 
   async loadSong(id) {

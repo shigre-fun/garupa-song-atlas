@@ -13,6 +13,11 @@ const files = {
     updatedAt: "2026-09-18T00:00:00Z",
   },
   "data/garupa/songs.json": { groups: [] },
+  "data/ournotes/admin-state.json": {
+    nextId: 900,
+    updatedAt: "2026-09-25T00:00:00Z",
+  },
+  "data/ournotes/songs.json": { groups: [] },
 };
 const source = JSON.parse(fs.readFileSync("data/garupa/songs.json", "utf8"));
 for (const title of ["空色デイズ", "ときめきエクスペリエンス！"]) {
@@ -30,6 +35,29 @@ for (const title of ["空色デイズ", "ときめきエクスペリエンス！
       songs: [],
     };
     files["data/garupa/songs.json"].groups.push(group);
+  }
+  group.songs.push(found.group.songs[found.index]);
+}
+const ournotesSource = JSON.parse(
+  fs.readFileSync("data/ournotes/songs.json", "utf8"),
+);
+for (const title of ["迷星叫", "春日影（MyGO!!!!! ver.）"]) {
+  const id = listGarupaSongs(ournotesSource, "ournotes").find(
+    (song) => song.title === title,
+  )?.id;
+  const found = findGarupaSong(ournotesSource, id);
+  if (!found) throw new Error(`検証用の${title}が見つかりません。`);
+  let group = files["data/ournotes/songs.json"].groups.find(
+    (item) =>
+      item.band === found.group.band && item.category === found.group.category,
+  );
+  if (!group) {
+    group = {
+      band: found.group.band,
+      category: found.group.category,
+      songs: [],
+    };
+    files["data/ournotes/songs.json"].groups.push(group);
   }
   group.songs.push(found.group.songs[found.index]);
 }

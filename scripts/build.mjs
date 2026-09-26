@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import crypto from "node:crypto";
 import { format } from "prettier";
 import { loadGameCatalog } from "./catalog.mjs";
 import { GAMES, siteSettings } from "../src/js/site-config.js";
@@ -204,6 +205,26 @@ async function page({
 // distと検証用.cache出力のみを再生成する。旧ページや削除曲の残骸を残さない。
 fs.rmSync(output, { recursive: true, force: true });
 fs.mkdirSync(output, { recursive: true });
+const adminModules = new Set([
+  "admin.js",
+  "related-song-picker.js",
+  "github-store.js",
+  "garupa-data.js",
+  "song-schema.js",
+  "site-config.js",
+  "urls.js",
+]);
+const adminAssetVersion = crypto
+  .createHash("sha256")
+  .update(fs.readFileSync("src/pages/admin.html"))
+  .update(fs.readFileSync("src/styles/admin.css"))
+  .update(
+    [...adminModules]
+      .map((name) => fs.readFileSync(`src/js/${name}`, "utf8"))
+      .join("\n"),
+  )
+  .digest("hex")
+  .slice(0, 12);
 for (const [directory, names] of [
   [
     "js",
@@ -219,6 +240,7 @@ for (const [directory, names] of [
       "garupa-data.js",
       "github-store.js",
       "admin.js",
+      "related-song-picker.js",
       "query-index.js",
       "legacy-redirect.js",
     ],
@@ -228,7 +250,16 @@ for (const [directory, names] of [
   ["static", ["_headers"]],
 ])
   for (const name of names)
-    fs.copyFileSync(`src/${directory}/${name}`, path.join(output, name));
+    if (directory === "js" && adminModules.has(name)) {
+      const source = fs.readFileSync(`src/${directory}/${name}`, "utf8");
+      write(
+        name,
+        source.replace(
+          /from "(\.\/[^"?]+\.js)"/g,
+          `from "$1?v=${adminAssetVersion}"`,
+        ),
+      );
+    } else fs.copyFileSync(`src/${directory}/${name}`, path.join(output, name));
 
 write(GAMES.garupa.catalog, JSON.stringify(catalogInfo.garupa, null, 2) + "\n");
 write(
@@ -395,6 +426,8 @@ write(
 
 const adminHTML = fs
   .readFileSync("src/pages/admin.html", "utf8")
+  .replace('src="/admin.js"', `src="/admin.js?v=${adminAssetVersion}"`)
+  .replace('href="/admin.css"', `href="/admin.css?v=${adminAssetVersion}"`)
   .replace(/(href|src|action)="\//g, `$1="${settings.basePath}`)
   .replaceAll("<!--SITE_NAME-->", escapeHTML(settings.name));
 write("admin/index.html", await format(adminHTML, { parser: "html" }));
